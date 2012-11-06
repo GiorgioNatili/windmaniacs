@@ -1,0 +1,457 @@
+@import "compass"
+@import url(http://fonts.googleapis.com/css?family=Oswald)
+body
+  font-family: 'Oswald', sans-serif
+a
+  &:hover, &:focus, &:hover
+    color: #0767b1
+  color: #1f9e57
+  text-decoration: none
+
+.margin
+  width: auto
+#shadow
+  width: 980px
+  +single-box-shadow(rgba(#000,.75), 0, 0, 35px, 0)
+  margin: 0 auto
+  background: #000
+  opacity: .9
+#user-nav .margin
+  width: 920px
+  height: 30px
+  margin: 0 auto
+  padding: 0 30px
+  +single-box-shadow(rgba(#000,.75), 0, 0, 35px, 0)
+  background: black
+  #social-connect
+    a
+      float: left
+      width: 30px
+      height: 30px
+    .social-connect-fb
+      background: url('../img/wdmk_fb.png') no-repeat center center
+    .social-connect-tw
+      background: url('../img/wdmk_tw.png') no-repeat center center
+    .social-connect-pt
+      background: url('../img/wdmk_pt.png') no-repeat center center
+  #languages
+    margin: 0 auto
+    width: 140px + 85px + 85px
+    height: 30px
+    position: relative
+    span
+      width: 85px
+      height: 30px
+      display: block
+      float: left
+      &.lang-dx
+        background: url('../img/wdmk_lang_dx.png') no-repeat center center
+      &.lang-sx
+        background: url('../img/wdmk_lang_sx.png') no-repeat center center
+    .widget_qtranslate
+      margin-left: -10px
+      float: left
+      width: 140px
+      height: 30px
+
+      ul
+        top: 6px
+        right: 100px
+        li a
+          color: #fff
+          text-decoration: none
+          text-transform: uppercase
+          font-size: 14px
+          &:visited, &:active
+            color: #fff
+            text-decoration: none
+          &:hover
+            color: #ccc
+            text-decoration: none
+  #log-in ul
+    position: absolute
+    top: 7px
+    right: 30px
+    li
+      font-size: 12px
+      text-transform: uppercase
+      a
+        color: #fff
+        &:visited, &:active
+          color: #fff
+        &:hover
+          color: #ccc
+            
+
+
+body.home #header, #header
+  width: 920px
+  height: 102px
+  margin: 0 auto
+  padding: 27px 30px 0
+  background: url(../img/wdmk_bk_header.png) repeat-x 0 bottom black
+
+body.home #header #logo, #header #logo
+  float: left
+  margin: 20px 0 0
+
+body.home #header .margin, #header .margin
+  width: auto
+  border-bottom: 0 none transparent
+  padding: 0
+
+body.home #header #topnav, #header #topnav
+  bottom: 22px
+  #menu-main-menu
+    padding: 0 
+  ul
+    width: auto
+
+    li
+      height: 18px
+      border-right: 3px solid #000
+      
+      /*Important to hide the last border-right in the top menu*/
+      &#menu-item-129
+        border-right: none
+        a
+          padding-right: 0
+      a
+        font-size: 18px
+        text-transform: uppercase
+        display: block
+        padding: 0px 10px
+        position: relative
+        text-decoration: none
+        color: #000
+        margin-top: -6px
+        &:visited, &:active
+          color: #000
+        &:hover
+          color: #fff
+          background-color: transparent
+
+#content-wrapper
+  width: 920px
+  padding: 0 30px
+  margin: 0 auto
+  position: relative
+
+  #search-key-words
+    position: absolute
+    top: 0
+    right: 30px
+    input[type="text"]
+      +border-radius(14px)
+      +single-box-shadow(rgba(#0099ff, .4), 0, 1px, 2px, 0px)
+      border: 2px solid #999
+      width: 115px
+      height: 21px
+      margin: 0 10px
+      padding: 0 15px
+      font-size: 10px
+      line-height: 21px
+      color: #666 
+  .custom-search-widget
+    margin-top: 20px
+    .menuTabs
+      ul
+        max-width: 740px
+        li
+          float: left
+          background: #0099ff
+          margin: 0 3px 3px 0
+          a
+            color: #fff
+            padding: 7px
+            font-size: 18px
+            text-transform: uppercase
+            &:hover
+              color: #003366
+        .active
+          a
+            color: #003366
+            &:hover
+              color: #fff
+    .b4k-select
+      clear: both
+      +border-radius(5px)
+      border: 1px solid #444
+      padding: 20px 0 20px 10px
+      background: url(../img/wdmk_bk_search.png) repeat-x 0 0
+      label
+        display: none
+      select
+        +appearance(none)
+        float: left
+        margin-right: 10px
+        width: 444px
+        height: 35px
+        +border-radius(15px)
+        font-size: 18px
+        padding: 0 15px
+        +box-shadow(rgba(#444, 0.7) 2px 2px 5px 1px inset)
+        background: url(../img/wdmk_select_arrow.png) no-repeat right center white
+      .b4k-separator
+        clear: both
+        width: 840px
+        height: 1px
+        margin: 0 auto
+        background-color: #003366
+      .b4k-static-select 
+        select
+          width: 217px
+          height: 30px
+          font-size: 15px
+    select[name="b4k_pmin"],
+    input[type="submit"]
+      width: 217px
+      height: 30px
+      font-size: 15px
+
+
+#menu-main-menu .searchform
+  padding: 0 25px 0 30px
+  margin: 9px 0 0
+  input[type="text"]
+    -webkit-border-radius: 14px
+    border-radius: 14px
+    -webkit-background-clip: padding-box
+    -moz-background-clip: padding
+    background-clip: padding-box
+    -webkit-box-shadow: 0 1px 2px 0px rgba(255, 255, 255, 0.4)
+    -moz-box-shadow: 0 1px 2px 0px rgba(255, 255, 255, 0.4)
+    box-shadow: 0 1px 2px 0px rgba(255, 255, 255, 0.4)
+    border: 2px solid #345624
+    display: block
+    width: 115px
+    height: 21px
+    margin: 0 10px
+    padding: 0 15px
+    font-size: 11px
+    line-height: 21px
+    color: #666
+
+#copyright
+  width: 980px
+  margin: 0 auto
+  .margin
+    padding: 5px 0px
+    background: transparent none
+
+#leader
+  width: 920px
+  padding: 40px 30px 30px
+  margin: 0 auto
+  .margin
+    border-bottom: 1px dotted #000
+    padding-bottom: 17px
+  h1
+    margin: 0
+
+div
+  &.breadcrumb
+    padding: 7px 7px 0 0
+    margin-top: 5px
+  &#products_page_container
+    margin: 0
+
+#footer
+  background: #0170c1
+  
+
+.addthis_toolbox
+  margin: 0 0 20px
+
+.single-imagecol
+  width: 400px !important
+  max-width: 400px !important
+  div.main_image a
+    max-width: 400px !important
+    width: auto !important
+
+div.single-producttext
+  width: 490px !important
+  max-width: 490px !important
+
+img.attachment-post-thumbnail
+  border: 0 none transparent
+  -webkit-border-radius: 0
+  -moz-border-radius: 0
+  border-radius: 0
+  background: white
+
+div
+  &.group-thumbnail img, &.single_container div.single-imagecol a img
+    border: 0 none transparent
+    -webkit-border-radius: 0
+    -moz-border-radius: 0
+    border-radius: 0
+    background: white
+
+a.large-blog-image img, div.main_image img
+  border: 0 none transparent
+  -webkit-border-radius: 0
+  -moz-border-radius: 0
+  border-radius: 0
+  background: white
+
+#leader
+  padding: 0 30px
+
+.custom_product_footer
+  clear: both
+  margin: 20px 0 0
+  padding: 10px 0
+  border-top: 1px solid #666
+  border-bottom: 1px solid #666
+  overflow: hidden
+  p
+    margin: 0
+  .lt
+    float: left
+    width: 240px
+  .rt
+    float: left
+    width: 240px
+    margin: 0 0 0 10px
+
+.big_green_button
+  display: block
+  text-align: center
+  width: 210px
+  height: 35px
+  line-height: 35px
+  color: white
+  font-size: 14px
+  color: #ffffff
+  background: #439102
+  /* Old browsers
+  /* IE9 SVG, needs conditional override of 'filter' to 'none'
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzVlYzQwNCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM0MzkxMDIiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+)
+  background: -moz-linear-gradient(top, #5ec404 0%, #439102 100%)
+  /* FF3.6+
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #5ec404), color-stop(100%, #439102))
+  /* Chrome,Safari4+
+  background: -webkit-linear-gradient(top, #5ec404 0%, #439102 100%)
+  /* Chrome10+,Safari5.1+
+  background: -o-linear-gradient(top, #5ec404 0%, #439102 100%)
+  /* Opera 11.10+
+  background: -ms-linear-gradient(top, #5ec404 0%, #439102 100%)
+  /* IE10+
+  background: linear-gradient(top, #5ec404 0%, #439102 100%)
+  /* W3C
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5ec404', endColorstr='#439102',GradientType=0 )
+  /* IE6-8
+  border-radius: 5px
+  -moz-border-radius: 5px
+  -webkit-border-radius: 5px
+  border: 2px solid #2a6900
+  -moz-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5), inset 0px 0px 3px white
+  -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5), inset 0px 0px 3px white
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1), 0px 1px 0px #519305
+  &:hover
+    color: #fff !important
+
+.addthis_container_custom .addthis_toolbox
+  margin: 10px 0
+
+#footer-bottom
+  h3
+    color: #FFF
+    text-shadow: 1px 1px #292929
+  .widget-container
+    a
+      color: #FFF
+      &:visited, &:active
+        color: #FFF
+    p, li
+      color: #FFF
+    a:hover
+      color: #FFF
+      text-decoration: underline
+
+
+
+#slider-controls
+  text-align: right
+  margin-top: -28px
+  padding-right: 30px
+
+#featured-slider
+  padding-bottom: 15px
+
+.prima-multislider-title
+  left: -10px
+
+#menu-footer-left-menu
+  .custom-search-field
+    display: none
+    visibility: hidden
+  li a
+    font-size: 13px !important
+    &:before
+      content: "- "
+
+.wpcf7
+  padding: 0 0 0 43px !important
+
+.footer-contact-form-title
+  margin: 0
+  color: #fff
+  font-size: 13px
+
+.footer-contact-form-email
+  margin: 0
+  color: #fff
+  font-size: 13px
+  input
+    height: 20px
+    line-height: 20px
+    margin: 6px 0
+    padding: 0 5px
+    width: 240px
+    display: block
+    font-size: 13px
+    border: 0 none transparent
+
+.footer-contact-form-message
+  margin: 0
+  color: #fff
+  font-size: 13px
+  textarea
+    height: 70px
+    margin: 6px 0
+    padding: 0 5px
+    width: 240px
+    display: block
+    font-size: 13px
+    border: 0 none transparent
+    resize: none !important
+
+.footer-contact-form-submit input
+  display: block !important
+  background: #014171 !important
+  border: 0 none transparent !important
+  color: white !important
+  cursor: pointer !important
+  float: right !important
+  font-size: 12px !important
+  font-weight: bold !important
+  height: 20px !important
+  line-height: 20px !important
+  margin: 10px 0 0 0 !important
+  padding: 0 10px !important
+  text-align: center !important
+
+.my-error
+  input, textarea
+    border: 1px solid red
+
+div
+  &.wpcf7-response-output
+    margin: 0
+    padding: 0
+  &.wpcf7-mail-sent-ok
+    color: #fff
+    border: 0 none transparent !important

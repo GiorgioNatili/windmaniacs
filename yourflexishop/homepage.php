@@ -55,6 +55,11 @@ get_header(); ?>
 
 <div id="content-wrapper">
 	<div id="main-content" class="container">
+    <div id="search-key-words">
+        <form method="get" id="searchform" action="<?php bloginfo('home'); ?>/">
+            <input type="text" size="put_a_size_here" name="s" id="s" value="Ricerca per parole chiave" onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;"/>
+        </form>
+    </div>
 	<?php b4k_search_form(); ?>
 		<div class="margin">
 			<div id="full-col">

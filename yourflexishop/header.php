@@ -26,3 +26,4 @@
 <body id="<?php prima_option('themelayout') ?>" <?php body_class(); ?>>
 <?php if(prima_get_option('usernav')&&class_exists('WP_eCommerce')) get_template_part( 'flexi-usernav' ); ?>
 <div id="flexi-wrapper">
+  <div id="shadow">

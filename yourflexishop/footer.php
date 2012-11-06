@@ -31,7 +31,7 @@
     </div>
 </div>
 <?php endif; ?>
-
+</div> <!-- end shadow -->
 <?php wp_footer(); ?>
 </body>
 </html>
