@@ -1,0 +1,3763 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-12-14 22:36+0700\n"
+"PO-Revision-Date: \n"
+"Last-Translator: WooThemes <agusmu7@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
+"X-Poedit-Basepath: .\n"
+"X-Textdomain-Support: yes\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+# @ flexishop
+#: ../404.php:8
+#: ../index.php:12
+msgid "404 - Not Found"
+msgstr ""
+
+# @ flexishop
+#: ../404.php:17
+#: ../index.php:99
+#: ../page.php:33
+msgid "Apologies, but the page you requested could not be found. Perhaps searching will help."
+msgstr ""
+
+# @ flexishop
+#: ../comments.php:5
+msgid "This post is password protected. Enter the password to view any comments."
+msgstr ""
+
+# @ flexishop
+#: ../comments.php:14
+#, php-format
+msgid "One Response to %2$s"
+msgid_plural "%1$s Responses to %2$s"
+msgstr[0] ""
+msgstr[1] ""
+
+# @ flexishop
+#: ../comments.php:19
+#: ../comments.php:30
+msgid "&larr; Older Comments"
+msgstr ""
+
+# @ flexishop
+#: ../comments.php:20
+#: ../comments.php:31
+msgid "Newer Comments &rarr;"
+msgstr ""
+
+# @ flexishop
+#: ../comments.php:37
+msgid "Comments are closed."
+msgstr ""
+
+# @ flexishop
+#: ../contact.php:7
+msgid "Please enter your name."
+msgstr ""
+
+# @ flexishop
+#: ../contact.php:14
+msgid "Please enter your email address."
+msgstr ""
+
+# @ flexishop
+#: ../contact.php:18
+msgid "You entered an invalid email address."
+msgstr ""
+
+# @ flexishop
+#: ../contact.php:25
+msgid "Please enter a message."
+msgstr ""
+
+# @ flexishop
+#: ../contact.php:39
+#, php-format
+msgid "[Contact Form] From %s"
+msgstr ""
+
+# @ flexishop
+#: ../contact.php:40
+#: ../contact.php:77
+msgid "Name:"
+msgstr ""
+
+# @ flexishop
+#: ../contact.php:40
+#: ../contact.php:83
+msgid "Email:"
+msgstr ""
+
+# @ flexishop
+#: ../contact.php:40
+#: ../contact.php:89
+msgid "Messages:"
+msgstr ""
+
+# @ flexishop
+#: ../contact.php:67
+msgid "Thanks, your email was sent successfully."
+msgstr ""
+
+# @ flexishop
+#: ../contact.php:69
+msgid "Sorry, your email was not sent. Please try again!"
+msgstr ""
+
+# @ flexishop
+#: ../contact.php:72
+msgid "Sorry, an error occured."
+msgstr ""
+
+# @ flexishop
+#: ../contact.php:96
+msgid "Send Email"
+msgstr ""
+
+# @ flexishop
+#: ../flexi-header.php:21
+msgid "Home"
+msgstr ""
+
+# @ flexishop
+#: ../flexi-topbar-cart.php:6
+#, php-format
+msgid "%d item"
+msgid_plural "%d items"
+msgstr[0] ""
+msgstr[1] ""
+
+# @ flexishop
+#: ../flexi-topbar-categories.php:4
+msgid "Products"
+msgstr ""
+
+# @ flexishop
+#: ../flexi-usernav.php:5
+msgid "Logout"
+msgstr ""
+
+# @ flexishop
+#: ../flexi-usernav.php:6
+msgid "Your Account"
+msgstr ""
+
+# @ flexishop
+#: ../flexi-usernav.php:8
+msgid "Register"
+msgstr ""
+
+# @ flexishop
+#: ../flexi-usernav.php:9
+msgid "Sign In"
+msgstr ""
+
+# @ flexishop
+#: ../footer.php:19
+msgid "Copyright &copy; 2011 &middot; WP FlexiShop"
+msgstr ""
+
+# @ flexishop
+#: ../frontpage.php:104
+msgid "Categories"
+msgstr ""
+
+# @ flexishop
+#: ../frontpage.php:126
+msgid "Best Sellers"
+msgstr ""
+
+# @ flexishop
+#: ../frontpage.php:145
+msgid "Latest Products"
+msgstr ""
+
+# @ flexishop
+#: ../full-page.php:30
+#: ../index.php:86
+#: ../page.php:28
+msgid "Pages:"
+msgstr ""
+
+# @ flexishop
+#: ../full-page.php:31
+#: ../index.php:87
+#: ../page.php:29
+msgid "Edit"
+msgstr ""
+
+# @ flexishop
+#: ../index.php:14
+#, php-format
+msgid "Search Results for \"%1$s\""
+msgstr ""
+
+# @ flexishop
+#: ../index.php:19
+#: ../index.php:23
+#: ../index.php:25
+#: ../index.php:29
+#: ../index.php:31
+#, php-format
+msgid "Archive for %1$s"
+msgstr ""
+
+# @ flexishop
+#: ../index.php:19
+msgid "g:i a"
+msgstr ""
+
+# @ flexishop
+#: ../index.php:21
+#, php-format
+msgid "Archive for minute %1$s"
+msgstr ""
+
+# @ flexishop
+#: ../index.php:21
+msgid "i"
+msgstr ""
+
+# @ flexishop
+#: ../index.php:23
+msgid "g a"
+msgstr ""
+
+# @ flexishop
+#: ../index.php:25
+msgid "F jS, Y"
+msgstr ""
+
+# @ flexishop
+#: ../index.php:27
+#, php-format
+msgid "Archive for week %1$s of %2$s"
+msgstr ""
+
+# @ flexishop
+#: ../index.php:27
+msgid "W"
+msgstr ""
+
+# @ flexishop
+#: ../index.php:27
+#: ../index.php:31
+msgid "Y"
+msgstr ""
+
+# @ flexishop
+#: ../index.php:49
+msgid "Latest News"
+msgstr ""
+
+# @ flexishop
+#: ../index.php:69
+msgid "Posted on"
+msgstr ""
+
+# @ flexishop
+#: ../index.php:69
+msgid "F j, Y"
+msgstr ""
+
+# @ flexishop
+#: ../index.php:85
+msgid "Continue reading &hellip;"
+msgstr ""
+
+# @ flexishop
+#: ../index.php:98
+#: ../page.php:32
+msgid "Not Found"
+msgstr ""
+
+# @ flexishop
+#: ../products.php:64
+msgid "Subcategories:"
+msgstr ""
+
+# @ flexishop
+#: ../search-wpsc-product.php:23
+#, php-format
+msgid "Product Search Results for \"%1$s\""
+msgstr ""
+
+# @ flexishop
+#: ../search.php:32
+msgid "[Blog Post]"
+msgstr ""
+
+# @ flexishop
+#: ../search.php:33
+msgid "[Page]"
+msgstr ""
+
+# @ flexishop
+#: ../search.php:34
+msgid "[Product]"
+msgstr ""
+
+# @ flexishop
+#: ../sidebar-footer-bottom.php:10
+msgid "Recent Posts"
+msgstr ""
+
+# @ flexishop
+#: ../sidebar-footer-bottom.php:25
+msgid "Blog Categories"
+msgstr ""
+
+# @ flexishop
+#: ../sidebar-footer-bottom.php:40
+msgid "Bookmarks"
+msgstr ""
+
+# @ flexishop
+#: ../sidebar-footer-bottom.php:55
+msgid "About Us"
+msgstr ""
+
+# @ flexishop
+#: ../sidebar-footer-bottom.php:57
+msgid "This is a short paragraph about us. It can be found in the theme options page"
+msgstr ""
+
+# @ flexishop
+#: ../sidebar-footer-top.php:53
+msgid "Twitter"
+msgstr ""
+
+# @ flexishop
+#: ../sidebar-footer-top.php:78
+msgid "Widget Area"
+msgstr ""
+
+# @ flexishop
+#: ../sidebar-footer-top.php:80
+#, php-format
+msgid "This is <strong>\"%1$s\"</strong> widget area. Visit your <a href=\"%2$s\">Widgets Page</a> to add new widget to this area."
+msgstr ""
+
+# @ flexishop
+#: ../sidebar-footer-top.php:80
+msgid "Third Footer Top"
+msgstr ""
+
+# @ flexishop
+#: ../sidebar.php:6
+msgid "Archives"
+msgstr ""
+
+# @ flexishop
+#: ../sidebar.php:12
+msgid "Meta"
+msgstr ""
+
+# @ flexishop
+#: ../taxonomy-product_tag.php:23
+msgid "Product Tag:"
+msgstr ""
+
+# @ flexishop
+#: ../taxonomy-wpsc-variation.php:23
+msgid "Product Variation:"
+msgstr ""
+
+# @ flexishop
+#: ../testimonials.php:38
+msgid "Sorry, no testimonial is available"
+msgstr ""
+
+# @ flexishop
+#: ../wpsc-cart_widget.php:8
+msgid "Shopping Cart"
+msgstr ""
+
+# @ flexishop
+#: ../wpsc-cart_widget.php:19
+#: ../wpsc-shopping_cart_page.php:33
+msgid "Product"
+msgstr ""
+
+# @ flexishop
+#: ../wpsc-cart_widget.php:20
+msgid "Qty"
+msgstr ""
+
+# @ flexishop
+#: ../wpsc-cart_widget.php:21
+#: ../wpsc-shopping_cart_page.php:34
+#: ../wpsc-single_product.php:124
+#: ../wpsc-user-log.php:104
+msgid "Price"
+msgstr ""
+
+# @ flexishop
+#: ../wpsc-cart_widget.php:43
+#: ../wpsc-shopping_cart_page.php:36
+msgid "Total"
+msgstr ""
+
+# @ flexishop
+#: ../wpsc-cart_widget.php:45
+msgid "(shipping and tax excluded)"
+msgstr ""
+
+# @ flexishop
+#: ../wpsc-cart_widget.php:51
+msgid "Checkout"
+msgstr ""
+
+# @ flexishop
+#: ../wpsc-cart_widget.php:54
+msgid "Empty Cart"
+msgstr ""
+
+# @ flexishop
+#: ../wpsc-cart_widget.php:59
+msgid "Your shopping cart is empty"
+msgstr ""
+
+# @ flexishop
+#: ../wpsc-cart_widget.php:61
+msgid "Visit the shop"
+msgstr ""
+
+# @ flexishop
+#: ../wpsc-grid_view.php:116
+#: ../wpsc-products_page.php:117
+msgid "Read More"
+msgstr ""
+
+# @ flexishop
+#: ../wpsc-grid_view.php:123
+#: ../wpsc-grid_view.php:208
+#: ../wpsc-list_view.php:156
+#: ../wpsc-products_page.php:124
+#: ../wpsc-products_page.php:264
+#: ../wpsc-single_product.php:269
+msgid "Buy Now"
+msgstr ""
+
+# @ flexishop
+#: ../wpsc-grid_view.php:125
+#: ../wpsc-grid_view.php:210
+#: ../wpsc-list_view.php:158
+#: ../wpsc-products_page.php:126
+#: ../wpsc-products_page.php:266
+#: ../wpsc-single_product.php:271
+msgid "Add To Cart"
+msgstr ""
+
+# @ flexishop
+#: ../wpsc-grid_view.php:134
+#: ../wpsc-grid_view.php:201
+#: ../wpsc-products_page.php:138
+#: ../wpsc-products_page.php:257
+#: ../wpsc-single_product.php:252
+msgid "Donation"
+msgstr ""
+
+# @ flexishop
+#: ../wpsc-grid_view.php:137
+#: ../wpsc-products_page.php:143
+#: ../wpsc-single_product.php:110
+msgid "Sale!"
+msgstr ""
+
+# @ flexishop
+#: ../wpsc-grid_view.php:139
+#: ../wpsc-grid_view.php:142
+#: ../wpsc-list_view.php:107
+#: ../wpsc-single_product.php:124
+msgid "from"
+msgstr ""
+
+# @ flexishop
+#: ../wpsc-grid_view.php:160
+#: ../wpsc-products_page.php:171
+msgid "[Edit]"
+msgstr ""
+
+# @ flexishop
+#: ../wpsc-grid_view.php:175
+#: ../wpsc-products_page.php:209
+#: ../wpsc-single_product.php:165
+msgid "More Details"
+msgstr ""
+
+# @ flexishop
+#: ../wpsc-grid_view.php:214
+#: ../wpsc-list_view.php:162
+#: ../wpsc-products_page.php:270
+#: ../wpsc-single_product.php:275
+msgid "Updating cart..."
+msgstr ""
+
+# @ flexishop
+#: ../wpsc-grid_view.php:248
+#: ../wpsc-list_view.php:189
+#: ../wpsc-products_page.php:313
+msgid "There are no products in this group."
+msgstr ""
+
+# @ flexishop
+#: ../wpsc-list_view.php:100
+#: ../wpsc-products_page.php:284
+#: ../wpsc-single_product.php:244
+msgid "Product in stock"
+msgstr ""
+
+# @ flexishop
+#: ../wpsc-list_view.php:102
+#: ../wpsc-products_page.php:287
+#: ../wpsc-single_product.php:247
+msgid "Product not in stock"
+msgstr ""
+
+# @ flexishop
+#: ../wpsc-list_view.php:137
+#: ../wpsc-products_page.php:244
+#: ../wpsc-shopping_cart_page.php:35
+#: ../wpsc-single_product.php:224
+msgid "Quantity"
+msgstr ""
+
+# @ flexishop
+#: ../wpsc-list_view.php:166
+#: ../wpsc-single_product.php:280
+msgid "This product has sold out."
+msgstr ""
+
+# @ flexishop
+#: ../wpsc-products_page.php:282
+#: ../wpsc-single_product.php:242
+#, php-format
+msgid "%s remaining stock"
+msgstr ""
+
+# @ flexishop
+#: ../wpsc-shopping_cart_page.php:10
+#: ../wpsc-transaction_results.php:24
+msgid "Oops, there is nothing in your cart."
+msgstr ""
+
+# @ flexishop
+#: ../wpsc-shopping_cart_page.php:10
+#: ../wpsc-transaction_results.php:24
+msgid "Please visit our shop"
+msgstr ""
+
+# @ flexishop
+#: ../wpsc-shopping_cart_page.php:17
+msgid "Checkout Progress"
+msgstr ""
+
+# @ flexishop
+#: ../wpsc-shopping_cart_page.php:28
+msgid "Please review your order"
+msgstr ""
+
+# @ flexishop
+#: ../wpsc-shopping_cart_page.php:61
+msgid "Personal Message:"
+msgstr ""
+
+# @ flexishop
+#: ../wpsc-shopping_cart_page.php:63
+msgid "Personal File:"
+msgstr ""
+
+# @ flexishop
+#: ../wpsc-shopping_cart_page.php:76
+#: ../wpsc-shopping_cart_page.php:116
+msgid "Update"
+msgstr ""
+
+# @ flexishop
+#: ../wpsc-shopping_cart_page.php:89
+msgid "Remove"
+msgstr ""
+
+# @ flexishop
+#: ../wpsc-shopping_cart_page.php:98
+#: ../wpsc-shopping_cart_page.php:238
+msgid "Total Price Before Shipping/Tax/Discount:"
+msgstr ""
+
+# @ flexishop
+#: ../wpsc-shopping_cart_page.php:108
+msgid "Enter coupon code"
+msgstr ""
+
+# @ flexishop
+#: ../wpsc-shopping_cart_page.php:110
+msgid "Coupon is not valid."
+msgstr ""
+
+# @ flexishop
+#: ../wpsc-shopping_cart_page.php:120
+#: ../wpsc-shopping_cart_page.php:271
+msgid "Discount"
+msgstr ""
+
+# @ flexishop
+#: ../wpsc-shopping_cart_page.php:141
+msgid "Calculate Shipping Price"
+msgstr ""
+
+# @ flexishop
+#: ../wpsc-shopping_cart_page.php:147
+msgid "Please choose a country below to calculate your shipping costs"
+msgstr ""
+
+# @ flexishop
+#: ../wpsc-shopping_cart_page.php:155
+msgid "Please provide a Zipcode and click Calculate in order to continue."
+msgstr ""
+
+# @ flexishop
+#: ../wpsc-shopping_cart_page.php:161
+msgid "Sorry, online ordering is unavailable to this destination and/or weight. Please double check your destination details."
+msgstr ""
+
+# @ flexishop
+#: ../wpsc-shopping_cart_page.php:182
+msgid " - Choose a Shipping Rate"
+msgstr ""
+
+# @ flexishop
+#: ../wpsc-shopping_cart_page.php:229
+msgid "Review and purchase"
+msgstr ""
+
+# @ flexishop
+#: ../wpsc-shopping_cart_page.php:249
+msgid "Total Shipping"
+msgstr ""
+
+# @ flexishop
+#: ../wpsc-shopping_cart_page.php:281
+msgid "Total Price"
+msgstr ""
+
+# @ flexishop
+#: ../wpsc-shopping_cart_page.php:290
+msgid "Next"
+msgstr ""
+
+# @ flexishop
+#: ../wpsc-shopping_cart_page.php:296
+msgid "Ready To Check Out?"
+msgstr ""
+
+# @ flexishop
+#: ../wpsc-shopping_cart_page.php:297
+msgid "Fields marked with an asterisk must be filled in."
+msgstr ""
+
+# @ flexishop
+#: ../wpsc-shopping_cart_page.php:312
+msgid "You must sign in or register with us to continue with your purchase"
+msgstr ""
+
+# @ flexishop
+#: ../wpsc-shopping_cart_page.php:315
+msgid "Sign in"
+msgstr ""
+
+# @ flexishop
+#: ../wpsc-shopping_cart_page.php:321
+msgid "If you have bought from us before please sign in here to purchase"
+msgstr ""
+
+# @ flexishop
+#: ../wpsc-shopping_cart_page.php:342
+msgid "Join up now"
+msgstr ""
+
+# @ flexishop
+#: ../wpsc-shopping_cart_page.php:345
+msgid "Username"
+msgstr ""
+
+# @ flexishop
+#: ../wpsc-shopping_cart_page.php:350
+msgid "Password"
+msgstr ""
+
+# @ flexishop
+#: ../wpsc-shopping_cart_page.php:355
+msgid "E-mail"
+msgstr ""
+
+# @ flexishop
+#: ../wpsc-shopping_cart_page.php:359
+msgid "Signing up is free and easy! please fill out your details your registration will happen automatically as you checkout. Don't forget to use your details to login with next time!"
+msgstr ""
+
+# @ flexishop
+#: ../wpsc-shopping_cart_page.php:409
+msgid "Same as billing address:"
+msgstr ""
+
+# @ flexishop
+#: ../wpsc-shopping_cart_page.php:411
+msgid "Your order will be shipped to the billing address"
+msgstr ""
+
+# @ flexishop
+#: ../wpsc-shopping_cart_page.php:439
+msgid "Enter your email address"
+msgstr ""
+
+# @ flexishop
+#: ../wpsc-shopping_cart_page.php:480
+msgid "How did you find us"
+msgstr ""
+
+# @ flexishop
+#: ../wpsc-shopping_cart_page.php:484
+msgid "Word of mouth"
+msgstr ""
+
+# @ flexishop
+#: ../wpsc-shopping_cart_page.php:485
+msgid "Advertising"
+msgstr ""
+
+# @ flexishop
+#: ../wpsc-shopping_cart_page.php:486
+msgid "Internet"
+msgstr ""
+
+# @ flexishop
+#: ../wpsc-shopping_cart_page.php:487
+msgid "Existing Customer"
+msgstr ""
+
+# @ flexishop
+#: ../wpsc-shopping_cart_page.php:500
+msgid "Payment Type"
+msgstr ""
+
+#: ../wpsc-shopping_cart_page.php:542
+#, php-format
+msgid "I agree to The <a rel=\"prettyPhoto\" href=\"#prima_termsandconds\" title=\"%s\">Terms and Conditions</a>"
+msgstr ""
+
+# @ flexishop
+#: ../wpsc-shopping_cart_page.php:542
+msgid "Terms and Conditions"
+msgstr ""
+
+# @ flexishop
+#: ../wpsc-shopping_cart_page.php:557
+msgid "Purchase"
+msgstr ""
+
+# @ flexishop
+#: ../wpsc-shopping_cart_page.php:558
+msgid "Back"
+msgstr ""
+
+# @ flexishop
+#: ../wpsc-single_product.php:126
+msgid "On Sale:"
+msgstr ""
+
+# @ flexishop
+#: ../wpsc-single_product.php:128
+msgid "You save"
+msgstr ""
+
+# @ flexishop
+#: ../wpsc-single_product.php:128
+msgid "up to"
+msgstr ""
+
+# @ flexishop
+#: ../wpsc-single_product.php:130
+msgid "Price:"
+msgstr ""
+
+# @ flexishop
+#: ../wpsc-single_product.php:147
+msgid "SKU: "
+msgstr ""
+
+# @ flexishop
+#: ../wpsc-single_product.php:186
+msgid "Personalize Your Product"
+msgstr ""
+
+# @ flexishop
+#: ../wpsc-single_product.php:187
+msgid "Complete this form to include a personalized message with your purchase."
+msgstr ""
+
+# @ flexishop
+#: ../wpsc-single_product.php:194
+msgid "Upload a File"
+msgstr ""
+
+# @ flexishop
+#: ../wpsc-single_product.php:195
+msgid "Select a file from your computer to include with this purchase."
+msgstr ""
+
+# @ flexishop
+#: ../wpsc-single_product.php:286
+msgid "Shipping"
+msgstr ""
+
+# @ flexishop
+#: ../wpsc-single_product.php:295
+msgid "Product Categories:"
+msgstr ""
+
+# @ flexishop
+#: ../wpsc-single_product.php:298
+msgid "Product Tags:"
+msgstr ""
+
+# @ flexishop
+#: ../wpsc-user-log.php:16
+msgid "Purchase History"
+msgstr ""
+
+# @ flexishop
+#: ../wpsc-user-log.php:17
+msgid "Your Details"
+msgstr ""
+
+# @ flexishop
+#: ../wpsc-user-log.php:18
+msgid "Your Downloads"
+msgstr ""
+
+# @ flexishop
+#: ../wpsc-user-log.php:38
+msgid "Save Profile"
+msgstr ""
+
+# @ flexishop
+#: ../wpsc-user-log.php:50
+msgid "File Names"
+msgstr ""
+
+# @ flexishop
+#: ../wpsc-user-log.php:51
+msgid "Downloads Left"
+msgstr ""
+
+# @ flexishop
+#: ../wpsc-user-log.php:52
+#: ../wpsc-user-log.php:103
+msgid "Date"
+msgstr ""
+
+# @ flexishop
+#: ../wpsc-user-log.php:87
+msgid "You have not purchased any downloadable products yet."
+msgstr ""
+
+# @ flexishop
+#: ../wpsc-user-log.php:102
+msgid "Status"
+msgstr ""
+
+# @ flexishop
+#: ../wpsc-user-log.php:108
+msgid "Payment Method"
+msgstr ""
+
+# @ flexishop
+#: ../wpsc-user-log.php:121
+msgid "No transactions for this month."
+msgstr ""
+
+# @ flexishop
+#: ../wpsc-user-log.php:134
+msgid "There have not been any purchases yet."
+msgstr ""
+
+# @ flexishop
+#: ../wpsc-user-log.php:142
+msgid "You must be logged in to use this page. Please use the form below to login to your account."
+msgstr ""
+
+# @ flexishop
+#: ../wpsc-user-log.php:146
+msgid "Username:"
+msgstr ""
+
+# @ flexishop
+#: ../wpsc-user-log.php:150
+msgid "Password:"
+msgstr ""
+
+# @ flexishop
+#: ../wpsc-user-log.php:156
+msgid "Remember me"
+msgstr ""
+
+# @ flexishop
+#: ../wpsc-user-log.php:161
+msgid "Login &raquo;"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/admin.php:7
+#: ../core/admin/admin.php:154
+msgid "Theme Settings"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/admin.php:8
+#: ../core/admin/admin.php:192
+msgid "Import/Export"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/admin.php:13
+#: ../core/admin/childthemefiles.php:34
+msgid "Child Theme Files"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/admin.php:18
+#: ../core/admin/admin.php:300
+msgid "Documentation"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/admin.php:62
+msgid "Theme Settings Reset"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/admin.php:65
+msgid "Theme Settings Saved"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/admin.php:92
+msgid "Close All"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/admin.php:93
+msgid "Open All"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/admin.php:106
+msgid "Upload"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/admin.php:110
+#, php-format
+msgid "Previously Uploaded (%s)"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/admin.php:155
+#: ../core/admin/admin.php:171
+msgid "Save Settings"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/admin.php:156
+#: ../core/admin/admin.php:172
+msgid "Reset Settings"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/admin.php:156
+msgid "Are you sure you want to reset?"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/admin.php:198
+msgid "Import Theme Settings"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/admin.php:204
+#, php-format
+msgid "Upload File: (Maximum Size: %s)"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/admin.php:206
+msgid "Upload and import"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/admin.php:218
+msgid "Export Theme Settings"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/admin.php:229
+msgid "Download Theme Settings File"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/admin.php:246
+msgid "Settings successfully imported!"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/admin.php:249
+msgid "There was a problem importing your settings. Please Try again."
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/admin.php:307
+msgid "PDF Documentation"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/admin.php:309
+msgid "Download detailed PDF documentation file"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/admin.php:319
+msgid "Readme"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/admin.php:330
+msgid "License"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/admin.php:341
+msgid "Changelog"
+msgstr ""
+
+# @ wpsc
+#: ../core/admin/admin.php:357
+msgid "Additional Settings"
+msgstr ""
+
+# @ wpsc
+#: ../core/admin/admin.php:361
+msgid "Gallery Thumbnail Image Size"
+msgstr ""
+
+# @ wpsc
+#: ../core/admin/admin.php:364
+msgid "Width"
+msgstr ""
+
+# @ wpsc
+#: ../core/admin/admin.php:365
+msgid "Height"
+msgstr ""
+
+#: ../core/admin/admin.php:403
+#, php-format
+msgid "Please install %s plugin!"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/admin.php:412
+msgid "<b>There is no \"Products Page\" page with [productspage] shortcode</b>. We need this page to display your products"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/admin.php:423
+#: ../core/admin/admin.php:443
+#: ../core/admin/admin.php:462
+#: ../core/admin/admin.php:481
+#, php-format
+msgid "Please change the post visibility of <b>%s</b> page from <b>private</b> to <b>public</b>"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/admin.php:431
+msgid "<b>There is no \"Checkout\" page with [shoppingcart] shortcode</b>. We need this page to display checkout page"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/admin.php:451
+msgid "<b>There is no \"Transaction Results\" page with [transactionresults] shortcode</b>. We need this page to display transaction result after checkout complete"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/admin.php:470
+msgid "<b>There is no \"Your Account\" page with [userlog] shortcode</b>. We need this page to display your buyer purchase history, billing/contact details, and downloads page when they logged-in to your website."
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/childthemefiles.php:8
+msgid "Error: the file could not be copied. Please make sure that your child theme directory is writable."
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/childthemefiles.php:11
+msgid "The file has been copied to your child theme directory."
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/childthemefiles.php:17
+msgid "Error: the file could not be deleted. Please make sure that your child theme directory is writable."
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/childthemefiles.php:20
+msgid "The file has been deleted from your child theme directory."
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/childthemefiles.php:25
+msgid "Your child theme directory is not writable. Please change your child theme folder permission!!!"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/childthemefiles.php:39
+msgid "Files Management"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/childthemefiles.php:41
+msgid "IMPORTANT!!!"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/childthemefiles.php:44
+msgid "You can edit a file from your Theme Editor page when this file exists in your child theme directory!"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/childthemefiles.php:47
+msgid "After copy or delete a file, please go to Settings - Store - Presentations and click \"Flush Theme Cache\" button!"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/childthemefiles.php:56
+msgid "File exists in your child theme directory."
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/childthemefiles.php:61
+msgid "Delete this file from your child theme directory"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/childthemefiles.php:67
+msgid "File doesn't exist in your child theme directory."
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/childthemefiles.php:72
+msgid "Copy this file to your child theme directory"
+msgstr ""
+
+# @ default
+#: ../core/admin/functions.php:27
+msgid "Prima Framework"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/functions.php:59
+msgid "Upload Image"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/metabox.php:4
+msgid "Custom Settings"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/metabox.php:11
+msgid "Hide product images in single product page."
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/metabox.php:12
+msgid "<b>NOTE:</b> It is useful when you replace product images with custom content. Ex: video"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/metabox.php:14
+msgid "Enter custom content you would like output to the top of product images in single product page:"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/metabox.php:16
+#: ../core/admin/metabox.php:19
+msgid "<b>NOTE:</b>  You can use any shortcode / HTML code."
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/metabox.php:17
+msgid "Enter custom content you would like output to the bottom of product images in single product page:"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/metabox.php:53
+msgid "Page Template Settings"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/metabox.php:58
+msgid "Products Slider Page Template Options"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/metabox.php:60
+msgid "Products IDs (separared by coma):"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/metabox.php:64
+msgid "Video Page Template Options"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/metabox.php:66
+msgid "Video Embed Code / Video Shortcode:"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/sidebar-settings.php:14
+msgid "Sidebar Settings"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/sidebar-settings.php:41
+msgid "Nice try, partner. But that sidebar doesn't exist. Click back and try again."
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/sidebar-settings.php:46
+msgid "Edit Sidebar"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/sidebar-settings.php:51
+#: ../core/admin/sidebar-settings.php:79
+#: ../core/admin/sidebar-settings.php:86
+#: ../core/admin/sidebar-settings.php:104
+msgid "Name"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/sidebar-settings.php:53
+#: ../core/admin/sidebar-settings.php:106
+msgid "A recognizable name for your new sidebar widget area"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/sidebar-settings.php:56
+#: ../core/admin/sidebar-settings.php:80
+#: ../core/admin/sidebar-settings.php:87
+#: ../core/admin/sidebar-settings.php:109
+msgid "ID"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/sidebar-settings.php:60
+msgid "The unique ID is used to register the sidebar widget area (cannot be changed)"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/sidebar-settings.php:63
+#: ../core/admin/sidebar-settings.php:81
+#: ../core/admin/sidebar-settings.php:88
+#: ../core/admin/sidebar-settings.php:114
+#: ../core/admin/theme-settings.php:490
+msgid "Description"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/sidebar-settings.php:71
+#, php-format
+msgid "%1$s Sidebar Settings"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/sidebar-settings.php:75
+msgid "Current Sidebars"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/sidebar-settings.php:100
+#: ../core/admin/sidebar-settings.php:117
+msgid "Add New Sidebar"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/sidebar-settings.php:111
+msgid "The unique ID is used to register the sidebar widget area"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/sidebar-settings.php:147
+msgid "Delete"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/sidebar-settings.php:233
+msgid "Oops! Please choose a valid Name and ID for this sidebar"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/sidebar-settings.php:236
+msgid "Oops! That sidebar ID already exists"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/sidebar-settings.php:239
+msgid "Oops! You are trying to edit a sidebar that does not exist, or is not editable"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/sidebar-settings.php:242
+msgid "Oops! You are trying to delete a sidebar that does not exist, or cannot be deleted"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/sidebar-settings.php:245
+msgid "Oops! Something went wrong. Try again."
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/sidebar-settings.php:255
+msgid "New sidebar successfully created!"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/sidebar-settings.php:259
+msgid "Sidebar successfully edited!"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/sidebar-settings.php:263
+msgid "Sidebar successfully deleted."
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/sidebar-settings.php:270
+#: ../core/admin/sidebar-settings.php:271
+msgid "Select Sidebar"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/sidebar-settings.php:278
+msgid "Main Sidebar"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/sidebar-settings.php:280
+#: ../core/admin/theme-settings.php:717
+#: ../core/admin/theme-settings.php:778
+msgid "Default"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:6
+msgid "This can be found in the theme options page under appearance, this is also a widget area"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:7
+msgid "Copyright 2011 FlexiShop"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:8
+msgid "This is a short paragraph which should be used to give an overview of your products. It can be found under in the theme options page"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:70
+msgid "General Settings"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:71
+msgid "Top Bar"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:72
+msgid "Leader Product Search"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:73
+msgid "Blog / Archives Page"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:74
+msgid "Frontpage Template"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:75
+#: ../core/admin/theme-settings.php:125
+msgid "Products Page"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:76
+msgid "Single Product Page"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:77
+msgid "Footer"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:79
+msgid "Branding"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:80
+msgid "Font Family"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:81
+msgid "Main Design Settings"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:82
+msgid "Optional Design Settings"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:83
+msgid "Custom CSS"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:87
+msgid "Overall Theme Layout:"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:89
+msgid "Simple"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:90
+msgid "Full"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:91
+msgid "Boxed"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:94
+msgid "About Us:"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:97
+msgid "Copyright Text:"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:104
+#: ../core/admin/theme-settings.php:239
+#: ../core/admin/theme-settings.php:290
+#: ../core/admin/theme-settings.php:331
+#: ../core/admin/theme-settings.php:382
+#: ../core/admin/theme-settings.php:418
+#: ../core/admin/theme-settings.php:530
+#: ../core/admin/theme-settings.php:888
+#: ../core/admin/theme-settings.php:906
+#: ../core/admin/theme-settings.php:924
+#: ../core/admin/theme-settings.php:942
+#: ../core/admin/theme-settings.php:958
+#: ../core/admin/theme-settings.php:980
+#, php-format
+msgid "The options is available when %s plugin is active."
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:109
+msgid "Show Product Search Form:"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:113
+msgid "Blog/Archives Page"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:117
+msgid "Single Post Page"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:121
+msgid "Page"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:129
+msgid "Checkout Page"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:133
+msgid "404 Not Found Page"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:137
+msgid "Note: This is not Product Search from Gold Cart Plugin"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:147
+msgid "Hide Featured Image at Blog Page"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:150
+msgid "Post Content Display at Blog Page:"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:152
+msgid "Post Excerpt (Summary)"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:153
+msgid "Post Content (Full)"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:158
+msgid "Hide Featured Image at Single Post Page"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:164
+msgid "Slider Height:"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:166
+#: ../core/admin/theme-settings.php:206
+msgid "px"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:167
+msgid "You may need to reupload your slider image if you use big height value"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:169
+msgid "Slider Transition Effect:"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:171
+msgid "Fade"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:172
+msgid "Horizontal Slide"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:175
+msgid "Slider Speed:"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:177
+#: ../core/admin/theme-settings.php:182
+msgid "(in miliseconds)"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:180
+msgid "Slider Pause:"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:186
+msgid "Slider Auto Play"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:191
+msgid "Show Post Title in News(Post) Slider"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:195
+msgid "Show Post Excerpt in News(Post) Slider"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:204
+msgid "Custom Image Width in Product Slider:"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:210
+msgid "Show Price in Product Slider"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:214
+msgid "Show Product Description in Product Slider"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:217
+msgid "Limit Product Description in Product Slider:"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:219
+#: ../core/admin/theme-settings.php:228
+#: ../core/admin/theme-settings.php:498
+#: ../core/admin/theme-settings.php:503
+msgid "characters"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:223
+msgid "Show Product Additional Description in Product Slider"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:226
+msgid "Limit Product Additional Description in Product Slider:"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:232
+msgid "Brief Company/Product Overview:"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:236
+msgid "Product Categories Section"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:245
+msgid "Show Product Categories"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:248
+msgid "Number of categories:"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:252
+#: ../core/admin/theme-settings.php:303
+#: ../core/admin/theme-settings.php:344
+#: ../core/admin/theme-settings.php:603
+#: ../core/admin/theme-settings.php:621
+msgid "Image Width:"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:256
+#: ../core/admin/theme-settings.php:307
+#: ../core/admin/theme-settings.php:348
+#: ../core/admin/theme-settings.php:607
+#: ../core/admin/theme-settings.php:625
+msgid "Image Height:"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:261
+msgid "Show Product Categories Name"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:265
+#: ../core/admin/theme-settings.php:320
+#: ../core/admin/theme-settings.php:361
+msgid "Slideable?"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:269
+#: ../core/admin/theme-settings.php:324
+#: ../core/admin/theme-settings.php:365
+msgid "Auto Play Slider?"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:272
+msgid "Show Product Category:"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:274
+msgid "-- All --"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:275
+msgid "-- Top Level Categories --"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:281
+msgid "Child of"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:287
+msgid "Best Sellers Section"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:296
+msgid "Show Best Sellers"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:299
+#: ../core/admin/theme-settings.php:340
+#: ../core/admin/theme-settings.php:599
+#: ../core/admin/theme-settings.php:617
+msgid "Number of products:"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:312
+#: ../core/admin/theme-settings.php:353
+msgid "Show Product Name"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:316
+#: ../core/admin/theme-settings.php:357
+msgid "Show Sale Icon"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:328
+msgid "Latest Products Section"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:337
+msgid "Show Latest Products"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:369
+msgid "Testimonials Section"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:372
+msgid "Show Testimonials"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:375
+msgid "Number of testimonials:"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:388
+msgid "User Navigation (Register/Signin Link)"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:393
+msgid "Top Product Categories"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:395
+msgid "Subcategory depth level:"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:397
+msgid "No"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:401
+msgid "All"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:403
+msgid "Mode:"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:405
+msgid "Vertical"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:406
+msgid "Horizontal"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:411
+msgid "Top Shopping Cart"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:424
+msgid "Products Page Sidebar"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:428
+msgid "Disable Product Categories at Product Sidebar"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:432
+msgid "These options below are used when you choose <strong>Default View</strong> for Product Display!"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:436
+msgid "Products Per Row:"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:440
+msgid "Not Cropped Thumbnails"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:443
+msgid "Go to Settings - Store - Presentations to change <strong>Default Product Thumbnail Size</strong>"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:445
+msgid "Product Image link to:"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:447
+msgid "Product Link"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:448
+msgid "Image Popup"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:451
+msgid "Product Image Hover Effect"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:453
+#: ../core/admin/theme-settings.php:492
+msgid "None"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:454
+msgid "Read More Button"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:455
+msgid "Buy Now Button"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:458
+#: ../core/admin/theme-settings.php:549
+msgid "Product Variation Price Type"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:460
+#: ../core/admin/theme-settings.php:551
+msgid "Minimum Price"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:461
+#: ../core/admin/theme-settings.php:552
+msgid "Maximum Price"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:465
+#: ../core/admin/theme-settings.php:556
+msgid "Product Variation Text:"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:469
+#: ../core/admin/theme-settings.php:560
+msgid "For example: from, start from, up to, etc"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:473
+#: ../core/admin/theme-settings.php:564
+msgid "Hide Price Decimal"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:477
+#: ../core/admin/theme-settings.php:568
+msgid "Hide Product Price"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:481
+msgid "Hide Sale Icons"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:485
+msgid "Hide Product Title"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:487
+msgid "Product Description"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:489
+msgid "Description + Additional Description"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:491
+msgid "Additional Description"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:496
+msgid "Limit Product Description:"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:501
+msgid "Limit Product Additional Description:"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:507
+msgid "Show Product Variations"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:511
+msgid "Show Product Quantity Field"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:515
+msgid "Show Buy Now Button After Description"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:519
+msgid "Show Paypal Buy Now Button After Description"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:523
+msgid "Show Product Stock Availability"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:536
+msgid "Show Single Product Sidebar"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:540
+msgid "Disable Product Categories at Single Product Sidebar"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:544
+msgid "Not Cropped Images"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:547
+msgid "Go to Settings - Store - Presentations to change <strong>Single Product Image Size</strong>"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:572
+msgid "Hide Sale Icon"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:576
+msgid "Show Product SKU"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:580
+msgid "Show Product Category Lists"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:584
+msgid "Show Product Tag Lists"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:586
+msgid "Product Comment Settings"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:588
+msgid "Default WPEC Setting - IntenseDebate"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:589
+msgid "Wordpress Comments"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:593
+msgid "Cross Sales - \"Users who bought this also bought\" item"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:596
+msgid "Display Cross Sales"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:611
+#: ../core/frontend/wpsc.php:219
+msgid "Related Products"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:614
+msgid "Display Related Products"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:634
+msgid "Enable Footer Top Section"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:636
+msgid "Number of latest news:"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:648
+msgid "Twitter Username:"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:651
+msgid "Number of tweets:"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:665
+msgid "Enable Footer Bottom Section"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:670
+msgid "Enter scripts/code you would like output to <code>wp_head()</code>:"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:672
+msgid "<b>NOTE:</b> The <code>wp_head()</code> hook executes immediately before the closing <code>&lt;/head&gt;</code> tag in the document source"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:673
+msgid "Enter scripts/code you would like output to <code>wp_footer()</code>:"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:675
+msgid "<b>NOTE:</b> The <code>wp_footer()</code> hook executes immediately before the closing <code>&lt;/body&gt;</code> tag in the document source"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:679
+msgid "Logo URL"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:680
+msgid "png, jpg or gif file"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:681
+msgid "Upload Your Logo: png, jpg or gif file"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:683
+msgid "Login Logo URL"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:684
+msgid "310x70px png, jpg or gif file"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:685
+msgid "Upload Your Login Logo: 310x70px png, jpg or gif file"
+msgstr ""
+
+#: ../core/admin/theme-settings.php:691
+#: ../core/admin/theme-settings.php:696
+msgid "Admin Bar Logo URL"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:692
+msgid "16x16px png, jpg or gif file"
+msgstr ""
+
+#: ../core/admin/theme-settings.php:693
+msgid "Upload Your Admin Bar Logo: 16x16px png, jpg or gif file"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:697
+msgid "32x23px png, jpg or gif file"
+msgstr ""
+
+#: ../core/admin/theme-settings.php:698
+msgid "Upload Your Admin Bar Logo: 32x32px png, jpg or gif file"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:701
+msgid "Favicon URL"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:702
+msgid "16x16px ico, png, jpg, or gif file"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:703
+msgid "Upload Your Favicon: 16x16px ico, png, jpg, or gif file"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:708
+msgid "Body Section"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:709
+msgid "Body Heading Color:"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:711
+msgid "Body Paragraph Color:"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:713
+msgid "Default Link Color:"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:715
+msgid "Background Settings:"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:719
+#: ../core/admin/theme-settings.php:780
+msgid "Use Image"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:721
+#: ../core/admin/theme-settings.php:782
+msgid "Use Color"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:723
+msgid "Background Color:"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:725
+msgid "Background Image URL"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:726
+msgid "Upload Your Background Image"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:728
+msgid "Background Repeat:"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:735
+#: ../core/admin/theme-settings.php:796
+msgid "Sets if/how a background image will be repeated"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:736
+msgid "Background Position:"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:748
+#: ../core/admin/theme-settings.php:809
+msgid "Sets the starting position of a background image"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:749
+msgid "Background Attachment:"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:754
+msgid "Sets whether a background image is fixed or scrolls with the rest of the page"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:759
+msgid "Boxed Background Color:"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:764
+msgid "Header Section"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:767
+msgid "Header Background Color:"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:770
+msgid "Header Link Color:"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:775
+msgid "Slider Background Section"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:776
+msgid "Slider Background Settings:"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:784
+msgid "Slider Background Color:"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:786
+msgid "Slider Background Image URL"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:787
+msgid "Upload Your Slider Background Image"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:789
+msgid "Slider Background Repeat:"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:797
+msgid "Slider Background Position:"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:813
+msgid "Footer Section"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:816
+msgid "Footer Background Color:"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:821
+msgid "Footer Top - Widget Title Background Color:"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:824
+msgid "Footer Top - Widget Title Color:"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:826
+msgid "Footer Top - Font Color:"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:828
+msgid "Footer Top - Link Color:"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:830
+msgid "Footer Bottom - Widget Title Color:"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:832
+msgid "Footer Bottom - Font Color:"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:834
+msgid "Footer Bottom - Link Color:"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:838
+msgid "Copyright Section"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:839
+msgid "Copyright Font Color:"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:843
+msgid "Copyright Background Color:"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:850
+msgid "Top Navigation Bar Section"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:851
+msgid "Top Background Color:"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:853
+msgid "Menu Background Color:"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:855
+#: ../core/admin/theme-settings.php:870
+msgid "Menu Text Color:"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:857
+msgid "Top Content Background Color:"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:859
+msgid "Top Content Title Color:"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:861
+msgid "Top Content Text Color:"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:863
+msgid "Top Content Border Color:"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:865
+msgid "Top Cart Count and Checkout Color:"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:869
+msgid "Navigation Menu Section"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:872
+msgid "Menu Background Color (Hover):"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:874
+msgid "Menu Text Color (Hover):"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:876
+msgid "Sub Menu Background Color:"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:878
+msgid "Sub Menu Text Color:"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:880
+msgid "Sub Menu Border Color:"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:885
+msgid "Frontpage Categories Section"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:892
+#: ../core/admin/theme-settings.php:910
+#: ../core/admin/theme-settings.php:928
+msgid "Title Background Color:"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:894
+#: ../core/admin/theme-settings.php:912
+#: ../core/admin/theme-settings.php:930
+msgid "Title Color:"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:896
+msgid "Category Name Background Color:"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:898
+msgid "Category Name Color:"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:903
+msgid "Frontpage Best Sellers Section"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:914
+#: ../core/admin/theme-settings.php:932
+msgid "Product Title Background Color:"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:916
+#: ../core/admin/theme-settings.php:934
+msgid "Product Title Color:"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:921
+msgid "Frontpage Latest Products Section"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:939
+msgid "Products Page Section"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:946
+msgid "Price Background Color:"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:948
+msgid "Price Color:"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:950
+msgid "Sale Price Color:"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:955
+msgid "Checkout Page Section"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:962
+msgid "Checkout Title Background Color:"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:964
+msgid "Checkout Title Text Color:"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:966
+msgid "Checkout Text Color:"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:968
+msgid "Checkout Table Row Background Color:"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:970
+msgid "Checkout Table Alternate Row Background Color:"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:972
+msgid "Checkout Table Border Color:"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:977
+msgid "Fancy Notification Section"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:984
+msgid "Notification Background Color:"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:986
+msgid "Notification  Text Color:"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:988
+msgid "Checkout Link Color:"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:990
+msgid "Continue Link Color:"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:998
+msgid "Default Font"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:1040
+msgid "Heading Font:"
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:1044
+msgid "Body Font:"
+msgstr ""
+
+#: ../core/admin/theme-settings.php:1048
+msgid "Additional Font:"
+msgstr ""
+
+#: ../core/admin/theme-settings.php:1050
+msgid "Note: Additional font is applied to blockquote, testimonials, product category description, post excerpt in Latest News widget and Frontpage Slider, Twitter widget."
+msgstr ""
+
+# @ flexishop
+#: ../core/admin/theme-settings.php:1055
+msgid "Quickly add some CSS to your theme:"
+msgstr ""
+
+# @ flexishop
+#: ../core/frontend/general.php:47
+msgid "Search..."
+msgstr ""
+
+# @ flexishop
+#: ../core/frontend/general.php:48
+#: ../core/frontend/general.php:56
+#: ../core/frontend/wpsc.php:81
+msgid "Search"
+msgstr ""
+
+# @ flexishop
+#: ../core/frontend/general.php:55
+msgid "Search this website&hellip;"
+msgstr ""
+
+# @ flexishop
+#: ../core/frontend/general.php:77
+msgid "en_US"
+msgstr ""
+
+# @ flexishop
+#: ../core/frontend/general.php:78
+msgid "Enter your email address..."
+msgstr ""
+
+# @ flexishop
+#: ../core/frontend/general.php:79
+msgid "Subscribe"
+msgstr ""
+
+# @ flexishop
+#: ../core/frontend/general.php:102
+msgid "No Feedburner ID was available"
+msgstr ""
+
+# @ flexishop
+#: ../core/frontend/general.php:148
+msgid "SUCCESS: Twitter feed used to update cache content."
+msgstr ""
+
+# @ flexishop
+#: ../core/frontend/general.php:156
+msgid "ERROR: Twitter feed was blank! Using cache content."
+msgstr ""
+
+# @ flexishop
+#: ../core/frontend/general.php:160
+msgid "SUCCESS: Cache file was recent enough to read from."
+msgstr ""
+
+# @ flexishop
+#: ../core/frontend/general.php:174
+msgid "SUCCESS: Twitter feed used to update cache content"
+msgstr ""
+
+# @ flexishop
+#: ../core/frontend/general.php:182
+msgid "The Twitter feed was blank while processing your request. Please try again."
+msgstr ""
+
+# @ flexishop
+#: ../core/frontend/general.php:205
+#, php-format
+msgid "about %s ago"
+msgstr ""
+
+# @ flexishop
+#: ../core/frontend/general.php:212
+msgid "No twitter updates available."
+msgstr ""
+
+# @ flexishop
+#: ../core/frontend/posts.php:4
+msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+# @ flexishop
+#: ../core/frontend/posts.php:36
+#, php-format
+msgid "%s"
+msgstr ""
+
+# @ flexishop
+#: ../core/frontend/posts.php:39
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+# @ flexishop
+#: ../core/frontend/posts.php:46
+#, php-format
+msgid "%1$s at %2$s"
+msgstr ""
+
+# @ flexishop
+#: ../core/frontend/posts.php:46
+#: ../core/frontend/posts.php:64
+msgid "(Edit)"
+msgstr ""
+
+# @ flexishop
+#: ../core/frontend/posts.php:64
+msgid "Pingback:"
+msgstr ""
+
+# @ flexishop
+#: ../core/frontend/posts.php:74
+#, php-format
+msgid "<span class=\"%1$s\">Posted on</span> %2$s <span class=\"meta-sep\">by</span> %3$s"
+msgstr ""
+
+# @ flexishop
+#: ../core/frontend/posts.php:96
+#, php-format
+msgid "This entry was posted in %1$s and tagged %2$s. Bookmark the <a href=\"%3$s\" title=\"Permalink to %4$s\" rel=\"bookmark\">permalink</a>."
+msgstr ""
+
+# @ flexishop
+#: ../core/frontend/posts.php:98
+#, php-format
+msgid "This entry was posted in %1$s. Bookmark the <a href=\"%3$s\" title=\"Permalink to %4$s\" rel=\"bookmark\">permalink</a>."
+msgstr ""
+
+# @ flexishop
+#: ../core/frontend/posts.php:100
+#, php-format
+msgid "Bookmark the <a href=\"%3$s\" title=\"Permalink to %4$s\" rel=\"bookmark\">permalink</a>."
+msgstr ""
+
+# @ flexishop
+#: ../core/frontend/posts.php:167
+msgid " &hellip;"
+msgstr ""
+
+# @ flexishop
+#: ../core/frontend/scripts.php:30
+msgid "Search Products..."
+msgstr ""
+
+# @ flexishop
+#: ../core/frontend/sliders.php:130
+msgid "Savings:"
+msgstr ""
+
+# @ flexishop
+#: ../core/frontend/sliders.php:131
+msgid "Start Date:"
+msgstr ""
+
+# @ flexishop
+#: ../core/frontend/sliders.php:132
+msgid "End Date:"
+msgstr ""
+
+# @ flexishop
+#: ../core/frontend/sliders.php:183
+msgid "No Image"
+msgstr ""
+
+# @ flexishop
+#: ../core/frontend/title.php:53
+msgid "Page "
+msgstr ""
+
+# @ flexishop
+#: ../core/frontend/wpsc-ajax.php:27
+msgid "Sorry, but this variation is out of stock."
+msgstr ""
+
+# @ flexishop
+#: ../core/frontend/wpsc-ajax.php:28
+msgid "Variation not in stock"
+msgstr ""
+
+# @ flexishop
+#: ../core/frontend/wpsc.php:80
+msgid "Search Products &hellip;"
+msgstr ""
+
+# @ flexishop
+#: ../core/frontend/wpsc.php:98
+msgid "People who bought this item also bought"
+msgstr ""
+
+# @ flexishop
+#: ../core/functions/menu.php:3
+msgid "Primary Navigation"
+msgstr ""
+
+# @ flexishop
+#: ../core/functions/type-promotion.php:7
+msgid "Promotions"
+msgstr ""
+
+# @ flexishop
+#: ../core/functions/type-promotion.php:8
+msgid "Shop Promotion"
+msgstr ""
+
+# @ flexishop
+#: ../core/functions/type-promotion.php:9
+#: ../core/functions/type-slider.php:9
+#: ../core/functions/type-testimonial.php:9
+msgid "Add New"
+msgstr ""
+
+# @ flexishop
+#: ../core/functions/type-promotion.php:10
+msgid "Add New Shop Promotion"
+msgstr ""
+
+# @ flexishop
+#: ../core/functions/type-promotion.php:11
+msgid "Edit Shop Promotion"
+msgstr ""
+
+# @ flexishop
+#: ../core/functions/type-promotion.php:12
+msgid "New Shop Promotion"
+msgstr ""
+
+# @ flexishop
+#: ../core/functions/type-promotion.php:13
+msgid "View Shop Promotion"
+msgstr ""
+
+# @ flexishop
+#: ../core/functions/type-promotion.php:14
+msgid "Search Promotions"
+msgstr ""
+
+# @ flexishop
+#: ../core/functions/type-promotion.php:15
+#: ../core/functions/type-slider.php:15
+#: ../core/functions/type-testimonial.php:15
+msgid "Nothing found"
+msgstr ""
+
+# @ flexishop
+#: ../core/functions/type-promotion.php:16
+#: ../core/functions/type-slider.php:16
+#: ../core/functions/type-testimonial.php:16
+msgid "Nothing found in Trash"
+msgstr ""
+
+# @ flexishop
+#: ../core/functions/type-promotion.php:31
+msgid "Promotion Image"
+msgstr ""
+
+# @ flexishop
+#: ../core/functions/type-promotion.php:35
+msgid "Promotion Details"
+msgstr ""
+
+# @ flexishop
+#: ../core/functions/type-promotion.php:42
+#: ../core/functions/type-promotion.php:209
+msgid "Link To Product"
+msgstr ""
+
+# @ flexishop
+#: ../core/functions/type-promotion.php:46
+msgid "Link To Category"
+msgstr ""
+
+# @ flexishop
+#: ../core/functions/type-promotion.php:51
+#: ../core/functions/type-promotion.php:217
+msgid "External Link"
+msgstr ""
+
+# @ flexishop
+#: ../core/functions/type-promotion.php:56
+#: ../core/functions/type-slider.php:60
+msgid "Enable Lightbox"
+msgstr ""
+
+# @ flexishop
+#: ../core/functions/type-promotion.php:60
+#: ../core/functions/type-slider.php:64
+msgid "Disable Lightbox"
+msgstr ""
+
+# @ flexishop
+#: ../core/functions/type-promotion.php:66
+msgid "Show Promotion Details"
+msgstr ""
+
+# @ flexishop
+#: ../core/functions/type-promotion.php:70
+msgid "Hide Promotion Details"
+msgstr ""
+
+# @ flexishop
+#: ../core/functions/type-promotion.php:91
+msgid "Links To External:"
+msgstr ""
+
+# @ flexishop
+#: ../core/functions/type-promotion.php:95
+#: ../core/functions/type-slider.php:91
+msgid "Lightbox works for images, Vimeo, and Youtube links"
+msgstr ""
+
+# @ flexishop
+#: ../core/functions/type-promotion.php:116
+#: ../core/functions/type-promotion.php:121
+msgid "Links To Product:"
+msgstr ""
+
+# @ flexishop
+#: ../core/functions/type-promotion.php:116
+msgid "(enter product link here)"
+msgstr ""
+
+# @ flexishop
+#: ../core/functions/type-promotion.php:135
+#: ../core/functions/type-slider.php:131
+msgid "No Product Available"
+msgstr ""
+
+# @ flexishop
+#: ../core/functions/type-promotion.php:142
+msgid "Links To Category:"
+msgstr ""
+
+# @ flexishop
+#: ../core/functions/type-promotion.php:156
+msgid "No Product Category Available"
+msgstr ""
+
+# @ flexishop
+#: ../core/functions/type-promotion.php:174
+msgid "You can show/hide promotion details (savings, start date, end date) in the slider"
+msgstr ""
+
+# @ flexishop
+#: ../core/functions/type-promotion.php:195
+msgid "Promotion Title"
+msgstr ""
+
+# @ flexishop
+#: ../core/functions/type-promotion.php:196
+msgid "Image"
+msgstr ""
+
+# @ flexishop
+#: ../core/functions/type-promotion.php:197
+msgid "Links Type"
+msgstr ""
+
+# @ flexishop
+#: ../core/functions/type-promotion.php:198
+msgid "Saving"
+msgstr ""
+
+# @ flexishop
+#: ../core/functions/type-promotion.php:199
+msgid "Start Date"
+msgstr ""
+
+# @ flexishop
+#: ../core/functions/type-promotion.php:200
+msgid "End Date"
+msgstr ""
+
+# @ flexishop
+#: ../core/functions/type-promotion.php:213
+msgid "Link To Product Category"
+msgstr ""
+
+# @ flexishop
+#: ../core/functions/type-slider.php:7
+msgid "Sliders"
+msgstr ""
+
+# @ flexishop
+#: ../core/functions/type-slider.php:8
+msgid "Slider"
+msgstr ""
+
+# @ flexishop
+#: ../core/functions/type-slider.php:10
+msgid "Add New Slider"
+msgstr ""
+
+# @ flexishop
+#: ../core/functions/type-slider.php:11
+msgid "Edit Slider"
+msgstr ""
+
+# @ flexishop
+#: ../core/functions/type-slider.php:12
+msgid "New Slider"
+msgstr ""
+
+# @ flexishop
+#: ../core/functions/type-slider.php:13
+msgid "View Slider"
+msgstr ""
+
+# @ flexishop
+#: ../core/functions/type-slider.php:14
+msgid "Search Sliders"
+msgstr ""
+
+# @ flexishop
+#: ../core/functions/type-slider.php:30
+#: ../core/functions/type-slider.php:205
+msgid "Slider Type"
+msgstr ""
+
+# @ flexishop
+#: ../core/functions/type-slider.php:35
+msgid "Slider Image for \"Simple Slider\" type"
+msgstr ""
+
+# @ flexishop
+#: ../core/functions/type-slider.php:41
+#: ../core/functions/type-slider.php:216
+msgid "Simple Slider"
+msgstr ""
+
+# @ flexishop
+#: ../core/functions/type-slider.php:51
+#: ../core/functions/type-slider.php:224
+msgid "Post / Page"
+msgstr ""
+
+# @ flexishop
+#: ../core/functions/type-slider.php:55
+#: ../core/functions/type-slider.php:228
+msgid "Promotion"
+msgstr ""
+
+# @ flexishop
+#: ../core/functions/type-slider.php:87
+msgid "Slider Link:"
+msgstr ""
+
+# @ flexishop
+#: ../core/functions/type-slider.php:113
+#: ../core/functions/type-slider.php:118
+msgid "Product:"
+msgstr ""
+
+# @ flexishop
+#: ../core/functions/type-slider.php:113
+msgid "(enter product ID here)"
+msgstr ""
+
+# @ flexishop
+#: ../core/functions/type-slider.php:144
+msgid "Post/Page:"
+msgstr ""
+
+# @ flexishop
+#: ../core/functions/type-slider.php:144
+msgid "(enter post/page ID here)"
+msgstr ""
+
+# @ flexishop
+#: ../core/functions/type-slider.php:149
+msgid "Post:"
+msgstr ""
+
+# @ flexishop
+#: ../core/functions/type-slider.php:162
+msgid "No Post/Page Available"
+msgstr ""
+
+# @ flexishop
+#: ../core/functions/type-slider.php:174
+#: ../core/functions/type-slider.php:179
+msgid "Promotion:"
+msgstr ""
+
+# @ flexishop
+#: ../core/functions/type-slider.php:174
+msgid "(enter promotion ID here)"
+msgstr ""
+
+# @ flexishop
+#: ../core/functions/type-slider.php:192
+msgid "No Promotion Available"
+msgstr ""
+
+# @ flexishop
+#: ../core/functions/type-slider.php:204
+msgid "Slider Title"
+msgstr ""
+
+# @ flexishop
+#: ../core/functions/type-slider.php:206
+msgid "Slider Name"
+msgstr ""
+
+# @ flexishop
+#: ../core/functions/type-slider.php:207
+msgid "Slider ID"
+msgstr ""
+
+# @ flexishop
+#: ../core/functions/type-testimonial.php:7
+msgid "Testimonials"
+msgstr ""
+
+# @ flexishop
+#: ../core/functions/type-testimonial.php:8
+msgid "Testimonial"
+msgstr ""
+
+# @ flexishop
+#: ../core/functions/type-testimonial.php:10
+msgid "Add New Testimonial"
+msgstr ""
+
+# @ flexishop
+#: ../core/functions/type-testimonial.php:11
+msgid "Edit Testimonial"
+msgstr ""
+
+# @ flexishop
+#: ../core/functions/type-testimonial.php:12
+msgid "New Testimonial"
+msgstr ""
+
+# @ flexishop
+#: ../core/functions/type-testimonial.php:13
+msgid "View Testimonial"
+msgstr ""
+
+# @ flexishop
+#: ../core/functions/type-testimonial.php:14
+msgid "Search Testimonials"
+msgstr ""
+
+# @ flexishop
+#: ../core/functions/type-testimonial.php:30
+msgid "Testimonial Details"
+msgstr ""
+
+# @ flexishop
+#: ../core/functions/type-testimonial.php:36
+msgid "Testimonial Author:"
+msgstr ""
+
+# @ flexishop
+#: ../core/functions/type-testimonial.php:45
+msgid "Testimonial Title"
+msgstr ""
+
+# @ flexishop
+#: ../core/functions/type-testimonial.php:46
+msgid "Testimonial Author"
+msgstr ""
+
+# @ flexishop
+#: ../core/functions/widgets.php:7
+msgid "Primary Widget Area"
+msgstr ""
+
+# @ flexishop
+#: ../core/functions/widgets.php:9
+msgid "The primary widget area"
+msgstr ""
+
+# @ flexishop
+#: ../core/functions/widgets.php:17
+msgid "Products Sidebar"
+msgstr ""
+
+# @ flexishop
+#: ../core/functions/widgets.php:19
+msgid "The sidebar on the products page"
+msgstr ""
+
+# @ flexishop
+#: ../core/functions/widgets.php:27
+msgid "Single Product Sidebar"
+msgstr ""
+
+# @ flexishop
+#: ../core/functions/widgets.php:29
+msgid "The sidebar on the single product page"
+msgstr ""
+
+# @ flexishop
+#: ../core/functions/widgets.php:37
+msgid "Home Left"
+msgstr ""
+
+# @ flexishop
+#: ../core/functions/widgets.php:39
+msgid "The left home column"
+msgstr ""
+
+# @ flexishop
+#: ../core/functions/widgets.php:47
+msgid "Home Middle"
+msgstr ""
+
+# @ flexishop
+#: ../core/functions/widgets.php:49
+msgid "The center home column"
+msgstr ""
+
+# @ flexishop
+#: ../core/functions/widgets.php:57
+msgid "Home Right"
+msgstr ""
+
+# @ flexishop
+#: ../core/functions/widgets.php:59
+msgid "The right home column"
+msgstr ""
+
+# @ flexishop
+#: ../core/functions/widgets.php:67
+msgid "First Footer Top"
+msgstr ""
+
+# @ flexishop
+#: ../core/functions/widgets.php:69
+msgid "The first footer top widget area"
+msgstr ""
+
+# @ flexishop
+#: ../core/functions/widgets.php:77
+msgid "Second Footer Top"
+msgstr ""
+
+# @ flexishop
+#: ../core/functions/widgets.php:79
+msgid "The second footer top widget area"
+msgstr ""
+
+# @ flexishop
+#: ../core/functions/widgets.php:89
+msgid "The third footer top widget area"
+msgstr ""
+
+# @ flexishop
+#: ../core/functions/widgets.php:97
+msgid "First Footer Bottom"
+msgstr ""
+
+# @ flexishop
+#: ../core/functions/widgets.php:99
+msgid "The first footer bottom widget area"
+msgstr ""
+
+# @ flexishop
+#: ../core/functions/widgets.php:107
+msgid "Second Footer Bottom"
+msgstr ""
+
+# @ flexishop
+#: ../core/functions/widgets.php:109
+msgid "The second footer bottom widget area"
+msgstr ""
+
+# @ flexishop
+#: ../core/functions/widgets.php:117
+msgid "Third Footer Bottom"
+msgstr ""
+
+# @ flexishop
+#: ../core/functions/widgets.php:119
+msgid "The third footer bottom widget area"
+msgstr ""
+
+# @ flexishop
+#: ../core/functions/widgets.php:127
+msgid "Fourth Footer Bottom"
+msgstr ""
+
+# @ flexishop
+#: ../core/functions/widgets.php:129
+msgid "The fourth footer bottom widget area"
+msgstr ""
+
+# @ flexishop
+#: ../core/functions/widgets.php:137
+msgid "Fifth Footer Bottom"
+msgstr ""
+
+# @ flexishop
+#: ../core/functions/widgets.php:139
+msgid "The fifth footer bottom widget area"
+msgstr ""
+
+# @ flexishop
+#: ../core/shortcodes/general.php:18
+msgid "l, F j, Y"
+msgstr ""
+
+# @ flexishop
+#: ../core/shortcodes/post.php:82
+msgid "Leave a response"
+msgstr ""
+
+# @ flexishop
+#: ../core/shortcodes/post.php:82
+msgid "1 Response"
+msgstr ""
+
+# @ flexishop
+#: ../core/shortcodes/post.php:82
+#, php-format
+msgid "%1$s Responses"
+msgstr ""
+
+# @ flexishop
+#: ../core/shortcodes/post.php:88
+#: ../core/shortcodes/post.php:90
+#: ../core/shortcodes/post.php:92
+#, php-format
+msgid "Comment on %1$s"
+msgstr ""
+
+# @ flexishop
+#: ../core/shortcodes/post.php:99
+msgid "l, F jS, Y, g:i a"
+msgstr ""
+
+# @ flexishop
+#: ../core/shortcodes/post.php:108
+#, php-format
+msgid "Edit %1$s"
+msgstr ""
+
+# @ flexishop
+#: ../core/shortcodes/post.php:114
+msgid "Shortlink"
+msgstr ""
+
+# @ flexishop
+#: ../core/shortcodes/prima.php:70
+msgid "View"
+msgstr ""
+
+# @ flexishop
+#: ../core/shortcodes/theme.php:32
+msgid "Powered by WordPress, state-of-the-art semantic personal publishing platform"
+msgstr ""
+
+# @ flexishop
+#: ../core/shortcodes/theme.php:32
+msgid "WordPress"
+msgstr ""
+
+# @ flexishop
+#: ../core/shortcodes/theme.php:44
+msgid "Log out of this account"
+msgstr ""
+
+# @ flexishop
+#: ../core/shortcodes/theme.php:44
+msgid "Log out"
+msgstr ""
+
+# @ flexishop
+#: ../core/shortcodes/theme.php:46
+msgid "Log into this account"
+msgstr ""
+
+# @ flexishop
+#: ../core/shortcodes/theme.php:46
+msgid "Log in"
+msgstr ""
+
+# @ flexishop
+#: ../core/shortcodes/theme.php:51
+#, php-format
+msgid "This page loaded in %1$s seconds with %2$s database queries."
+msgstr ""
+
+# @ flexishop
+#: ../core/shortcodes/theme.php:97
+msgid "No categories"
+msgstr ""
+
+# @ flexishop
+#: ../core/shortcodes/generator/window.php:9
+msgid "You are not allowed to be here"
+msgstr ""
+
+# @ flexishop
+#: ../core/shortcodes/generator/window.php:14
+msgid "Shortcode Generator"
+msgstr ""
+
+# @ flexishop
+#: ../core/shortcodes/generator/window.php:161
+msgid "Shortcodes"
+msgstr ""
+
+# @ flexishop
+#: ../core/shortcodes/generator/window.php:174
+msgid "Select Shortcodes"
+msgstr ""
+
+# @ flexishop
+#: ../core/shortcodes/generator/window.php:177
+msgid "-- Please Choose --"
+msgstr ""
+
+# @ flexishop
+#: ../core/shortcodes/generator/window.php:178
+msgid "Product Categories"
+msgstr ""
+
+# @ flexishop
+#: ../core/shortcodes/generator/window.php:182
+msgid "Audio"
+msgstr ""
+
+# @ flexishop
+#: ../core/shortcodes/generator/window.php:183
+msgid "Video"
+msgstr ""
+
+# @ flexishop
+#: ../core/shortcodes/generator/window.php:184
+msgid "2 Columns (1:1)"
+msgstr ""
+
+# @ flexishop
+#: ../core/shortcodes/generator/window.php:185
+msgid "2 Columns (2:1)"
+msgstr ""
+
+# @ flexishop
+#: ../core/shortcodes/generator/window.php:186
+msgid "2 Columns (1:2)"
+msgstr ""
+
+# @ flexishop
+#: ../core/shortcodes/generator/window.php:187
+msgid "3 Columns (1:1:1)"
+msgstr ""
+
+# @ flexishop
+#: ../core/shortcodes/generator/window.php:188
+msgid "3 Columns (2:1:1)"
+msgstr ""
+
+# @ flexishop
+#: ../core/shortcodes/generator/window.php:189
+msgid "3 Columns (1:2:1)"
+msgstr ""
+
+# @ flexishop
+#: ../core/shortcodes/generator/window.php:190
+msgid "3 Columns (1:1:2)"
+msgstr ""
+
+# @ flexishop
+#: ../core/shortcodes/generator/window.php:191
+msgid "4 Columns"
+msgstr ""
+
+# @ flexishop
+#: ../core/shortcodes/generator/window.php:192
+msgid "5 Columns"
+msgstr ""
+
+# @ flexishop
+#: ../core/shortcodes/generator/window.php:193
+msgid "6 Columns"
+msgstr ""
+
+# @ flexishop
+#: ../core/shortcodes/generator/window.php:216
+msgid "Cancel"
+msgstr ""
+
+# @ flexishop
+#: ../core/shortcodes/generator/window.php:220
+msgid "Insert"
+msgstr ""
+
+# @ flexishop
+#: ../core/widgets/general.php:11
+msgid "Display most recent comments"
+msgstr ""
+
+# @ flexishop
+#: ../core/widgets/general.php:13
+msgid "Recent Comments"
+msgstr ""
+
+# @ flexishop
+#: ../core/widgets/general.php:54
+msgid "No comments were found"
+msgstr ""
+
+# @ flexishop
+#: ../core/widgets/general.php:73
+#: ../core/widgets/general.php:105
+#: ../core/widgets/general.php:137
+#: ../core/widgets/general.php:174
+#: ../core/widgets/general.php:226
+#: ../core/widgets/wpsc.php:36
+msgid "Title:"
+msgstr ""
+
+# @ flexishop
+#: ../core/widgets/general.php:74
+msgid "Number of comments to show:"
+msgstr ""
+
+# @ flexishop
+#: ../core/widgets/general.php:75
+msgid "Show avatar"
+msgstr ""
+
+# @ flexishop
+#: ../core/widgets/general.php:76
+msgid "Avatar size (px):"
+msgstr ""
+
+# @ flexishop
+#: ../core/widgets/general.php:77
+msgid "Comment excerpt length:"
+msgstr ""
+
+# @ flexishop
+#: ../core/widgets/general.php:82
+msgid "Display search form"
+msgstr ""
+
+# @ flexishop
+#: ../core/widgets/general.php:84
+msgid "Search Form"
+msgstr ""
+
+# @ flexishop
+#: ../core/widgets/general.php:106
+#: ../core/widgets/general.php:177
+#: ../core/widgets/wpsc.php:37
+msgid "Input text:"
+msgstr ""
+
+# @ flexishop
+#: ../core/widgets/general.php:107
+#: ../core/widgets/general.php:178
+msgid "Button text:"
+msgstr ""
+
+# @ flexishop
+#: ../core/widgets/general.php:112
+msgid "Display most recent Twitter feed"
+msgstr ""
+
+# @ flexishop
+#: ../core/widgets/general.php:114
+msgid "Twitter Feed"
+msgstr ""
+
+# @ flexishop
+#: ../core/widgets/general.php:138
+msgid "Twitter username:"
+msgstr ""
+
+# @ flexishop
+#: ../core/widgets/general.php:140
+msgid "5 minutes"
+msgstr ""
+
+# @ flexishop
+#: ../core/widgets/general.php:140
+msgid "10 minutes"
+msgstr ""
+
+# @ flexishop
+#: ../core/widgets/general.php:140
+msgid "15 minutes"
+msgstr ""
+
+# @ flexishop
+#: ../core/widgets/general.php:140
+msgid "30 minutes"
+msgstr ""
+
+# @ flexishop
+#: ../core/widgets/general.php:140
+#: ../core/widgets/general.php:141
+msgid "1 hour"
+msgstr ""
+
+# @ flexishop
+#: ../core/widgets/general.php:141
+msgid "4 hour"
+msgstr ""
+
+# @ flexishop
+#: ../core/widgets/general.php:141
+msgid "12 hour"
+msgstr ""
+
+# @ flexishop
+#: ../core/widgets/general.php:141
+msgid "24 hours"
+msgstr ""
+
+# @ flexishop
+#: ../core/widgets/general.php:142
+msgid "Load new Tweets every:"
+msgstr ""
+
+# @ flexishop
+#: ../core/widgets/general.php:147
+msgid "Display Feedburner subscription form"
+msgstr ""
+
+# @ flexishop
+#: ../core/widgets/general.php:149
+msgid "Feedburner Form"
+msgstr ""
+
+# @ flexishop
+#: ../core/widgets/general.php:175
+msgid "Introduction text:"
+msgstr ""
+
+# @ flexishop
+#: ../core/widgets/general.php:176
+msgid "Feedburner ID:"
+msgstr ""
+
+# @ flexishop
+#: ../core/widgets/general.php:183
+msgid "Display photos from Flickr"
+msgstr ""
+
+# @ flexishop
+#: ../core/widgets/general.php:185
+msgid "Flickr"
+msgstr ""
+
+# @ flexishop
+#: ../core/widgets/general.php:224
+msgid "Flickr Photos"
+msgstr ""
+
+# @ flexishop
+#: ../core/widgets/general.php:227
+msgid "User"
+msgstr ""
+
+# @ flexishop
+#: ../core/widgets/general.php:227
+msgid "Group"
+msgstr ""
+
+# @ flexishop
+#: ../core/widgets/general.php:227
+msgid "User Set"
+msgstr ""
+
+# @ flexishop
+#: ../core/widgets/general.php:227
+msgid "Tag"
+msgstr ""
+
+# @ flexishop
+#: ../core/widgets/general.php:228
+msgid "Source:"
+msgstr ""
+
+# @ flexishop
+#: ../core/widgets/general.php:229
+msgid "User ID:"
+msgstr ""
+
+# @ flexishop
+#: ../core/widgets/general.php:230
+msgid "* find your user ID using"
+msgstr ""
+
+# @ flexishop
+#: ../core/widgets/general.php:231
+msgid "Group ID:"
+msgstr ""
+
+# @ flexishop
+#: ../core/widgets/general.php:232
+msgid "Set ID:"
+msgstr ""
+
+# @ flexishop
+#: ../core/widgets/general.php:233
+msgid "Tag (separated by comma):"
+msgstr ""
+
+# @ flexishop
+#: ../core/widgets/general.php:234
+msgid "Latest"
+msgstr ""
+
+# @ flexishop
+#: ../core/widgets/general.php:234
+msgid "Random"
+msgstr ""
+
+# @ flexishop
+#: ../core/widgets/general.php:235
+msgid "Display:"
+msgstr ""
+
+# @ flexishop
+#: ../core/widgets/general.php:236
+msgid "Number of photos (from 1 to 10):"
+msgstr ""
+
+# @ flexishop
+#: ../core/widgets/wpsc.php:8
+msgid "Display product search form"
+msgstr ""
+
+# @ flexishop
+#: ../core/widgets/wpsc.php:10
+msgid "Product Search"
+msgstr ""
+
+# @ flexishop
+#: ../core/widgets/wpsc.php:34
+msgid "Search products&hellip;"
+msgstr ""
+
