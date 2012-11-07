@@ -1,0 +1,217 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Banner\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-07-26 19:44+0100\n"
+"PO-Revision-Date: 2011-07-26 19:44+0100\n"
+"Last-Translator: Alfredo Cubitos alfredocubitos@yahoo.com.mx\n"
+"Language-Team: \n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-Language: German\n"
+"X-Poedit-Country: Germany\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-SearchPath-0: .\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Language: de_DE\n"
+"X-Source-Language: en_US\n"
+
+#: banner_admin.php:106
+msgid "<h3>Update Banner</h3>"
+msgstr "<h3>Banner ändern</h3>"
+
+#: banner_admin.php:108
+msgid "<h3>Create New Banner</h3>"
+msgstr "<h3>Neuer Werbebanner</h3>"
+
+#: banner_admin.php:112
+msgid "Client Data"
+msgstr "Kundendaten"
+
+#: banner_admin.php:116
+msgid "Existing&nbsp;client"
+msgstr "Kunde"
+
+#: banner_admin.php:119
+msgid "(clear)"
+msgstr "(leeren)"
+
+#: banner_admin.php:134 banner_admin.php:205
+msgid "<option>No Data</option>"
+msgstr "<option>keine Daten</option>"
+
+#: banner_admin.php:139
+msgid "Client&nbsp;name"
+msgstr "Name"
+
+#: banner_admin.php:146
+msgid "Banner URL"
+msgstr "Banner URL"
+
+#: banner_admin.php:154
+msgid "Click URL"
+msgstr "Klick URL"
+
+#: banner_admin.php:184
+msgid "Ad Banner Data"
+msgstr "Daten des Werbebanner"
+
+#: banner_admin.php:187
+msgid "Banner Size"
+msgstr "Bannergröße"
+
+#: banner_admin.php:189
+msgid "necessary when using Flash"
+msgstr "erforderlich bei Flashbanner"
+
+#: banner_admin.php:211
+msgid "Impressions Purchased"
+msgstr "Wie oft anzeigen?"
+
+#: banner_admin.php:213
+msgid "0 = unlimited"
+msgstr "0 = kein Limit"
+
+#: banner_admin.php:218
+msgid "Start Date"
+msgstr "von"
+
+#: banner_admin.php:233
+msgid "End Date"
+msgstr "bis"
+
+#: banner_admin.php:241
+msgid "blank = no limit"
+msgstr "leer = kein Limit"
+
+#: banner_admin.php:250
+msgid "Position"
+msgstr "Position"
+
+#: banner_admin.php:257
+msgid "in a widget"
+msgstr "als Widget"
+
+#: banner_admin.php:260
+msgid "in layout"
+msgstr "im Layout plazieren"
+
+#: banner_admin.php:266
+msgid "Place your ad on your blog"
+msgstr "Banner platzieren"
+
+#: banner_admin.php:267
+msgid "WP Div ID"
+msgstr "WP div ID"
+
+#: banner_admin.php:291
+msgid "Append"
+msgstr "anhängen"
+
+#: banner_admin.php:292
+msgid "Prepend"
+msgstr "davor"
+
+#: banner_admin.php:293
+msgid "After"
+msgstr "danach"
+
+#: banner_admin.php:297
+msgid "in <b>%</b>"
+msgstr "v <b>%</b>"
+
+#: banner_admin.php:301
+msgid "This option works only with wp standard templates!"
+msgstr "Diese Option funktioniert nur mit Wordpress Standard-Templates!"
+
+#: banner_admin.php:309
+msgid "Active"
+msgstr "Werbung Aktiv"
+
+#: banner_admin.php:312
+msgid "Yes"
+msgstr "Ja"
+
+#: banner_admin.php:313
+msgid "No"
+msgstr "Nein"
+
+#: banner_admin.php:324
+msgid "really delete this banner?"
+msgstr "banner wirklich löschen?"
+
+#: banner_admin.php:325
+msgid "Delete Banner"
+msgstr "banner löschen"
+
+#: banner_admin.php:330
+msgid "Update Banner"
+msgstr "banner ändern"
+
+#: banner_admin.php:361
+msgid "Create New"
+msgstr "Neuer banner"
+
+#: banner_admin.php:398
+msgid "Date of campaign start"
+msgstr "Anfangsdatum der Kampagne"
+
+#: banner_admin.php:405
+msgid "Date of campaign end. Leave field empty if its a never ending story"
+msgstr "Endedatum der Kampagne. Leer = kein Ende"
+
+#: banner_admin.php:451
+msgid "close Banner-Window"
+msgstr "Bannerfenster schließen"
+
+#: banner_admin.php:457
+msgid "open Banner-Window"
+msgstr "Bannerfenster öffnen"
+
+#: banner_admintab.php:30
+msgid "Banner Admin"
+msgstr "Banner-Verwaltung"
+
+#: banner_admintab.php:31
+msgid "Statistic"
+msgstr "Statistik"
+
+#: banner_admintab.php:35
+msgid "planned for future release"
+msgstr "zukünftig geplant"
+
+#: banner_admintab.php:36
+msgid "You can support the development with a donation"
+msgstr "Du kannst die Entwicklung mit einer Spende unterstützen"
+
+#: banner.php:45
+msgid "WP Banner Widget"
+msgstr "WP Banner Widget"
+
+#: banner.php:79
+msgid "Advertisement"
+msgstr "Werbung"
+
+#: banner.php:84
+msgid "Title:"
+msgstr "Titel:"
+
+#: banner.php:86
+msgid "Client:"
+msgstr "Kunde:"
+
+#: banner.php:88
+msgid "No Ad"
+msgstr "keine Werbung"
+
+#: banner.php:89
+msgid "Random"
+msgstr "zufällig"
+
+#: banner.php:145
+msgid "Place your Ad here"
+msgstr "Werbung hier platzieren"

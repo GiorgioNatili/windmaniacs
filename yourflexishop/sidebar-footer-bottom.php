@@ -20,8 +20,8 @@
         <?php dynamic_sidebar( 'second-footer-widget-area' ); ?>
     </ul>
 <?php else : ?>
-    <div class="col-3">
-	   <?php front_end_form(); ?>
+    <div class="col-3 footer-newsletter">
+	   <?php front_end_form(); //newsletter form ?>
     </div>
 <?php endif; ?>
 
@@ -31,7 +31,7 @@
     </ul>
 <?php else : ?>
     <div class="col-3 footer-contact-form">
-        <?php echo do_shortcode( '[contact-form-7 id="215" title="Footer Contact Form"]'); ?>
+        <?php echo do_shortcode( '[contact-form-7 id="215" title="Footer Contact Form"]'); //contact form?>
     </div>
 <?php endif; ?>
 

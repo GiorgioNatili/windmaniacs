@@ -1,0 +1,254 @@
+/*credits*/
+
+.danycode-credits-separator{
+	border-top: 1px solid #DFDFDF;
+	margin: 50px 0;
+}
+
+.danycode-credits-link{
+	background: #EEEEEE;
+    border-color: #DFDFDF;
+    border-style: solid;
+    border-width: 0 1px 1px;
+    width: 351px;
+}
+
+.danycode-credits-link p{
+	font-family: verdana,sans-serif;
+    font-size: 10px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.danycode-credits-container {
+background: none repeat scroll 0 0 #EEEEEE;
+    border: 1px solid #DFDFDF;
+    height: 116px;
+    margin: 0;
+    padding: 10px;
+    width: 331px;
+}
+
+.danycode-credits-container-left {
+	border-right: 1px solid #DDDDDD;
+    float: left;
+    height: 116px;
+    padding-right: 5px;
+    width: 160px;
+}
+
+.danycode-credits-container-left p {
+	font-family: verdana,sans-serif;
+    font-size: 10px;
+    margin: 0;
+}
+
+.danycode-credits-container-right {
+	float: right;
+    height: 116px;
+    padding-left: 5px;
+    width: 160px;
+}
+
+.danycode-paypal-button {
+	padding-top: 34px;
+    height: 47px;
+    width: 160px;
+}
+
+/*credits*/
+
+.mail-list-admin .icon-title h2{
+	font-weight: normal;
+    line-height: 32px;
+    margin-left: 42px;	
+}
+
+.mail-list-admin .icon-title{
+	background: url("../img/icon32.png") no-repeat scroll 0 0 transparent;
+	height: 32px;
+}
+
+.number-of-subscribers{
+	color: #21759B;
+    font-weight: bold;
+}
+
+.mail-list-admin pre{
+	padding: 10px;
+	border: 0;
+	margin: 0;
+	background-color: #eeeeee;
+	font-family: monospace;
+	width: 300px;
+}
+
+.mail-list-admin .inline{
+	display: inline !important;
+}
+
+.mail-list-admin .test-newsletter{
+	padding: 10px;
+	background-color: #eeeeee;
+	margin: 10px 0;
+	width: 300px;
+}
+
+.mail-list-saved{
+	background: #eeeeee;
+	padding: 10px;
+	border: 1px solid #cccccc;
+	text-align: center;
+}
+.mail-list-admin .mail-list-text{
+	display: inline;
+	width: 200px;
+	margin: 10px 0;
+	color: #888888;
+}
+.mail-list-admin .mail-list-submit{
+	display: block;
+	margin: 10px 0;
+	padding-left: 10px;
+	padding-right: 10px;
+	cursor: pointer;
+}
+.mail-list-admin span{
+	margin-left: 10px;
+}
+
+#ml-newsletterform {
+	/*background: none repeat scroll 0 0 #222222;*/
+	/*border-top: 5px solid #0DA3DD;*/
+	bottom: 0;
+	height: 40px;
+	left: 0;
+	margin: 0 auto;
+	/*padding: 10px;*/
+	/*position: fixed;*/
+	/*text-align: center;*/
+	/*width: 100%;*/
+	/*z-index: 999999;*/
+}
+#ml-newsletterform-container{
+	/*height: 40px;*/
+	margin: 0 auto;
+	/*width: 760px;*/
+}
+#ml-newsletterform-container p {
+	margin:0;
+}
+#ml-newsletterform-container #ml-p{
+	color: #FFF;
+	/*float: left;*/
+	font-size: 13px;
+	/*height: 40px;
+	line-height: 40px;
+	margin: 0;*/
+}
+#ml-p-text{
+	color:#3e98d7;
+}
+#ml-newsletterform-container #ml-p-sent{
+	color: #fff;
+	/*float: left;*/
+	font-size: 13px;
+	/*height: 40px;*/
+	line-height: 1.4;
+	margin: 0;
+	display: none;
+}
+#ml-newsletterform-container #ml-form{
+	/*float: right;
+	height: 40px;*/
+}
+#ml-newsletterform-container #ml-email{
+	/*border: 3px solid #555555;*/
+	/*border-radius: 6px;-webkit-border-radius: 6px;*/
+	color: #555555;
+	height: 20px;
+	line-height: 20px;
+	margin: 6px 0;
+	padding: 0 5px;
+	/*text-align: center;*/
+	width: 240px;
+	display: block;
+    font-size: 13px; 
+    border:0 none transparent;
+}
+#ml-newsletterform-container #ml-button{
+	background: #014171;
+	border:0 none transparent;
+	/*border-color: #BBBBBB #BBBBBB #999999;
+	border-radius: 6px;-webkit-border-radius: 6px;
+	border-style: solid;
+	border-width: 3px;*/
+	color: #FFF;
+	cursor: pointer;
+	float: right;
+	font-family: helvetica,arial,sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	height: 20px;
+	line-height: 20px;
+	margin:10px 0 0 0;
+	padding: 0 10px;
+	text-align: center;
+	/*text-shadow: 0 1px #F0F0F0;*/
+}
+#ml-newsletterform-container #ml-img{
+	display: none;
+	float: left;
+	margin: 5px 10px 5px 0;
+}
+
+.mail-list-admin .button-primary{
+	display: block;
+}
+.mail-list-admin label{
+	color: #21759B;
+	font-weight: bold;
+	display: block;
+	margin-top: 10px;
+}
+.mail-list-admin input{
+	display: block;
+	margin-right: 5px;
+}
+.mail-list-admin input[type="text"]{
+	
+}
+.mail-list-admin input[type="submit"]{
+	margin-top: 10px;
+}
+
+.mail-list-admin input[type="checkbox"]{
+	display: inline;
+}
+
+.ml-terms{
+	font-size: 10px;
+	text-decoration: none;
+	margin-left: 10px;
+}
+
+#ml-newsletterform form{
+	/*float: right;*/
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+/* EASY FLOATING BOX */
+.clearfix:after{
+	content:".";
+	display:block;
+	height:0;
+	clear:both;
+	visibility:hidden;
+}
+/* Hide from IE-mac /*/
+* html .clearfix{1%;}
+/* End hide from IE-mac */
+/* EASY FLOATING BOX - END */

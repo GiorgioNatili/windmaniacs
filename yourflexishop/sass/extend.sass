@@ -1,13 +1,22 @@
 @import "compass"
+@import "sassy-buttons"
 @import url(http://fonts.googleapis.com/css?family=Oswald)
 body
+  font-family: 'Oswald', sans-serif
+  background: url('../img/wdmk_bk.jpg') no-repeat center center #003366
+  +background-size(cover)
+h1, h2, h3, h4, h5, h6
+  color: #fff
+  font-weight: bold
+input, select, textarea
   font-family: 'Oswald', sans-serif
 a
   &:hover, &:focus, &:hover
     color: #0767b1
   color: #1f9e57
   text-decoration: none
-
+.clear
+  clear: both
 .margin
   width: auto
 #shadow
@@ -16,6 +25,22 @@ a
   margin: 0 auto
   background: #000
   opacity: .9
+input[type="text"]
+  +border-radius(14px)
+  +single-box-shadow(rgba(#0099ff, .4), 0, 1px, 2px, 0px)
+  display: block
+  width: 160px
+  height: 26px
+  margin: 0 10px
+  padding: 0 15px
+  font-size: 10px
+  line-height: 20px
+  color: #444
+  border: 2px solid #111
+  text-transform: uppercase
+
+/*
+  Navigation bar
 #user-nav .margin
   width: 920px
   height: 30px
@@ -83,6 +108,8 @@ a
           color: #ccc
             
 
+/*
+  Header
 
 body.home #header, #header
   width: 920px
@@ -111,7 +138,7 @@ body.home #header #topnav, #header #topnav
       height: 18px
       border-right: 3px solid #000
       
-      /*Important to hide the last border-right in the top menu*/
+      //Important to hide the last border-right in the top menu
       &#menu-item-129
         border-right: none
         a
@@ -130,33 +157,26 @@ body.home #header #topnav, #header #topnav
         &:hover
           color: #fff
           background-color: transparent
-
+  
+/*
+  Main Content
 #content-wrapper
   width: 920px
   padding: 0 30px
   margin: 0 auto
   position: relative
-
-  #search-key-words
-    position: absolute
-    top: 0
-    right: 30px
-    input[type="text"]
-      +border-radius(14px)
-      +single-box-shadow(rgba(#0099ff, .4), 0, 1px, 2px, 0px)
-      border: 2px solid #999
-      width: 115px
-      height: 21px
-      margin: 0 10px
-      padding: 0 15px
-      font-size: 10px
-      line-height: 21px
-      color: #666 
+  
+  //Search box
   .custom-search-widget
     margin-top: 20px
+
+    #search-key-words
+      float: right
+      
+      
     .menuTabs
       ul
-        max-width: 740px
+        max-width: 710px
         li
           float: left
           background: #0099ff
@@ -175,6 +195,9 @@ body.home #header #topnav, #header #topnav
               color: #fff
     .b4k-select
       clear: both
+      position: relative
+      margin-top: 20px
+      height: 250px
       +border-radius(5px)
       border: 1px solid #444
       padding: 20px 0 20px 10px
@@ -185,10 +208,12 @@ body.home #header #topnav, #header #topnav
         +appearance(none)
         float: left
         margin-right: 10px
+        margin-bottom: 20px
         width: 444px
         height: 35px
         +border-radius(15px)
         font-size: 18px
+        text-transform: uppercase
         padding: 0 15px
         +box-shadow(rgba(#444, 0.7) 2px 2px 5px 1px inset)
         background: url(../img/wdmk_select_arrow.png) no-repeat right center white
@@ -197,8 +222,14 @@ body.home #header #topnav, #header #topnav
         width: 840px
         height: 1px
         margin: 0 auto
-        background-color: #003366
+        background-color: #09F
+        position: absolute
+        top: 148px
+        left: 40px
       .b4k-static-select 
+        position: absolute
+        bottom: 70px
+        width: 100%
         select
           width: 217px
           height: 30px
@@ -208,46 +239,34 @@ body.home #header #topnav, #header #topnav
       width: 217px
       height: 30px
       font-size: 15px
-
-
-#menu-main-menu .searchform
-  padding: 0 25px 0 30px
-  margin: 9px 0 0
-  input[type="text"]
-    -webkit-border-radius: 14px
-    border-radius: 14px
-    -webkit-background-clip: padding-box
-    -moz-background-clip: padding
-    background-clip: padding-box
-    -webkit-box-shadow: 0 1px 2px 0px rgba(255, 255, 255, 0.4)
-    -moz-box-shadow: 0 1px 2px 0px rgba(255, 255, 255, 0.4)
-    box-shadow: 0 1px 2px 0px rgba(255, 255, 255, 0.4)
-    border: 2px solid #345624
-    display: block
-    width: 115px
-    height: 21px
-    margin: 0 10px
-    padding: 0 15px
-    font-size: 11px
-    line-height: 21px
-    color: #666
-
-#copyright
-  width: 980px
-  margin: 0 auto
-  .margin
-    padding: 5px 0px
-    background: transparent none
-
+      position: absolute
+      bottom: 10px
+    input[type="submit"]
+      right: 1px
+      padding: 0 15px
+      display: inline-block
+      cursor: pointer
+      font-size: 15px
+      color: #fff
+      text-shadow: black 0 -1px 0
+      text-transform: uppercase
+      margin-right: 10px
+      margin-bottom: 20px
+      border: 1px solid #c1cdd9
+      +border-radius(15px)
+      +background(url("../img/wdmk_search_button.png") no-repeat 99% center, linear-gradient(#09F, #052341))
+      &:hover
+        +background(url("../img/wdmk_search_button.png") no-repeat 99% center, linear-gradient(#001A35, #09F))
+      &:active
+        +box-shadow(rgba(#000, .4) 1px -1px 5px inset)
 #leader
   width: 920px
-  padding: 40px 30px 30px
-  margin: 0 auto
-  .margin
-    border-bottom: 1px dotted #000
-    padding-bottom: 17px
+  padding: 20px 30px
+  background: black
   h1
-    margin: 0
+    text-transform: uppercase
+    color: #fff
+    text-shadow: 0 0 black
 
 div
   &.breadcrumb
@@ -256,8 +275,145 @@ div
   &#products_page_container
     margin: 0
 
+/*
+  Footer
 #footer
-  background: #0170c1
+  background: url(../img/wdmk_bk_footer.png) 0 0 repeat-x #000
+  padding: 0 30px
+  line-height: 1.8
+  #footer-bottom
+    padding: 5px 0
+    .col-3
+      width: 286px
+      margin-right: 15px
+
+      .widget-container
+        padding-top: 25px
+        padding-right: 15px
+        margin-bottom: 0
+        border-right: 1px solid #09F
+        height: 171px
+        width: 286px
+        a
+          font-size: 16px
+          color: #beceda
+          &:visited, &:active
+            color: #beceda
+        p, li
+          color: #beceda
+        a:hover
+          color: #beceda
+          text-decoration: underline
+
+    .footer-newsletter
+      padding-top: 25px
+      padding-right: 15px
+      margin-left: 15px
+      border-right: 1px solid #09F
+      height: 171px
+      width: 286px
+      #ml-newsletterform
+        p
+          color: #beceda
+          line-height: 2
+          &#ml-p
+            color: #fff
+            font-size: 16px
+            text-transform: uppercase
+            font-weight: bold
+        #ml-email
+          padding: 0 10px
+          font-size: 10px
+          color: #010000
+          border: 2px solid #003
+          width: 262px
+          height: 26px
+          text-transform: none
+          +box-shadow(rgba(#444, 0.6) 1px 1px 5px 1px inset)
+        #ml-button
+          font-size: 16px
+          background: #003
+          text-transform: uppercase
+          padding: 0 20px
+          height: 26px
+          line-height: 1
+          font-family: 'Oswald', sans-serif
+          margin-top: 14px
+    .footer-contact-form
+      padding-top: 25px
+      padding-left: 0
+      margin: 0
+      height: 171px
+      width: 286px
+
+      .footer-contact-form-title
+        margin: 0
+        color: #fff
+        font-size: 16px
+        text-transform: uppercase
+
+      input[type="text"]
+        padding: 0 10px
+        font-size: 10px
+        color: #010000
+        border: 2px solid #003
+        width: 262px
+        height: 26px
+        margin: 0
+        text-transform: none
+        margin-bottom: 20px
+        +box-shadow(rgba(#444, 0.6) 1px 1px 5px 1px inset)
+      .footer-contact-form-message
+        margin: 0
+        textarea
+          margin-top: -15px
+          +border-radius(15px)
+          padding: 7px 10px
+          font-size: 10px
+          color: #010000
+          border: 2px solid #003
+          width: 262px
+          height: 46px
+          overflow: auto
+          +box-shadow(rgba(#444, 0.6) 1px 1px 5px 1px inset)
+
+      input[type="submit"]
+        display: block !important
+        background: #003 !important
+        border: 0 none transparent !important
+        color: white !important
+        cursor: pointer !important
+        float: right !important
+        font-size: 16px !important
+        font-weight: bold !important
+        height: 26px !important
+        line-height: 20px !important
+        margin: 0 !important
+        padding: 0 20px !important
+        text-align: center !important
+        text-transform: uppercase
+        line-height: 1
+
+      .my-error
+        input, textarea
+          border: 1px solid red
+
+      div
+        &.wpcf7-response-output
+          margin: 0
+          padding: 0
+        &.wpcf7-mail-sent-ok
+          color: #fff
+          border: 0 none transparent !important
+
+#copyright
+  width: 980px
+  margin: 0 auto
+  .margin
+    padding: 5px 0px
+    background: transparent none
+
+
   
 
 .addthis_toolbox
@@ -296,9 +452,6 @@ a.large-blog-image img, div.main_image img
   border-radius: 0
   background: white
 
-#leader
-  padding: 0 30px
-
 .custom_product_footer
   clear: both
   margin: 20px 0 0
@@ -316,60 +469,13 @@ a.large-blog-image img, div.main_image img
     width: 240px
     margin: 0 0 0 10px
 
-.big_green_button
-  display: block
-  text-align: center
-  width: 210px
-  height: 35px
-  line-height: 35px
-  color: white
-  font-size: 14px
-  color: #ffffff
-  background: #439102
-  /* Old browsers
-  /* IE9 SVG, needs conditional override of 'filter' to 'none'
-  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzVlYzQwNCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM0MzkxMDIiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+)
-  background: -moz-linear-gradient(top, #5ec404 0%, #439102 100%)
-  /* FF3.6+
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #5ec404), color-stop(100%, #439102))
-  /* Chrome,Safari4+
-  background: -webkit-linear-gradient(top, #5ec404 0%, #439102 100%)
-  /* Chrome10+,Safari5.1+
-  background: -o-linear-gradient(top, #5ec404 0%, #439102 100%)
-  /* Opera 11.10+
-  background: -ms-linear-gradient(top, #5ec404 0%, #439102 100%)
-  /* IE10+
-  background: linear-gradient(top, #5ec404 0%, #439102 100%)
-  /* W3C
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5ec404', endColorstr='#439102',GradientType=0 )
-  /* IE6-8
-  border-radius: 5px
-  -moz-border-radius: 5px
-  -webkit-border-radius: 5px
-  border: 2px solid #2a6900
-  -moz-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5), inset 0px 0px 3px white
-  -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5), inset 0px 0px 3px white
-  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1), 0px 1px 0px #519305
-  &:hover
-    color: #fff !important
+
 
 .addthis_container_custom .addthis_toolbox
   margin: 10px 0
 
-#footer-bottom
-  h3
-    color: #FFF
-    text-shadow: 1px 1px #292929
-  .widget-container
-    a
-      color: #FFF
-      &:visited, &:active
-        color: #FFF
-    p, li
-      color: #FFF
-    a:hover
-      color: #FFF
-      text-decoration: underline
+
+
 
 
 
@@ -384,74 +490,3 @@ a.large-blog-image img, div.main_image img
 .prima-multislider-title
   left: -10px
 
-#menu-footer-left-menu
-  .custom-search-field
-    display: none
-    visibility: hidden
-  li a
-    font-size: 13px !important
-    &:before
-      content: "- "
-
-.wpcf7
-  padding: 0 0 0 43px !important
-
-.footer-contact-form-title
-  margin: 0
-  color: #fff
-  font-size: 13px
-
-.footer-contact-form-email
-  margin: 0
-  color: #fff
-  font-size: 13px
-  input
-    height: 20px
-    line-height: 20px
-    margin: 6px 0
-    padding: 0 5px
-    width: 240px
-    display: block
-    font-size: 13px
-    border: 0 none transparent
-
-.footer-contact-form-message
-  margin: 0
-  color: #fff
-  font-size: 13px
-  textarea
-    height: 70px
-    margin: 6px 0
-    padding: 0 5px
-    width: 240px
-    display: block
-    font-size: 13px
-    border: 0 none transparent
-    resize: none !important
-
-.footer-contact-form-submit input
-  display: block !important
-  background: #014171 !important
-  border: 0 none transparent !important
-  color: white !important
-  cursor: pointer !important
-  float: right !important
-  font-size: 12px !important
-  font-weight: bold !important
-  height: 20px !important
-  line-height: 20px !important
-  margin: 10px 0 0 0 !important
-  padding: 0 10px !important
-  text-align: center !important
-
-.my-error
-  input, textarea
-    border: 1px solid red
-
-div
-  &.wpcf7-response-output
-    margin: 0
-    padding: 0
-  &.wpcf7-mail-sent-ok
-    color: #fff
-    border: 0 none transparent !important

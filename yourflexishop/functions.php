@@ -12,6 +12,8 @@ require_once( TEMPLATEPATH . '/core/init.php' );
 remove_action('wpsc_before_form_of_shopping_cart', 'wpsc_google_checkout_page');
 remove_action('wpsc_bottom_of_shopping_cart', 'wpsc_google_checkout_page');
 add_action('wpsc_bottom_of_shopping_cart', 'wpsc_google_checkout_page');
+
+/* Add a search form in the top menu - Not using anymore */
 /*add_filter('wp_nav_menu_items','add_search_box', 10, 2);
 
 function add_search_box($items, $args) {
@@ -21,9 +23,9 @@ function add_search_box($items, $args) {
         $searchform = ob_get_contents();
         ob_end_clean();
 
-        $items .= '<li class="custom-search-field">' . $searchform . '</li>';
+        $items .= '<div class="custom-search-field">' . $searchform . '</div>';
 
     return $items;
-}
-*/
+}*/
+
 /* add your custom code here */
