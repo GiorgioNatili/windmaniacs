@@ -151,13 +151,28 @@ body.home #header #topnav, #header #topnav
         position: relative
         text-decoration: none
         color: #000
-        margin-top: -6px
+        margin-top: -4px
         &:visited, &:active
           color: #000
         &:hover
           color: #fff
           background-color: transparent
-  
+
+#leader
+  width: 920px
+  padding: 20px 30px
+  background: black
+  h1
+    text-transform: uppercase
+    color: #fff
+    text-shadow: 0 0 black
+
+div
+  &.breadcrumb
+    padding: 7px 7px 0 0
+    margin-top: 5px
+  &#products_page_container
+    margin: 0
 /*
   Main Content
 #content-wrapper
@@ -214,7 +229,8 @@ body.home #header #topnav, #header #topnav
         +border-radius(15px)
         font-size: 18px
         text-transform: uppercase
-        padding: 0 15px
+        padding: 3px 0 0
+        text-indent: 15px
         +box-shadow(rgba(#444, 0.7) 2px 2px 5px 1px inset)
         background: url(../img/wdmk_select_arrow.png) no-repeat right center white
       .b4k-separator
@@ -259,28 +275,78 @@ body.home #header #topnav, #header #topnav
         +background(url("../img/wdmk_search_button.png") no-repeat 99% center, linear-gradient(#001A35, #09F))
       &:active
         +box-shadow(rgba(#000, .4) 1px -1px 5px inset)
-#leader
-  width: 920px
-  padding: 20px 30px
-  background: black
-  h1
-    text-transform: uppercase
-    color: #fff
-    text-shadow: 0 0 black
+  #home-sidebar
+    float: right
+    h3
+      display: none
+  #main-col
+    width: 780px
+    
+    
+    .blog-post
+      width: 185px
+      float: left
+      margin-right: 10px
+      height: 300px
+      overflow: hidden
+      position: relative
+      padding: 0
+      margin-bottom: 20px
+      border-bottom: none
 
-div
-  &.breadcrumb
-    padding: 7px 7px 0 0
-    margin-top: 5px
-  &#products_page_container
-    margin: 0
+      .overlay
+        position: absolute
+        height: 165px
+        width: 185px
+        bottom: 0
+        z-index: 10
+        opacity: .95
+        background: black
+        border-top: 1px solid #DDD
+        .price
+          height: 60px
+          font-size: 30px
+          text-align: center
+          color: white
+          font-weight: bold
+          line-height: 1.7
+          &:before
+            content: '400,00€'
+        .excerpt
+          max-height: 47px
+          overflow: hidden
+          p
+            line-height: 1.3
+        h3
+          margin-bottom: 7px
+        a
+          font-size: 14px
+          color: #09f
+          &.read-more
+            position: absolute
+            bottom: 0
+            text-transform: uppercase
+            width: 100%
+            color: #fff
+            background: #09f
+            text-align: center
+
+
+
+
+
 
 /*
   Footer
 #footer
-  background: url(../img/wdmk_bk_footer.png) 0 0 repeat-x #000
+  background: url(../img/wdmk_bk_footer.png) 0 bottom repeat-x #000
   padding: 0 30px
   line-height: 1.8
+
+  #bannerdiv0
+    margin-left: -30px
+    position: relative
+    top: 4px
   #footer-bottom
     padding: 5px 0
     .col-3
@@ -306,11 +372,11 @@ div
           text-decoration: underline
 
     .footer-newsletter
-      padding-top: 25px
+      padding-top: 10px
       padding-right: 15px
       margin-left: 15px
       border-right: 1px solid #09F
-      height: 171px
+      height: 186px
       width: 286px
       #ml-newsletterform
         p
@@ -321,6 +387,7 @@ div
             font-size: 16px
             text-transform: uppercase
             font-weight: bold
+            margin-bottom: 10px
         #ml-email
           padding: 0 10px
           font-size: 10px
@@ -330,6 +397,7 @@ div
           height: 26px
           text-transform: none
           +box-shadow(rgba(#444, 0.6) 1px 1px 5px 1px inset)
+          margin: 20px 0 0
         #ml-button
           font-size: 16px
           background: #003
@@ -338,16 +406,16 @@ div
           height: 26px
           line-height: 1
           font-family: 'Oswald', sans-serif
-          margin-top: 14px
+          margin-top: 10px
     .footer-contact-form
-      padding-top: 25px
+      padding-top: 10px
       padding-left: 0
       margin: 0
       height: 171px
       width: 286px
 
       .footer-contact-form-title
-        margin: 0
+        margin: 0 0 10px
         color: #fff
         font-size: 16px
         text-transform: uppercase
@@ -388,7 +456,7 @@ div
         font-weight: bold !important
         height: 26px !important
         line-height: 20px !important
-        margin: 0 !important
+        margin: 5px 0 0!important
         padding: 0 20px !important
         text-align: center !important
         text-transform: uppercase

@@ -57,12 +57,95 @@ get_header(); ?>
 	<div id="main-content" class="container">
 	<?php b4k_search_form(); ?>
 		<div class="margin">
-			<div id="full-col">
+            <?php if ( is_active_sidebar( 'home-right'  )) : ?>
+            <div id="home-sidebar">
+                <?php if ( is_active_sidebar( 'home-right' ) ) : ?>
+                <?php dynamic_sidebar( 'home-right' ); ?>
+                <?php endif; ?>
+            </div>  
+            <?php endif; ?>
+			<div id="main-col">
 				<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 					<?php the_content(); ?>
                     <?php wp_link_pages( array( 'before' => '' . __( 'Pages:', PRIMA_DOMAIN ), 'after' => '' ) ); ?>
                     <?php edit_post_link( __( 'Edit', PRIMA_DOMAIN ), '', '' ); ?>
 				<?php endwhile; ?>
+                <!--   visualizzare i prodotti in homepage    -->
+                <?php 
+                if (prima_get_option('homepagecategories')) {
+                    $title = __( 'Categories', PRIMA_DOMAIN );
+                    $number = prima_get_option('homepagecatnumber') ? prima_get_option('homepagecatnumber') : 10;
+                    $width = prima_get_option('homepagecatwidth') ? prima_get_option('homepagecatwidth') : 186;
+                    $height = prima_get_option('homepagecatheight') ? prima_get_option('homepagecatheight') : 186;
+                    $name = prima_get_option('homepagecatname') ? 'name="alwaysshow"' : '';
+                    $slider = prima_get_option('homepagecatslide') ? intval($page_width / $width) : 'no';
+                    $slider_auto = prima_get_option('homepagecatslideauto') ? 'yes' : 'no';
+                    $catsid = prima_get_option('homepagecatsid');
+                    if ( !$catsid || ($catsid == 'groups') ) $catsid = 'parent="0"';
+                    elseif ( $catsid == 'all' ) $catsid = ''; 
+                    elseif ( is_numeric($catsid) ) $catsid = 'child_of="'.$catsid.'"'; 
+                    $title_bg = prima_get_color('frontcatsbgcol') ? ' title_bg="'.prima_get_color('frontcatsbgcol').'"' : '';
+                    $title_color = prima_get_color('frontcatscol') ? ' title_color="'.prima_get_color('frontcatscol').'"' : '';
+                    $name_bg = prima_get_color('frontcatnamebgcol') ? ' name_bg="'.prima_get_color('frontcatnamebgcol').'"' : '';
+                    $name_color = prima_get_color('frontcatnamecol') ? ' name_color="'.prima_get_color('frontcatnamecol').'"' : '';
+
+                    echo do_shortcode('[prima_categories '.$catsid.' title="'.$title.'" number="'.$number.'" image_width="'.$width.'" image_height="'.$height.'" '.$name.' slider="'.$slider.'" slider_auto="'.$slider_auto.'" '.$title_bg.$title_color.$name_bg.$name_color.']');
+                }
+                ?>
+                
+                <?php 
+                if (prima_get_option('homepagebestsellers')) {
+                    $title = __( 'Best Sellers', PRIMA_DOMAIN );
+                    $number = prima_get_option('homepagebestnumber') ? prima_get_option('homepagebestnumber') : 10;
+                    $width = prima_get_option('homepagebestwidth') ? prima_get_option('homepagebestwidth') : 186;
+                    $height = prima_get_option('homepagebestheight') ? prima_get_option('homepagebestheight') : 186;
+                    $name = prima_get_option('homepagebestname') ? 'name="alwaysshow"' : '';
+                    $slider = prima_get_option('homepagebestslide') ? intval($page_width / $width) : 'no';
+                    $slider_auto = prima_get_option('homepagebestslideauto') ? 'yes' : 'no';
+                    $sale_icon = prima_get_option('homepagebestsale') ? 'sale_icon="yes"' : '';
+                    $title_bg = prima_get_color('frontbestsbgcol') ? ' title_bg="'.prima_get_color('frontbestsbgcol').'"' : '';
+                    $title_color = prima_get_color('frontbestscol') ? ' title_color="'.prima_get_color('frontbestscol').'"' : '';
+                    $name_bg = prima_get_color('frontbestprodbgcol') ? ' name_bg="'.prima_get_color('frontbestprodbgcol').'"' : '';
+                    $name_color = prima_get_color('frontbestprodcol') ? ' name_color="'.prima_get_color('frontbestprodcol').'"' : '';
+                    
+                    echo do_shortcode('[prima_bestsellers '.$sale_icon.' title="'.$title.'" number="'.$number.'" image_width="'.$width.'" image_height="'.$height.'" '.$name.' slider="'.$slider.'" slider_auto="'.$slider_auto.'" '.$title_bg.$title_color.$name_bg.$name_color.']'); 
+                }
+                ?>
+                
+                <?php 
+                if (prima_get_option('homepagelatestproducts')) {
+                    $title = __( 'Latest Products', PRIMA_DOMAIN );
+                    $number = prima_get_option('homepagelatestnumber') ? prima_get_option('homepagelatestnumber') : 10;
+                    $width = prima_get_option('homepagelatestwidth') ? prima_get_option('homepagelatestwidth') : 186;
+                    $height = prima_get_option('homepagelatestheight') ? prima_get_option('homepagelatestheight') : 186;
+                    $name = prima_get_option('homepagelatestname') ? 'name="alwaysshow"' : '';
+                    $slider = prima_get_option('homepagelatestslide') ? intval($page_width / $width) : 'no';
+                    $slider_auto = prima_get_option('homepagelatestslideauto') ? 'yes' : 'no';
+                    $sale_icon = prima_get_option('homepagelatestsale') ? 'sale_icon="yes"' : '';
+                    $title_bg = prima_get_color('frontlatestsbgcol') ? ' title_bg="'.prima_get_color('frontlatestsbgcol').'"' : '';
+                    $title_color = prima_get_color('frontlatestscol') ? ' title_color="'.prima_get_color('frontlatestscol').'"' : '';
+                    $name_bg = prima_get_color('frontlatestprodbgcol') ? ' name_bg="'.prima_get_color('frontlatestprodbgcol').'"' : '';
+                    $name_color = prima_get_color('frontlatestprodcol') ? ' name_color="'.prima_get_color('frontlatestprodcol').'"' : '';
+                    
+                    echo do_shortcode('[prima_products '.$sale_icon.' title="'.$title.'" number="'.$number.'" image_width="'.$width.'" image_height="'.$height.'" '.$name.' slider="'.$slider.'" slider_auto="'.$slider_auto.'" '.$title_bg.$title_color.$name_bg.$name_color.']'); 
+                }
+                ?>
+                
+                <?php 
+                if (prima_get_option('homepagetestimonials')) {
+                    $number = prima_get_option('homepagetestinumber') ? prima_get_option('homepagetestinumber') : 3;
+                    echo do_shortcode('[prima_testimonials slider="yes" number="'.$number.'"]'); 
+                }
+                ?>
+
+                <?php $frontpage_query = new WP_Query( array ( 'page_id' => $current_page_id ) ); ?>
+                <?php if ( $frontpage_query->have_posts() ) while ( $frontpage_query->have_posts() ) : $frontpage_query->the_post(); ?>
+                    <?php the_content(); ?>
+                <?php endwhile; ?>
+                <!--   visualizzare i prodotti in homepage  END  -->
+
+
+
 			</div>
 		</div>
 	</div>

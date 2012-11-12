@@ -29,3 +29,5 @@ function add_search_box($items, $args) {
 }*/
 
 /* add your custom code here */
+
+//add_image_size( 'product-thumb', 185, 185, true ); //300 pixels wide (and unlimited height)
