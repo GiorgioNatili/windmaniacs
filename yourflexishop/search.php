@@ -1,4 +1,5 @@
 <?php
+include(WP_PLUGIN_DIR.'/b4k-search/b4k-query.php');
 global $wp_query, $product_page_width, $product_sidebar, $product_sidebar_width;
 $product_sidebar = false;
 if (prima_get_option('themelayout') == 'boxed') { $product_page_width = 665; }
@@ -16,24 +17,29 @@ get_header(); ?>
 </div>
 <div id="content-wrapper">
 	<div id="main-content" class="container">	
+		<?php b4k_search_form(); ?>
 		<div class="margin">
 			<div id="main-col">
 				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
                 <div class="blog-post blog-overview">
                     <div class="post-content clearfix">
-					<?php 
-					$width = 100;
-					$height = 100;
-					$thumbnail = prima_get_image( false, $width, $height, true ); 
-					if ( $thumbnail )
-						echo '<img class="attachment-post-thumbnail alignleft" src="'.$thumbnail.'" title="'.the_title_attribute('echo=0').'" alt="'.the_title_attribute('echo=0').'" width="'.$width.'" height="'.$height.'" />';
-					$post_type = get_post_field( 'post_type', get_the_ID() );
-					if ( $post_type == 'post' ) $type = __('[Blog Post]', PRIMA_DOMAIN);
-					elseif ( $post_type == 'page' ) $type = __('[Page]', PRIMA_DOMAIN);
-					elseif ( $post_type == 'wpsc-product' ) $type = __('[Product]', PRIMA_DOMAIN);
-					?>
-					<p><?php echo $type ?> <strong><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></strong></p>
-                    <?php the_excerpt();?>
+						<?php 
+						$width = 185;
+						$height = 185;
+						$thumbnail = prima_get_image( false, $width, $height, true ); 
+						if ( $thumbnail )
+							echo '<img class="attachment-post-thumbnail alignleft" src="'.$thumbnail.'" title="'.the_title_attribute('echo=0').'" alt="'.the_title_attribute('echo=0').'" width="'.$width.'" height="'.$height.'" />';
+						$post_type = get_post_field( 'post_type', get_the_ID() );
+						if ( $post_type == 'post' ) $type = __('[Blog Post]', PRIMA_DOMAIN);
+						elseif ( $post_type == 'page' ) $type = __('[Page]', PRIMA_DOMAIN);
+						elseif ( $post_type == 'wpsc-product' ) $type = __('[Product]', PRIMA_DOMAIN);
+						?>
+						<div class="overlay">
+		                	<div class="price"></div>
+		                	<h3><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h3>
+		                  	<div class="excerpt"><?php the_excerpt();?></div>
+		                  	<a href="<?php the_permalink() ?>" class="read-more">Visualizza</a>
+		                </div>
                     </div>
                 </div>
                 <?php endwhile; ?>
@@ -44,11 +50,18 @@ get_header(); ?>
 					<?php get_search_form(); ?>
 				<?php endif; ?>
 			</div>
-			<div id="sidebar">
+			<!-- <div id="sidebar">
 				<div class="sidebar-inner">
 					<?php get_sidebar(); ?>
 				</div>
-			</div>
+			</div> -->
+			<?php if ( is_active_sidebar( 'home-right'  )) : ?>
+            <div id="home-sidebar">
+                <?php if ( is_active_sidebar( 'home-right' ) ) : ?>
+                <?php dynamic_sidebar( 'home-right' ); ?>
+                <?php endif; ?>
+            </div>  
+            <?php endif; ?>
 		</div>
 	</div>
 </div>

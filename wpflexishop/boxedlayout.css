@@ -1,0 +1,310 @@
+/* BOXED LAYOUT SPECIFIC STYLES */
+/* ----------------------------------------- */
+
+/* GENERAL LAYOUT AND MARGINS */
+/* ----------------------------------------- */
+
+#flexi-wrapper {
+	width:920px;
+	background:white;
+	margin: 0 auto;
+	padding:0px 30px;	
+}
+
+#boxed .margin{
+	width:920px;
+}
+
+#boxed .full-width{
+	width:920px;
+}
+
+#boxed #header-wrapper{
+	background:none;
+}
+
+#boxed #header{
+	background:none;
+}
+
+#boxed #top-header .margin{
+	width:920px;
+	padding:0;
+	background: none;
+}
+
+#boxed div.product-image{
+	top:-31px;
+}
+
+#boxed #footer div.margin{
+	border-top:0px;
+}
+
+#boxed #footer-bottom{
+	border-bottom:none;
+	
+}
+
+#boxed #brief .margin{
+	padding-bottom: 15px;
+	padding-top:15px;
+	margin-top:-10px;
+}
+
+#boxed #copyright{
+	padding:0;
+}
+
+#boxed #copyright .margin{
+	width:920px;
+	background: none;
+	padding:30px 30px;
+}
+
+
+#boxed #features{
+	height:342px;
+}
+
+#boxed #main-content{
+	padding:0;
+}
+
+#boxed #main-content .margin{
+	clear:both;
+	overflow: hidden;
+	padding-bottom:30px;
+}
+
+#boxed div#products_page_container{
+	margin:0;
+	padding-bottom:30px;
+}
+
+#boxed #main-content .margin #main-col{
+	width:665px;
+}
+
+#boxed #main-content .margin #sidebar{
+	width:254px;
+}
+
+/* FEATURED SLIDER */
+/* ----------------------------------------- */
+
+#boxed #featured-slider{
+	background: none;
+	padding:10px;
+	background: #f4f4f4;
+	border:1px solid #ddd;
+	overflow: hidden;
+	width:898px
+}
+
+#boxed #features .bx-wrapper{
+	width:896px !important;
+}
+
+#boxed #features .bx-wrapper .bx-window{
+	height:342px !important;
+	width:896px !important;
+}
+
+#boxed #slider-controls{
+	margin-top:10px;
+}
+
+#boxed #featured-slider ul{
+	width:894px;
+	height:342px;
+}
+
+#boxed li.feature div.feature-post-wrapper{
+	bottom:0px;
+}
+
+#boxed #featured-slider ul li{
+	height:342px;
+	width:896px;
+}
+
+#boxed #featured-slider ul li.feature img, #boxed #featured-slider ul li.promotion img{
+	width:896px;
+}
+
+#boxed #featured-slider img{
+	
+}
+
+#boxed #feature-wrapper{
+	width:896px;
+	border:1px solid #ddd;
+	overflow: hidden;
+}
+
+#boxed ul.feature-list li{
+}
+
+/* RANDOM STYLES */
+/* ----------------------------------------- */
+
+
+body#boxed p, body#boxed h1, body#boxed h2, body#boxed h3, body#boxed h4, body#boxed a{
+	text-shadow:none !important;
+}
+
+#boxed a{
+	-webkit-box-shadow: none !important;
+	-moz-box-shadow: none !important;
+	box-shadow: none !important;
+}
+
+#boxed div.front-categories div.slider-mask div.bx-wrapper, #boxed div.front-categories div.slider-mask, #boxed div.front-categories, #boxed div.front-categories div.slider-mask div.bx-wrapper div.bx-window, #boxed ul.front-category-list{
+	width:920px !important;
+	clear: both;
+	overflow: hidden;
+}
+
+#boxed div.front-category-slider div.full-width{
+	width:920px;
+	position: relative;
+	display: inline;
+}
+
+#boxed ul.front-category-list li div.padding{
+	height:172px;
+}
+
+#boxed ul.front-category-list li.col-right{
+	*margin-left:-4px;
+}
+
+#boxed #header .margin {
+	border: none;
+}
+
+#boxed #leader {
+	margin: 10px 0;
+	padding: 30px 0 20px;
+	border-bottom:1px dotted #ddd;
+	border-top:1px dotted #ddd;
+}
+
+#boxed.page-template-special #leader {
+	margin: 0;
+    padding: 0 0 10px;
+	border: none;
+}
+
+#boxed #footer-top h3.widget-title, #boxed div.best-sellers h2, #boxed div.front-categories h2, #boxed div.latest-products h2{
+	margin-left:0px;
+	font-size:15px;
+}
+
+#boxed ul.best-seller-list li div.padding, #boxed ul.front-category-list li div.padding, #boxed ul.latest-product-list li div.padding{
+	height:174px;
+}
+
+#boxed #main-col img.attachment-blog{
+	width:655px;
+}
+
+#boxed #user-nav ul{
+	right:260px;
+}
+
+/* PRODUCTS */
+/* ----------------------------------------- */
+
+#boxed div.product-meta{
+	height:174px;
+}
+
+#boxed div#main-col div.product-meta{
+	height:124px;
+}
+
+#boxed div.single-producttext{
+	width:340px;
+}
+
+#boxed ul.product-list li div.product-meta input.wpsc_buy_button{
+	left:43px;
+	top:65px;
+}
+
+#boxed #main-col ul.product-list li div.product-meta input.wpsc_buy_button{
+	left:20px;
+	top:33px;
+}
+
+#boxed #checkout #shopping-cart, #boxed #checkout #shopping-cart-form{
+	width:920px;
+}
+
+#checkout #checkout-slider-mask{
+	width:920px;
+}
+
+#boxed #checkout{
+	padding:0;
+}
+
+#boxed #checkout .margin{
+	padding: 0px 30px 50px;
+}
+
+#boxed #content-wrapper #products div.wpsc_product_search{
+	top:-0px;
+	margin-top:-10px;
+}
+
+
+#products-sidebar .searchbox { 
+	width: 160px; 
+}
+
+/* New Main Products Sidebar Positioning - since v1.2.4 */
+
+#boxed div#products_page_container.products-sidebar {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+#boxed div#products_page_container.products-sidebar #main_products_page_container {
+	width: 734px;
+	float: right;
+	margin: 0;
+	padding: 0;
+}
+
+#boxed div#products-sidebar.main-products-sidebar {
+	width: 176px;
+	float: left;
+	margin: 0;
+	padding: 0;
+}
+
+/* New Single Products Sidebar Positioning - since v1.2.4 */
+
+#boxed div#products_page_container.products-sidebar {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+#boxed div#products_page_container.products-sidebar #single_product_page_container {
+	width: 724px;
+	float: right;
+	margin: 0;
+	padding: 0;
+}
+
+#boxed div#products-sidebar.single-products-sidebar {
+	width: 176px;
+	float: left;
+	margin: 0;
+	padding: 0;
+}

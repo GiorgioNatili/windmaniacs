@@ -1,0 +1,1 @@
+<?php header('Location: wdmk_img0'.rand(1,7).'.jpg'); ?>

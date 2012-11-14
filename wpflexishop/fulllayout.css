@@ -1,0 +1,144 @@
+/* FULL LAYOUT SPECIFIC STYLES */
+/* ----------------------------------------- */
+
+/* GENERAL LAYOUT AND MARGINS */
+/* ----------------------------------------- */
+
+body#full.page-template-special #header-wrapper {
+	background-color:#BAD3E6;
+}
+
+#header{
+	background-color:#BAD3E6;
+	background-image:url(images/radial-gradient.png);
+}
+
+body#full.page-template-special #header, body#full.page-template-special #leader {
+	background: none;
+}
+
+#full #header .margin{
+	border-bottom:none;
+}
+
+#full #footer{
+	padding:50px 0px 20px;
+	margin-top:20px;
+	background:#202020 url(images/bezel-border.png) repeat-x top;
+}
+
+#full #copyright{
+	background-color:#202020;
+}
+
+#full #cart-top{
+	border-left:none;
+}
+
+#full #leader{
+	padding-bottom:15px;
+}
+
+#full.single-post #leader{
+	padding-bottom:35px;
+}
+
+body#full.home #leader{
+	padding: 0px 0px 0px;
+	margin-bottom: 30px;
+}
+
+#full #brief{
+	padding-top:0px;
+}
+
+#full #brief .margin{
+	padding-bottom:15px;
+	margin-bottom:-10px;
+}
+
+#full #footer-top{
+	border-bottom:none;
+	padding-top:20px;
+}
+
+#full #footer div.margin{
+	border-top:none;
+}
+
+#full #footer-top div.col-2.col-right div.col-wrapper{
+	border:none;
+}
+
+#full #footer-top, #full #footer-top p { 
+	color: #878787;
+}
+
+#full #footer-top a, #full #footer-top a:hover { 
+	color: #FFFFFF;
+}
+
+#footer-top  .post-excerpt p {
+	text-shadow: none;
+}
+
+#full #footer-top #blog-panel div.col-wrapper{
+	border-right:none;
+}
+
+#full #footer-bottom{
+	border-bottom:none;
+}
+
+#footer-bottom h3, #footer-bottom h3 a {
+	color: #FFFFFF;
+}
+
+#full div.blog-post{
+	border-bottom:none;
+	background:url(images/trans-border.png) repeat-x bottom;
+}
+
+#full #slider-controls{
+	margin-top:-7px;
+	padding-bottom:15px;
+}
+
+/* RANDOM STYLES */
+/* ----------------------------------------- */
+
+#full ul.best-seller-list li div.padding, #full ul.front-category-list li div.padding, #full ul.latest-product-list li div.padding, #full div.product-meta, .widget_specials img{
+	-webkit-box-shadow: none !important;
+	-moz-box-shadow: none !important;
+	box-shadow: none !important;
+}
+
+#full #footer-top h3.widget-title{
+	color:white;
+	background:none;
+	font-weight: normal;
+	clear:both;
+	font-size:18px;
+	padding:0;
+	display:block;
+	margin-left:0;
+	line-height:24px;
+}
+
+#full div.front-categories{
+	padding:5px 0px 15px 0px;
+	border-bottom:1px solid #cdcdcd;
+}
+
+#full h1, #full h2, #full h3, #full h4, #full a{
+	text-shadow: none !important;
+}
+
+#full div#single-post div.post-meta{
+	top:-39px;
+}
+
+#sidebar li.widget-container.widget_recent_entries li, #sidebar li.widget-container.widget_recent_comments li, #sidebar li.widget-container.widget_categories li{
+	border-bottom:none;
+	background:url(images/trans-border.png) repeat-x bottom;
+}

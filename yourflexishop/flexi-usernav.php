@@ -1,9 +1,9 @@
 <div id="user-nav">
     <div class="margin <?php if ( prima_get_option('topcategories') ) echo 'topcategories-active' ?> <?php if ( prima_get_option('topcart') ) echo 'topcart-active' ?>">
         <div id="social-connect">
-            <a href="#" alt="" class="social-connect-fb" target="_blank"></a>
-            <a href="#" alt="" class="social-connect-tw" target="_blank"></a>
-            <a href="#" alt="" class="social-connect-pt" target="_blank"></a>
+            <a href="https://www.facebook.com/Windmaniacs?fref=ts" alt="" class="social-connect-fb" target="_blank"></a>
+            <a href="https://twitter.com/windmaniacs" alt="" class="social-connect-tw" target="_blank"></a>
+            <a href="http://pinterest.com/windmaniacs/" alt="" class="social-connect-pt" target="_blank"></a>
         </div>
         <div id="languages">
             <span class="lang-sx"></span>
