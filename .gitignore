@@ -1,0 +1,34 @@
+# Editor generated files #
+######################
+*~
+*.bak
+*.old
+*.tmp
+*.temp
+netbeans
+
+# OS generated files #
+######################
+.DS_Store?
+ehthumbs.db
+Icon?
+Thumbs.db
+
+# Logs #
+######################
+*.log
+
+# Configuration #
+######################
+config.cfg
+
+# Packages #
+############
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
