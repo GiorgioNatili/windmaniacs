@@ -15,7 +15,7 @@
                 <?php if ( is_user_logged_in() ) : ?>
                     <li class="no"><a class="black" href="<?php echo wp_logout_url(get_option('home')); ?>"><?php _e( 'Logout', PRIMA_DOMAIN ); ?></a></li>
                     <li>|</li>
-                    <li><a href="<?php echo get_option('user_account_url'); ?>"><?php _e( 'Your Account', PRIMA_DOMAIN ); ?></a></li>
+                    <li><a href="<?php echo get_option('user_account_url'); ?>?edit_profile=true"><?php _e( 'Your Account', PRIMA_DOMAIN ); ?></a></li>
                 <?php else : ?>
                     <li><a href="<?php echo get_option('home'); ?>/wp-login.php?action=register"><?php _e( 'Register', PRIMA_DOMAIN ); ?></a></li>
                     <li>|</li>

@@ -21,16 +21,18 @@ get_header(); ?>
 	<div id="main-content" class="container">	
 		<div class="margin">
 			<div id="main-col">
-				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-					<?php the_content(); ?>
-                    <?php wp_link_pages( array( 'before' => '' . __( 'Pages:', PRIMA_DOMAIN ), 'after' => '' ) ); ?>
-                    <?php edit_post_link( __( 'Edit', PRIMA_DOMAIN ), '', '' ); ?>
-				<?php endwhile; ?>
-                <?php else : ?>
-					<p><strong><?php _e( 'Not Found', PRIMA_DOMAIN ); ?></strong></p>
-					<p><?php _e( 'Apologies, but the page you requested could not be found. Perhaps searching will help.', PRIMA_DOMAIN ); ?></p>
-					<?php get_search_form(); ?>
-				<?php endif; ?>
+				<div id="page">
+					<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+						<?php the_content(); ?>
+	                    <?php wp_link_pages( array( 'before' => '' . __( 'Pages:', PRIMA_DOMAIN ), 'after' => '' ) ); ?>
+	                    <?php edit_post_link( __( 'Edit', PRIMA_DOMAIN ), '', '' ); ?>
+					<?php endwhile; ?>
+	                <?php else : ?>
+						<p><strong><?php _e( 'Not Found', PRIMA_DOMAIN ); ?></strong></p>
+						<p><?php _e( 'Apologies, but the page you requested could not be found. Perhaps searching will help.', PRIMA_DOMAIN ); ?></p>
+						<?php get_search_form(); ?>
+					<?php endif; ?>
+				</div>
 			</div>
 			<div id="sidebar">
 				<div class="sidebar-inner">

@@ -30,4 +30,44 @@ function add_search_box($items, $args) {
 
 /* add your custom code here */
 
-//add_image_size( 'product-thumb', 185, 185, true ); //300 pixels wide (and unlimited height)
+add_action( 'login_head', 'wpse_41844_favicon' );
+
+function wpse_41844_favicon()
+{
+?>
+<link rel='shortcut icon' href='/favicon.ico'>
+<?php
+}
+
+/******* tell to facebook to pick the featured image ********/
+function insert_image_src_rel_in_head() {
+	global $post;
+	if ( !is_singular()) //if it is not a post or a page
+		return;
+	if(!has_post_thumbnail( $post->ID )) { //the post does not have featured image, use a default image
+		$default_image="http://www.windmaniacs.com/wp-content/themes/yourflexishop/img/facebook-logo.png"; //replace this with a default image on your server or an image in your media library
+		echo '<meta property="og:image" content="' . $default_image . '"/>';
+	}
+	else{
+		$thumbnail_src = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'medium' );
+		echo '<meta property="og:image" content="' . esc_attr( $thumbnail_src[0] ) . '"/>';
+	}
+	echo "
+";
+}
+add_action( 'wp_head', 'insert_image_src_rel_in_head', 5 );
+
+/*/category with radio button instead of checkboxes
+function catlist2radio(){zr
+	echo '<script type="text/javascript">';
+	echo 'jQuery(".categorychecklist")';
+	echo '.each(function(){this.type="radio"});</script>';
+}
+
+add_action( 'admin_footer', 'catlist2radio' );*/
+
+add_action('admin_head','bettertagging');
+
+function bettertagging(){
+  echo '<script type="text/javascript" src="/wp-content/themes/yourflexishop/js/bettertagging.js"></script>';
+}

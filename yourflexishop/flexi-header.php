@@ -15,4 +15,9 @@
 		</h2>
 		<?php include("mynav.php");?>
     </div>
+    <div id="search-key-words">
+        <form method="get" id="searchform" action="<?php bloginfo('home'); ?>/">
+            <input type="text" size="put_a_size_here" name="s" id="s" placeholder="Search" onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;"/>
+        </form>
+    </div>
 </div>
