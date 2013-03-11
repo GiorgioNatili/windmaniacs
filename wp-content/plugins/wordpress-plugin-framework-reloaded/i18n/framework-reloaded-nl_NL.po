@@ -1,0 +1,168 @@
+# Translation of the WordPress plugin Wordpress Plugin Framework Reloaded 0.1 by Lopo Lencastre de Almeida - iPublicis.com.
+# Copyright (C) 2010 Lopo Lencastre de Almeida - iPublicis.com
+# This file is distributed under the same license as the Wordpress Plugin Framework Reloaded package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Wordpress Plugin Framework Reloaded 0.1\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/wordpress-plugin-framework-reloaded\n"
+"POT-Creation-Date: 2010-04-22 18:24+0000\n"
+"PO-Revision-Date: 2010-04-24 19:11+0100\n"
+"Last-Translator: Theo van der Sluijs <theo@vandersluijs.nl>\n"
+"Language-Team: T. van der Sluijs <theo@vandersluijs.nl>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Dutch\n"
+"X-Poedit-Country: NETHERLANDS\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+#: framework-reloaded.php:240
+#: framework-reloaded.php:268
+msgid "translation made by"
+msgstr "vertaling gemaakt door"
+
+#: framework-reloaded.php:264
+msgid "We would like to thank to the following volunteers without whom we would not have this plugin available for a broader public. Thank you."
+msgstr "We willen de volgende vrijwilligers bedanken zonder wie het niet gelukt zou zijn om deze plugin beschikbaar te maken voor een breder publiek. Bedankt."
+
+#: framework-reloaded.php:314
+#, php-format
+msgid "%s Settings"
+msgstr "%s Instellingen"
+
+#: framework-reloaded.php:315
+#: framework-reloaded.php:493
+msgid "Settings"
+msgstr "Instellingen"
+
+#: framework-reloaded.php:360
+#: framework-reloaded.php:512
+msgid "About "
+msgstr "Over "
+
+#: framework-reloaded.php:361
+#: framework-reloaded.php:444
+msgid "Overview"
+msgstr "Overzicht"
+
+#: framework-reloaded.php:399
+msgid "Update Options &raquo;"
+msgstr "Update opties &raquo;"
+
+#: framework-reloaded.php:426
+msgid "Settings updated."
+msgstr "Instellingen opgeslagen"
+
+#: framework-reloaded.php:481
+msgid "Support Forum"
+msgstr "Support Forum"
+
+#: framework-reloaded.php:513
+#: framework-reloaded.php:558
+msgid "Plugin Latest News."
+msgstr "Plugin laatste nieuws"
+
+#: framework-reloaded.php:514
+msgid "About Wordpress Plugin Framework Reloaded"
+msgstr "Over Wordpress plugin Framework Reloaded"
+
+#: framework-reloaded.php:527
+msgid "This project was possible due to the previous work of "
+msgstr "Dit project is mogelijk door het vorige werk van "
+
+#: framework-reloaded.php:534
+msgid "and so many others. Thank you all and also a special <em>thank you</em> to all the Wordpress developers."
+msgstr "en zo velen anderen. Bedankt allemaal en een speciaal <em>bedankje</em> voor alle Wordpress ontwikkelaars."
+
+#: framework-reloaded.php:542
+msgid "was developed by"
+msgstr "is ontwikkeld door"
+
+#: framework-reloaded.php:544
+msgid "and released under the GNU LGPL license, version 3 or greater."
+msgstr "en vrijgegeven onder de GNU LGPL-licentie, versie 3 of hoger."
+
+#: framework-reloaded.php:554
+msgid "Do you like this Plugin?"
+msgstr "Vind je deze plugin super?"
+
+#: framework-reloaded.php:555
+msgid "Need Support?"
+msgstr "Ondersteuning nodig?"
+
+#: framework-reloaded.php:556
+msgid "Translators Credits"
+msgstr "Vertaal Credits"
+
+#: framework-reloaded.php:559
+msgid "WPFR Latest News."
+msgstr "WPFR laatste nieuws."
+
+#: framework-reloaded.php:561
+msgid "Help Us"
+msgstr "Help ons"
+
+#: framework-reloaded.php:567
+#, php-format
+msgid "You too can help. Just <a href='%s'>dowload</a> the .pot file included and send your translation back to us. We just need the resulting .po and .mo files. Thanks!"
+msgstr "Jij kan ook helpen. <a href='%s'>Dowload</a> gewoon het .pot bestand en stuur je vertaling terug naar ons. We hebben alleen de .po en .mo bestanden  nodig. Bedankt!!"
+
+#: framework-reloaded.php:569
+msgid "More at "
+msgstr "Meer via "
+
+#: framework-reloaded.php:570
+msgid "Please, use something like "
+msgstr "Gebruik aub iets zoals "
+
+#: framework-reloaded.php:582
+msgid "We spend a lot of effort on Free Software development. Any help would be highly appreciated. Thanks!"
+msgstr "We besteden veel moeite voor vrije software ontwikkeling. Alle hulp wordt zeer gewaardeerd. Bedankt!!"
+
+#: framework-reloaded.php:587
+msgid "Link to it. Others may use it."
+msgstr "Link naar het. Zodat anderen het kunnen gebruiken."
+
+#: framework-reloaded.php:592
+msgid "Give it a good rating on WordPress.org."
+msgstr "Geef het een goede rating op WordPress.org."
+
+#: framework-reloaded.php:597
+msgid "Donate something to our team."
+msgstr "Doneer iets aan ons team."
+
+#: framework-reloaded.php:602
+msgid "Send us a gift to show your appreciation."
+msgstr "Stuur ons een cadeau om uw waardering te tonen."
+
+#: framework-reloaded.php:607
+msgid "Help us translating it."
+msgstr "Help ons vertalen."
+
+#: framework-reloaded.php:615
+msgid "If you have any problems with this plugin or ideas for improvements or enhancements, please use them..."
+msgstr "Als je problemen hebt met deze plugin of ideeën voor verbeteringen of uitbreidingen, gebruik ze aub..."
+
+#: framework-reloaded.php:620
+msgid "Support Forums."
+msgstr "Support Forums."
+
+#: framework-reloaded.php:625
+msgid "Report a Bug."
+msgstr "Rapporteer een fout."
+
+#: framework-reloaded.php:631
+msgid "We are available for hire!"
+msgstr "Wij zijn beschikbaar voor inhuur!"
+
+#: framework-reloaded.php:649
+#, php-format
+msgid "%s Latest News"
+msgstr "%s laatste nieuws"
+
+#: framework-reloaded.php:666
+msgid "Subscribe with RSS"
+msgstr "Abonneer je op RSS"
+

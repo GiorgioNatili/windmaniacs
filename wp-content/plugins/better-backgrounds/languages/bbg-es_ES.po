@@ -1,0 +1,409 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-Language: \n"
+"X-Poedit-Country: \n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
+"X-Poedit-Basepath: \n"
+"X-Poedit-Bookmarks: \n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Textdomain-Support: yes"
+
+#: bbg_admin.php:331
+#@ bbg
+msgid "Keep your site looking fresh!"
+msgstr "Mantenga su sitio una apariencia fresca!"
+
+#: bbg_admin.php:332
+#@ bbg
+msgid "Help & Support"
+msgstr "Ayuda y soporte técnico"
+
+#: bbg_admin.php:369
+#@ bbg
+msgid "Background Images"
+msgstr "Imágenes de fondo"
+
+#: bbg_admin.php:415
+#@ bbg
+msgid "Upload images to a new "
+msgstr "Subir imágenes a un nuevo"
+
+#: bbg_admin.php:416
+#@ bbg
+msgid "Nextgen Gallery"
+msgstr "Galería de NextGen"
+
+#: bbg_admin.php:397
+#@ bbg
+msgid "Choose your NextGen Gallery"
+msgstr "Elija su NextGen Galería"
+
+#: bbg_admin.php:420
+#@ bbg
+msgid "Enter the server sub-folder path"
+msgstr "Introduzca la ruta del servidor subcarpeta"
+
+#: bbg_admin.php:424
+#@ bbg
+msgid "(e.g. wp-content/uploads/bg-images/)"
+msgstr "(wp-content/uploads/bg-images/ por ejemplo)"
+
+#: bbg_admin.php:437
+#@ bbg
+msgid "Background Layout"
+msgstr "Antecedentes de diseño"
+
+#: bbg_admin.php:449
+#@ bbg
+msgid "Recommended"
+msgstr "Recomendaciones"
+
+#: bbg_admin.php:575
+#@ bbg
+msgid "Random Image Change Interval"
+msgstr "Cambio de imagen al azar de intervalo"
+
+#: bbg_admin.php:587
+#@ bbg
+msgid "Once A Visitor Session"
+msgstr "Una vez que una sesión del visitante"
+
+#: bbg_admin.php:589
+#@ bbg
+msgid "The same random image will be used on every page of the site, until they visit on a different session (uses cookies)."
+msgstr "La imagen al azar misma será utilizada en todas las páginas del sitio, hasta que visitar en una sesión diferente (utiliza &quot;cookies&quot;)."
+
+#: bbg_admin.php:593
+#@ bbg
+msgid "Every Page Refresh"
+msgstr "Cada Actualizar página"
+
+#: bbg_admin.php:595
+#@ bbg
+msgid "Every time a visitor changes pages a new random image is chosen."
+msgstr "Cada vez que un visitante cambios páginas una imagen aleatoria nuevo es elegido."
+
+#: bbg_admin.php:599
+#@ bbg
+msgid "Continuously On Timer Interval (Slideshow)"
+msgstr "Continuamente El temporizador de intervalos (Diapositivas)"
+
+#: bbg_admin.php:602
+#@ bbg
+msgid "Background images will loop through like a slideshow."
+msgstr "Las imágenes de fondo a recorrer como un pase de diapositivas."
+
+#: bbg_admin.php:604
+#@ bbg
+msgid "Change Background Every"
+msgstr "Cambio de fondo cada"
+
+#: bbg_admin.php:604
+#@ bbg
+msgid "seconds"
+msgstr "segundo"
+
+#: bbg_admin.php:483
+#@ bbg
+msgid "Background Color"
+msgstr "Color de fondo"
+
+#: bbg_admin.php:485
+#@ default
+msgid "Select a Color"
+msgstr "Elija un color"
+
+#: bbg_admin.php:563
+#@ bbg
+msgid "Full page width, scrolling layout only. There is no height by default. If you want backgrounds to fit width and height of your page, you can set the height to 100%. Otherwise you can set the height in pixels."
+msgstr "ancho de la página completa, diseño de desplazamiento solamente. No hay altura de forma predeterminada. Si quieres fondos para encajar con la anchura y la altura de su página, puede establecer la altura del 100%. De lo contrario, puede establecer la altura en píxeles."
+
+#: bbg_admin.php:684
+#@ bbg
+msgid "Settings"
+msgstr "Configuración"
+
+#: bbg_admin.php:78
+#: bbg_admin.php:330
+#@ default
+#@ bbg
+msgid "Better Backgrounds"
+msgstr "Mejor Fondos"
+
+#: bbg_admin.php:93
+#@ default
+msgid "You can customize the look of your site without touching any of your theme&#8217;s code by using a Better Backgrounds.."
+msgstr ""
+
+#: bbg_admin.php:94
+#@ default
+msgid "<a href=\"http://davetcoleman.com/blog/better-backgrounds-wordpress-plugin\" target=\"_blank\">Documentation on Better Backgrounds</a>"
+msgstr ""
+
+#: bbg_admin.php:339
+#, php-format
+#@ default
+msgid "Background updated. <a href=\"%s\">Visit your site</a> to see how it looks."
+msgstr ""
+
+#: bbg_admin.php:348
+#@ bbg
+msgid "Background Preview"
+msgstr "Vista previa de fondo"
+
+#: bbg_admin.php:372
+#@ bbg
+msgid "Note: You are in manual upload mode and may need server access via FTP to add background images. For easier use we recommend you install the <a href=\"http://wordpress.org/extend/plugins/nextgen-gallery/\">NextGen Gallery</a> Wordpress plugin and return to this page."
+msgstr "Nota: Usted está en el manual del modo de carga y es posible que el acceso al servidor a través de FTP para añadir imágenes de fondo. Para facilitar su uso se recomienda instalar la <a href=\\\"http://wordpress.org/extend/plugins/nextgen-gallery/\\\">Galería de NextGen</a> plugin para Wordpress y volver a esta página."
+
+#: bbg_admin.php:376
+#@ bbg
+msgid "Find and upload your desired images in .png, .gif, or .jpg formats."
+msgstr "Buscar y enviar las imágenes que desee en formato. Png,. Gif o. JPG."
+
+#: bbg_admin.php:377
+#@ bbg
+msgid "Based on today's browser display statistics, a good recommended image size is 1280px x 1024px."
+msgstr "Con base en las estadísticas de hoy de visualización del navegador, un buen tamaño de imagen recomendado es 1280px x 1024px."
+
+#: bbg_admin.php:382
+#@ bbg
+msgid "Images Location:"
+msgstr "Imágenes Situación:"
+
+#: bbg_admin.php:420
+#@ bbg
+msgid "to the folder containing your background images:"
+msgstr "la carpeta que contiene las imágenes de fondo:"
+
+#: bbg_admin.php:439
+#@ bbg
+msgid "Choose how you want the background to be displayed on your website."
+msgstr "Elija cómo desea que el fondo que se mostrará en su sitio web."
+
+#: bbg_admin.php:445
+#@ bbg
+msgid "Layout Mode:"
+msgstr "Modo de diseño:"
+
+#: bbg_admin.php:449
+#@ bbg
+msgid "Better Background"
+msgstr "Mejor fondo"
+
+#: bbg_admin.php:451
+#@ bbg
+msgid "Easiest to implement and offers the most options and customizations. Scales it to fit browser window exactly."
+msgstr "Más fácil de implementar y ofrece más opciones y personalizaciones. Escalas para que se ajuste exactamente ventana del navegador."
+
+#: bbg_admin.php:454
+#@ bbg
+msgid "Classic Background"
+msgstr "Antecedentes clásicos"
+
+#: bbg_admin.php:456
+#@ bbg
+msgid "Uses the standard body background css attribute. Does not scale the background to fit the page's width or support fade in. Works like the regular Wordpress Custom Background functionality."
+msgstr "Utiliza el fondo estándar del cuerpo de atributo CSS. No se escala el fondo para encajar con la anchura de la página o el apoyo fade in Obras como la funcionalidad de fondo regular Wordpress personalizado."
+
+#: bbg_admin.php:459
+#@ bbg
+msgid "Developer"
+msgstr "Promotor"
+
+#: bbg_admin.php:474
+#@ bbg
+msgid "Background Layout Options"
+msgstr "Opciones de diseño de fondo"
+
+#: bbg_admin.php:476
+#@ bbg
+msgid "Customize your chosen background layout."
+msgstr "Personaliza tu diseño elegido de fondo."
+
+#: bbg_admin.php:481
+#@ default
+msgid "Color"
+msgstr ""
+
+#: bbg_admin.php:492
+#@ bbg
+msgid "Attachment"
+msgstr "Fijación"
+
+#: bbg_admin.php:495
+#@ bbg
+msgid "Background Attachment"
+msgstr "Antecedentes adjuntos"
+
+#: bbg_admin.php:498
+#@ bbg
+msgid "Scroll"
+msgstr "Desplazamiento"
+
+#: bbg_admin.php:501
+#@ bbg
+msgid "Fixed"
+msgstr "Fijo"
+
+#: bbg_admin.php:503
+#@ bbg
+msgid "'Fixed' - the background image will not move as the page scrolls down."
+msgstr "&#39;Fijo&#39; - la imagen de fondo no se moverá hasta la página se desplaza hacia abajo."
+
+#: bbg_admin.php:509
+#@ bbg
+msgid "Position"
+msgstr "Posición"
+
+#: bbg_admin.php:512
+#@ bbg
+msgid "Background Position"
+msgstr "Posición de fondo"
+
+#: bbg_admin.php:515
+#@ bbg
+msgid "Left"
+msgstr "Izquierda"
+
+#: bbg_admin.php:518
+#@ bbg
+msgid "Center"
+msgstr "Centro"
+
+#: bbg_admin.php:521
+#@ bbg
+msgid "Right"
+msgstr "Derecho"
+
+#: bbg_admin.php:527
+#@ bbg
+msgid "Repeat"
+msgstr "Repetir"
+
+#: bbg_admin.php:529
+#@ bbg
+msgid "Background Repeat"
+msgstr "Repita el fondo"
+
+#: bbg_admin.php:530
+#@ bbg
+msgid "No Repeat"
+msgstr "No repetir"
+
+#: bbg_admin.php:531
+#@ bbg
+msgid "Tile"
+msgstr "Azulejo"
+
+#: bbg_admin.php:532
+#@ bbg
+msgid "Tile Horizontally"
+msgstr "Mosaico horizontal"
+
+#: bbg_admin.php:533
+#@ bbg
+msgid "Tile Vertically"
+msgstr "Mosaico vertical"
+
+#: bbg_admin.php:539
+#@ bbg
+msgid "Fade In"
+msgstr "Fundido de entrada"
+
+#: bbg_admin.php:541
+#: bbg_admin.php:560
+#@ bbg
+msgid "Fade In Background"
+msgstr "Fundido de fondo"
+
+#: bbg_admin.php:543
+#@ bbg
+msgid "Use the jQuery fade effect to show your background. Looks best with a black background color."
+msgstr "Utilice el efecto de fundido jQuery para mostrar sus antecedentes. Se ve mejor con un color de fondo negro."
+
+#: bbg_admin.php:549
+#: bbg_admin.php:551
+#@ bbg
+msgid "Fade In Speed"
+msgstr "Fundido de Velocidad"
+
+#: bbg_admin.php:552
+#@ bbg
+msgid "milliseconds"
+msgstr "milisegundos"
+
+#: bbg_admin.php:558
+#@ bbg
+msgid "Height"
+msgstr "Altura"
+
+#: bbg_admin.php:577
+#@ bbg
+msgid "How often your background image changes."
+msgstr "¿Con qué frecuencia los cambios de imagen de fondo."
+
+#: bbg_admin.php:583
+#@ bbg
+msgid "Change Interval"
+msgstr "Intervalo de cambio"
+
+#: bbg_admin.php:617
+#@ bbg
+msgid "Developer Integration"
+msgstr "Integration Developer"
+
+#: bbg_admin.php:624
+#: bbg_admin.php:630
+#@ bbg
+msgid "Object Selector"
+msgstr "Selector de objetos"
+
+#: bbg_admin.php:627
+#@ bbg
+msgid ""
+"If you want to customize where the background image is to be placed you can specify the id or class name of a DOM object, like a &lt;div&gt;. \n"
+"\t\t\t\t\t\t\t\t\tThis plugin will automatically insert the css to set the object's 'background:' property and use javascript to change the background or apply effects, as specified in the options above."
+msgstr "Si desea personalizar la imagen de fondo donde se va a colocar se puede especificar el ID o nombre de la clase de un objeto DOM, como un &lt;div&gt;. \\ T \\ t \\ t \\ t \\ t \\ t \\ t \\ t \\ plugin lLa insertará automáticamente el CSS para definir el objeto &#39;de fondo: &quot;la propiedad y el uso de JavaScript para cambiar el fondo o aplicar efectos, según lo especificado en las opciones anteriores ."
+
+#: bbg_admin.php:637
+#@ bbg
+msgid "Function Call"
+msgstr "Función de llamada"
+
+#: bbg_admin.php:640
+#@ bbg
+msgid "The function call is probably not necessary but is included here for reference"
+msgstr "La llamada de función no es probablemente necesario, pero se incluye aquí para referencia"
+
+#: bbg_admin.php:641
+#@ bbg
+msgid "To insert the custom background image into your custom theme, you can use something similar to the following code:"
+msgstr "Para insertar la imagen de fondo personalizado en el tema personalizado, se puede usar algo similar al siguiente código:"
+
+#: bbg_admin.php:645
+#@ bbg
+msgid "Or to add the background image url to a variable, use something like this:"
+msgstr "O para agregar la URL de la imagen de fondo a una variable, usar algo como esto:"
+
+#: bbg_admin.php:461
+#@ bbg
+msgid "Specify exactly where to place the background on the webpage."
+msgstr "Especificar exactamente dónde colocar el fondo de la página web."
+
+#: bbg_admin.php:649
+#@ bbg
+msgid "Note: this function only works in Wordpress 3.0 and higher."
+msgstr "Nota: esta función sólo funciona en Wordpress 3.0 y superiores."
+

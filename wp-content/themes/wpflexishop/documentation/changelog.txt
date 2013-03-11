@@ -1,0 +1,214 @@
+*** FlexiShop Changelog ***
+
+2011.11.10 - version 1.2.4
+
+* added: admin notification if there is any problem with your WP E-commerce page configurations
+  (revised: core folder )
+* added: Custom Content Before and After Product Image at Single Product Page 
+  -> For example you can replace main product image with a video.
+  (revised: core folder, products.php, wpsc-single_product.php )
+* added: Single Products Sidebar at Products Page and Single Product Page
+  (revised: core folder, products.php, wpsc-products_page.php, wpsc-single_product.php, style.css, boxedlayout.css )
+* added: Unlimited sidebar
+  (revised: core folder, sidebar.php )
+* updated: Frontpage page template, new and better function for slider, product categories, best seller, latest product
+  (revised: frontpage.php )
+* updated: ability to display/hide promotion details
+  (revised: core folder, style.css )
+* updated: post/page slider will always display post title and excerpt
+  (revised: style.css, js/flexishop.js )
+* added: singular template for slider and promotion post type, for consistent user experience
+  (new file: single-slider.php, single-promotion.php )
+* added: better featured product display at products page
+  (revised: wpsc-featured_product.php )
+* updated: ability to choose horizontal/vertical product categories top bar
+  (revised: style.css, js/flexishop.js )
+* updated: re-arrange widget areas order ar Widgets Admin page
+  (revised: core folder )
+* updated: slideshow page template use full width layout
+  (revised: slideshow.php )
+* added: products slider page template
+  (revised: page_productslider.php )
+* added: video page template
+  (revised: page_video.php )
+* added: youtube shortcode, vimeo shortcode
+  (revised: core folder )
+* updated: latest bxSlider script
+  (revised: js/jquery.bxSlider.min.js )
+* fixed: sliding to the top of checkout page when next/back button is clicked
+  (revised: js/jquery.bxSlider.min.js )
+* fixed: slider/promotion custom field 
+  -> post/product/promotion dropdown will be replaced with simple text input when you have more than 200 posts/products/promotions
+  (revised: js/jquery.bxSlider.min.js )
+* fixed: PrettyPhoto title at Single Product Page
+  (revised: core folder, wpsc-single_product.php )
+
+2011.07.1 - version 1.2.3RC1
+
+* added: speed optimization - fully compatible with WP Super Cache plugin
+  (revised: core folder )
+* added: simple non e-commerce theme when WP e-commerce plugin is not activated
+  (revised: core folder, frontpage.php, header.php, sidebar-footer-top.php, footer.php )
+* added: Cross Sales - "Users who bought this also bought" item
+  (revised: core folder, wpsc-single_product.php )
+* added: Related Products
+  (revised: core folder, wpsc-single_product.php )
+* added: Stock Counter
+  (revised: core folder, wpsc-product_page.php, wpsc-single_product.php )
+* added: Variation Images
+  (revised: core folder, wpsc-single_product.php )
+* added: new theme options for Products Page = Products Per Row, Not Cropped Thumbnails, Product Variation Price Type (Minimum/Maximum), Product Variation Text, Hide Price Decimal, Hide Product Price, Hide Sale Icons, Limit Product Description Characters, Limit Additional Product Description Characters 
+  (revised: core folder, wpsc-products_page.php )
+* added: new theme options for Products Page = Not Cropped Thumbnails, Product Variation Price Type (Minimum/Maximum), Product Variation Text, Hide Price Decimal, Hide Product Price, Hide Sale Icons
+  (revised: core folder, wpsc-products_page.php, wpsc-single_product.php )
+* added: new theme options for Blog / Archives Page = Hide Featured Image at Blog Page, Post Content Display at Blog Page, Hide Featured Image at Single Post Page
+  (revised: core folder, index.php, single.php )
+* added: simple product search widget
+  (revised: core folder, *additional style )
+* added: display product search form at leader section, controlled from theme settings
+  (revised: core folder, index.php, search.php, single.php, page.php, full-page.php, contact.php, testimonials.php, products.php, taxonomy-product_tag.php, taxonomy-wpsc-variation.php, single-wpsc-product.php, checkout.php, 404.php )
+* added: new product search template file
+  (revised: core folder; new file: search-wpsc-product.php )
+* added: new product variation template file
+  (revised: core folder; new file: taxonomy-wpsc-variation.php )  
+* added: new product tag template file
+  (revised: core folder; new file: taxonomy-product_tag.php )  
+* added: Contact page template
+  (new file: contact.php )
+* added: Single testimonial post template
+  (new file: single-testimonial.php )
+* added: Search template
+  (new file: search.php )
+* added: simple slider type for Slider post type
+  (revised: core folder, frontpage.php )
+* added: testimonials (plus multiple slider) shortcode
+  (revised: core folder )
+* added: flexible product categories (plus multiple slider) shortcode
+  (revised: core folder, frontpage.php )
+* added: flexible products (plus multiple slider) shortcode
+  (revised: core folder, frontpage.php )
+* added: flexible best sellers (plus multiple slider) shortcode
+  (revised: core folder, frontpage.php )
+* added: video shortcodes
+  (revised: core folder )
+* added: audio shortcodes
+  (revised: core folder )
+* added: standard shortcodes (Button, Box, Quote, Column, Tabbed, Toggle, etc)
+  (revised: core folder )
+* added: simple shortcodes generator
+  (revised: core folder )
+* (added) new twitter function
+  (revised: core folder, sidebar-footer-top.php )
+* (added) new twitter widget
+  (revised: core folder )
+* (added) Flickr widget
+  (revised: core folder )
+* (added) Feedburner subscription widget
+  (revised: core folder )
+* (added) recent comments widget
+  (revised: core folder )
+* added & modified: product category image resizing
+  (revised: core folder, products.php, flexi-frontpage-categories.php )
+* added: auto-lightbox for all linked images url
+  (revised: core folder )
+* added: "not found" text when the post/page doesn't exist
+  (revised: index.php, single.php, page.php )
+* modified: terms and conditions box uses PrettyPhoto
+  (revised: core folder, wpsc-shopping_cart_page.php, flexi-topbar-cart.php )
+* modified: better default layout CSS file
+  (revised: fulllayout.css )
+* modified: don't show shipping & tax at mini shopping cart - introduced since WPEC 3.8.4
+  (revised: core folder, wpsc-cart_widget.php )
+* modified: simple check to hide promotion slider link when it is not available
+  (revised: core folder )
+* fixed: 404 eror when clicking empty cart
+  (revised: core folder, wpsc-shopping_cart_page.php, flexi-topbar-cart.php )
+* fixed: jquery error when frontpage slider is empty
+  (revised: frontpage.php)
+
+2011.05.11 - version 1.2.2.1
+* added: option to display additional description in a product slider
+* fixed: products page template issue
+* fixed: products price issue
+
+2011.04.30 - version 1.2.2
+* added: child theme support
+* added: child theme files management page when child theme is active 
+* added: product comment using wordpress comment system
+* added: display product category lists at single product page
+* added: display product tag lists at single product page
+* modified: frontpage
+* fixed: paged products page template issue
+* fixed: turnoff frontpage slider autoplay
+* fixed: display image filesize at theme setting's image uploader
+* fixed: style and font issues with frontpage latest products and best sellers 
+
+2011.04.16 - version 1.2.1
+* added: custom price functions to fix 3.8.+ variations price display issue
+* added: custom multicurrency functions to fix 3.8.+ multicurrency price display issue
+* added: more design settings, make it more easy to change the colors of top bar, primary navigation menu, frontpage categories, best sellers, latest products, price display, checkout page, fancy notification, etc
+* added: "custom css" box to quickly add some CSS to your theme
+* added: more slider control options (slider height, product slider image width, limit product description)
+* added: display/hide product title on frontpage bestsellers and latest products
+* added: personalized message and user uploaded file at checkout page
+* added: make product description shortcode aware
+* modified: multiple images display at single product page
+* modified: image uploader scripts
+* modified: dynamic styles and scripts 
+* fixed: frontpage best seller issue when a variation product exist
+* fixed: missing testimonial header part
+* fixed: missing archive page title
+* fixed: google checkout issue 
+* fixed: wrong number of sliders
+* fixed: frontpage categories to show only top level
+* fixed: some css issues
+
+2011.04.02 - version 1.2
+* compatible with WP E-Commerce 3.8 with a lot of new features & settings
+
+2011.03.31 - version 1.1.4
+
+ * added: testimonial custom post type
+ * modified: Gold Cart product gallery functions (load faster)
+ * modified: user styles css output
+ * modified: timthumb behavior at featured product slider when using boxed layout
+ * fixed: posts_per_page bug ( not show all slider posts) 
+ * fixed: javascript for product category groups bar (rare bug)
+
+2011.03.07 - version 1.1.3
+
+ * modified: using wp_enqueue_script and wp_enqueue_style for all header scripts and styles
+ * modified: better fonts option (standard fonts, custom @font-face, and Google fonts)
+ * modified: better javascript for product category groups bar
+
+2011.02.25 - version 1.1.2
+
+ * fixed: for WP 3.1, topheader (shopping chart & grouped categories) positioning when admin bar is active
+ * added: filter WPEC JPEG image quality (default WPEC JPEG image quality is only 75%!!!)
+ * improved: homepage logic (use default blog style when Frontpage template isn't active)
+ * added: Slideshow page template (you can have custom slider at your page using WP Media Library)
+ * added: superfish dropdown menu for better and fancy drop down menu!
+ * improved: delete empty custom fields when save post 
+ * added: better support for List View when Gold Cart plugin is active  
+ * added: better support for Grid View when Gold Cart plugin is active  
+
+2011.02.20 - version 1.1.1
+
+ * better translation support. translating FlexiShop to your language is very easy
+ * brand new documentation file (full color PDF)
+
+2011.02.19 - version 1.1.0
+
+ * fixed special price and variations price behavior at products page and single product page 
+ * fixed top and bottom pagination bug
+ * fixed duplicate excerpt and content in blog post 
+ * fixed user navigation bug 
+ * added group id parameter to frontpage categories slider 
+ * modified slider behavior, to make ordering slider easy (order by published date)
+ * modified post thumbnail linked to full image size (popup) at single post page 
+ * fixed first footer top widget area bug
+ * modified latest news section at footer top area to show excerpt (not full content)
+ * replaced short open tags with standard tags for better compatibility
+ * added Timthumb support for WP Multisite
+ * added notification when the twitter username option is empty
+ * fixed top navigation floating bug when gold cart product search is activated

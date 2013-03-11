@@ -1,0 +1,410 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: jie <yinrenjieone@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
+"X-Textdomain-Support: yes\n"
+"X-Poedit-Language: Chinese\n"
+"X-Poedit-Country: CHINA\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#@ bbg
+#: bbg_admin.php:331
+msgid "Keep your site looking fresh!"
+msgstr "让你的站点看起来很新鲜！"
+
+#@ bbg
+#: bbg_admin.php:332
+msgid "Help & Support"
+msgstr "帮助和支持"
+
+#@ bbg
+#: bbg_admin.php:369
+msgid "Background Images"
+msgstr "背景图像"
+
+#@ bbg
+#: bbg_admin.php:415
+msgid "Upload images to a new "
+msgstr "上传图像到一个新的"
+
+#@ bbg
+#: bbg_admin.php:416
+msgid "Nextgen Gallery"
+msgstr "Nextgen Gallery"
+
+#@ bbg
+#: bbg_admin.php:397
+msgid "Choose your NextGen Gallery"
+msgstr "选择你的NextGen Gallery"
+
+#@ bbg
+#: bbg_admin.php:420
+msgid "Enter the server sub-folder path"
+msgstr "输入服务器的子文件夹路径"
+
+#@ bbg
+#: bbg_admin.php:424
+msgid "(e.g. wp-content/uploads/bg-images/)"
+msgstr "(例如wp-content/uploads/bg-images/)"
+
+#@ bbg
+#: bbg_admin.php:437
+msgid "Background Layout"
+msgstr "背景布局"
+
+#@ bbg
+#: bbg_admin.php:449
+msgid "Recommended"
+msgstr "推荐"
+
+#@ bbg
+#: bbg_admin.php:575
+msgid "Random Image Change Interval"
+msgstr "随机图片更换间隔"
+
+#@ bbg
+#: bbg_admin.php:587
+msgid "Once A Visitor Session"
+msgstr "当访问者变化时"
+
+#@ bbg
+#: bbg_admin.php:589
+msgid "The same random image will be used on every page of the site, until they visit on a different session (uses cookies)."
+msgstr "在一个访问者浏览期间将一直使用同一个随机背景，直到另一个访问者到来（使用Cookie）。"
+
+#@ bbg
+#: bbg_admin.php:593
+msgid "Every Page Refresh"
+msgstr "当页面刷新时"
+
+#@ bbg
+#: bbg_admin.php:595
+msgid "Every time a visitor changes pages a new random image is chosen."
+msgstr "每次改变页面都选择一个新的随机背景图像。"
+
+#@ bbg
+#: bbg_admin.php:599
+msgid "Continuously On Timer Interval (Slideshow)"
+msgstr "定时器不间断变化（幻灯片）"
+
+#@ bbg
+#: bbg_admin.php:602
+msgid "Background images will loop through like a slideshow."
+msgstr "背景会循环变换，像幻灯片一样。"
+
+#@ bbg
+#: bbg_admin.php:604
+msgid "Change Background Every"
+msgstr "改变背景每"
+
+#@ bbg
+#: bbg_admin.php:604
+msgid "seconds"
+msgstr "秒"
+
+#@ bbg
+#: bbg_admin.php:483
+msgid "Background Color"
+msgstr "背景颜色"
+
+#@ default
+#: bbg_admin.php:485
+msgid "Select a Color"
+msgstr "选择颜色"
+
+#@ bbg
+#: bbg_admin.php:563
+msgid "Full page width, scrolling layout only. There is no height by default. If you want backgrounds to fit width and height of your page, you can set the height to 100%. Otherwise you can set the height in pixels."
+msgstr "完整页面宽度，只用于滚动布局。没有默认高度。如果你想背景适应您网页的宽度和高度，您可以设置高度为100％。否则，你可以设置像素高度。"
+
+#@ bbg
+#: bbg_admin.php:684
+msgid "Settings"
+msgstr "设置"
+
+#@ default
+#@ bbg
+#: bbg_admin.php:78
+#: bbg_admin.php:330
+msgid "Better Backgrounds"
+msgstr "Better Backgrounds"
+
+#@ default
+#: bbg_admin.php:93
+msgid "You can customize the look of your site without touching any of your theme&#8217;s code by using a Better Backgrounds.."
+msgstr ""
+
+#@ default
+#: bbg_admin.php:94
+msgid "<a href=\"http://davetcoleman.com/blog/better-backgrounds-wordpress-plugin\" target=\"_blank\">Documentation on Better Backgrounds</a>"
+msgstr ""
+
+#@ default
+#: bbg_admin.php:339
+#, php-format
+msgid "Background updated. <a href=\"%s\">Visit your site</a> to see how it looks."
+msgstr ""
+
+#@ bbg
+#: bbg_admin.php:348
+msgid "Background Preview"
+msgstr "背景预览"
+
+#@ bbg
+#: bbg_admin.php:372
+msgid "Note: You are in manual upload mode and may need server access via FTP to add background images. For easier use we recommend you install the <a href=\"http://wordpress.org/extend/plugins/nextgen-gallery/\">NextGen Gallery</a> Wordpress plugin and return to this page."
+msgstr "注意：您现在处于手动上传模式，可能需要通过FTP服务器访问添加背景图片。为了更容易使用，我们建议您安装 <a href=\"http://wordpress.org/extend/plugins/nextgen-gallery/\">NextGen Gallery</a> WordPress插件然后返回此页。"
+
+#@ bbg
+#: bbg_admin.php:376
+msgid "Find and upload your desired images in .png, .gif, or .jpg formats."
+msgstr "找到并上传您想要的图像（png gif jpg 格式）。"
+
+#@ bbg
+#: bbg_admin.php:377
+msgid "Based on today's browser display statistics, a good recommended image size is 1280px x 1024px."
+msgstr "基于当前的浏览器显示统计数据，建议的图像大小为 1280px x 1024px。"
+
+#@ bbg
+#: bbg_admin.php:382
+msgid "Images Location:"
+msgstr "图像位置："
+
+#@ bbg
+#: bbg_admin.php:420
+msgid "to the folder containing your background images:"
+msgstr "文件夹包含您的背景图像："
+
+#@ bbg
+#: bbg_admin.php:439
+msgid "Choose how you want the background to be displayed on your website."
+msgstr "选择你想如何显示网站背景。"
+
+#@ bbg
+#: bbg_admin.php:445
+msgid "Layout Mode:"
+msgstr "布局模式："
+
+#@ bbg
+#: bbg_admin.php:449
+msgid "Better Background"
+msgstr "更好的背景"
+
+#@ bbg
+#: bbg_admin.php:451
+msgid "Easiest to implement and offers the most options and customizations. Scales it to fit browser window exactly."
+msgstr "最容易实现，并提供最多的选项和自定义功能。缩放能完全适应浏览器窗口。"
+
+#@ bbg
+#: bbg_admin.php:454
+msgid "Classic Background"
+msgstr "传统背景"
+
+#@ bbg
+#: bbg_admin.php:456
+msgid "Uses the standard body background css attribute. Does not scale the background to fit the page's width or support fade in. Works like the regular Wordpress Custom Background functionality."
+msgstr "使用标准的背景CSS属性。不支持缩放背景以适应页面的宽度，也不支持淡入背景。就像原本的WordPress自定义背景功能。"
+
+#@ bbg
+#: bbg_admin.php:459
+msgid "Developer"
+msgstr "开发"
+
+#@ bbg
+#: bbg_admin.php:474
+msgid "Background Layout Options"
+msgstr "背景布局选项"
+
+#@ bbg
+#: bbg_admin.php:476
+msgid "Customize your chosen background layout."
+msgstr "自定义您选择的背景布局。"
+
+#@ default
+#: bbg_admin.php:481
+msgid "Color"
+msgstr ""
+
+#@ bbg
+#: bbg_admin.php:492
+msgid "Attachment"
+msgstr "附加选项"
+
+#@ bbg
+#: bbg_admin.php:495
+msgid "Background Attachment"
+msgstr "背景附件"
+
+#@ bbg
+#: bbg_admin.php:498
+msgid "Scroll"
+msgstr "滚动"
+
+#@ bbg
+#: bbg_admin.php:501
+msgid "Fixed"
+msgstr "固定"
+
+#@ bbg
+#: bbg_admin.php:503
+msgid "'Fixed' - the background image will not move as the page scrolls down."
+msgstr "“固定” - 背景图像不会随着页面的滚动而移动。"
+
+#@ bbg
+#: bbg_admin.php:509
+msgid "Position"
+msgstr "位置"
+
+#@ bbg
+#: bbg_admin.php:512
+msgid "Background Position"
+msgstr "背景位置"
+
+#@ bbg
+#: bbg_admin.php:515
+msgid "Left"
+msgstr "左"
+
+#@ bbg
+#: bbg_admin.php:518
+msgid "Center"
+msgstr "中"
+
+#@ bbg
+#: bbg_admin.php:521
+msgid "Right"
+msgstr "右"
+
+#@ bbg
+#: bbg_admin.php:527
+msgid "Repeat"
+msgstr "重复"
+
+#@ bbg
+#: bbg_admin.php:529
+msgid "Background Repeat"
+msgstr "背景重复"
+
+#@ bbg
+#: bbg_admin.php:530
+msgid "No Repeat"
+msgstr "不重复"
+
+#@ bbg
+#: bbg_admin.php:531
+msgid "Tile"
+msgstr "平铺"
+
+#@ bbg
+#: bbg_admin.php:532
+msgid "Tile Horizontally"
+msgstr "横向平铺"
+
+#@ bbg
+#: bbg_admin.php:533
+msgid "Tile Vertically"
+msgstr "纵向平铺"
+
+#@ bbg
+#: bbg_admin.php:539
+msgid "Fade In"
+msgstr "淡入"
+
+#@ bbg
+#: bbg_admin.php:541
+#: bbg_admin.php:560
+msgid "Fade In Background"
+msgstr "淡入背景"
+
+#@ bbg
+#: bbg_admin.php:543
+msgid "Use the jQuery fade effect to show your background. Looks best with a black background color."
+msgstr "使用jQuery淡入淡出显示您的背景。最好使用黑色的背景颜色。"
+
+#@ bbg
+#: bbg_admin.php:549
+#: bbg_admin.php:551
+msgid "Fade In Speed"
+msgstr "淡入速度"
+
+#@ bbg
+#: bbg_admin.php:552
+msgid "milliseconds"
+msgstr "毫秒"
+
+#@ bbg
+#: bbg_admin.php:558
+msgid "Height"
+msgstr "高度"
+
+#@ bbg
+#: bbg_admin.php:577
+msgid "How often your background image changes."
+msgstr "多久改变您的背景图像。"
+
+#@ bbg
+#: bbg_admin.php:583
+msgid "Change Interval"
+msgstr "改变间隔"
+
+#@ bbg
+#: bbg_admin.php:617
+msgid "Developer Integration"
+msgstr "开发集成"
+
+#@ bbg
+#: bbg_admin.php:624
+#: bbg_admin.php:630
+msgid "Object Selector"
+msgstr "对象选择器"
+
+#@ bbg
+#: bbg_admin.php:627
+msgid ""
+"If you want to customize where the background image is to be placed you can specify the id or class name of a DOM object, like a &lt;div&gt;. \n"
+"\t\t\t\t\t\t\t\t\tThis plugin will automatically insert the css to set the object's 'background:' property and use javascript to change the background or apply effects, as specified in the options above."
+msgstr ""
+"如果你想自定义背景图像位置，您可以指定一个DOM对象的ID或类的名称，像一个&lt;div&gt;。\n"
+"\t\t\t\t\t\t\t\t\t这个插件会自动插入的CSS来设置对象的“背景：”属性并使用JavaScript来改变背景或应用在上述选项中指定的效果。"
+
+#@ bbg
+#: bbg_admin.php:637
+msgid "Function Call"
+msgstr "调用函数"
+
+#@ bbg
+#: bbg_admin.php:640
+msgid "The function call is probably not necessary but is included here for reference"
+msgstr "函数调用可能是没有必要的，放在这里，以供参考"
+
+#@ bbg
+#: bbg_admin.php:641
+msgid "To insert the custom background image into your custom theme, you can use something similar to the following code:"
+msgstr "要插入到您的自定义主题的自定义背景图片，您可以使用类似下面的代码："
+
+#@ bbg
+#: bbg_admin.php:645
+msgid "Or to add the background image url to a variable, use something like this:"
+msgstr "或添加背景图片的URL给一个变量，使用这样的："
+
+#@ bbg
+#: bbg_admin.php:461
+msgid "Specify exactly where to place the background on the webpage."
+msgstr "确切的指定背景在网页上的位置。"
+
+#@ bbg
+#: bbg_admin.php:649
+msgid "Note: this function only works in Wordpress 3.0 and higher."
+msgstr "注：此功能只在WordPress3.0和更高版本的作品。"
+

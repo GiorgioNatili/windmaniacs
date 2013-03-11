@@ -1,0 +1,7 @@
+backup-remove
+wp-content/uploads
+wp-content/cache
+wp-content/update
+wp-content/gd-star-rating
+sitemap.xml
+sitemap.xml.gz

@@ -1,0 +1,169 @@
+# Translation of the WordPress plugin Wordpress Plugin Framework Reloaded 0.1 by Lopo Lencastre de Almeida - iPublicis.com.
+# Copyright (C) 2010 Lopo Lencastre de Almeida - iPublicis.com
+# This file is distributed under the same license as the Wordpress Plugin Framework Reloaded package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Wordpress Plugin Framework Reloaded 0.1\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/wordpress-plugin-framework-reloaded\n"
+"POT-Creation-Date: 2010-04-22 18:24+0000\n"
+"PO-Revision-Date: 2010-04-23 16:38+0100\n"
+"Last-Translator: Lopo Lencastre de Almeida <foss@brainventures.net>\n"
+"Language-Team: Portugal <pt@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: n, n+1\n"
+"X-Poedit-Language: Portuguese\n"
+"X-Poedit-Country: PORTUGAL\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+#: framework-reloaded.php:240
+#: framework-reloaded.php:268
+msgid "translation made by"
+msgstr "tradução por"
+
+#: framework-reloaded.php:264
+msgid "We would like to thank to the following volunteers without whom we would not have this plugin available for a broader public. Thank you."
+msgstr "Nós gostaríamos de agradecer aos seguintes voluntários sem os quais não seria possível oferecer este plugin a um público mais vasto. Muito obrigado."
+
+#: framework-reloaded.php:314
+#, php-format
+msgid "%s Settings"
+msgstr "%s - Opções"
+
+#: framework-reloaded.php:315
+#: framework-reloaded.php:493
+msgid "Settings"
+msgstr "Opções"
+
+#: framework-reloaded.php:360
+#: framework-reloaded.php:512
+msgid "About "
+msgstr "Acerca "
+
+#: framework-reloaded.php:361
+#: framework-reloaded.php:444
+msgid "Overview"
+msgstr "Geral"
+
+#: framework-reloaded.php:399
+msgid "Update Options &raquo;"
+msgstr "Actualizar &raquo;"
+
+#: framework-reloaded.php:426
+msgid "Settings updated."
+msgstr "Opções actualizadas."
+
+#: framework-reloaded.php:481
+msgid "Support Forum"
+msgstr "Forum de Suporte"
+
+#: framework-reloaded.php:513
+#: framework-reloaded.php:558
+msgid "Plugin Latest News."
+msgstr "Últimas Notícias."
+
+#: framework-reloaded.php:514
+msgid "About Wordpress Plugin Framework Reloaded"
+msgstr "Acerca do Wordpress Plugin Framework Reloaded"
+
+#: framework-reloaded.php:527
+msgid "This project was possible due to the previous work of "
+msgstr "Este projecto foi possível graças ao trabalho anterior de "
+
+#: framework-reloaded.php:534
+msgid "and so many others. Thank you all and also a special <em>thank you</em> to all the Wordpress developers."
+msgstr "e de tantos outros, Obrigado a todos e em especial a toda a comunidade do Wordpress. "
+
+#: framework-reloaded.php:542
+msgid "was developed by"
+msgstr "foi desenvolvido por"
+
+#: framework-reloaded.php:544
+msgid "and released under the GNU LGPL license, version 3 or greater."
+msgstr "e disponibilizado sob a licença GNU LGPL, versão 3 ou superior."
+
+#: framework-reloaded.php:554
+msgid "Do you like this Plugin?"
+msgstr "Gosta deste Plugin?"
+
+#: framework-reloaded.php:555
+msgid "Need Support?"
+msgstr "Precisa de Ajuda?"
+
+#: framework-reloaded.php:556
+msgid "Translators Credits"
+msgstr "Tradutores"
+
+#: framework-reloaded.php:559
+msgid "WPFR Latest News."
+msgstr "Últimas do WPFR"
+
+#: framework-reloaded.php:561
+msgid "Help Us"
+msgstr "Ajude-nos"
+
+#: framework-reloaded.php:567
+#, php-format
+msgid "You too can help. Just <a href='%s'>dowload</a> the .pot file included and send your translation back to us. We just need the resulting .po and .mo files. Thanks!"
+msgstr "Você também pode ajudar. Basta <a href='%s'>descarregar</a> o ficheiro .pot incluído e enviar a sua tradução de volta para nós. Só precisamos dos ficheiros .po e .mo. Obrigado!"
+
+#: framework-reloaded.php:569
+msgid "More at "
+msgstr "Mais em "
+
+#: framework-reloaded.php:570
+msgid "Please, use something like "
+msgstr "Use, por favor, algo como o "
+
+#: framework-reloaded.php:582
+msgid "We spend a lot of effort on Free Software development. Any help would be highly appreciated. Thanks!"
+msgstr "Nós envidamos muitos esforços no desenvolvimento de Software Livre. Qualquer ajuda será muito apreciada. Obrigado!"
+
+#: framework-reloaded.php:587
+msgid "Link to it. Others may use it."
+msgstr "Referencie. Outros poderão usá-lo."
+
+#: framework-reloaded.php:592
+msgid "Give it a good rating on WordPress.org."
+msgstr "Vote no Wordpress.org."
+
+#: framework-reloaded.php:597
+msgid "Donate something to our team."
+msgstr "Doe algo à nossa equipa."
+
+#: framework-reloaded.php:602
+msgid "Send us a gift to show your appreciation."
+msgstr "Envie-nos um presente."
+
+#: framework-reloaded.php:607
+msgid "Help us translating it."
+msgstr "Ajude-nos a traduzi-lo."
+
+#: framework-reloaded.php:615
+msgid "If you have any problems with this plugin or ideas for improvements or enhancements, please use them..."
+msgstr "Se tiver qualquer problema com este plugin ou ideias para o melhorar, use os seguintes recursos..."
+
+#: framework-reloaded.php:620
+msgid "Support Forums."
+msgstr "Forum de Suporte"
+
+#: framework-reloaded.php:625
+msgid "Report a Bug."
+msgstr "Reporte um Erro."
+
+#: framework-reloaded.php:631
+msgid "We are available for hire!"
+msgstr "Contracte-nos!"
+
+#: framework-reloaded.php:649
+#, php-format
+msgid "%s Latest News"
+msgstr "Últimas do %s"
+
+#: framework-reloaded.php:666
+msgid "Subscribe with RSS"
+msgstr "Subscreva com RSS"
+

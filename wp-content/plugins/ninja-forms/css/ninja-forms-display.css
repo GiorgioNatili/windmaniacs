@@ -1,0 +1,70 @@
+a.tooltip {outline:none; text-decoration: none; }
+a.tooltip strong {line-height:30px;}
+a.tooltip:hover {text-decoration:none;}
+a.tooltip span {
+    z-index:10;display:none; padding:14px 20px;
+    margin-top:-10px; margin-left:28px;
+    width:240px; line-height:16px;
+    z-index: 1;
+    position: relative;
+}
+a.tooltip span:before {
+    border-top: 10px solid transparent;
+    border-right: 15px solid #ccc;
+    border-bottom: 10px solid transparent;
+    content: "";
+    position: absolute;
+    left: -15px;
+
+}
+a.tooltip:hover span{
+    display:inline; position:absolute; color:#333;
+    border:1px solid #ccc; background:#f1f1f1;}
+
+/*CSS3 extras*/
+a.tooltip span
+{
+    border-radius:4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+
+    -moz-box-shadow: 5px 5px 8px #CCC;
+    -webkit-box-shadow: 5px 5px 8px #CCC;
+    box-shadow: 5px 5px 8px #CCC;
+}
+#ui-datepicker-div {
+    background: #f1f1f1;
+    border-radius: 3px;
+}
+#ui-datepicker-div a {
+    text-decoration: none;
+    cursor: pointer;
+}
+#ui-datepicker-div .ui-datepicker-header,
+#ui-datepicker-div .ui-datepicker-calendar th,
+#ui-datepicker-div .ui-datepicker-calendar td {
+    padding: 5px;
+    text-align: center;
+}
+.ui-datepicker-prev {
+    float: left;
+}
+.ui-datepicker-next {
+    float: right;
+}
+.ninja-forms-no-display {
+    display: none;
+}
+.ninja-forms-form .wp-switch-editor {
+    height: auto;
+}
+.ninja-forms-form .mceIframeContainer {
+    background: #fff;
+}
+.ninja-forms-req-symbol {
+    color: #ff0000;
+}
+.ninja-forms-form .label-above label,
+.ninja-forms-form .label-below label {
+    display: block;
+}
