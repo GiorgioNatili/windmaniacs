@@ -18,7 +18,7 @@ if (!defined('WP_PLUGIN_URL'))
   define('WP_PLUGIN_URL', WP_CONTENT_URL.'/plugins');
 if (!defined('WP_PLUGIN_DIR'))
   define('WP_PLUGIN_DIR', WP_CONTENT_DIR.'/plugins');
-if(!define('WDM_TABLE_NAME'))
+if(!defined('WDM_TABLE_NAME'))
   define('WDM_TABLE_NAME', $wpdb->prefix . 'wdm_taxonomy_manager');
 
 function wdm_install(){
