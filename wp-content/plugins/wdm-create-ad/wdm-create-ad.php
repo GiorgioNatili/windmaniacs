@@ -55,7 +55,7 @@ function wdm_create_ad_form( $atts ) {
       // Not required
       break;
     case 2:
-      include WP_PLUGIN_URL . '/wdm-search/wdm-search.php';
+      include(__DIR__ . '/../wdm-search/wdm-search.php');
       // Load data from prev step
       $hidden_value['wdm-type'] = wdm_create_ad_form_get('wdm-type',     FALSE);
 
