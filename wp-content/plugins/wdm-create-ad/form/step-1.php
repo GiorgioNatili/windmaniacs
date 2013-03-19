@@ -1,2 +1,2 @@
-<input type="radio" name="wdm-type" value="wdm-windsurf-boards" checked="checked"><?php _e('Windsurf'); ?><br />
-<input type="radio" name="wdm-type" value="wdm-kitesurfing-boards"><?php _e('Kitesurfing'); ?><br />
+<input type="radio" name="wdm-type" value="wdm-windsurf-boards"<?php print wdm_create_ad_is_default('wdm-windsurf-boards', $default_value['wdm-type'], "checked") ?>><?php _e('Windsurf'); ?><br />
+<input type="radio" name="wdm-type" value="wdm-kitesurfing-boards"<?php print wdm_create_ad_is_default('wdm-kitesurfing-boards', $default_value['wdm-type'], "checked") ?>><?php _e('Kitesurfing'); ?><br />

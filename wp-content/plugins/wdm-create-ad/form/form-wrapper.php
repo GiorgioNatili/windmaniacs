@@ -1,4 +1,4 @@
-<form id="wdm-create-ad-<?php print $step; ?>" class="wdm-create-ad" method="post">
+<form id="wdm-create-ad-<?php print $step; ?>" class="wdm-create-ad" method="post" <?php print $form_extra_attr?>>
 
   <?php include("step-$step.php"); ?>
 
@@ -11,7 +11,7 @@
   <input type="submit" name="action_prev"   value="<?php print _('Step') . ' ' . ($step - 1); ?>" /></button>
   <?php endif; ?>
   <input type="submit" name="submit"        value="Submit" />
-  <?php if ($step < 7): ?>
+  <?php if ($step < 5): ?>
   <input type="submit" name="action_next"   value="<?php print _('Step') . ' ' . ($step + 1); ?>"></button>
   <?php endif; ?>
 </form>

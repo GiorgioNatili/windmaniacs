@@ -1,17 +1,24 @@
-<?php foreach ($languages as $langcode): ?>
-<fieldset>
-  <label><?php _e($langcode); ?></label>
+<label for="wdm-condiction"><?php _e("Condiction"); ?></label>
 
-  <label for="wdm-title[<?php  print $langcode; ?>]"><?php _e("Title"); ?></label>
-  <input type="text" name="wdm-title[<?php print $langcode; ?>]" />
+<select name="wdm-condiction">
+  <option value=""><?php _e('Please select'); ?></option>
+<?php foreach ($condictions as $value => $label):?>
+  <option value="<?php print $value; ?>" <?php print wdm_create_ad_is_default($value, $default_value['wdm-condiction']) ?>><?php print $label; ?></option>
+<?php endforeach?>
+</select>
 
-  <label for="wdm-description[<?php  print $langcode; ?>]"><?php _e("Description"); ?></label>
-  <input type="text" name="wdm-description[<?php print $langcode; ?>]" /></label>
+<label for="wdm-year"><?php _e("Year"); ?></label>
+<select name="wdm-year">
+  <option value=""><?php _e('Please select'); ?></option>
+<?php foreach ($years as $value => $label):?>
+  <option value="<?php print $value; ?>" <?php print wdm_create_ad_is_default($value, $default_value['wdm-year']) ?>><?php print $label; ?></option>
+<?php endforeach?>
+</select>
 
-  <label for="wdm-price[<?php  print $langcode; ?>]"><?php _e("Price"); ?></label>
-  <input type="text" name="wdm-price[<?php print $langcode; ?>]" /></label>
-
-  <label for="wdm-sale_price[<?php  print $langcode; ?>]"><?php _e("Sale price"); ?></label>
-  <input type="text" name="wdm-sale_price[<?php print $langcode; ?>]" /></label>
-</fieldset>
-<?php endforeach; ?>
+<label for="wdm-style"><?php _e("Style"); ?></label>
+<select name="wdm-style">
+  <option value=""><?php _e('Please select'); ?></option>
+<?php foreach ($styles as $value => $label):?>
+  <option value="<?php print $value; ?>" <?php print wdm_create_ad_is_default($value, $default_value['wdm-style']) ?>><?php print $label; ?></option>
+<?php endforeach?>
+</select>
