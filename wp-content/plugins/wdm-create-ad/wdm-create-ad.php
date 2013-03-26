@@ -16,7 +16,32 @@
  *   Form to display
  */
 function wdm_create_ad_form( $atts ) {
-  //var_dump($wp_scripts);
+  // Constant salt required to user auth
+  $wdm_salt = 'dslkfhadskfsdkf4534asdfasdf325423';
+
+  // Get current step.
+  $step = wdm_create_ad_form_get_step(1);
+
+  // Is a callback page
+  if (isset($_GET['wdm_data'])) {
+    list($post_id, $md5) = explode('-', $_GET['wdm_data']);
+    if (md5($post_id . $wdm_salt ) != $md5) {
+      wp_die(_('You are try to access to wrong page.'));
+    }
+    else {
+      // Move to last step
+      $step = 6;
+
+      // Set post author to current user
+      $post = array();
+      $post['ID'] = $post_id;
+      $post['post_author'] = get_current_user_id();
+
+      // Update the post into the database
+      wp_update_post($post);
+    }
+  }
+
   // Identify options
   extract( shortcode_atts( array(
     'lang' => 'lang',
@@ -36,9 +61,6 @@ function wdm_create_ad_form( $atts ) {
   wp_localize_script('wdm-create-ad', 'WPWdmCreateAd', array(
     'todo' => 'need info?',
   ));
-
-  // Get current step.
-  $step = wdm_create_ad_form_get_step(1);
 
   // Go to next step.
   if ($_POST['action_prev']) {
@@ -154,7 +176,7 @@ function wdm_create_ad_form( $atts ) {
       }
 
       // Empty loaded files
-      $_SESSION['wdm_loaded_files'] = array();
+      $product_images = array();
 
       for ($i = 0; $i < 5; $i++) {
         $data_key = "uploadfiles_$i";
@@ -163,7 +185,7 @@ function wdm_create_ad_form( $atts ) {
           if (isset( $upload['error']) && '0' != $upload['error']) {
             wp_die( 'There was an error uploading your file. ' );
           } else {
-            $_SESSION['wdm_loaded_files'][] = $upload;
+            $product_images[] = $upload;
           }
         }
       }
@@ -182,7 +204,7 @@ function wdm_create_ad_form( $atts ) {
       $post = array(
         'post_title'    => wdm_create_ad_generate_translation_blob($titles),
         'post_content'  => wdm_create_ad_generate_translation_blob($descs),
-        'post_status'   => 'publish',
+        'post_status'   => 'draft',
         'post_author'   => get_current_user_id(),
         'post_type'     => 'wpsc-product',
       );
@@ -220,36 +242,47 @@ function wdm_create_ad_form( $atts ) {
 
       // Sale price
       add_post_meta($post_id, '_wpsc_special_price', $hidden_value['wdm-sale_price']);
-      var_dump($_SESSION['wdm_loaded_files']);
-      if (isset($_SESSION['wdm_loaded_files']) && is_array($_SESSION['wdm_loaded_files'])) {
-        // you must first include the image.php file
-        // for the function wp_generate_attachment_metadata() to work
-        require_once(ABSPATH . 'wp-admin/includes/image.php');
-        foreach ($_SESSION['wdm_loaded_files'] as $upload) {
-          var_dump($upload);
-          // Create attachment post
-          $attachment = array(
-             'guid' => $upload['path'],
-             'post_mime_type' => $upload['type'],
-             'post_title' => $upload['filename'],
-             'post_content' => '',
-             'post_status' => 'inherit'
-          );
-          $attach_id = wp_insert_attachment( $attachment, $upload['filename']);
-          $attach_data = wp_generate_attachment_metadata( $attach_id, $upload['filename'], $post_id);
-          wp_update_attachment_metadata( $attach_id, $attach_data );
+
+      // you must first include the image.php file
+      // for the function wp_generate_attachment_metadata() to work
+      require_once(ABSPATH . 'wp-admin/includes/image.php');
+
+      // Only first image need to be stored as thumbnail
+      $first_image = TRUE;
+
+      // Manage all available images
+      foreach ($product_images as $upload) {
+        $filename = basename($upload['file']);
+        // Create attachment post
+        $attachment = array(
+           'guid' => $upload['url'],
+           'post_mime_type' => $upload['type'],
+           'post_title' => $filename,
+           'post_content' => '',
+           'post_status' => 'inherit',
+           'post_parent' => $post_id,
+        );
+        $attach_id = wp_insert_attachment( $attachment, $filename);
+        $attach_data = wp_generate_attachment_metadata( $attach_id, $filename, $post_id);
+        wp_update_attachment_metadata( $attach_id, $attach_data );
+
+        // This add only the thumb image..
+        if ($first_image) {
+          add_post_meta($post_id, '_thumbnail_id', $attach_id);
+          $first_image = FALSE;
         }
-        // Reset attachments data
-        unset($_SESSION['wdm_loaded_files']);
       }
 
       // $_SESSION['wdm-create-ad-post_id'][] = $post_id;
 
-      $salt = 'dslkfhadskfsdkf4534asdfasdf325423';
       $destination_url = get_permalink() . '?' . http_build_query(array(
-        'wdm_data'  => $post_id . '-' . md5($post_id . $salt)
+        'wdm_data'  => $post_id . '-' . md5($post_id . $wdm_salt)
       ));
       $destination_url = urlencode($destination_url);
+      break;
+    case 6:
+      // Move back to result page
+      $step = 5;
       break;
   }
 
