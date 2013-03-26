@@ -8,7 +8,7 @@
 
   <input type="hidden" name="wdm_create_ad_form_step" value="<?php print $step; ?>" />
 
-  <?php if ($step > 1 && $step  < 6): ?>
+  <?php if ($step > 1 && $step  < 5): ?>
     <input type="submit" name="action_prev"   value="<?php print _('Step') . ' ' . ($step - 1); ?>" /></button>
   <?php endif; ?>
   <?php if ($button_current): ?>
