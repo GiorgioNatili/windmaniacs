@@ -1,5 +1,5 @@
+<div id="spinvariablecontainer"></div>
 <form id="wdm-create-ad-<?php print $step; ?>" class="wdm-create-ad" method="post" <?php print $form_extra_attr?>>
-
   <?php include("step-$step.php"); ?>
 
   <?php foreach($hidden_value as $name => $value): ?>

@@ -1,5 +1,5 @@
 <h2>Main category</h2>
-<select name="wdm-category">
+<select id="wdm-ad-main-category" name="wdm-category">
   <option value=""><?php _e('Please select'); ?></option>
 <?php foreach ($custom_taxonomies as $taxonomy):?>
   <option value="<?php print $taxonomy->slug; ?>" <?php print wdm_create_ad_is_default($taxonomy->slug, $default_value['wdm-category']) ?>><?php print $taxonomy->label; ?></option>
