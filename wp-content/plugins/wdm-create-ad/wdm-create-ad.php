@@ -192,6 +192,8 @@ function wdm_create_ad_form( $atts ) {
       // break;
 
 //    case 5: // =================================================================
+      // TODO: refactor post creation to use wpsc_insert_product
+
       // Create post..
       $titles = array();
       $descs = array();
@@ -360,9 +362,66 @@ function wdm_create_ad_terms($vocabulary) {
   return $return;
 }
 
+function wdm_create_ad_get_column_headers() {
+  return array(
+    'image'  => '',
+    'title'  => _('Name'),
+    'description'  => _('Description'),
+    'price'  => _('Price'),
+    'sale_price' => _('Sale Price'),
+  );
+}
 
-// Create shortcode for the form
-add_shortcode( 'wdm-create-ad', 'wdm_create_ad_form' );
+/**
+ * Create a page with product for current user
+ */
+function wdm_create_ad_products() {
+  if ( is_user_logged_in() ) {
+    global $current_user;
+    get_currentuserinfo();
+  } else {
+    return _("You are not allowed to see content here");
+  }
+
+  // $products = query_posts('post_type="wpsc-product"&author=' . $current_user->ID);
+  query_posts('post_type="wpsc-product"&author=' . $current_user->ID);
+
+  $headers = wdm_create_ad_get_column_headers();
+
+  $output  = '<table>';
+  $output .=   '<thead>';
+  $output .=     '<tr>';
+  foreach ($headers as $header) {
+    $output .=     '<th>' . $header. '</th>';
+  }
+  $output .=     '</tr>';
+  $output .=   '</thead>';
+  $output .=   '<tbody>';
+
+  if ( have_posts() ) {
+    while ( have_posts() ) {
+      the_post();
+
+      $price      = get_product_meta(the_ID(), 'price', true);
+      $sale_price = get_product_meta(the_ID(), 'special_price', true);
+
+      $output .= '<tr>';
+      $output .=   '<td>' . 'IMAGE' . '</td>';
+      $output .=   '<td>' . get_the_title() . '</td>';
+      $output .=   '<td>' . get_the_excerpt() . '</td>';
+      $output .=   '<td>' . wpsc_currency_display( $price ) . '</td>';
+      $output .=   '<td>' . wpsc_currency_display( $sale_price ) . '</td>';
+      $output .= '</tr>';
+    }
+  }
+
+  $output .=   '</tbody>';
+  $output .= '</table>';
+
+  wp_reset_query();
+
+  return $output;
+}
 
 function wdm_create_ad_generate_translation_blob($data) {
   $data_string = '';
@@ -371,3 +430,9 @@ function wdm_create_ad_generate_translation_blob($data) {
   }
   return $data_string;
 }
+
+// Create shortcode for the form
+add_shortcode( 'wdm-create-ad', 'wdm_create_ad_form' );
+
+// Create shortcode for product list
+add_shortcode( 'wdm-list-products', 'wdm_create_ad_products' );
