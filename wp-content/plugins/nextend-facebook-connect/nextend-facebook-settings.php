@@ -43,6 +43,28 @@ function NextendFB_Options_Page() {
 		echo $message;
 		?></p></strong></div><?php
 	} ?>
+  
+  <?php
+  if (!function_exists('curl_init')) {
+  ?>
+    <div class="error"><strong><p>Facebook needs the CURL PHP extension. Contact your server adminsitrator!</p></strong></div>
+  <?php
+  }else{
+    $version = curl_version();
+    $ssl_supported= ($version['features'] & CURL_VERSION_SSL);
+    if(!$ssl_supported){
+    ?>
+      <div class="error"><strong><p>Protocol https not supported or disabled in libcurl. Contact your server adminsitrator!</p></strong></div>
+    <?php
+    }
+  }
+  if (!function_exists('json_decode')) {
+    ?>
+      <div class="error"><strong><p>Facebook needs the JSON PHP extension. Contact your server adminsitrator!</p></strong></div>
+    <?php
+  }
+  ?>
+  
 	<div id="newfb-desc">
 	<p><?php _e('This plugins helps you create Facebook login and register buttons. The login and register process only takes one click and you can fully customize the buttons with images and other assets.', 'nextend-facebook-connect'); ?></p>
 	<h3><?php _e('Setup', 'nextend-facebook-connect'); ?></h3>
@@ -60,10 +82,10 @@ function NextendFB_Options_Page() {
   </p>
   <h3><?php _e('Usage', 'nextend-facebook-connect'); ?></h3>
   <h4><?php _e('Simple link', 'nextend-facebook-connect'); ?></h4>
-	<p><?php _e('&lt;a href="'.get_option('siteurl').'?loginFacebook=1&redirect='.get_option('siteurl').'" onclick="window.location = \''.get_option('siteurl').'?loginFacebook=1&redirect=\'+window.location.href; return false;"&gt;Click here to login or register with Facebook&lt;/a&gt;', 'nextend-facebook-connect'); ?></p>
+	<p><?php _e('&lt;a href="'.new_fb_login_url().'&redirect='.get_option('siteurl').'" onclick="window.location = \''.new_fb_login_url().'&redirect=\'+window.location.href; return false;"&gt;Click here to login or register with Facebook&lt;/a&gt;', 'nextend-facebook-connect'); ?></p>
 	
   <h4><?php _e('Image button', 'nextend-facebook-connect'); ?></h4>
-	<p><?php _e('&lt;a href="'.get_option('siteurl').'?loginFacebook=1&redirect='.get_option('siteurl').'" onclick="window.location = \''.get_option('siteurl').'?loginFacebook=1&redirect=\'+window.location.href; return false;"&gt; &lt;img src="HereComeTheImage" /&gt; &lt;/a&gt;', 'nextend-facebook-connect'); ?></p>
+	<p><?php _e('&lt;a href="'.new_fb_login_url().'&redirect='.get_option('siteurl').'" onclick="window.location = \''.new_fb_login_url().'&redirect=\'+window.location.href; return false;"&gt; &lt;img src="HereComeTheImage" /&gt; &lt;/a&gt;', 'nextend-facebook-connect'); ?></p>
   
   <h3><?php _e('Note', 'nextend-facebook-connect'); ?></h3>
   <p><?php _e('If the Facebook user\'s email address already used by another member of your site, the facebook profile will be automatically linked to the existing profile!', 'nextend-facebook-connect'); ?></p>
@@ -80,7 +102,7 @@ function NextendFB_Options_Page() {
 	<h3 class="hndle"><?php _e('About this plugin', 'nextend-facebook-connect'); ?></h3>
 	<div class="inside"><ul>
   
-  <li><a href="http://www.nextendweb.com/social-connect-plugins-for-wordpress.html" target="_blank"><?php _e('Check the realted <b>blog post</b>!', 'nextend-facebook-connect'); ?></a></li>
+  <li><a href="http://www.nextendweb.com/social-connect-plugins-for-wordpress.html" target="_blank"><?php _e('Check the related <b>blog post</b>!', 'nextend-facebook-connect'); ?></a></li>
 	<li><br></li>
 	<li><a href="http://wordpress.org/extend/plugins/nextend-facebook-connect/" target="_blank"><?php _e('Nextend Facebook Connect', 'nextend-facebook-connect'); ?></a></li>
 	<li><br></li>
@@ -169,6 +191,14 @@ function NextendFB_Options_Page() {
 		<td>
       <?php if(!isset($nextend_fb_connect['fb_link_button'])) $nextend_fb_connect['fb_link_button'] = '<div class="new-fb-btn new-fb-1 new-fb-default-anim"><div class="new-fb-1-1"><div class="new-fb-1-1-1">LINK ACCOUNT TO</div></div></div>'; ?>
 		  <textarea cols="83" rows="3" name="fb_link_button"><?php echo $nextend_fb_connect['fb_link_button']; ?></textarea>
+		</td>
+		</tr>
+    
+    <tr>
+		<th scope="row"><?php _e('Unlink account button:', 'nextend-facebook-connect'); ?></th>
+		<td>
+      <?php if(!isset($nextend_fb_connect['fb_unlink_button'])) $nextend_fb_connect['fb_unlink_button'] = '<div class="new-fb-btn new-fb-1 new-fb-default-anim"><div class="new-fb-1-1"><div class="new-fb-1-1-1">UNLINK ACCOUNT</div></div></div>'; ?>
+		  <textarea cols="83" rows="3" name="fb_unlink_button"><?php echo $nextend_fb_connect['fb_unlink_button']; ?></textarea>
 		</td>
 		</tr>
     <tr>

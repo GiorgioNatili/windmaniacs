@@ -1,0 +1,133 @@
+# This file is distributed under the same license as the qTranslate META package.
+msgid ""
+msgstr ""
+"Project-Id-Version: qTranslate META 1.0.0\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/qtranslate-meta\n"
+"POT-Creation-Date: 2012-03-24 12:47:38+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2012-04-11 09:45+0200\n"
+"X-Poedit-Language: Slovak\n"
+"X-Poedit-Country: Slovakia\n"
+"Language-Team: Web Geeks\n"
+"Last-Translator: \n"
+
+#: download.php:31
+#: summary-page.php:55
+#: summary-page.php:61
+msgid "Post Title"
+msgstr "Post hlavy"
+
+#: qtranslate-meta.php:40
+msgid "This plugin requires qTranslate to be installed and activated."
+msgstr "Tento plugin vyžaduje qTranslate nainštalovaný a aktivovaný."
+
+#: qtranslate-meta.php:57
+#: qtranslate-meta.php:216
+msgid "Browser Title"
+msgstr "Záhlavia prehľadávača"
+
+#: qtranslate-meta.php:58
+#: qtranslate-meta.php:220
+msgid "Keywords"
+msgstr "Kľúčové slová"
+
+#: qtranslate-meta.php:59
+#: qtranslate-meta.php:224
+msgid "Description"
+msgstr "Popis"
+
+#: qtranslate-meta.php:87
+#: qtranslate-meta.php:95
+msgid "Multilingual META"
+msgstr "Viacjazyčné META"
+
+#: qtranslate-meta.php:229
+msgid "characters. Most search engines use a maximum of 160 chars for the description."
+msgstr "znaky. Väčšina vyhľadávačov použiť maximálne 160 znakov na popis."
+
+#: settings-page.php:2
+msgid "qTranslate META Plugin — Settings"
+msgstr "qTranslate META Plugin — nastavenia"
+
+#: settings-page.php:9
+msgid "Posts converted"
+msgstr "Príspevky prevedené"
+
+#: settings-page.php:16
+msgid "Browser title"
+msgstr "Záhlavia prehľadávača"
+
+#: settings-page.php:19
+msgid "Title suffix"
+msgstr "Prípona názvu"
+
+#: settings-page.php:22
+msgid "Appended to every page browser title"
+msgstr "Pripojené na každej stránke prehliadač hlavy"
+
+#: settings-page.php:26
+msgid "Title hook"
+msgstr "Hlava háčik"
+
+#: settings-page.php:29
+msgid "Default:"
+msgstr "Predvolená hodnota:"
+
+#: settings-page.php:39
+msgid "Save Changes"
+msgstr "Chcete uložiť zmeny"
+
+#: summary-page.php:2
+msgid "Multilingual META Summary Page"
+msgstr "Viacjazyčné META obsah"
+
+#: summary-page.php:4
+msgid "This table shows the META tags in each language set for each page in the site."
+msgstr "Táto tabuľka ukazuje meta tagy v každom jazyku, stanovené pre každú stránku na webe."
+
+#: summary-page.php:5
+msgid "Hover the cursor over the flags to view the actual content."
+msgstr "Kurzor hover vlajky na zobrazenie skutočný obsah."
+
+#: summary-page.php:28
+msgid "View"
+msgstr "Zobrazenie"
+
+#: summary-page.php:30
+msgid "Flags"
+msgstr "Príznaky"
+
+#: summary-page.php:31
+msgid "Text"
+msgstr "Textu"
+
+#: summary-page.php:47
+msgid "Download as Excel Spreadsheet"
+msgstr "Stiahnuť ako hárok programu Excel"
+
+#: summary-page.php:71
+msgid "Edit Page"
+msgstr "DapperFox"
+
+#. Plugin Name of the plugin/theme
+msgid "qTranslate META"
+msgstr "qTranslate META"
+
+#. Plugin URI of the plugin/theme
+msgid "http://johnjcamilleri.com/2010/01/qtranslate-and-multilingual-meta-tags/"
+msgstr "http://johnjcamilleri.com/2010/01/qtranslate-and-multilingual-meta-tags/"
+
+#. Description of the plugin/theme
+msgid "Multilingual support for META tags. Requires qTranslate."
+msgstr "Viacjazyčná podpora pre META tagy. Vyžaduje qTranslate."
+
+#. Author of the plugin/theme
+msgid "John J. Camilleri"
+msgstr "John J. Camilleri"
+
+#. Author URI of the plugin/theme
+msgid "http://johnjcamilleri.com"
+msgstr "http://johnjcamilleri.com"
+

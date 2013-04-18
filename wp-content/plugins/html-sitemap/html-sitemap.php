@@ -3,7 +3,7 @@
 Plugin Name: HTML Page Sitemap
 Plugin URI: http://www.pluginspodcast.com/plugins/html-page-sitemap/
 Description: <a href="http://www.pluginspodcast.com/plugins/html-page-sitemap/" target="_blank">HTML Page Sitemap</a> Adds an HTML (Not XML) sitemap of your blog pages (not posts) by entering the shortcode [html_sitemap]. A plugin from <a href="http://www.pluginspodcast.com/" target="_blank">Plugins: The WordPress Plugins Podcast</a>.
-Version: 1.1.2
+Version: 1.1.3
 Author: Angelo Mandato
 Author URI: http://www.pluginspodcast.com/
 Change Log:

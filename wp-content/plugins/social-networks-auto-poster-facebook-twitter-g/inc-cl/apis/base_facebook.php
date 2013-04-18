@@ -865,6 +865,7 @@ abstract class NXS_BaseFacebook
       $params
     ), true);
 
+    // prr($domainKey); prr($path);  prr($params);
     // results are returned, errors are thrown
     if (is_array($result) && isset($result['error'])) {
       $this->throwAPIException($result);
@@ -934,13 +935,17 @@ abstract class NXS_BaseFacebook
     }
 
     curl_setopt_array($ch, $opts);
+        
     $result = curl_exec($ch);
 
     if (curl_errno($ch) == 60) { // CURLE_SSL_CACERT
-      self::errorLog('Invalid or no certificate authority found, '.
-                     'using bundled information');
-      curl_setopt($ch, CURLOPT_CAINFO,
-                  dirname(__FILE__) . '/fb_ca_chain_bundle.crt');
+      self::errorLog('Invalid or no certificate authority found, using bundled information');
+      curl_setopt($ch, CURLOPT_CAINFO, dirname(__FILE__) . '/fb_ca_chain_bundle.crt');
+      $result = curl_exec($ch);
+    }
+    
+    if (curl_errno($ch) == 60) { // CURLE_SSL_CACERT      
+      curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
       $result = curl_exec($ch);
     }
 

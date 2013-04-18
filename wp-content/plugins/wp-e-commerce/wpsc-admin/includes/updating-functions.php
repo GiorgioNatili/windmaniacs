@@ -118,9 +118,9 @@ class WPSC_Update_Progress
 
 	private function print_eta() {
 		echo '<div class="eta">';
-		echo __( 'Estimated time left:', 'wpsc' ) . ' ';
+		_e( 'Estimated time left:', 'wpsc' ) . ' ';
 		if ( $this->eta == 0 )
-			echo __( 'Under a minute', 'wpsc' );
+			_e( 'Under a minute', 'wpsc' );
 		else
 			printf( _n( '%d minute', '%d minutes', $this->eta, 'wpsc' ), $this->eta );
 		echo '</div>';
@@ -150,7 +150,7 @@ class WPSC_Update_Progress
 
 		if ( $percent == 100 ) {
 			remove_filter( 'wpsc_update_terminate_location', array( $this, 'filter_terminate_location' ) );
-			echo '<div class="eta">Done!</div>';
+			echo '<div class="eta">' . _x( 'Done!', 'Update routine completed', 'wpsc' ) . '</div>';
 			echo '</div>';
 		}
 	}
@@ -182,9 +182,9 @@ function wpsc_update_step( $i, $total ) {
 		$processed = $i - $count + 1;
 		$eta = floor( ( $total - $i ) * ( $now - $start ) / ( $processed * 60 ) );
 		echo '<div class="eta">';
-		echo __( 'Estimated time left:', 'wpsc' ) . ' ';
+		_e( 'Estimated time left:', 'wpsc' ) . ' ';
 		if ( $eta == 0 )
-			echo __( 'Under a minute', 'wpsc' );
+			_e( 'Under a minute', 'wpsc' );
 		else
 			printf( _n( '%d minute', '%d minutes', $eta, 'wpsc' ), $eta );
 		echo '</div>';
@@ -484,6 +484,7 @@ function wpsc_convert_products_to_posts() {
 			$post_data['_wpsc_product_metadata']['quantity_limited'] = (int)(bool)$product['quantity_limited'];
 			$post_data['_wpsc_product_metadata']['special'] = (int)(bool)$product['special'];
 			if(isset($post_data['meta'])) {
+				$post_data['_wpsc_product_metadata']['notify_when_none_left'] = (int)(bool)$post_data['meta']['_wpsc_product_metadata']['notify_when_none_left'];
 				$post_data['_wpsc_product_metadata']['unpublish_when_none_left'] = (int)(bool)$post_data['meta']['_wpsc_product_metadata']['unpublish_when_none_left'];
 			}
 			$post_data['_wpsc_product_metadata']['no_shipping'] = (int)(bool)$product['no_shipping'];

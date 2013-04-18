@@ -4,7 +4,7 @@ Plugin Name: Multiple Category Selection Widget
 Plugin URI: http://wp.zackdesign.biz/category-selection-widget/
 Description: Select multiple categories at once using this widget!
 Author: Isaac Rowntree
-Version: 3.1.2
+Version: 3.1.3
 Author URI: http://zackdesign.biz
 
     Copyright (c) 2005, 2006 Isaac Rowntree (http://zackdesign.biz)
@@ -52,7 +52,7 @@ function wpmm_load_category()
           }
           else
           {
-              wp_redirect(get_bloginfo('url').'/?cat='.$sql.'&search_type='.$_POST['mmctype'].'&order='.$_POST['order']);
+              wp_redirect(get_bloginfo('url').'/?categories='.$sql.'&search_type='.$_POST['mmctype'].'&order='.$_POST['order']);
                   exit();
           }
         } 
@@ -83,7 +83,8 @@ function wpmm_load_category()
 
 function categories_queryvars( $qvars )
 {
-  $qvars[] = 'search_type';  
+  $qvars[] = 'search_type'; 
+  $qvars[] = 'categories'; 
   return $qvars;
 }
 
@@ -91,38 +92,37 @@ function wpmm_parse($vars)
 {
     if (!empty($vars->query_vars['search_type']))
     {
-        $cats = explode(',',$vars->query_vars['cat']);
-        $type = $vars->query_vars['search_type'];
-        $order = $vars->query_vars['order'];
-    
-        global $wp;
-        $wp->set_query_var('category__'.$type, $cats);
         
         //$taxonomy = array('relation' => 'OR', array('terms' => $cats));
         //$wp->set_query_var('tax_query', $taxonomy);
         //print_r($wp);
         
-        if ($order == 'title')
-        {
-            $wp->set_query_var('orderby', 'title');
-            $wp->set_query_var('order', 'asc');
-        }
-        
-        $_SESSION['wpmm_cats'] = $vars->query_vars['cat']; 
-        $_SESSION['wpmm_search_vars'] = $type;
+        $_SESSION['wpmm_cats'] = $vars->query_vars['categories']; 
+        $_SESSION['wpmm_search_vars'] = $vars->query_vars['search_type'];
+        $_SESSION['wpmm_title'] = $vars->query_vars['order'];
     }
+}
+
+function wpmm_modify_query($query) {
+		if (isset($_SESSION['wpmm_cats']) && isset($_SESSION['wpmm_search_vars'])) {
+			$query->set('category__'.$_SESSION['wpmm_search_vars'], explode(',',$_SESSION['wpmm_cats']));
+		}
+		if (isset($_SESSION['wpmm_title'])) {
+			$query->set('orderby', 'title');
+			$query->set('order', 'asc');
+		}
 }
 
 function wpmm_add_rewrite_rules( $wp_rewrite ) 
 {
   $new_rules = array( 
-     'categories/(.+?)/search_type/(.+?)/order/(.+?)/page/(.+?)/?$' => 'index.php?cat=' .
+     'categories/(.+?)/search_type/(.+?)/order/(.+?)/page/(.+?)/?$' => 'index.php?categories=' .
        $wp_rewrite->preg_index(1).'&search_type=' . $wp_rewrite->preg_index(2).'&order='.$wp_rewrite->preg_index(3).'&paged='. $wp_rewrite->preg_index(4),
-     'categories/(.+?)/search_type/(.+?)/order/(.+?)/?$' => 'index.php?cat=' .
+     'categories/(.+?)/search_type/(.+?)/order/(.+?)/?$' => 'index.php?categories=' .
        $wp_rewrite->preg_index(1).'&search_type=' . $wp_rewrite->preg_index(2).'&order='.$wp_rewrite->preg_index(3),     
-     'categories/(.+)/page/(.+)/?$' => 'index.php?cat=' .
+     'categories/(.+)/page/(.+)/?$' => 'index.php?categories=' .
        $wp_rewrite->preg_index(1).'&paged=' . $wp_rewrite->preg_index(2),
-     'categories/(.+)/?$' => 'index.php?cat=' .
+     'categories/(.+)/?$' => 'index.php?categories=' .
        $wp_rewrite->preg_index(1));
   
   $wp_rewrite->rules = array_merge($new_rules, $wp_rewrite->rules);
@@ -203,7 +203,8 @@ register_activation_hook( __FILE__, 'wpmm_activate' );
 add_filter('query_vars', 'categories_queryvars' );
 
 // Run the category selection
-add_action('parse_request','wpmm_parse');
+add_action('parse_request','wpmm_parse'); 
+add_action('pre_get_posts','wpmm_modify_query');
 
 // Rewrite URL
 add_action('init','wpmm_load_category');  

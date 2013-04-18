@@ -27,6 +27,7 @@ I'd like to thank the following people for their contributions (in chronological
 * [Rene](http://wpwebshop.com/blog/) &mdash; Dutch translation
 * banane &mdash; Bugs with WordPress 3 compatability.
 * Alexander of [Web Hosting Geeks](http://webhostinggeeks.com/) &mdash; Romanian translation
+* Branco Radenovich of [Web Hosting Watch](http://webhostingw.com/) &mdash; Slovakian translation
 
 == Installation ==
 
@@ -63,6 +64,9 @@ This is normal, because the file generated is not actually Excel but HTML. Howev
 2. The Multilingual META summary page, showing missing translations in certain languages.
 
 == Changelog ==
+
+= 1.0.2 =
+* Only load meta tags when displaying a single post or page. If you don't like this behaviour, comment out line 163 of `qtranslate-meta.php`.
 
 = 1.0.1 =
 * Fixed a bug when saving empty options.

@@ -4,7 +4,7 @@ Tags: facebook, register, login, social connect, social, facebook connect
 Donate link: https://www.facebook.com/nextendweb
 Requires at least: 3.0
 Tested up to: 3.4
-Stable tag: 1.4.16
+Stable tag: 1.4.54
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -22,10 +22,10 @@ Personally, I hate to fill out registration forms, waiting for confirmation e-ma
 
 * If your visitors have a Facebook profile, they can register your site with a single click, and later to log in too.
 * The previously registered users can simply attach their existing Facebook profile to their account, so in the future, they can logging in with the one social button.
-* The plugin has multiple desings, so it fits all kind of websites smoothly and elegantly. - Soon
+* The plugin has multiple desings, so it fits all kind of websites smoothly and elegantly.
+* The plugin supports Facebook profile picture as avatar. 
 * Very simple to use.
 * Fast and helpful support.
-* Totally free.
 
 If you like our stuff donate a like to our [Facebook page](https://www.facebook.com/nextendweb) or follow us on [Twitter](https://twitter.com/nextendweb)!
 
@@ -41,11 +41,11 @@ After you activated the plugin, the plugin will autmatically
 
 **Simple link**
 
-&lt;a href="*siteurl*?loginFacebook=1&redirect=*siteurl*" onclick="window.location = \'*siteurl*?loginFacebook=1&redirect=\'+window.location.href; return false;"&gt;Click here to login or register with Facebook&lt;/a&gt;
+&lt;a href="*siteurl*/wp-login.php?loginFacebook=1&redirect=*siteurl*" onclick="window.location = \'*siteurl*/wp-login.php?loginFacebook=1&redirect=\'+window.location.href; return false;"&gt;Click here to login or register with Facebook&lt;/a&gt;
 
 **Image button**
 
-&lt;a href="*siteurl*?loginFacebook=1&redirect=*siteurl*" onclick="window.location = \'*siteurl*?loginFacebook=1&redirect=\'+window.location.href; return false;"&gt; &lt;img src="HereComeTheImage" /&gt; &lt;/a&gt;
+&lt;a href="*siteurl*/wp-login.php?loginFacebook=1&redirect=*siteurl*" onclick="window.location = \'*siteurl*/wp-login.php?loginFacebook=1&redirect=\'+window.location.href; return false;"&gt; &lt;img src="HereComeTheImage" /&gt; &lt;/a&gt;
 
 == Installation ==
 
@@ -66,6 +66,90 @@ After you activated the plugin, the plugin will autmatically
 2. Our Social Connect plugins in the profile page for account linking
 
 == Changelog ==
+
+= 1.4.54 =
+* Feature: You can now define NEXTEND_FB_APP_ID and NEXTEND_FB_APP_SECRET contant and it will overwrite the backend settings.
+
+= 1.4.53 =
+* Error messages added if some PHP components are missing.
+
+= 1.4.52 =
+* Avatar fix
+
+= 1.4.48 =
+* Avatar fix
+* Changes in actions 
+
+= 1.4.47 =
+* Optimalizations
+
+= 1.4.46 =
+* Redirection fix
+* Unlink speed up
+
+= 1.4.45 =
+* New filter added to get extended Facebook permissions: nextend_fb_scope
+* Read more on the new filter: http://www.nextendweb.com/knowledgebase/question/how-can-i-get-extended-facebook-permissions-for-other-fields
+
+= 1.4.44 =
+* Now user not logged out after the unlinking process.
+
+= 1.4.43 =
+* Redirection fix
+* Added feature: unlink account
+* Added WP actions for register/login/account linking. Read more: http://www.nextendweb.com/knowledgebase/question/how-can-i-make-custom-calls-when-a-visitor-log-in-with-facebook-connect
+
+= 1.4.42 =
+* Added check for login inputs
+
+= 1.4.36 =
+* PHP notice fixes
+
+= 1.4.35 =
+* With `new_fb_get_user_access_token($user_id)` PHP function you can get the user access token, if any...
+* Javascript login fix for "SimpleModal Login"
+
+= 1.4.34 =
+* Typo fix, please update from 1.4.3x to this version!
+
+= 1.4.33 =
+* Double login button fix
+
+= 1.4.32 =
+* Official SSL support added - Thanks for Chin for the help
+
+= 1.4.29 =
+* "There was an error with the FB auth!" fix
+
+= 1.4.28 =
+* Certificate fix
+
+= 1.4.27 =
+* Important security fix
+
+= 1.4.26 =
+* Added e-mail notification on registration
+
+= 1.4.25 =
+* wp_login do_action fix
+
+= 1.4.23 =
+* Bugfix for Wordpress 3.5RC1
+* Added email check
+* Fixed get avatar filter
+* new_fb_is_user_connected() function now returns with the Facebook id if authenticated, null if not...
+
+= 1.4.21 =
+* Bugfix for Wordpress 3.5RC1
+
+= 1.4.20 =
+* Avatar bugfix
+
+= 1.4.19 =
+* Added profile picture support for avatars
+
+= 1.4.18 =
+* Fixed SDK loading
 
 = 1.4.16 =
 * Buttons added to registration form

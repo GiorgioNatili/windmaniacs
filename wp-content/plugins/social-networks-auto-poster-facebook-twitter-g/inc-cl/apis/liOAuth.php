@@ -34,10 +34,11 @@ class nsx_LinkedIn {
     $consumer = $this->consumer;
     $request = nsx_trOAuthRequest::from_consumer_and_token($consumer, NULL, "GET", $this->request_token_path);
     $request->set_parameter("oauth_callback", $this->oauth_callback);
-    $request->sign_request($this->signature_method, $consumer, NULL); prr($request);
+    $request->sign_request($this->signature_method, $consumer, NULL); // prr($request);
     $headers = Array();
-    $url = $request->to_url(); echo "^^^^^";  prr($url); 
-    $response = $this->httpRequest($url, $headers, "GET"); prr($response); if ($response!='') $this->http_code = 200;
+    $url = $request->to_url(); // echo "^^^^^";  prr($url); 
+    $response = $this->httpRequest($url, $headers, "GET"); //prr($response); 
+    if ($response!='') $this->http_code = 200;
     parse_str($response, $response_params); //prr($response_params); echo "!!!!";
     $this->request_token = new nsx_trOAuthConsumer($response_params['oauth_token'], $response_params['oauth_token_secret'], 1); return $this->request_token;
   }
@@ -53,9 +54,9 @@ class nsx_LinkedIn {
     $request->set_parameter("oauth_verifier", $oauth_verifier);
     $request->sign_request($this->signature_method, $this->consumer, $this->request_token);
     $headers = Array();
-    $url = $request->to_url(); echo "==========";
-    $response = $this->httpRequest($url, $headers, "GET"); prr($request);
-    parse_str($response, $response_params);  prr($response_params);
+    $url = $request->to_url(); // echo "==========";
+    $response = $this->httpRequest($url, $headers, "GET"); //prr($request);
+    parse_str($response, $response_params); // prr($response_params);
     if($debug) {
       echo $response . "\n";
     }
@@ -96,9 +97,10 @@ class nsx_LinkedIn {
     return $response;
   }
   
-  function postToGroup($msg, $title, $groupID) { $status_url = $this->base_url . "/v1/groups/".$groupID."/posts";  //$debug = true;
+  function postToGroup($msg, $title, $groupID, $url='', $imgURL='', $dsc='') { $status_url = $this->base_url . "/v1/groups/".$groupID."/posts";  //$debug = true;
     $dsc =  nxs_decodeEntitiesFull(strip_tags($dsc));  $msg = strip_tags(nxs_decodeEntitiesFull($msg));  $title =  nxs_decodeEntitiesFull(strip_tags($title));
-    $xml = '<?xml version="1.0" encoding="UTF-8"?><post><title>'.htmlspecialchars($title, ENT_NOQUOTES, "UTF-8").'</title><summary>'.htmlspecialchars($msg, ENT_NOQUOTES, "UTF-8").'</summary></post>';
+    $xml = '<?xml version="1.0" encoding="UTF-8"?><post><title>'.htmlspecialchars($title, ENT_NOQUOTES, "UTF-8").'</title><summary>'.htmlspecialchars($msg, ENT_NOQUOTES, "UTF-8").'</summary>
+    '.($url!=''?'<content><title>'.htmlspecialchars($title, ENT_NOQUOTES, "UTF-8").'</title><submitted-url>'.$url.'</submitted-url><submitted-image-url>'.$imgURL.'</submitted-image-url><description>'.htmlspecialchars($dsc, ENT_NOQUOTES, "UTF-8").'</description></content>':'').'</post>';
     
     $request = nsx_trOAuthRequest::from_consumer_and_token($this->consumer, $this->access_token, "POST", $status_url);
     $request->sign_request($this->signature_method, $this->consumer, $this->access_token);
@@ -119,7 +121,7 @@ class nsx_LinkedIn {
     if ($debug) {
       echo $auth_header . "\n";
     }
-    $response = $this->httpRequest($status_url, $auth_header, "PUT", $xml); prr($response);
+    $response = $this->httpRequest($status_url, $auth_header, "PUT", $xml); // prr($response);
     return $response;
   }
   
@@ -128,6 +130,19 @@ class nsx_LinkedIn {
   function search($parameters) {
     $search_url = $this->base_url . "/v1/people/" . $parameters;
     echo "Performing search for: " . $parameters . "\n";
+    $request = nsx_trOAuthRequest::from_consumer_and_token($this->consumer, $this->access_token, "GET", $search_url);
+    $request->sign_request($this->signature_method, $this->consumer, $this->access_token);
+    $auth_header = $request->to_header("https://api.linkedin.com");
+    if ($debug) {
+      echo $request->get_signature_base_string() . "\n";
+      echo $auth_header . "\n";
+    }
+    $response = $this->httpRequest($search_url, $auth_header, "GET");
+    return $response;
+  }
+
+  function getCurrentShare($parameters='') { 
+    $search_url = $this->base_url . "/v1/people/~/current-share";    
     $request = nsx_trOAuthRequest::from_consumer_and_token($this->consumer, $this->access_token, "GET", $search_url);
     $request->sign_request($this->signature_method, $this->consumer, $this->access_token);
     $auth_header = $request->to_header("https://api.linkedin.com");
@@ -154,16 +169,16 @@ class nsx_LinkedIn {
       curl_setopt($curl, CURLOPT_HTTPHEADER, $auth_header);   
     }
  
-    $data = curl_exec($curl); $errmsg = curl_error($curl);
+    $data = curl_exec($curl); $errmsg = curl_error($curl); //prr($data);// die();
     
     //## NextScripts Fix
     if (curl_errno($curl) == 60 || stripos($errmsg, 'SSL')!==false) {  curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false); $data = curl_exec($curl);}
     if (curl_errno($curl) > 0) { $err = curl_errno($curl); $errmsg = curl_error($curl); prr($errmsg); prr($err);}    
     //## /NextScripts Fix    
-    $header = curl_getinfo($curl); curl_close($curl); 
+    $header = curl_getinfo($curl); curl_close($curl);// prr($header);
 
     if ($this->debug) echo $data . "\n";    
-    if (trim($data)=='' && $header['http_code']=='201') $data = '201';
+        if (trim($data)=='' && ($header['http_code']=='201' || $header['http_code']=='200' || $header['http_code']=='202')) $data = '201';
     return $data; 
   }
 

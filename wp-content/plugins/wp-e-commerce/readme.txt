@@ -1,16 +1,16 @@
 === WP e-Commerce ===
-Contributors: mufasa, mychelle, garyc40, justinsainton
+Contributors: mufasa, mychelle, garyc40, JustinSainton
 Donate link: http://getshopped.org
 Tags: e-commerce, wp-e-commerce, shop, cart, paypal, authorize, stock control, ecommerce, shipping, tax
 Requires at least: 3.1
-Tested up to: 3.4
-Stable tag: 3.8.8.3
+Tested up to: 3.5
+Stable tag: 3.8.9.5
 
 WP e-Commerce is a free WordPress Shopping Cart Plugin that lets customers buy your products, services and digital downloads online.
 
 == Description ==
 
-We make setting up an ecommerce shop easy, and with over 1.8 Million downloads, we have unparalleled experience.
+We make setting up an ecommerce shop easy, and with over 2 Million downloads, we have unparalleled experience.
 
 Features:
 
@@ -154,8 +154,236 @@ For more information visit [http://getshopped.org](http://getshopped.org "http:/
 Before updating please make a backup of your existing files and database. Just in case.
 After upgrading from earlier versions look for link "Update Store". This will update your database structure to work with new version.
 
-
 == Changelog ==
+= 3.8.9.5 =
+* New: Polish translation.
+* Fix: Attempt to regenerate customer ID if it's invalid to avoid fatal errors.
+* Fix: Australia Post doesn't return any quotes if the products' dimensions are not specified.
+* Fix: Billing state is set to shipping state upon checkout.
+* Fix: Cannot resent purchase receipt any more.
+* Fix: Custom Cart Messages on Sales Log need stripslashes.
+* Fix: Error message when changing purchase log status via AJAX.
+* Fix: Fatal error in merchant.class.php.
+* Fix: Giving stock or price of a product a 4 figure number will screw it up when the product is updated again.
+* Fix: Invalid zipcode is displayed even when the zipcode is not specified yet.
+* Fix: Quick editing a product doesn't work.
+* Fix: Transaction result emails are sent when an order is closed.
+* Fix: More native css support for product variations in WP 3.5+.
+
+= 3.8.9.4 =
+* Fix: "No shipping quotes" error is displayed when selecting "Shipping same as billing".
+* Fix: Avoid flooding transient data when site's feed is being visited by bots.
+* Fix: Blank Checkout page for some certain installation when Shipping is enabled.
+* Fix: Can't add to cart on some server.
+* Fix: Fatal error when viewing product variation iframe, because _wp_admin_html_begin() does not exist on older WordPress versions.
+* Fix: MySQL error/warning in _wpsc_filter_special_widget_where().
+* Fix: Only show attachment fields when viewed on an edit product page.
+* Fix: PHP Notice in cart.class.php.
+* Fix: Properly escape columns in admin products page.
+* Fix: Purchase log's item names are not translatable via qTranslate.
+* Fix: Shipping same as billing saves "State" field label as the shipping region.
+* Fix: Shipwire settings are not updated.
+* Fix: Shipwire syncing doesn't take into consideration products in trash, or multiple products using the same SKUs (as in WPML)
+* Fix: Specials widget is empty when there are no product with variation sales.
+* Fix: Variation sets are not being sorted on the front-end.
+* Fix: WPEC doesn't cooperate with WP 3.5 media UI.
+* Fix: wpsc_pre_transaction_results filter is ignored.
+* Make sure admin styles are enqueued for product variations iframe in older version of WordPress.
+
+= 3.8.9.3 =
+* New: Add support for quantity field in default grid view template.
+* New: Let plugins add new column to product variation list table via filter 'wpsc_manage_product_variations_custom_column'.
+* Fix: Blank transaction results page when using paypal gateways.
+* Fix: Comment form is displayed even though comment is closed on products page.
+* Fix: Fatal error in formatting.php for some sites.
+* Fix: New countries in 3.8.9 automatically added to target market list.
+* Fix: PayPal Standard doesnt' take care of coupons.
+* Fix: Punctuation in pending transaction email.
+
+= 3.8.9.2 =
+* Fix: Admin cannot download file from product edit page.
+* Fix: Compatibility issues with Jetpack.
+* Fix: Google Analytics is printed out even when it's not active. Also, PHP notice when the product doesn't have a category.
+* Fix: Make sure PayPal Standard works with 100% discount.
+* Fix: Product page title is not properly replaced with the category or tag title in WP 3.5.
+* Fix: Products are sometimes displayed even when products page is set to only display list of categories.
+* Fix: Products thumbnail sizes are inconsistent with the settings.
+* Fix: Properly flush outdated customer meta from the transient table.
+* Fix: Typo in wpsc_cart::update_location().
+* Fix: Wrong class attribute for price display.
+
+= 3.8.9.1 =
+* Fix: Fatal error in Shipwire.
+* Fix: Fatal error with customer meta on multisite.
+* Fix: Fatal error with get_the_product_tags().
+* Fix: Pagination in admin product list doesn't work.
+* Fix: Permalinks are incorrect when products page is set as home page and permalink scheme is set to %post_name%.
+* Fix: Rewrite rules are not regenerated correctly when switching from "Default" to "Post name".
+* Fix: Shipwire and Google Analytics are not working properly.
+* Fix: Shipwire request is sent even when Shipwire is not active.
+* Fix: States are displayed as numbers in admin purchase report.
+* Fix: Transaction results displaying cart content twice as well as "Oops, there is nothing in your cart".
+* Fix: Use customer meta instead of $_SESSION for eway and payflow message.
+* Fix: Variation pagination doesn't work.
+
+= 3.8.9 =
+* New: Additional columns can now be added to Store Sales page via filter hook.
+* New: Additional filters for purchase log notification classes.
+* New: Allow devs to filter the list of accepted credit cards in PayPal Pro.
+* New: Filters to enable image scaling (versus cropping).
+* New: Hook to modify the product table on transaction results and purchase receipts.
+* New: Make buy now button's html output filterable.
+* New: More flexibility in role management.
+* New: New Hook for cancelling subscriptions with Memebers Access.
+* New: Pagination UI for product variations.
+* New: Users can bulk edit products' stock, price, sales price etc.
+* New: Users can now choose to "Notify site owner" and "Unpublish product" separately when stock runs out.
+* New: Users can now delete checkout form sets.
+* New: Users can now set product sorting direction in Settings->Presentation.
+* New: Variation UI enhancements.
+* Change: "Registration required" and "Anyone can register" are now synchronized.
+* Change: Default checkout shipping option to lowest shipping cost of all choices.
+* Fix: "Variation Controls" anchor in metabox leads nowhere.
+* Fix: AJAX code audit (security)
+* Fix: Activating WP e-Commerce on a vanilla WordPress installation with pretty permalinks enabled messes up the rewrite rules.
+* Fix: Add a space after tilde character to avoid confusion in admin product list.
+* Fix: Add new variation sets and terms from Edit Product page doesn't work properly.
+* Fix: Additional description is double escaped in product edit page.
+* Fix: Alignment of checkboxes and radios in product category edit page is a bit off.
+* Fix: Avoid using query_posts() which could break themes.
+* Fix: Backslashes are sometimes added to UPS and USPS settings.
+* Fix: Base_region option remains set if base country is switched.
+* Fix: Billing phone number not accessible via wpsc_merchant::$cart_data.
+* Fix: Buy Now feature doesn't properly create and update sales log.
+* Fix: Can't add variations on new products.
+* Fix: Can't delete coupon conditions.
+* Fix: Can't order products properly in Products admin page.
+* Fix: Can't upload product category image when adding a new category.
+* Fix: Cannot set thumbnail for variations.
+* Fix: Cart item name is not updated when corresponding variation name is changed.
+* Fix: Cart items are not translated for qTranslate.
+* Fix: Cart mix up when multisite is enabled.
+* Fix: Category image size metadata are not used properly on templates.
+* Fix: Category title is replaced with the first product's title, and pagination does not work correctly on Category page.
+* Fix: Changing an order status in Sales Log page incorrectly updates the views and pagination links.
+* Fix: Changing checkout field sort order doesn't work.
+* Fix: Checkout- Parent Product Thumbnail Displayed Instead of Product Variation Thumbnail.
+* Fix: Claimed stock cronjob doesn't take into consideration timezone.
+* Fix: Collapse product variation sets by default on Manage tab.
+* Fix: Colorbox Gallery doesn't work.
+* Fix: Country dropdown lists disregard Target Market option.
+* Fix: Coupon is not invalid is displayed even when there's no coupon applied.
+* Fix: Coupon start and expiry date don't take into account local timezone.
+* Fix: Currency converter doesn't work for some particular currencies.
+* Fix: Custom fields are missing in purchase log if they have the same name as other fields.
+* Fix: Customers are able able to purchase scheduled but unpublished products.
+* Fix: Database upgrade routines.
+* Fix: Division by zero in product-template.php.
+* Fix: Dollar signs are used in flat rate settings regardless of the main currency.
+* Fix: Duplicating a Product doesn't duplicate the images correctly.
+* Fix: Email information in "Admin" settings tab is not displayed properly.
+* Fix: Enabling shipping but not selecting any shipping methods causes frustrating unexpected issues.
+* Fix: Fatal error in PayPal Pro settings page.
+* Fix: Fatal error in checkout page form validation.
+* Fix: Fatal error when quick editing products.
+* Fix: Fatal error when upgrading from 3.7.x.
+* Fix: Final breadcrumb id tag is not W3C Compliant.
+* Fix: Free shipping discount is not updated when shipping method is changed.
+* Fix: Free shipping doesn't reset individual cart items' shipping amounts when submitted to PayPal.
+* Fix: Free-shipping doesn't work on PayPal Pro if the discount amount > item total.
+* Fix: Google Analytics is now tracking correctly.
+* Fix: Great Britain is redundant in country list (we already have U.K. and North Ireland).
+* Fix: Improper escaping of user input.
+* Fix: Inaccurate dimension calculation in Australia Post.
+* Fix: Incompatibility with $_SESSION.
+* Fix: Incorrect i18n in Presentation tab.
+* Fix: Increase gateway timeout settings across the board.
+* Fix: Inefficient pinging when product is updated.
+* Fix: Infinite loop on single product page.
+* Fix: Infinite loop when using PayPal Pro.
+* Fix: Issue with SSL and Share This URL.
+* Fix: Latest product widget doesn't show image.
+* Fix: Logic error in function wpsc_product_has_stock.
+* Fix: Make it clear that the sidebar widget doesn't include discount.
+* Fix: More flexibility in role management.
+* Fix: New coupon conditions are added below the first condition instead of the last.
+* Fix: Number of products per page field in shortcode generator doesn't work.
+* Fix: On user details page, switching country to a country without region won't display the State (Region) text field.
+* Fix: Only display permalink double save warning if WordPress version is earlier than 3.3.
+* Fix: Outdated country codes and currency codes.
+* Fix: Pagination does not work with price range widget.
+* Fix: Pagination for category short codes does not work.
+* Fix: Pagination for tags does not work.
+* Fix: Pagination links generated with unnecessary "page/" portion for WP 3.4.
+* Fix: Pagination links in Category shortcode page are not consistent.
+* Fix: Parent product is still treated as if it had variations even though all its variations have been moved to trash or hidden (set to draft).
+* Fix: PayPal Express Checkout doesn't take into account free shipping.
+* Fix: PayPal Standard Subscriptions produce unexpected product title in PayPal cart and receipts.
+* Fix: Performance improvement for dynamic stylesheet.
+* Fix: Placeholder image is missing for products without thumbnails.
+* Fix: Potential height issue with variation edit iframe (parent hidden overflow, expand/collapse checkboxes).
+* Fix: Prevent segmentation fault when using wpsc-products shortcode.
+* Fix: Product Specials Widget does not work with product variations on sale.
+* Fix: Product page URLs are sometimes not updated properly.
+* Fix: Product permalinks in single product view are not using current category path.
+* Fix: Products page pagination fails if the products page is set as the homepage.
+* Fix: Products with variations on sale does not display the prices correctly.
+* Fix: Purchase logs list table doesn't have Total line as before 3.8.8.
+* Fix: Refactor purchase log notifications to fix various issues:
+* Fix: Region field is not consistently updated or displayed when selecting a country without regions on checkout form.
+* Fix: SKU should be sent to PayPal Standard instead of Product ID if that's available.
+* Fix: Shipping error is reported when "Shipping same as billing" is selected on the checkout page, even when shipping is disabled.
+* Fix: Shipping location error message is displayed before the customer has a chance to specify state and zip code.
+* Fix: Shipping method and option are not displayed on Sales Log single page if there is no shipping form fields.
+* Fix: Shipping options not refreshed when "shipping same as billing" causes new quotes.
+* Fix: Shipping rate choice not correctly encoded during checkout.
+* Fix: Shipwire settings are broken.
+* Fix: Shortcode button doesn't work in visual mode if WP folder configuration is different from default.
+* Fix: Table rate shipping doesn't accept $0 amount.
+* Fix: Target makret restrictions for product categories is broken.
+* Fix: Tax bands not working.
+* Fix: Template tags for product tags don't work.
+* Fix: Terms & Conditions validation code is broken.
+* Fix: Total Price not properly reflective of the total after $1,000.
+* Fix: Transaction results refactor.
+* Fix: Updating purchase log status doesn't update pagination count
+* Fix: Unnecessary thumbnail regeneration on product single page.
+* Fix: Update message is displayed even when the db has bene updated.
+* Fix: Updating region when "Same shipping as billing" is checked doesn't update the shipping quote.
+* Fix: Use $cart_item->get_title() instead of $cart_item->product_name.
+* Fix: Use array instead of strings when calling WP_Query in wpsc_the_variation_price.
+* Fix: Users are now warned that setting products per row for grid view to 0 would probably lead to layout breakage.
+* Fix: Using 2 checkout sets shows incorrect order on Purchase History and Your details pages.
+* Fix: Valid checkout fields are not preserved when there are invalid fields.
+* Fix: Variation drag'n'drop sorting is not working.
+* Fix: Various bugs and inconsistencies with coupon conditions.
+* Fix: WPEC loads product image then scales to thumbnail size in the backend products list.
+* Fix: Weird Taxable Amount column.
+* Fix: When "Free Shipping" is enabled in Settings->Shipping, shipping is always set to 0 even when shipping discount value is set to 0 or empty.
+* Fix: Wrong alternate row class for variation inline shipping editor.
+* Fix: Wrong documentation link for Chronopay.
+* Fix: Wrong logic in deprecated function nzshpcrt_currency_display().
+* Fix: _wpsc_process_transaction_coupon() contains typos.
+* Fix: also bought image path is supposed to be fixed already.
+* Fix: i18n audit.
+* Fix: improper escaping in Price metabox.
+* Fix: post_status is not formatted correctly in wpsc_start_the_query().
+* Fix: private products are listed on the /products/ page.
+* Fix: wpsc_list_dir() should return empty array if directory is empty.
+* Fix: wpsc_shopping_cart() function call doesn't work.
+* Fix: wpsc_the_product_thumbnail() ignores custom width and height.
+
+= 3.8.8.5 =
+* Fix: Order Closed status does not count in the sales log totals on dashboard widget.
+* Fix: PHP preg_replace warning.
+
+= 3.8.8.4 =
+* Fix: Also bought product image doesn't display correctly.
+* Fix: Pagination fails when hierarchical category URL is enabled.
+* Fix: Product Specials Widget causes 404 errors. Props Chris Jean.
+* Fix: Product category slug beginning with a digit doesn't work.
+* Updated localization.
+
 = 3.8.8.3 =
 * Fix: Incompatibility between WPEC products page pagination and WordPress 3.4.
 
@@ -182,7 +410,6 @@ After upgrading from earlier versions look for link "Update Store". This will up
 * Fix: Sometimes clicking Save doesn't save tracking ID on sales log page.
 
 = 3.8.8 =
-* New: 3 action hooks to process PayPal IPN responses: wpsc_paypal_pro_ipn, wpsc_paypal_standard_ipn and wpsc_paypal_express_ipn.
 * New: Actions for bulk actions on sales page: wpsc_sales_log_process_bulk_action, wpsc_sales_log_extra_tablenav
 * New: Allow variation checkboxes to be collapsed & expanded without having to tick the variation set checkbox itself.
 * New: Digital Download UI improvement.
@@ -210,7 +437,6 @@ After upgrading from earlier versions look for link "Update Store". This will up
 * Fix: $wpsc_query->query_vars['wpsc_product_category'] not always set on product page with hierarchical category permalinks.
 * Fix: Cannot add new Checkout field.
 * Fix: Cannot re-re-send buyer receipt.
-* Fix: Custom Meta copies values when adding new.
 * Fix: 3.7 -> 3.8 Database Upgrade Routine causes some products with variations to display a $0.00 price.
 * Fix: Double <p> tag with wpec_taxes_display_tax_bands() on product edit page.
 * Fix: Fatal error when trying to include a non-existent admin file.
@@ -223,7 +449,6 @@ After upgrading from earlier versions look for link "Update Store". This will up
 * Fix: Summary line does not get updated when sales log status is changed.
 * Fix: Total Quantity check fails for coupon codes.
 * Fix: USPS: "FLATE RATE ENVELOPE" should be changed to "VARIABLE" to allow for shipping quotes to be based on weight.
-* Fix: USPS settings not saving correctly.
 * Fix: Use ->add_help_tab() to support WP 3.3 admin screen API.
 * Fix: Using discount causes Paypal Express to calculate wrong total amount.
 * Fix: get_the_content() is not enough in product feed.

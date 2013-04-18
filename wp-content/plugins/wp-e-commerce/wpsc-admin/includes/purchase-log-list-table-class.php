@@ -12,12 +12,19 @@ class WPSC_Purchase_Log_List_Table extends WP_List_Table
 	private $sortable = true;
 	private $month_filter = true;
 	private $views = true;
+	private $status = 'all';
 	private $per_page = 20;
+	private $total_amount = 0;
+	private $joins;
+	private $where;
+	private $where_no_filter;
 
-	public function __construct() {
-		WP_List_Table::__construct( array(
-			'plural' => 'purchase-logs',
-		) );
+	public function __construct( $args = array() ) {
+		$args['plural'] = 'purchase-logs';
+		parent::__construct( $args );
+
+		if ( defined( 'DOING_AJAX' ) && DOING_AJAX )
+			$_SERVER['REQUEST_URI'] = wp_get_referer();
 	}
 
 	public function disable_sortable() {
@@ -103,10 +110,12 @@ class WPSC_Purchase_Log_List_Table extends WP_List_Table
 		}
 
 		// filter by status
-		if ( ! empty( $_REQUEST['status'] ) ) {
-			$status = absint( $_REQUEST['status'] );
-			$where[] = 'processed = ' . $status;
+		if ( ! empty( $_REQUEST['status'] ) && $_REQUEST['status'] != 'all' ) {
+			$this->status = absint( $_REQUEST['status'] );
+			$where[] = 'processed = ' . $this->status;
 		}
+
+		$this->where_no_filter = implode( ' AND ', $where );
 
 		// filter by month
 		if ( ! empty( $_REQUEST['m'] ) ) {
@@ -117,8 +126,8 @@ class WPSC_Purchase_Log_List_Table extends WP_List_Table
 		}
 
 		$selects = implode( ', ', $selects );
-		$joins = implode( ' ', $joins );
-		$where = implode( ' AND ', $where );
+		$this->joins = implode( ' ', $joins );
+		$this->where = implode( ' AND ', $where );
 		$limit = ( $this->per_page !== 0 ) ? "LIMIT {$offset}, {$this->per_page}" : '';
 
 		$orderby = empty( $_REQUEST['orderby'] ) ? 'p.id' : 'p.' . $_REQUEST['orderby'];
@@ -131,8 +140,8 @@ class WPSC_Purchase_Log_List_Table extends WP_List_Table
 		$purchase_log_sql = "
 			SELECT SQL_CALC_FOUND_ROWS {$selects}
 			FROM " . WPSC_TABLE_PURCHASE_LOGS . " AS p
-			{$joins}
-			WHERE {$where}
+			{$this->joins}
+			WHERE {$this->where}
 			ORDER BY {$orderby} {$order}
 			{$limit}
 		";
@@ -145,6 +154,19 @@ class WPSC_Purchase_Log_List_Table extends WP_List_Table
 				'per_page'    => $this->per_page,
 			) );
 		}
+
+		$total_where = $this->where;
+		if ( $this->status == 'all' ) {
+			$total_where .= ' AND p.processed IN (2, 3, 4) ';
+		}
+
+		$total_sql = "
+			SELECT SUM(totalprice)
+			FROM " . WPSC_TABLE_PURCHASE_LOGS . " AS p
+			WHERE {$total_where}
+		";
+
+		$this->total_amount = $wpdb->get_var( $total_sql );
 	}
 
 	public function is_pagination_enabled() {
@@ -193,12 +215,13 @@ class WPSC_Purchase_Log_List_Table extends WP_List_Table
 		// there are lots of logs
 		$today = getdate();
 		$transient_key = 'wpsc_purchase_logs_months_' . $today['year'] . $today['month'];
-		if ( $months = get_transient( $transient_key ) )
-			return $months;
+		/* if ( $months = get_transient( $transient_key ) )
+			return $months; */
 
 		$sql = "
 			SELECT DISTINCT YEAR(FROM_UNIXTIME(date)) AS year, MONTH(FROM_UNIXTIME(date)) AS month
-			FROM " . WPSC_TABLE_PURCHASE_LOGS . "
+			FROM " . WPSC_TABLE_PURCHASE_LOGS . " AS p
+			WHERE {$this->where_no_filter}
 			ORDER BY date DESC
 		";
 
@@ -209,13 +232,14 @@ class WPSC_Purchase_Log_List_Table extends WP_List_Table
 
 	public function get_views() {
 		global $wpdb;
+
 		$view_labels = array(
 			1 => _nx_noop( 'Incomplete <span class="count">(%s)</span>', 'Incomplete <span class="count">(%s)</span>', 'purchase logs' ),
-			2 => _nx_noop( 'Received <span class="count">(%s)</span>', 'Received <span class="count">(%s)</span>', 'purchase logs' ),
-			3 => _nx_noop( 'Accepted <span class="count">(%s)</span>', 'Accepted <span class="count">(%s)</span>', 'purchase logs' ),
+			2 => _nx_noop( 'Received <span class="count">(%s)</span>'  , 'Received <span class="count">(%s)</span>'  , 'purchase logs' ),
+			3 => _nx_noop( 'Accepted <span class="count">(%s)</span>'  , 'Accepted <span class="count">(%s)</span>'  , 'purchase logs' ),
 			4 => _nx_noop( 'Dispatched <span class="count">(%s)</span>', 'Dispatched <span class="count">(%s)</span>', 'purchase logs' ),
-			5 => _nx_noop( 'Closed <span class="count">(%s)</span>', 'Closed <span class="count">(%s)</span>', 'purchase logs' ),
-			6 => _nx_noop( 'Declined <span class="count">(%s)</span>', 'Declined <span class="count">(%s)</span>', 'purchase logs' ),
+			5 => _nx_noop( 'Closed <span class="count">(%s)</span>'    , 'Closed <span class="count">(%s)</span>'    , 'purchase logs' ),
+			6 => _nx_noop( 'Declined <span class="count">(%s)</span>'  , 'Declined <span class="count">(%s)</span>'  , 'purchase logs' ),
 		);
 
 		$sql = "SELECT DISTINCT processed, COUNT(*) AS count FROM " . WPSC_TABLE_PURCHASE_LOGS . " GROUP BY processed ORDER BY processed";
@@ -235,6 +259,7 @@ class WPSC_Purchase_Log_List_Table extends WP_List_Table
 			_nx( 'All <span class="count">(%s)</span>', 'All <span class="count">(%s)</span>', $total_count, 'purchase logs', 'wpsc' ),
 			number_format_i18n( $total_count )
 		);
+
 		$all_href = remove_query_arg( array(
 			'status',
 			'paged',
@@ -246,17 +271,19 @@ class WPSC_Purchase_Log_List_Table extends WP_List_Table
 			'paged',
 			's',
 		) );
-		$all_class = ( ( empty( $_REQUEST['status'] ) || $_REQUEST['status'] == 'all' ) && empty( $_REQUEST['m'] ) && empty( $_REQUEST['s'] ) ) ? 'class="current"' : '';
+		$all_class = ( $this->status == 'all' && empty( $_REQUEST['m'] ) && empty( $_REQUEST['s'] ) ) ? 'class="current"' : '';
 		$views = array(
 			'all' => sprintf(
 				'<a href="%s" %s>%s</a>',
-				$all_href,
-				$all_class,
+				esc_url( $all_href ),
+				sanitize_html_class( $all_class ),
 				$all_text
 			),
 		);
 
 		foreach ( $statuses as $status => $count ) {
+			if ( ! isset( $view_labels[$status] ) )
+				continue;
 			$text = sprintf(
 				translate_nooped_plural( $view_labels[$status], $count, 'wpsc' ),
 				number_format_i18n( $count )
@@ -271,11 +298,11 @@ class WPSC_Purchase_Log_List_Table extends WP_List_Table
 				'paged',
 				's',
 			), $href );
-			$class = ( ! empty( $_REQUEST['status'] ) && $_REQUEST['status'] == $status ) ? 'class="current"' : '';
+			$class = ( $this->status == $status ) ? 'class="current"' : '';
 			$views[$status] = sprintf(
 				'<a href="%s" %s>%s</a>',
-				$href,
-				$class,
+				esc_url( $href ),
+				sanitize_html_class( $class ),
 				$text
 			);
 		}
@@ -290,7 +317,7 @@ class WPSC_Purchase_Log_List_Table extends WP_List_Table
 
 		if ( ! $this->month_filter ) {
 			if ( $m !== 0 )
-				echo '<input type="hidden" name="m" value="' . $m . '" />';
+				echo '<input type="hidden" name="m" value="' . esc_attr( $m ) . '" />';
 
 			return false;
 		}
@@ -327,6 +354,21 @@ class WPSC_Purchase_Log_List_Table extends WP_List_Table
 		}
 	}
 
+	public function pagination( $which ) {
+		ob_start();
+		parent::pagination( $which );
+		$output = ob_get_clean();
+		if ( $this->status == 'all' )
+			$string = _x( 'Total (excluding Incomplete and Declined): %s', 'sales log page total', 'wpsc' );
+		else
+			$string = _x( 'Total: %s', 'sales log page total', 'wpsc' );
+		$total_amount = ' - ' . sprintf( $string, wpsc_currency_display( $this->total_amount ) );
+		$total_amount = str_replace( '$', '\$', $total_amount );
+		$output = preg_replace( '/(<span class="displaying-num">)([^<]+)(<\/span>)/', '${1}${2}' . ' ' . $total_amount . '${3}', $output );
+
+		echo $output;
+	}
+
 	public function column_cb( $item ){
 		$checked = isset( $_REQUEST['post'] ) ? checked( in_array( $item->id, $_REQUEST['post'] ), true, false ) : '';
 		return sprintf(
@@ -355,7 +397,7 @@ class WPSC_Purchase_Log_List_Table extends WP_List_Table
 	public function column_customer( $item ) {
 		?>
 		<strong>
-			<a class="row-title" href="<?php echo esc_attr( $this->item_url( $item ) ); ?>" title="<?php esc_attr_e( 'View order details', 'wpsc' ) ?>"><?php echo esc_html( $item->firstname . ' ' . $item->lastname ); ?></a>
+			<a class="row-title" href="<?php echo esc_url( $this->item_url( $item ) ); ?>" title="<?php esc_attr_e( 'View order details', 'wpsc' ) ?>"><?php echo esc_html( $item->firstname . ' ' . $item->lastname ); ?></a>
 		</strong><br />
 		<small><?php echo make_clickable( $item->email ); ?></small>
 		<?php
@@ -378,10 +420,10 @@ class WPSC_Purchase_Log_List_Table extends WP_List_Table
 
 	public function column_id( $item ) {
 		?>
-		<a href="<?php echo esc_attr( $this->item_url( $item ) ); ?>" title="<?php esc_attr_e( 'View order details', 'wpsc' ) ?>"><?php echo esc_html( $item->id ); ?></a>
+		<a href="<?php echo esc_url( $this->item_url( $item ) ); ?>" title="<?php esc_attr_e( 'View order details', 'wpsc' ) ?>"><?php echo esc_html( $item->id ); ?></a>
 		<?php if ( ! $this->current_action() == 'delete' ): ?>
 			<br />
-			<small><a class="delete" href="<?php echo esc_url( $this->delete_url( $item ) ); ?>"><?php echo esc_html( _x( 'Delete', 'Sales log page', 'wpsc' ) ); ?></a></small>
+			<small><a class="delete" href="<?php echo esc_url( $this->delete_url( $item ) ); ?>"><?php echo esc_html_x( 'Delete', 'Sales log page', 'wpsc' ); ?></a></small>
 		<?php endif ?>
 		<?php
 	}
@@ -407,7 +449,9 @@ class WPSC_Purchase_Log_List_Table extends WP_List_Table
 	}
 
 	public function column_default( $item, $column_name ) {
-		return esc_html( $item->$column_name );
+		$default = isset( $item->$column_name ) ? $item->$column_name : '';
+		$output = apply_filters( 'wpsc_manage_purchase_logs_custom_column',  $default, $column_name, $item );
+		return $output;
 	}
 
 	public function column_status( $item ) {
@@ -435,11 +479,11 @@ class WPSC_Purchase_Log_List_Table extends WP_List_Table
 		$empty = empty( $item->track_id );
 		?>
 			<div data-log-id="<?php echo esc_attr( $item->id ); ?>" <?php echo $empty ? ' class="empty"' : ''; ?>>
-				<a class="add" href="#"><?php echo esc_html( _x( 'Add Tracking ID', 'add purchase log tracking id', 'wpsc' ) ); ?></a>
+				<a class="add" href="#"><?php echo esc_html_x( 'Add Tracking ID', 'add purchase log tracking id', 'wpsc' ); ?></a>
 				<input type="text" class="wpsc-purchase-log-tracking-id" value="<?php echo esc_attr( $item->track_id ); ?>" />
-				<a class="button save" href="#"><?php echo esc_html( _x( 'Save', 'save sales log tracking id', 'wpsc' ) ); ?></a>
+				<a class="button save" href="#"><?php echo esc_html_x( 'Save', 'save sales log tracking id', 'wpsc' ); ?></a>
 				<img src="<?php echo esc_url( admin_url( 'images/wpspin_light.gif' ) ); ?>" class="ajax-feedback" title="" alt="" /><br class="clear" />
-				<small class="send-email"><a href="#"><?php echo esc_html( _x( 'Send Email', 'sales log', 'wpsc' ) ); ?></a></small>
+				<small class="send-email"><a href="#"><?php echo esc_html_x( 'Send Email', 'sales log', 'wpsc' ); ?></a></small>
 			</div>
 		<?php
 	}
@@ -453,7 +497,7 @@ class WPSC_Purchase_Log_List_Table extends WP_List_Table
 			'1'      => __( 'Incomplete Sale', 'wpsc' ),
 			'2'      => __( 'Order Received', 'wpsc' ),
 			'3'      => __( 'Accepted Payment', 'wpsc' ),
-			'4'      => __( 'Job dispatched', 'wpsc' ),
+			'4'      => __( 'Job Dispatched', 'wpsc' ),
 			'5'      => __( 'Closed Order', 'wpsc' ),
 			'6'      => __( 'Payment Declined', 'wpsc' ),
 		);

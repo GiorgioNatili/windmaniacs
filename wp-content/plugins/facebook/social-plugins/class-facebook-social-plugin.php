@@ -21,7 +21,7 @@ class Facebook_Social_Plugin {
 	 * @since 1.1
 	 * @var array
 	 */
-	public static $font_choices = array( 'arial', 'lucida grande', 'segoe ui', 'tahoma', 'trebuchet ms', 'verdana' );
+	public static $font_choices = array( 'arial' => true, 'lucida grande' => true, 'segoe ui' => true, 'tahoma' => true, 'trebuchet ms' => true, 'verdana' => true );
 
 	/**
 	 * Choose a light or dark color scheme to match your site style
@@ -29,7 +29,7 @@ class Facebook_Social_Plugin {
 	 * @since 1.1
 	 * @param string
 	 */
-	protected $color_scheme;
+	protected $colorscheme;
 
 	/**
 	 * Use a light or dark color scheme
@@ -37,7 +37,7 @@ class Facebook_Social_Plugin {
 	 * @since 1.1
 	 * @var array
 	 */
-	public static $color_scheme_choices = array( 'light', 'dark' );
+	public static $colorscheme_choices = array( 'light' => true, 'dark' => true );
 
 	/**
 	 * Add a unique reference to track referrals. Facebook passes this parameter to the destination URL when a Facebook user clicks the link.
@@ -57,7 +57,7 @@ class Facebook_Social_Plugin {
 	 * @return Facebook_Social_Plugin support chaining
 	 */
 	public function setFont( $font ) {
-		if ( is_string( $font ) && in_array( $font, self::$font_choices, true ) )
+		if ( is_string( $font ) && isset( self::$font_choices[$font] ) )
 			$this->font = $font;
 		return $this;
 	}
@@ -66,12 +66,12 @@ class Facebook_Social_Plugin {
 	 * Choose a light or dark color scheme
 	 *
 	 * @since 1.1
-	 * @see self::color_scheme_choices
+	 * @see self::colorscheme_choices
 	 * @param string $color_scheme light|dark
 	 * @return Facebook_Social_Plugin support chaining
 	 */
 	public function setColorScheme( $color_scheme ) {
-		if ( is_string( $color_scheme ) && in_array( $color_scheme, self::$color_scheme_choices, true ) )
+		if ( is_string( $color_scheme ) && isset( self::$colorscheme_choices[$color_scheme] ) )
 			$this->colorscheme = $color_scheme;
 		return $this;
 	}

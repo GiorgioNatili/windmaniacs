@@ -18,10 +18,13 @@ function wpsc_buy_now_button( $product_id, $replaced_shortcode = false ) {
 	$product = get_post( $product_id );
 	$supported_gateways = array('wpsc_merchant_paypal_standard','paypal_multiple');
 	$selected_gateways = get_option( 'custom_gateway_options' );
+	if ( $replaced_shortcode )
+		ob_start();
+
 	if ( in_array( 'wpsc_merchant_paypal_standard', (array)$selected_gateways ) ) {
 		if ( $product_id > 0 ) {
 			$post_meta = get_post_meta( $product_id, '_wpsc_product_metadata', true );
-			$shipping = $post_meta['shipping']['local'];
+			$shipping = isset( $post_meta['shipping'] ) ? $post_meta['shipping']['local'] : '';
 			$price = get_post_meta( $product_id, '_wpsc_price', true );
 			$special_price = get_post_meta( $product_id, '_wpsc_special_price', true );
 			if ( $special_price )
@@ -31,32 +34,30 @@ function wpsc_buy_now_button( $product_id, $replaced_shortcode = false ) {
 			} else {
 				$handling = $shipping;
 			}
-			$output .= "<form onsubmit='log_paypal_buynow(this)' target='paypal' action='" . get_option( 'paypal_multiple_url' ) . "' method='post' />
-				<input type='hidden' name='business' value='" . get_option( 'paypal_multiple_business' ) . "' />
-				<input type='hidden' name='cmd' value='_xclick' />
-				<input type='hidden' name='item_name' value='" . $product->post_title . "' />
-				<input type='hidden' id='item_number' name='item_number' value='" . $product_id . "' />
-				<input type='hidden' id='amount' name='amount' value='" . ($price) . "' />
-				<input type='hidden' id='unit' name='unit' value='" . $price . "' />
-				<input type='hidden' id='shipping' name='ship11' value='" . $shipping . "' />
-				<input type='hidden' name='handling' value='" . $handling . "' />
-				<input type='hidden' name='currency_code' value='" . get_option( 'paypal_curcode' ) . "' />";
-			if ( get_option( 'multi_add' ) == 1 ) {
-				$output .="<label for='quantity'>" . __( 'Quantity', 'wpsc' ) . "</label>";
-				$output .="<input type='text' size='4' id='quantity' name='quantity' value='' /><br />";
-			} else {
-				$output .="<input type='hidden' name='undefined_quantity' value='0' />";
-			}
-			$output .="<input type='image' name='submit' border='0' src='https://www.paypal.com/en_US/i/btn/btn_buynow_LG.gif' alt='PayPal - The safer, easier way to pay online' />
-				<img alt='' border='0' width='1' height='1' src='https://www.paypal.com/en_US/i/scr/pixel.gif' />
-			</form>\n\r";
+
+			$src = _x( 'https://www.paypal.com/en_US/i/btn/btn_buynow_LG.gif', 'PayPal Buy Now Button', 'wpsc' );
+			$src = apply_filters( 'wpsc_buy_now_button_src', $src );
+			$classes = "wpsc-buy-now-form wpsc-buy-now-form-{$product_id}";
+			$button_html = '<input class="wpsc-buy-now-button wpsc-buy-now-button-' . esc_attr( $product_id ) . '" type="image" name="submit" border="0" src=' . esc_url( $src ) . ' alt="' . esc_attr( 'PayPal - The safer, easier way to pay online', 'wpsc' ) . '" />';
+			$button_html = apply_filters( 'wpsc_buy_now_button_html', $button_html, $product_id );
+			?>
+			<form class="<?php echo esc_attr( $classes ); ?>" target="paypal" action="<?php echo esc_url( home_url() ); ?>" method="post">
+				<input type="hidden" name="wpsc_buy_now_callback" value="1" />
+				<input type="hidden" name="product_id" value="<?php echo esc_attr( $product_id ); ?>" />
+				<?php if ( get_option( 'multi_add' ) ): ?>
+					<label for="quantity"><?php esc_html_e( 'Quantity', 'wpsc' ); ?></label>
+					<input type="text" size="4" id="quantity" name="quantity" value="" /><br />
+				<?php else: ?>
+					<input type="hidden" name="quantity" value="1" />
+				<?php endif ?>
+				<?php echo $button_html; ?>
+				<img alt='' border='0' width='1' height='1' src='<?php echo esc_url( _x( 'https://www.paypal.com/en_US/i/scr/pixel.gif', 'PayPal Pixel', 'wpsc' ) ); ?>' />
+			</form>
+			<?php
 		}
 	}
-	if ( $replaced_shortcode == true ) {
-		return $output;
-	} else {
-		echo $output;
-	}
+	if ( $replaced_shortcode )
+		return ob_get_clean();
 }
 
 function wpsc_also_bought( $product_id ) {
@@ -86,17 +87,16 @@ function wpsc_also_bought( $product_id ) {
 		foreach ( (array)$also_bought as $also_bought_data ) {
 			$output .= "<div class='wpsc_also_bought_item' style='width: " . $element_widths . "px;'>";
 			if ( get_option( 'show_thumbnails' ) == 1 ) {
-				if ( $also_bought_data['image'] != null ) {
+				$image_path = wpsc_the_product_thumbnail( $image_display_width, $image_display_height, $also_bought_data['ID']);
+				if($image_path){
 					$output .= "<a href='" . get_permalink($also_bought_data['ID']) . "' class='preview_link'  rel='" . str_replace( " ", "_", get_the_title($also_bought_data['ID']) ) . "'>";
-					$image_path = "index.php?productid=" . $also_bought_data['ID'] . "&amp;width=" . $image_display_width . "&amp;height=" . $image_display_height . "";
-
 					$output .= "<img src='$image_path' id='product_image_" . $also_bought_data['ID'] . "' class='product_image' style='margin-top: " . $margin_top . "px'/>";
 					$output .= "</a>";
 				} else {
 					if ( get_option( 'product_image_width' ) != '' ) {
-						$output .= "<img src='" . WPSC_CORE_IMAGES_URL . "/no-image-uploaded.gif' title='" . get_the_title($also_bought_data['ID']) . "' alt='" . $also_bought_data['name'] . "' width='$image_display_height' height='$image_display_height' id='product_image_" . $also_bought_data['ID'] . "' class='product_image' />";
+						$output .= "<img src='" . WPSC_CORE_IMAGES_URL . "/no-image-uploaded.gif' title='" . esc_attr( get_the_title( $also_bought_data['ID'] ) ) . "' alt='" . esc_attr( $also_bought_data['name'] ) . "' width='$image_display_height' height='$image_display_height' id='product_image_" . $also_bought_data['ID'] . "' class='product_image' />";
 					} else {
-						$output .= "<img src='" . WPSC_CORE_IMAGES_URL . "/no-image-uploaded.gif' title='" . get_the_title($also_bought_data['ID']) . "' alt='" . htmlentities( stripslashes( get_the_title($also_bought_data['ID']) ), ENT_QUOTES, 'UTF-8' ) . "' id='product_image_" . $also_bought_data['ID'] . "' class='product_image' />";
+						$output .= "<img src='" . WPSC_CORE_IMAGES_URL . "/no-image-uploaded.gif' title='" . esc_attr( get_the_title( $also_bought_data['ID'] ) ) . "' alt='" . esc_attr( get_the_title( $also_bought_data['ID'] ) ) . "' id='product_image_" . $also_bought_data['ID'] . "' class='product_image' />";
 					}
 				}
 			}
@@ -126,29 +126,29 @@ function wpsc_loading_animation_url() {
 	return apply_filters( 'wpsc_loading_animation_url', WPSC_CORE_THEME_URL . 'wpsc-images/indicator.gif' );
 }
 
-function fancy_notifications() {	
+function fancy_notifications() {
 	return wpsc_fancy_notifications( true );
 }
 function wpsc_fancy_notifications( $return = false ) {
 	static $already_output = false;
-	
+
 	if ( $already_output )
 		return '';
-	
+
 	$output = "";
 	if ( get_option( 'fancy_notifications' ) == 1 ) {
 		$output = "";
 		$output .= "<div id='fancy_notification'>\n\r";
 		$output .= "  <div id='loading_animation'>\n\r";
-		$output .= '<img id="fancy_notificationimage" title="Loading" alt="Loading" src="' . wpsc_loading_animation_url() . '" />' . __( 'Updating', 'wpsc' ) . "...\n\r";
+		$output .= '<img id="fancy_notificationimage" title="' . esc_attr__( 'Loading', 'wpsc' ) . '" alt="' . esc_attr__( 'Loading', 'wpsc' ) . '" src="' . wpsc_loading_animation_url() . '" />' . __( 'Updating', 'wpsc' ) . "...\n\r";
 		$output .= "  </div>\n\r";
 		$output .= "  <div id='fancy_notification_content'>\n\r";
 		$output .= "  </div>\n\r";
 		$output .= "</div>\n\r";
 	}
-	
+
 	$already_output = true;
-	
+
 	if ( $return )
 		return $output;
 	else
@@ -226,50 +226,83 @@ function wpsc_add_to_cart_button( $product_id, $return = false ) {
 				</form>
 			</div>
 		<?php
-		
+
 		if ( $return )
 			return ob_get_clean();
 	}
 }
 
 /**
- * wpsc_refresh_page_urls( $content )
+ * wpsc_refresh_page_urls
  *
- * Refresh page urls when permalinks are turned on or altered
+ * Refresh page urls when pages are updated
  *
- * @global object $wpdb
- * @param string $content
- * @return string
+ * @param  int    $post_id
+ * @param  object $post
+ * @uses   wpsc_update_permalink_slugs()
+ * @return int    $post_id
  */
-function wpsc_refresh_page_urls( $content ) {
+function wpsc_refresh_page_urls( $post_id, $post ) {
+
+	if ( ! current_user_can( 'manage_options' ) )
+		return;
+
+	if ( 'page' != $post->post_type )
+		return;
+
+	if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE )
+		return;
+
+	if ( ! in_array( $post->post_status, array( 'publish', 'private' ) ) )
+		return;
+
+	wpsc_update_permalink_slugs();
+
+	return $post_id;
+}
+
+add_action( 'save_post', 'wpsc_refresh_page_urls', 10, 2 );
+
+/**
+ * Updates permalink slugs
+ *
+ * @since 3.8.9
+ * @return type
+ */
+function wpsc_update_permalink_slugs() {
 	global $wpdb;
 
-	$wpsc_pageurl_option['product_list_url'] = '[productspage]';
-	$wpsc_pageurl_option['shopping_cart_url'] = '[shoppingcart]';
-	$check_chekout = $wpdb->get_var( "SELECT `guid` FROM `{$wpdb->posts}` WHERE `post_content` LIKE '%[checkout]%' AND `post_type` NOT IN('revision') LIMIT 1" );
+	$wpsc_pageurl_option = array(
+		'product_list_url'  => '[productspage]',
+		'shopping_cart_url' => '[shoppingcart]',
+		'checkout_url'      => '[shoppingcart]',
+		'transact_url'      => '[transactionresults]',
+		'user_account_url'  => '[userlog]'
+	);
 
-	if ( $check_chekout != null )
-		$wpsc_pageurl_option['checkout_url'] = '[checkout]';
-	else
-		$wpsc_pageurl_option['checkout_url'] = '[checkout]';
+	$ids = array();
 
-	$wpsc_pageurl_option['transact_url'] = '[transactionresults]';
-	$wpsc_pageurl_option['user_account_url'] = '[userlog]';
-	$changes_made = false;
 	foreach ( $wpsc_pageurl_option as $option_key => $page_string ) {
-		$post_id = $wpdb->get_var( "SELECT `ID` FROM `{$wpdb->posts}` WHERE `post_type` IN('page','post') AND `post_content` LIKE '%$page_string%' AND `post_type` NOT IN('revision') LIMIT 1" );
-		$the_new_link = _get_page_link( $post_id );
+		$id = $wpdb->get_var( "SELECT `ID` FROM `{$wpdb->posts}` WHERE `post_type` = 'page' AND `post_content` LIKE '%$page_string%' LIMIT 1" );
+
+		if ( ! $id )
+			continue;
+
+		$ids[$page_string] = $id;
+
+		$the_new_link = get_page_link( $id );
 
 		if ( stristr( get_option( $option_key ), "https://" ) )
 			$the_new_link = str_replace( 'http://', "https://", $the_new_link );
 
+		if ( $option_key == 'shopping_cart_url' )
+			update_option( 'checkout_url', $the_new_link );
+
 		update_option( $option_key, $the_new_link );
 	}
-	return $content;
+
+	update_option( 'wpsc_shortcode_page_ids', $ids );
 }
-
-add_filter( 'mod_rewrite_rules', 'wpsc_refresh_page_urls' );
-
 
 /**
  * wpsc_obtain_the_title function, for replaacing the page title with the category or product
@@ -332,7 +365,7 @@ function wpsc_obtain_the_title() {
 	}
 
 	if ( isset( $full_product_name ) && ($full_product_name != null) )
-		$output = htmlentities( stripslashes( $full_product_name ), ENT_QUOTES, 'UTF-8' );
+		$output = esc_html(  $full_product_name );
 	$seperator = ' | ';
 	$seperator = apply_filters('wpsc_the_wp_title_seperator' , $seperator);
 	return $output.$seperator;

@@ -4,8 +4,8 @@ http://wp.zackdesign.biz/category-selection-widget/
 Donate link: http://wp.zackdesign.biz/category-selection-widget/
 Tags: widget, plugin, category, post, subcategory, drill, sidebar
 Requires at least: 2.8
-Tested up to: 3.3.2
-Stable tag: 3.1.2
+Tested up to: 3.5.1
+Stable tag: 3.1.3
 
 This widget makes it easy for your site users to drill down into your Wordpress post categories.
 
@@ -70,6 +70,12 @@ Country
      - NZ state 2
 
 == Changelog ==
+
+3.1.3
+
+- Tested in WP 3.5.2
+- Removed cat= from the rewrite rules and did some work around ensuring that Wordpress doesn't get confused. AND/IN should work correctly now
+
 
 3.1.2
 
@@ -185,7 +191,6 @@ They won't appear unless you have posts in the Wordpress categories.
 
 Change the 'width' value to whatever width you need and place in your theme CSS file.
 
-= I Need HELP!!! =
+= I really want to donate! =
 
-That's what I'm here for. I do Wordpress sites for many people in a professional capacity and
-can do the same for you. Check out www.zackdesign.biz
+Check out wp.zackdesign.biz - if you have issues contact me via Twitter on zackdesign.biz (visible there)

@@ -4,7 +4,7 @@ Plugin Name: Google AdSense Plugin
 Plugin URI:  http://bestwebsoft.com/plugin/
 Description: This plugin allows implementing Google AdSense to your website.
 Author: BestWebSoft
-Version: 1.11
+Version: 1.17
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -31,31 +31,15 @@ $this_adsns_plugin = plugin_basename(__FILE__);  // path to this file(from plugi
 
 $adsns_plugin = new adsns();  // creating a variable with type of our class
  
-$adsns_plugin->page_title = __( 'AdSense Options', 'adsense'); // title for options page
+$adsns_plugin->page_title = __( 'AdSense Settings', 'adsense'); // title for options page
  
 $adsns_plugin->menu_title = __( 'AdSense', 'adsense'); 	// name in menu
 
-$count = 0; 							//current number of showed ads
-$current_count = 0; 					// tmp var for storing a number of already showed ads
-$adsns_count = 0; 						// number of posts on home page
-if( $adsns_options = get_option( 'adsns_sets' ) ) {
-	unset( $adsns_options['code2'] );
-	add_option( 'adsns_settings', $adsns_options );
-	delete_option( 'adsns_sets' );
-}
-$adsns_options = get_option( 'adsns_settings' );	// array of options
-
-$max_ads = $adsns_options['max_ads'];			// max number of ads
-
 // This function showing ads at the choosen position
 function adsns_show_ads() {
-	global $adsns_options;
-	global $max_ads;
-	global $count;
-	global $current_count;
-	global $adsns_count;
-	global $adsns_plugin;
-	
+	global $adsns_options, $max_ads, $count, $current_count, $adsns_count, $adsns_plugin;
+	$adsns_plugin->adsns_activate();
+
 	// checking in what position we should show an ads
 	if ( $adsns_options['position'] == 'postend' ) {  									// if we choose ad position after post(single page)
 		add_filter( 'the_content', array( $adsns_plugin, 'adsns_end_post_ad' ) );  	// adding ad after post
@@ -85,7 +69,7 @@ if( ! function_exists( 'bws_add_menu_render' ) ) {
 	function bws_add_menu_render() {
 		global $title;
 		$active_plugins = get_option('active_plugins');
-		$all_plugins		= get_plugins();
+		$all_plugins	= get_plugins();
 
 		$array_activate = array();
 		$array_install	= array();
@@ -100,7 +84,9 @@ if( ! function_exists( 'bws_add_menu_render' ) ) {
 			array( 'gallery-plugin\/gallery-plugin.php', 'Gallery', 'http://wordpress.org/extend/plugins/gallery-plugin/', 'http://bestwebsoft.com/plugin/gallery-plugin/', '/wp-admin/plugin-install.php?tab=search&type=term&s=Gallery+Plugin+bestwebsoft&plugin-search-input=Search+Plugins', '' ),
 			array( 'adsense-plugin\/adsense-plugin.php', 'Google AdSense Plugin', 'http://wordpress.org/extend/plugins/adsense-plugin/', 'http://bestwebsoft.com/plugin/google-adsense-plugin/', '/wp-admin/plugin-install.php?tab=search&type=term&s=Adsense+Plugin+bestwebsoft&plugin-search-input=Search+Plugins', 'admin.php?page=adsense-plugin.php' ),
 			array( 'custom-search-plugin\/custom-search-plugin.php', 'Custom Search Plugin', 'http://wordpress.org/extend/plugins/custom-search-plugin/', 'http://bestwebsoft.com/plugin/custom-search-plugin/', '/wp-admin/plugin-install.php?tab=search&type=term&s=Custom+Search+plugin+bestwebsoft&plugin-search-input=Search+Plugins', 'admin.php?page=custom_search.php' ),
-			array( 'quotes_and_tips\/quotes-and-tips.php', 'Quotes and Tips', 'http://wordpress.org/extend/plugins/quotes-and-tips/', 'http://bestwebsoft.com/plugin/quotes-and-tips/', '/wp-admin/plugin-install.php?tab=search&type=term&s=Quotes+and+Tips+bestwebsoft&plugin-search-input=Search+Plugins', 'admin.php?page=quotes-and-tips.php' )
+			array( 'quotes-and-tips\/quotes-and-tips.php', 'Quotes and Tips', 'http://wordpress.org/extend/plugins/quotes-and-tips/', 'http://bestwebsoft.com/plugin/quotes-and-tips/', '/wp-admin/plugin-install.php?tab=search&type=term&s=Quotes+and+Tips+bestwebsoft&plugin-search-input=Search+Plugins', 'admin.php?page=quotes-and-tips.php' ),
+			array( 'google-sitemap-plugin\/google-sitemap-plugin.php', 'Google sitemap plugin', 'http://wordpress.org/extend/plugins/google-sitemap-plugin/', 'http://bestwebsoft.com/plugin/google-sitemap-plugin/', '/wp-admin/plugin-install.php?tab=search&type=term&s=Google+sitemap+plugin+bestwebsoft&plugin-search-input=Search+Plugins', 'admin.php?page=google-sitemap-plugin.php' ),
+			array( 'updater\/updater.php', 'Updater', 'http://wordpress.org/extend/plugins/updater/', 'http://bestwebsoft.com/plugin/updater/', '/wp-admin/plugin-install.php?tab=search&s=updater+bestwebsoft&plugin-search-input=Search+Plugins', 'admin.php?page=updater-options' )
 		);
 		foreach($array_plugins as $plugins) {
 			if( 0 < count( preg_grep( "/".$plugins[0]."/", $active_plugins ) ) ) {
@@ -150,7 +136,7 @@ if( ! function_exists( 'bws_add_menu_render' ) ) {
 				<?php foreach( $array_recomend as $recomend_plugin ) { ?>
 				<div style="float:left; width:200px;"><?php echo $recomend_plugin['title']; ?></div> <p><a href="<?php echo $recomend_plugin['link']; ?>" target="_blank"><?php echo __( "Read more", 'adsense'); ?></a> <a href="<?php echo $recomend_plugin['href']; ?>" target="_blank"><?php echo __( "Download", 'adsense'); ?></a> <a class="install-now" href="<?php echo get_bloginfo( "url" ) . $recomend_plugin['slug']; ?>" title="<?php esc_attr( sprintf( __( 'Install %s' ), $recomend_plugin['title'] ) ) ?>" target="_blank"><?php echo __( 'Install now from wordpress.org', 'adsense' ) ?></a></p>
 				<?php } ?>
-				<span style="color: rgb(136, 136, 136); font-size: 10px;"><?php _e( 'If you have any questions, please contact us via plugin@bestwebsoft.com or fill in our contact form on our site', 'adsense' ); ?> <a href="http://bestwebsoft.com/contact/">http://bestwebsoft.com/contact/</a></span>
+				<span style="color: rgb(136, 136, 136); font-size: 10px;"><?php _e( 'If you have any questions, please contact us via plugin@bestwebsoft.com or fill out the contact form on our website', 'adsense' ); ?> <a href="http://bestwebsoft.com/contact/">http://bestwebsoft.com/contact/</a></span>
 			</div>
 			<?php } ?>
 		</div>
@@ -172,6 +158,7 @@ add_filter( 'plugin_action_links', array( $adsns_plugin, 'adsns_plugin_action_li
 add_filter( 'plugin_row_meta', array( $adsns_plugin, 'adsns_register_plugin_links'), 10, 2 );
 
 add_action( 'init', 'adsns_plugin_init' );
+add_action( 'init', array( $adsns_plugin, 'adsns_activate' ) );
 add_action( 'admin_init', array( $adsns_plugin, 'adsns_write_admin_head' ) );
 
 // Action for adsns_show_ads
@@ -191,5 +178,6 @@ register_deactivation_hook( __FILE__, array( $adsns_plugin, 'adsns_deactivate' )
 
 // Activation hook
 register_activation_hook( __FILE__, array( $adsns_plugin, 'adsns_activate' ) );
+
 
 ?>

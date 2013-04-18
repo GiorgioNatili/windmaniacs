@@ -3,8 +3,8 @@ Contributors: VelvetBlues.com
 Donate link: http://www.velvetblues.com/go/updateurlsdonate/
 Tags: permalinks, urls, links, update links, move wordpress, location, update urls, update permalinks, move, link, url, permalink, excerpt, content links, excerpt links, custom field links
 Requires at least: 2.5
-Tested up to: 3.3.1
-Stable tag: 3.0
+Tested up to: 3.5
+Stable tag: 3.1
 License: GPLv2 or later
 
 Updates all urls and content links in your website.
@@ -69,6 +69,9 @@ Get support for this plugin by going to the [Velvet Blues Update URLs plugin pag
 1. The Admin screen for the plugin. screenshot-1.png
 
 == Change Log ==
+
+= 3.1 =
+* Confirmed compatibility with WordPress 3.5 release
 
 = 3.0 =
 * Confirmed compatibility with latest WordPress releases and added support for future versions.

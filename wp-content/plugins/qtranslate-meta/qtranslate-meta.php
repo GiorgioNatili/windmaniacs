@@ -3,7 +3,7 @@
 Plugin Name: qTranslate META
 Plugin URI: http://johnjcamilleri.com/2010/01/qtranslate-and-multilingual-meta-tags/
 Description: Multilingual support for META tags. Requires qTranslate.
-Version: 1.0.1
+Version: 1.0.2
 Author: John J. Camilleri
 Author URI: http://johnjcamilleri.com
 */
@@ -160,6 +160,7 @@ class qTranslateMETAPlugin {
 	
 	/* Action which runs dump the localised META tags */
 	function hook_head() {
+		if (!(is_single() || is_page())) return;
 		global $post;
 		$lang = qtrans_getLanguage();
 		$meta = $this->load_meta($post->ID);

@@ -48,23 +48,23 @@ class WPSC_Purchase_Log_Page
    private function purchase_logs_fix_options( $id ) {
       ?>
       <select name='<?php echo $id; ?>'>
-         <option value='-1'><?php _ex( 'Select an Option', 'Dropdown default when called in uniquename dropdown', 'wpsc' ); ?>'</option>
-         <option value='billingfirstname'><?php _e( 'Billing First Name', 'wpsc' ); ?></option>
-         <option value='billinglastname'><?php _e( 'Billing Last Name', 'wpsc' ); ?></option>
-         <option value='billingaddress'><?php _e( 'Billing Address', 'wpsc' ); ?></option>
-         <option value='billingcity'><?php _e( 'Billing City', 'wpsc' ); ?></option>
-         <option value='billingstate'><?php _e( 'Billing State', 'wpsc' ); ?></option>
-         <option value='billingcountry'><?php _e( 'Billing Country', 'wpsc' ); ?></option>
-         <option value='billingemail'><?php _e( 'Billing Email', 'wpsc' ); ?></option>
-         <option value='billingphone'><?php _e( 'Billing Phone', 'wpsc' ); ?></option>
-         <option value='billingpostcode'><?php _e( 'Billing Post Code', 'wpsc' ); ?></option>
-         <option value='shippingfirstname'><?php _e( 'Shipping First Name', 'wpsc' ); ?></option>
-         <option value='shippinglastname'><?php _e( 'Shipping Last Name', 'wpsc' ); ?></option>
-         <option value='shippingaddress'><?php _e( 'Shipping Address', 'wpsc' ); ?></option>
-         <option value='shippingcity'><?php _e( 'Shipping City', 'wpsc' ); ?></option>
-         <option value='shippingstate'><?php _e( 'Shipping State', 'wpsc' ); ?></option>
-         <option value='shippingcountry'><?php _e( 'Shipping Country', 'wpsc' ); ?></option>
-         <option value='shippingpostcode'><?php _e( 'Shipping Post Code', 'wpsc' ); ?></option>
+         <option value='-1'><?php echo esc_html_x( 'Select an Option', 'Dropdown default when called in uniquename dropdown', 'wpsc' ); ?>'</option>
+         <option value='billingfirstname'><?php esc_html_e( 'Billing First Name', 'wpsc' ); ?></option>
+         <option value='billinglastname'><?php esc_html_e( 'Billing Last Name', 'wpsc' ); ?></option>
+         <option value='billingaddress'><?php esc_html_e( 'Billing Address', 'wpsc' ); ?></option>
+         <option value='billingcity'><?php esc_html_e( 'Billing City', 'wpsc' ); ?></option>
+         <option value='billingstate'><?php esc_html_e( 'Billing State', 'wpsc' ); ?></option>
+         <option value='billingcountry'><?php esc_html_e( 'Billing Country', 'wpsc' ); ?></option>
+         <option value='billingemail'><?php esc_html_e( 'Billing Email', 'wpsc' ); ?></option>
+         <option value='billingphone'><?php esc_html_e( 'Billing Phone', 'wpsc' ); ?></option>
+         <option value='billingpostcode'><?php esc_html_e( 'Billing Post Code', 'wpsc' ); ?></option>
+         <option value='shippingfirstname'><?php esc_html_e( 'Shipping First Name', 'wpsc' ); ?></option>
+         <option value='shippinglastname'><?php esc_html_e( 'Shipping Last Name', 'wpsc' ); ?></option>
+         <option value='shippingaddress'><?php esc_html_e( 'Shipping Address', 'wpsc' ); ?></option>
+         <option value='shippingcity'><?php esc_html_e( 'Shipping City', 'wpsc' ); ?></option>
+         <option value='shippingstate'><?php esc_html_e( 'Shipping State', 'wpsc' ); ?></option>
+         <option value='shippingcountry'><?php esc_html_e( 'Shipping Country', 'wpsc' ); ?></option>
+         <option value='shippingpostcode'><?php esc_html_e( 'Shipping Post Code', 'wpsc' ); ?></option>
       </select>
       <?php
    }
@@ -131,22 +131,23 @@ class WPSC_Purchase_Log_Page
 
    function purchase_logs_checkout_fields(){
       global $purchlogitem;
-      if ( ! empty($purchlogitem->customcheckoutfields ) ) {
+
+      if ( ! empty($purchlogitem->additional_fields ) ) {
       ?>
          <div class="metabox-holder">
             <div id="custom_checkout_fields" class="postbox">
-               <h3 class='hndle'><?php _e( 'Additional Checkout Fields' , 'wpsc' ); ?></h3>
+               <h3 class='hndle'><?php esc_html_e( 'Additional Checkout Fields' , 'wpsc' ); ?></h3>
                <div class='inside'>
                   <?php
-                  foreach((array)$purchlogitem->customcheckoutfields as $key=>$value){
-                     $value['value'] = maybe_unserialize($value['value']);
-                     if(is_array($value['value'])){
+                  foreach( (array) $purchlogitem->additional_fields as $value ) {
+                     $value['value'] = maybe_unserialize ($value['value'] );
+                     if( is_array( $value['value'] ) ) {
                      ?>
-                        <p><strong><?php echo $key; ?> :</strong> <?php echo implode(stripslashse($value['value']), ','); ?></p>
+                        <p><strong><?php echo $value['name']; ?> :</strong> <?php echo implode( stripslashes( $value['value'] ), ',' ); ?></p>
                      <?php
                      }else{
                      ?>
-                        <p><strong><?php echo $key; ?> :</strong> <?php echo stripslashes($value['value']); ?></p>
+                        <p><strong><?php echo $value['name']; ?> :</strong> <?php echo stripslashes( $value['value'] ); ?></p>
                      <?php
                      }
                   }
@@ -162,22 +163,22 @@ class WPSC_Purchase_Log_Page
       if( wpsc_purchlogs_has_customfields() ){?>
          <div class='metabox-holder'>
             <div id='purchlogs_customfields' class='postbox'>
-               <h3 class='hndle'><?php _e( 'Users Custom Fields' , 'wpsc' ); ?></h3>
+               <h3 class='hndle'><?php esc_html_e( 'Users Custom Fields' , 'wpsc' ); ?></h3>
                <div class='inside'>
                   <?php $messages = wpsc_purchlogs_custommessages(); ?>
                   <?php $files = wpsc_purchlogs_customfiles(); ?>
                   <?php if(count($files) > 0){ ?>
-                     <h4><?php _e( 'Cart Items with Custom Files' , 'wpsc' ); ?>:</h4>
+                     <h4><?php esc_html_e( 'Cart Items with Custom Files' , 'wpsc' ); ?>:</h4>
                      <?php
                      foreach($files as $file){
                         echo $file;
                      }
                   }?>
                   <?php if(count($messages) > 0){ ?>
-                     <h4><?php _e( 'Cart Items with Custom Messages' , 'wpsc' ); ?>:</h4>
+                     <h4><?php esc_html_e( 'Cart Items with Custom Messages' , 'wpsc' ); ?>:</h4>
                      <?php
                      foreach($messages as $message){
-                        echo $message;
+                        echo esc_html( $message );
                      }
                   } ?>
                </div>
@@ -212,7 +213,7 @@ class WPSC_Purchase_Log_Page
 
    public function controller_item_details() {
       if ( ! isset( $_REQUEST['id'] ) )
-         die( 'Invalid sales log ID' );
+         die( __( 'Invalid sales log ID', 'wpsc' ) );
 
       global $purchlogitem;
 
@@ -222,11 +223,11 @@ class WPSC_Purchase_Log_Page
       $purchlogitem = new wpsc_purchaselogs_items( $this->log_id );
 
       $columns = array(
-         'title'    => __( 'Name','wpsc' ),
-         'sku'      => __( 'SKU','wpsc' ),
+         'title'    => __( 'Name', 'wpsc' ),
+         'sku'      => __( 'SKU', 'wpsc' ),
          'quantity' => __( 'Quantity','wpsc' ),
-         'price'    => __( 'Price','wpsc' ),
-         'shipping' => __( 'Item Shipping','wpsc'),
+         'price'    => __( 'Price', 'wpsc' ),
+         'shipping' => __( 'Item Shipping', 'wpsc'),
       );
 
       if ( wpec_display_product_tax() ) {
@@ -242,7 +243,7 @@ class WPSC_Purchase_Log_Page
 
    public function controller_packing_slip() {
       if ( ! isset( $_REQUEST['id'] ) )
-         die( 'Invalid sales log ID' );
+         die( __( 'Invalid sales log ID', 'wpsc' ) );
 
       global $purchlogitem;
 
@@ -285,6 +286,8 @@ class WPSC_Purchase_Log_Page
          $cols = 5;
       else
          $cols = 4;
+      $receipt_sent = ! empty( $_GET['sent'] );
+      $receipt_not_sent = isset( $_GET['sent'] ) && ! $_GET['sent'];
       include( 'includes/purchase-logs-page/item-details.php' );
    }
 

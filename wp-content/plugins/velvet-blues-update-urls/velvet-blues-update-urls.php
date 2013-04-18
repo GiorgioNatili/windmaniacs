@@ -6,11 +6,11 @@ Description: This plugin <strong>updates all urls in your website</strong> by re
 Author: VelvetBlues.com
 Author URI: http://www.velvetblues.com/
 Author Email: info@velvetblues.com
-Version: 3.0
+Version: 3.1
 License: GPLv2 or later
 Text Domain: velvet-blues-update-urls
 */
-/*  Copyright 2011  Velvet Blues Web Design  (email : info@velvetblues.com)
+/*  Copyright 2012  Velvet Blues Web Design  (email : info@velvetblues.com)
 
 This program is free software; you can redistribute it and/or
 modify it under the terms of the GNU General Public License
@@ -43,14 +43,14 @@ function VelvetBluesUU_options_page(){
 		global $wpdb;
 		$results = array();
 		$queries = array(
-		'content' =>		array("UPDATE $wpdb->posts SET post_content = replace(post_content, '".$oldurl."','".$newurl."')",  __('Content Items (Posts, Pages, Custom Post Types, Revisions)','velvet-blues-update-urls') ),
-		'excerpts' =>		array("UPDATE $wpdb->posts SET post_excerpt = replace(post_excerpt, '".$oldurl."','".$newurl."')", __('Excerpts','velvet-blues-update-urls') ),
-		'attachments' =>	array("UPDATE $wpdb->posts SET guid = replace(guid, '".$oldurl."','".$newurl."') WHERE post_type = 'attachment'",  __('Attachments','velvet-blues-update-urls') ),
-		'custom' =>			array("UPDATE $wpdb->postmeta SET meta_value = replace(meta_value, '".$oldurl."','".$newurl."')",  __('Custom Fields','velvet-blues-update-urls') ),
-		'guids' =>			array("UPDATE $wpdb->posts SET guid = replace(guid, '".$oldurl."','".$newurl."')",  __('GUIDs','velvet-blues-update-urls') )
+		'content' =>		array("UPDATE $wpdb->posts SET post_content = replace(post_content, %s, %s)",  __('Content Items (Posts, Pages, Custom Post Types, Revisions)','velvet-blues-update-urls') ),
+		'excerpts' =>		array("UPDATE $wpdb->posts SET post_excerpt = replace(post_excerpt, %s, %s)", __('Excerpts','velvet-blues-update-urls') ),
+		'attachments' =>	array("UPDATE $wpdb->posts SET guid = replace(guid, %s, %s) WHERE post_type = 'attachment'",  __('Attachments','velvet-blues-update-urls') ),
+		'custom' =>			array("UPDATE $wpdb->postmeta SET meta_value = replace(meta_value, %s, %s)",  __('Custom Fields','velvet-blues-update-urls') ),
+		'guids' =>			array("UPDATE $wpdb->posts SET guid = replace(guid, %s, %s)",  __('GUIDs','velvet-blues-update-urls') )
 		);
 		foreach($options as $option){
-			$result = $wpdb->query( $wpdb->prepare( $queries[$option][0] ) );
+			$result = $wpdb->query( $wpdb->prepare( $queries[$option][0], $oldurl, $newurl) );
 			$results[$option] = array($result, $queries[$option][1]);
 		}
 		return $results;			

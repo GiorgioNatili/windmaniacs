@@ -28,7 +28,7 @@ function wpsc_find_purchlog_status_name( $purchlog_status ) {
 
 /**
  * WPSC get state by id function, gets either state code or state name depending on param
- *
+*
  * @since 3.7
  * $param int $id the id for the region
  * @param string $return_value either 'name' or 'code' depending on what you want returned
@@ -98,30 +98,17 @@ function wpsc_add_new_user( $user_login, $user_pass, $user_email ) {
 }
 
 /**
- * WPSC product has variations function
- * @since 3.7
- * @param int product id
- * @return bool true or false
+ * Deprecated function
+ *
+ * @deprecated 3.8.9
  */
-function wpsc_product_has_variations( $product_id ) {
-	_deprecated_function( __FUNCTION__, '3.8', 'wpsc_have_variations()' );
-	global $wpdb;
-	if ( $product_id > 0 ) {
-		$variation_count = $wpdb->get_var( "SELECT COUNT(`id`) FROM `" . WPSC_TABLE_VARIATION_ASSOC . "` WHERE `type` IN('product') AND `associated_id` IN('{$product_id}')" );
-		if ( $variation_count > 0 ) {
-			return true;
-		}
-	}
-	return false;
-}
-
 function wpsc_post_title_seo( $title ) {
 	global $wpdb, $page_id, $wp_query;
 	$new_title = wpsc_obtain_the_title();
 	if ( $new_title != '' ) {
 		$title = $new_title;
 	}
-	return stripslashes( $title );
+	return esc_html( $title );
 }
 
 //add_filter( 'single_post_title', 'wpsc_post_title_seo' );
@@ -388,7 +375,7 @@ function nzshpcrt_display_preview_image() {
 					$temp_h = $height;
 
 					// select our scaling method
-					$scaling_method = 'cropping';
+					$scaling_method = apply_filters( 'wpsc_preview_image_cropping_method', 'cropping' );
 
 					// set both offsets to zero
 					$offset_x = $offset_y = 0;
@@ -419,14 +406,15 @@ function nzshpcrt_display_preview_image() {
 					}
 
 					// Create temp resized image
+					$bgcolor_default = apply_filters( 'wpsc_preview_image_bgcolor', array( 255, 255, 255 ) );
 					$temp_img = ImageCreateTrueColor( $temp_w, $temp_h );
-					$bgcolor = ImageColorAllocate( $temp_img, 255, 255, 255 );
+					$bgcolor = ImageColorAllocate( $temp_img, $bgcolor_default[0], $bgcolor_default[1], $bgcolor_default[2] ) ;
 					ImageFilledRectangle( $temp_img, 0, 0, $temp_w, $temp_h, $bgcolor );
 					ImageAlphaBlending( $temp_img, TRUE );
 					ImageCopyResampled( $temp_img, $src_img, 0, 0, 0, 0, $temp_w, $temp_h, $source_w, $source_h );
 
 					$dst_img = ImageCreateTrueColor( $width, $height );
-					$bgcolor = ImageColorAllocate( $dst_img, 255, 255, 255 );
+					$bgcolor = ImageColorAllocate( $dst_img, $bgcolor_default[0], $bgcolor_default[1], $bgcolor_default[2] );
 					ImageFilledRectangle( $dst_img, 0, 0, $width, $height, $bgcolor );
 					ImageAlphaBlending( $dst_img, TRUE );
 
@@ -509,17 +497,12 @@ function wpsc_list_dir( $dirname ) {
 			$num++;
 		}
 	}
-	if ( $dirlist == null ) {
-		$dirlist[0] = "paypal.php";
-		$dirlist[1] = "testmode.php";
-	}
 	return $dirlist;
 }
 
 /**
  * wpsc_recursive_copy function, copied from here and renamed: http://nz.php.net/copy
  * Why doesn't PHP have one of these built in?
-
  */
 function wpsc_recursive_copy( $src, $dst ) {
 	$dir = opendir( $src );
@@ -562,10 +545,8 @@ function wpsc_replace_reply_name( $input ) {
 
 /**
  * wpsc_object_to_array, recusively converts an object to an array, for usage with SOAP code
-
  * Copied from here, then modified:
  * http://www.phpro.org/examples/Convert-Object-To-Array-With-PHP.html
-
  */
 function wpsc_object_to_array( $object ) {
 	if ( !is_object( $object ) && !is_array( $object ) ) {
@@ -748,32 +729,32 @@ function wpsc_check_memory_limit() {
 
 /* Thanks to: http://www.if-not-true-then-false.com/2009/format-bytes-with-php-b-kb-mb-gb-tb-pb-eb-zb-yb-converter */
 function wpsc_convert_byte($bytes, $unit = "", $decimals = 2) {
-	$units = array('B' => 0, 'KB' => 1, 'MB' => 2, 'GB' => 3, 'TB' => 4, 
+
+	$units = array('B' => 0, 'KB' => 1, 'MB' => 2, 'GB' => 3, 'TB' => 4,
 			'PB' => 5, 'EB' => 6, 'ZB' => 7, 'YB' => 8);
 	$value = 0;
 	if ($bytes > 0) {
-		// Generate automatic prefix by bytes 
+		// Generate automatic prefix by bytes
 		// If wrong prefix given
 		if (!array_key_exists($unit, $units)) {
 			$pow = floor(log($bytes)/log(1024));
 			$unit = array_search($pow, $units);
 		}
- 
+
 		// Calculate byte value by prefix
 		$value = ($bytes/pow(1024,floor($units[$unit])));
 	}
- 
-	// If decimals is not numeric or decimals is less than 0 
+
+	// If decimals is not numeric or decimals is less than 0
 	// then set default value
 	if (!is_numeric($decimals) || $decimals < 0) {
 		$decimals = 2;
 	}
- 
+
 	// Format output
 	return sprintf('%.' . $decimals . 'f '.$unit, $value);
   }
 
-    
 /**
  * Check whether an integer is odd
  * @return bool - true if is odd, false otherwise
@@ -782,8 +763,8 @@ function wpsc_is_odd( $int ) {
 
 	$int = absint( $int );
 	return( $int & 1 );
-} 
- 
+}
+
 /**
  * Retrieves extension of file.
  * @return string - extension of the passed filename
@@ -794,15 +775,3 @@ function wpsc_get_extension( $str ) {
 	return end( $parts );
 
 }
-
-/**
- * Destroys checkout field values on logout.
- */
- 
-function wpsc_kill_user_session() {
-	unset( $_SESSION['wpsc_checkout_saved_values'] );
-}
-
-add_action( 'wp_logout', 'wpsc_kill_user_session' );
-
-?>

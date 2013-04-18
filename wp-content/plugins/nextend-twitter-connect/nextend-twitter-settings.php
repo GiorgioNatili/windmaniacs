@@ -58,10 +58,10 @@ function NextendTwitter_Options_Page() {
   </p>
   <h3><?php _e('Usage', 'nextend-twitter-connect'); ?></h3>
   <h4><?php _e('Simple link', 'nextend-twitter-connect'); ?></h4>
-	<p><?php _e('&lt;a href="'.get_option('siteurl').'?loginTwitter=1&redirect='.get_option('siteurl').'" onclick="window.location = \''.get_option('siteurl').'?loginTwitter=1&redirect=\'+window.location.href; return false;"&gt;Click here to login or register with twitter&lt;/a&gt;', 'nextend-twitter-connect'); ?></p>
+	<p><?php _e('&lt;a href="'.new_twitter_login_url().'&redirect='.get_option('siteurl').'" onclick="window.location = \''.new_twitter_login_url().'&redirect=\'+window.location.href; return false;"&gt;Click here to login or register with twitter&lt;/a&gt;', 'nextend-twitter-connect'); ?></p>
 	
   <h4><?php _e('Image button', 'nextend-twitter-connect'); ?></h4>
-	<p><?php _e('&lt;a href="'.get_option('siteurl').'?loginTwitter=1&redirect='.get_option('siteurl').'" onclick="window.location = \''.get_option('siteurl').'?loginTwitter=1&redirect=\'+window.location.href; return false;"&gt; &lt;img src="HereComeTheImage" /&gt; &lt;/a&gt;', 'nextend-twitter-connect'); ?></p>
+	<p><?php _e('&lt;a href="'.new_twitter_login_url().'&redirect='.get_option('siteurl').'" onclick="window.location = \''.new_twitter_login_url().'&redirect=\'+window.location.href; return false;"&gt; &lt;img src="HereComeTheImage" /&gt; &lt;/a&gt;', 'nextend-twitter-connect'); ?></p>
   
   <h3><?php _e('Note', 'nextend-twitter-connect'); ?></h3>
   <p><?php _e('If the twitter user\'s email address already used by another member of your site, the twitter profile will be automatically linked to the existing profile!', 'nextend-twitter-connect'); ?></p>
@@ -129,18 +129,18 @@ function NextendTwitter_Options_Page() {
 		</tr>
 
 		<tr>
-		<th scope="row"><?php _e('New user prefix:', 'nextend-twitter-connect'); ?></th>
-		<td>
-    <?php if(!isset($nextend_twitter_connect['twitter_user_prefix'])) $nextend_twitter_connect['twitter_user_prefix'] = 'Facebook - '; ?>
-		<input type="text" name="twitter_user_prefix" value="<?php echo $nextend_twitter_connect['twitter_user_prefix']; ?>" />
-		</td>
-		</tr>
-
-		<tr>
 		<th scope="row"><?php _e('Fixed redirect url for login:', 'nextend-twitter-connect'); ?></th>
 		<td>
     <?php if(!isset($nextend_twitter_connect['twitter_redirect'])) $nextend_twitter_connect['twitter_redirect'] = 'auto'; ?>
 		<input type="text" name="twitter_redirect" value="<?php echo $nextend_twitter_connect['twitter_redirect']; ?>" />
+		</td>
+		</tr>
+
+		<tr>
+		<th scope="row"><?php _e('Fixed redirect url for register:', 'nextend-twitter-connect'); ?></th>
+		<td>
+    <?php if(!isset($nextend_twitter_connect['twitter_redirect_reg'])) $nextend_twitter_connect['twitter_redirect_reg'] = 'auto'; ?>
+		<input type="text" name="twitter_redirect_reg" value="<?php echo $nextend_twitter_connect['twitter_redirect_reg']; ?>" />
 		</td>
 		</tr>
 
@@ -166,6 +166,14 @@ function NextendTwitter_Options_Page() {
 		<td>
       <?php if(!isset($nextend_twitter_connect['twitter_link_button'])) $nextend_twitter_connect['twitter_link_button'] = '<div class="new-twitter-btn new-twitter-1 new-twitter-default-anim"><div class="new-twitter-1-1"><div class="new-twitter-1-1-1">LINK ACCOUNT TO</div></div></div>'; ?>
 		  <textarea cols="83" rows="3" name="twitter_link_button"><?php echo $nextend_twitter_connect['twitter_link_button']; ?></textarea>
+		</td>
+		</tr>
+    
+    <tr>
+		<th scope="row"><?php _e('Unlink account button:', 'nextend-twitter-connect'); ?></th>
+		<td>
+      <?php if(!isset($nextend_twitter_connect['twitter_unlink_button'])) $nextend_twitter_connect['twitter_unlink_button'] = '<div class="new-twitter-btn new-twitter-1 new-twitter-default-anim"><div class="new-twitter-1-1"><div class="new-twitter-1-1-1">UNLINK ACCOUNT</div></div></div>'; ?>
+		  <textarea cols="83" rows="3" name="twitter_unlink_button"><?php echo $nextend_twitter_connect['twitter_unlink_button']; ?></textarea>
 		</td>
 		</tr>
     
