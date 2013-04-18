@@ -77,27 +77,22 @@ function qtrans_generateLanguageSelectCode($style='', $id='') {
 		case 'image':
 		case 'text':
 		case 'dropdown':
-			echo '<div class="language box widget_qtranslate"><ul class="qtrans_language_chooser" id="'.$id.'">';
-			$myarr = qtrans_getSortedLanguages();
-			$leng = count($myarr);
-			$iii = 0;
-			foreach($myarr as $language) {
+			echo '<ul class="qtrans_language_chooser" id="'.$id.'">';
+			foreach(qtrans_getSortedLanguages() as $language) {
 				$classes = array('lang-'.$language);
 				if($language == $q_config['language'])
-					$classes[] = 'active';//qtrans_convertURL($url, $language); qTranslateSlug_getSelfUrl($language);
+					$classes[] = 'active';
 				echo '<li class="'. implode(' ', $classes) .'"><a href="'.qtrans_convertURL($url, $language).'"';
 				// set hreflang
 				echo ' hreflang="'.$language.'" title="'.$q_config['language_name'][$language].'"';
 				if($style=='image')
 					echo ' class="qtrans_flag qtrans_flag_'.$language.'"';
-				echo '>';
-				echo ''.$language.'</span></a></li>';
-				if($iii+1 != $leng) {
-    				echo '<li class="spacer"> | </li>';
-  				};
-  				$iii++;
+				echo '><span';
+				if($style=='image')
+					echo ' style="display:none"';
+				echo '>'.$q_config['language_name'][$language].'</span></a></li>';
 			}
-			echo "</ul></div><div class=\"qtrans_widget_end\"></div>";
+			echo "</ul><div class=\"qtrans_widget_end\"></div>";
 			if($style=='dropdown') {
 				echo "<script type=\"text/javascript\">\n// <![CDATA[\r\n";
 				echo "var lc = document.getElementById('".$id."');\n";
@@ -115,7 +110,7 @@ function qtrans_generateLanguageSelectCode($style='', $id='') {
 			}
 			break;
 		case 'both':
-			echo '<div class="language box widget_qtranslate"><ul class="qtrans_language_chooser" id="'.$id.'">';
+			echo '<ul class="qtrans_language_chooser" id="'.$id.'">';
 			foreach(qtrans_getSortedLanguages() as $language) {
 				echo '<li';
 				if($language == $q_config['language'])
@@ -124,7 +119,7 @@ function qtrans_generateLanguageSelectCode($style='', $id='') {
 				echo ' class="qtrans_flag_'.$language.' qtrans_flag_and_text" title="'.$q_config['language_name'][$language].'"';
 				echo '><span>'.$q_config['language_name'][$language].'</span></a></li>';
 			}
-			echo "</ul></div><div class=\"qtrans_widget_end\"></div>";
+			echo "</ul><div class=\"qtrans_widget_end\"></div>";
 			break;
 	}
 }
