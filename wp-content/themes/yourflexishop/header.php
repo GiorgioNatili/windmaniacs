@@ -10,9 +10,6 @@
     //$jsUrl = $url . '/wp-content/themes/yourflexishop/js/global.js';
     echo '<!-- custom extend css -->
           <link rel="stylesheet" type="text/css" href="' . $cssUrl . '" />
-          
-          
-  
           <!-- /end custom extend css -->';
     /*echo '<!-- custom global js -->
           <script type="text/javascript" src="' . $jsUrl . '"></script>
@@ -25,19 +22,7 @@
     }
   </style>
 <![endif]-->
-<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" />
-<script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
 
-<script>
-	//$(function() {
-	//	$( "#tabs" ).tabs();
-	//});
-        
-        jQuery(function() {
-            jQuery("#tabscontainer").tabs();
-        });
-</script>
-	
 <script language="javascript" type="text/javascript">
         function limitText(limitField, limitCount, limitNum) {
             if (limitField.value.length > limitNum) {

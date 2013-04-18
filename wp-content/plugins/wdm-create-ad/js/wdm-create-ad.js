@@ -57,6 +57,26 @@
           $(form_name).replaceWith(form[0]);
           // ..bind events on injected code.
           ajaxForm(form_name);
+
+          // Add TABS
+          var selectTab = function (item) {
+            var classname = 'tab-selected';
+
+            $('#tabscontainer ul li a', form_name).removeClass(classname);
+            $('#tabscontainer ul li a[href="' + item + '"]').addClass(classname);
+
+            $('#tabscontainer div', form_name).hide();
+            $('#tabscontainer div' + item, form_name).show();
+          }
+
+          $('#tabscontainer div', form_name).hide();
+          selectTab($('#tabscontainer ul li a:first').attr('href'));
+
+          $('#tabscontainer ul li a', form_name).click(function (e) {
+            var selector = $(this).attr('href');
+            selectTab(selector);
+            e.preventDefault();
+          });
         }
       });
 
