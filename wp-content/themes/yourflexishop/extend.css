@@ -1648,25 +1648,19 @@ a.large-blog-image img, div.main_image img {
   margin:30px 20px 20px 20px;
   float:left;
   border:none;
-  opacity: 0.9;
+  opacity: 0.7;
   cursor:pointer;
   font-size:0;
   text-align:center;
   padding:0 10px ;
   background-color:#0099ff;
   position:relative;
-  border:solid 1px;
-  
 }
 #already{
   background: url("../img/buttonAlready.png") #0099ff no-repeat center 65% ;
 }
 #already:active, #already:hover, #stillnot:active, #stillnot:hover{
   opacity: 1;
-  border:solid 1px;
-  box-shadow: inset 52px rgba(0,0,0,0.07);
-  -webkit-box-shadow: rgba(0, 0, 0, 0.7) 5px  inset;
-  -moz-box-shadow: rgba(0, 0 0, 0.7) 5px inset;
 }
 #already h2, #stillnot h2{
   width:202px;
@@ -1857,7 +1851,7 @@ input[type="radio"]:checked + span{
 .regular-checkbox:checked + label {
 	background-color: #e9ecee;
 	border: 1px solid #adb8c0;
-	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1);
 	color: #99a1a7;
 }
 
@@ -1980,14 +1974,11 @@ input[type="radio"]:checked + span{
   display:none;
 }
 
-#stepcondition, #dynamic-upload-images {
+#stepcondition{
   width:764px;
   padding:20px;
   margin-top:10px;
   height:60px;
-}
-#dynamic-upload-images{
-  height:200px;
 }
 #selectabletags select{
   -webkit-appearance: none;
@@ -2033,99 +2024,3 @@ input[type="radio"]:checked + span{
   box-shadow: rgba(68, 68, 68, 0.7) 2px 2px 5px 1px inset;
   background: url(../img/wdmk_select_arrow.png) no-repeat right center white;
 }
-
-#selectcondition select, #selectyear select, #selectstyle select{
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  float:left;
-  margin: 5px 10px 25px 10px;
-  width: 220px;
-  height: 35px;
-  -webkit-border-radius: 15px;
-  -moz-border-radius: 15px;
-  -ms-border-radius: 15px;
-  -o-border-radius: 15px;
-  border-radius: 15px;
-  font-size: 15px;
-  text-transform: uppercase;
-  padding: 3px 0 0;
-  text-indent: 15px;
-  -webkit-box-shadow: rgba(68, 68, 68, 0.7) 2px 2px 5px 1px inset;
-  -moz-box-shadow: rgba(68, 68, 68, 0.7) 2px 2px 5px 1px inset;
-  box-shadow: rgba(68, 68, 68, 0.7) 2px 2px 5px 1px inset;
-  background: url(../img/wdmk_select_arrow.png) no-repeat right center white;
-}
-
-#selectcondition select, #selectyear select, #selectstyle select{
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  float:left;
-  margin: 5px 10px 25px 10px;
-  width: 220px;
-  height: 35px;
-  -webkit-border-radius: 15px;
-  -moz-border-radius: 15px;
-  -ms-border-radius: 15px;
-  -o-border-radius: 15px;
-  border-radius: 15px;
-  font-size: 15px;
-  text-transform: uppercase;
-  padding: 3px 0 0;
-  text-indent: 15px;
-  -webkit-box-shadow: rgba(68, 68, 68, 0.7) 2px 2px 5px 1px inset;
-  -moz-box-shadow: rgba(68, 68, 68, 0.7) 2px 2px 5px 1px inset;
-  box-shadow: rgba(68, 68, 68, 0.7) 2px 2px 5px 1px inset;
-  background: url(../img/wdmk_select_arrow.png) no-repeat right center white;
-}
-
-#dynamic-upload-images .uploadfiles{
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  /*float:left;*/
-  margin: 5px 10px 25px 10px;
-  width: 220px;
-  height: 35px;
-  -webkit-border-radius: 15px;
-  -moz-border-radius: 15px;
-  -ms-border-radius: 15px;
-  -o-border-radius: 15px;
-  border-radius: 15px;
-  font-size: 15px;
-  text-transform: uppercase;
-  padding: 3px 0 0;
-  text-indent: 15px;
-  -webkit-box-shadow: rgba(68, 68, 68, 0.7) 2px 2px 5px 1px inset;
-  -moz-box-shadow: rgba(68, 68, 68, 0.7) 2px 2px 5px 1px inset;
-  box-shadow: rgba(68, 68, 68, 0.7) 2px 2px 5px 1px inset;
-   background: url("../img/bgupload.png") no-repeat scroll 95% center none repeat scroll 0 0 rgba(9, 114, 202, 0.8);
-}
-
-
-
-
-
-/*bgupload.png*/
- 
- .formcarbonbackground #dynamic-upload-images input[type="upload"] {
-    -webkit-border-radius: 15px;
-  -moz-border-radius: 15px;
-  -ms-border-radius: 15px;
-  -o-border-radius: 15px;
-  border-radius: 15px;
-    background: url("../img/bgupload.png") no-repeat scroll 95% center none repeat scroll 0 0 rgba(9, 114, 202, 0.8);
-    border: none;
-    color: white;
-    cursor: pointer;
-    display: inline-block;
-    font-size: 15px;
-    height: 35px;
-    margin: 15px 10px 10px 35px;
-    padding: 0 15px;
-    text-shadow: 0 -1px 0 black;
-    text-transform: uppercase;
-    width: 150px;
-    display:block;
- }

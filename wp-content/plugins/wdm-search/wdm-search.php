@@ -154,23 +154,21 @@ function wdm_form_select($category_name,$category_id,$label,$term_key,$parent_id
   foreach ($temp_terms as $slug => $name) {
     $selected = '';
 
-    $data = isset($_GET[$term_key]) ? $_GET[$term_key] : $_POST[$term_key];
-
-    if(is_string($data) && $data == $slug) {
+    if(is_string($_GET[$term_key]) && $_GET[$term_key] == $slug) {
       $selected = 'selected="selected"';
     }
 
-    if(is_array($data)){
-      foreach ($data as $k => $name2) {
+    if(is_array($_GET[$term_key])){
+      foreach ($_GET[$term_key] as $k => $name2) {
         //set default value for variable taxonomies
         if(is_numeric($k)) {
-          if($data[$k] == $slug){
+          if($_GET[$term_key][$k] == $slug){
             $selected = 'selected="selected"';
           }
         }
         //Set default values for ranges common taxonomies
         if(is_string($k)) {
-          if($data[$subkey] == $slug){
+          if($_GET[$term_key][$subkey] == $slug){
             $selected = 'selected="selected"';
           }
         }
@@ -230,10 +228,9 @@ function wdm_form_select_range($id, $label, $values, $sort = 'ASC', $subkey = NU
   foreach ($values as $key => $value){
     $selected = '';
 
-    $data = isset($_GET[$id]) ? $_GET[$id] : $_POST[$id];
-    if (is_array($data)) {
-      foreach ($data as $k => $name) {
-        if($data[$subkey] == $key){
+    if(is_array($_GET[$id])){
+      foreach ($_GET[$id] as $k => $name) {
+        if($_GET[$id][$subkey] == $key){
           $selected = 'selected="selected"';
         }
       }

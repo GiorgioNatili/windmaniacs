@@ -401,16 +401,12 @@ function wdm_create_ad_products() {
   if ( have_posts() ) {
     while ( have_posts() ) {
       the_post();
-
-      $price      = get_product_meta(the_ID(), 'price', true);
-      $sale_price = get_product_meta(the_ID(), 'special_price', true);
-
       $output .= '<tr>';
       $output .=   '<td>' . 'IMAGE' . '</td>';
       $output .=   '<td>' . get_the_title() . '</td>';
       $output .=   '<td>' . get_the_excerpt() . '</td>';
-      $output .=   '<td>' . wpsc_currency_display( $price ) . '</td>';
-      $output .=   '<td>' . wpsc_currency_display( $sale_price ) . '</td>';
+      $output .=   '<td>' . 'PRICE' . '</td>';
+      $output .=   '<td>' . 'SALE_PRICE' . '</td>';
       $output .= '</tr>';
     }
   }
