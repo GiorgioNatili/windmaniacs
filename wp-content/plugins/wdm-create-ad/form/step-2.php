@@ -44,7 +44,7 @@
             <input id="titolo" type="text" onblur="if(this.value=='')this.value=this.defaultValue;" onfocus="if(this.value==this.defaultValue)this.value='';" placeholder="<?php _e("Insert Title"); ?>" name="wdm-title-<?php print $langcode; ?>" value="<?php print $default_value['wdm-title-' . $langcode]; ?>" class="input-left" />
 
             <label for="wdm-description-<?php  print $langcode; ?>"><?php _e("Description"); ?></label>
-            <textarea name="descrizione" name="wdm-description-<?php print $langcode; ?>" value="<?php print $default_value['wdm-description-' . $langcode]; ?>" placeholder="<?php _e('Insert Description'); ?>" class="text-area-right" onKeyDown="limitText(this.form.desc,this.form.countdown,500);" onKeyUp="limitText(this.form.desc,this.form.countdown,500);"></textarea>
+            <textarea name="wdm-description-<?php print $langcode; ?>" value="<?php print $default_value['wdm-description-' . $langcode]; ?>" placeholder="<?php _e('Insert Description'); ?>" class="text-area-right" onKeyDown="limitText(this.form.desc,this.form.countdown,500);" onKeyUp="limitText(this.form.desc,this.form.countdown,500);"></textarea>
           </fieldset>
         </div>
         <?php endforeach; ?>
