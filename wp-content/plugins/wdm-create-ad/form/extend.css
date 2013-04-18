@@ -375,9 +375,9 @@ div#products_page_container {
 /*  background: url(../img/wdmk_bk_search.png) repeat 0 0;*/
 /*}*/
 #content-wrapper .custom-search-widget{
-  
+
   position: relative;
-  
+
 }
 .mainTabs ul{
   /*height:45px;*/
@@ -399,7 +399,7 @@ div#products_page_container {
   text-transform:uppercase;
   position:relative;
   bottom:-1px;
-  
+
 }
 .mainTabs ul li:active{
   padding-top:7px;
@@ -1203,7 +1203,7 @@ a.large-blog-image img, div.main_image img {
   background: url(../img/wdmk_bk_search.png) repeat 0 0;
   position:relative;
   width:781px;
-  
+
 }
 #stepnavbar {
   display:block;
@@ -1230,7 +1230,7 @@ a.large-blog-image img, div.main_image img {
   display: inline;
   float:left;
   /*margin:0px 20px 0 20px;*/
-  
+
 }
 #step1{
   width:116px;
@@ -1278,9 +1278,9 @@ a.large-blog-image img, div.main_image img {
 
 
 
-.formcarbonbackground .kitesurfbutton:active, 
+.formcarbonbackground .kitesurfbutton:active,
 .formcarbonbackground .kitesurfbutton:hover,
-.formcarbonbackground .windsurfbutton:active, 
+.formcarbonbackground .windsurfbutton:active,
 .formcarbonbackground .windsurfbutton:hover{
   opacity: 1;
 }
@@ -1310,7 +1310,7 @@ a.large-blog-image img, div.main_image img {
   padding:0;
   float:left;
   margin-left:15px;
-  
+
   cursor:pointer;
 }
 .upstepnavigator{
@@ -1326,7 +1326,7 @@ a.large-blog-image img, div.main_image img {
   padding:0;
   float:right;
   margin-right:15px;
-  
+
   cursor:pointer;
 }
 .post-category, post-description{
@@ -1438,7 +1438,7 @@ a.large-blog-image img, div.main_image img {
   font-size:14px;
   line-height:14px;
   text-transform:uppercase;
-  
+
 }
 #inputdati-dx  .text-area-right {
   border:none;
@@ -1497,7 +1497,7 @@ a.large-blog-image img, div.main_image img {
     font-family: "Oswald", sans-serif;
 }
 #tabscontainer{
-  width:300px;
+  width:440px;
   float:right;
 }
 #tabscontainer .clear{
@@ -1517,7 +1517,7 @@ a.large-blog-image img, div.main_image img {
     z-index: 90;
     text-align:center;
     display:none;
-}   
+}
 .wdm-create-ad  #jquery-lightbox {
     text-align: left;
     position: absolute;
@@ -1555,7 +1555,7 @@ a.large-blog-image img, div.main_image img {
   border:none;
   display:none;
 }
-.wdm-create-ad  #jquery-lightbox .not-selected:hover{ 
+.wdm-create-ad  #jquery-lightbox .not-selected:hover{
   opacity: 1;
   display:none;
 }
@@ -1564,7 +1564,7 @@ a.large-blog-image img, div.main_image img {
   float:left;
   width:240px;
   margin:20px 10px;
-  
+
 }
 
 .formcarbonbackground #dynamic-condition-select .selectcontainer label {
@@ -1576,7 +1576,7 @@ a.large-blog-image img, div.main_image img {
   appearance: none;
   float: left;
   margin: 15px 10px 10px 0;
-  width: 230px; 
+  width: 230px;
   height: 35px;
   -webkit-border-radius: 15px;
   -moz-border-radius: 15px;
@@ -1593,7 +1593,7 @@ a.large-blog-image img, div.main_image img {
   background: url(../img/wdmk_select_arrow.png) no-repeat right center white;
 }
 
-.formcarbonbackground #dynamic-upload-images input[type="submit"] { 
+.formcarbonbackground #dynamic-upload-images input[type="submit"] {
   margin: 15px 10px 10px 35px;
   padding: 0 15px;
   width:150px;
@@ -1619,7 +1619,7 @@ a.large-blog-image img, div.main_image img {
   appearance: none;
   float: left;
   margin: 15px 10px 10px 0;
-  width: 312px; 
+  width: 312px;
   height: 35px;
   -webkit-border-radius: 15px;
   -moz-border-radius: 15px;
@@ -1753,13 +1753,13 @@ a.large-blog-image img, div.main_image img {
 	-khtml-opacity: 0.7;
 	opacity: 0.7;
 }
- 
+
 .formcarbonbackground #buttonarea span:after{
 	content: ""; /*if CSS are disbled span elements are not displayed*/
 }
 .formcarbonbackground #buttonarea input{
 	position: absolute;
-	
+
 	margin: 0;
 	width: 222px;
 	height: 222px;
@@ -1774,7 +1774,7 @@ a.large-blog-image img, div.main_image img {
 	position: absolute;
         top:60px;
         left:100px;
-	
+
 	filter:alpha(opacity=0);
 	-moz-opacity:0;
 	-khtml-opacity: 0;
@@ -1796,12 +1796,12 @@ a.large-blog-image img, div.main_image img {
 	visibility: hidden; /*temporarily hide the "YES" label*/
 	background: transparent;
 }
- 
+
 .formcarbonbackground #buttonarea input[type="radio"] + span:after{
 	content: ""; /*if CSS are disbled span elements are not displayed*/
 }
- 
- 
+
+
 input[type="radio"]:checked + span{
 	visibility: visible; /*show the "YES" label only if the radio button is checked*/
         filter:alpha(opacity=100);
@@ -1812,7 +1812,7 @@ input[type="radio"]:checked + span{
 }
 
 /* prova css per radiobuttons*/
-  
+
 #holder {
 	width: 100%;
 }
@@ -1902,7 +1902,7 @@ input[type="radio"]:checked + span{
 .regular-radio + label {
 	-webkit-appearance: none;
         /*background: url("../img/buttonkitesurf.jpg") no-repeat center center;*/
-        
+
 	background-color: transparent;/*#fafafa*/;
 	/*border: 1px solid #cacece;*/
 	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
@@ -1955,7 +1955,7 @@ input[type="radio"]:checked + span{
 	/*left: 4px;*/
 	/*top: 4px;*/
         /*background: url("../img/buttonkitesurf.jpg") no-repeat center center;*/
-        
+
 }
 
 
@@ -1981,13 +1981,13 @@ input[type="radio"]:checked + span{
   height:60px;
 }
 #dynamic-upload-images{
-  
+
 }
 #selectabletags select{
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  
+
   margin: 5px 10px 25px 10px;
   width: 320px;
   height: 35px;
@@ -2102,7 +2102,7 @@ input[type="radio"]:checked + span{
 
 
 /*bgupload.png*/
- 
+
  .formcarbonbackground #dynamic-upload-images input[type="upload"] {
     -webkit-border-radius: 15px;
   -moz-border-radius: 15px;

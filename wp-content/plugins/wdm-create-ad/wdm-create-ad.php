@@ -19,6 +19,8 @@ function wdm_create_ad_form( $atts ) {
   // Constant salt required to user auth
   $wdm_salt = 'dslkfhadskfsdkf4534asdfasdf325423';
 
+  wp_enqueue_style('wdm-create-ad');
+
   // Get current step.
   $step = wdm_create_ad_form_get_step(1);
 
@@ -432,3 +434,6 @@ add_shortcode( 'wdm-create-ad', 'wdm_create_ad_form' );
 
 // Create shortcode for product list
 add_shortcode( 'wdm-list-products', 'wdm_create_ad_products' );
+
+// Register CSS
+wp_register_style('wdm-create-ad', plugins_url('css/style.css', __FILE__));

@@ -4,17 +4,11 @@
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
 <title><?php the_title(); ?></title>
 <?php wp_head(); ?>
-<?php
-    $url = get_settings('siteurl');
-    $cssUrl = $url . '/wp-content/themes/yourflexishop/css/extend.css';
-    //$jsUrl = $url . '/wp-content/themes/yourflexishop/js/global.js';
-    echo '<!-- custom extend css -->
-          <link rel="stylesheet" type="text/css" href="' . $cssUrl . '" />
-          <!-- /end custom extend css -->';
-    /*echo '<!-- custom global js -->
-          <script type="text/javascript" src="' . $jsUrl . '"></script>
-          <!-- /end custom global js -->'; */
-?>
+
+<!-- custom extend css -->
+<link rel="stylesheet" type="text/css" href="<?php print get_settings('siteurl'); ?>/wp-content/themes/yourflexishop/css/extend.css" />
+<!-- /end custom extend css -->
+
 <!--[if gte IE 9]>
   <style type="text/css">
     #menu-main-menu {
@@ -32,8 +26,8 @@
             }
         }
 </script>
-        
-        
+
+
 </head>
 <body id="<?php prima_option('themelayout') ?>" <?php body_class(); ?>>
   <img alt="full screen background image" src='<?=background_image();?>' id="full-screen-background-image" class="better-background" />

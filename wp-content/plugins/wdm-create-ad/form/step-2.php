@@ -41,10 +41,10 @@
           <fieldset class="language-<?php  print $langcode; ?>">
             <!--<label><?php print $langcode; ?></label>-->
             <label for="wdm-title-<?php  print $langcode; ?>"><?php _e("Title"); ?></label>
-            <input id="titolo" type="text" onblur="if(this.value=='')this.value=this.defaultValue;" onfocus="if(this.value==this.defaultValue)this.value='';" placeholder="Title AD" name="s" size="put_a_size_here" class="input-left">
+            <input id="titolo" type="text" onblur="if(this.value=='')this.value=this.defaultValue;" onfocus="if(this.value==this.defaultValue)this.value='';" placeholder="<?php _e("Insert Title"); ?>" name="s" size="put_a_size_here" class="input-left">
             <!--<input type="text" name="wdm-title-<?php print $langcode; ?>" value="<?php print $default_value['wdm-title-' . $langcode]; ?>"/>-->
             <label for="wdm-description-<?php  print $langcode; ?>"><?php _e("Description"); ?></label>
-            <textarea name="descrizione"  name="wdm-description-<?php print $langcode; ?>" value="<?php print $default_value['wdm-description-' . $langcode]; ?> class="text-area-right" onKeyDown="limitText(this.form.desc,this.form.countdown,500);" onKeyUp="limitText(this.form.desc,this.form.countdown,500);">Insert Description</textarea>
+            <textarea name="descrizione"  name="wdm-description-<?php print $langcode; ?>" value="<?php print $default_value['wdm-description-' . $langcode]; ?> placeholder="<?php _e("Insert Description"); ?>" class="text-area-right" onKeyDown="limitText(this.form.desc,this.form.countdown,500);" onKeyUp="limitText(this.form.desc,this.form.countdown,500);"></textarea>
             <!--<input type="text" class="text-area-right" name="wdm-description-<?php print $langcode; ?>" value="<?php print $default_value['wdm-description-' . $langcode]; ?>"/>-->
           </fieldset>
         </div>

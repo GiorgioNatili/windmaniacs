@@ -35,7 +35,7 @@
     <input type="submit" name="action_prev" class="downstepnavigator"  value="<?php print _('Step') . ' ' . ($step - 1); ?>" /></button>
   <?php endif; ?>
   <?php if ($button_current): ?>
-    <input type="submit" name="submit"        value="Submit" />
+    <input type="submit" name="submit" class="currentstepnavigator" value="Submit" />
   <?php endif; ?>
   <?php if ($step < 5): ?>
     <input type="submit" class="upstepnavigator" name="action_next"   value="<?php print _('Step') . ' ' . ($step + 1); ?>"></button>
