@@ -137,7 +137,6 @@ input[type="text"], input[type="password"], textarea {
 }
 /* line 90, ../sass/extend.sass */
 #user-nav .margin #languages span {
-  width: 85px;
   height: 30px;
   display: block;
   float: left;
@@ -145,10 +144,21 @@ input[type="text"], input[type="password"], textarea {
 /* line 95, ../sass/extend.sass */
 #user-nav .margin #languages span.lang-dx {
   background: url("../img/wdmk_lang_dx.png") no-repeat center center;
+  width: 85px;
+}
+
+#languages ul {
+  position: relative;
+  line-height:30px;
+  height:30px;
+  margin:auto 0 auto 10px;
+  top:0;
+  float:left;
 }
 /* line 97, ../sass/extend.sass */
 #user-nav .margin #languages span.lang-sx {
   background: url("../img/wdmk_lang_sx.png") no-repeat center center;
+  width: 85px;
 }
 /* line 99, ../sass/extend.sass */
 #user-nav .margin #languages .widget_qtranslate {
@@ -1179,6 +1189,16 @@ a.large-blog-image img, div.main_image img {
 /* line 811, ../sass/extend.sass */
 .prima-multislider-title {
   left: -10px;
+}
+
+#divNotFound {
+    background: url("img/notfound.png") no-repeat scroll center top transparent;
+    color: white;
+    font-size: 26px;
+    height: 530px;
+    margin-top: -80px;
+    text-align: center;
+    width: 800px;
 }
 
 #content-wrapper .prima-multislide-box .overlay {
