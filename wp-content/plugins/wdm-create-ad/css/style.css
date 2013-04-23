@@ -3,6 +3,7 @@
   height: 410px;
   margin:auto;
   margin-bottom:40px;
+  position: relative;
 }
 .formcarbonbackground{
   position: relative;
@@ -982,3 +983,17 @@ input[type="radio"]:checked + span{
     text-shadow: 0 -1px 0 black;
     text-transform: uppercase;
     width: 150px;
+}
+
+#spinvariablecontainer {
+  position: absolute;
+  top: 82px;
+  left: 1px;
+  width: 400px;
+  height: 199px;
+  padding-top: 160px;
+  padding-left: 380px;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+}

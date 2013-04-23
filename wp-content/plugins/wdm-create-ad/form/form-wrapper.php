@@ -1,6 +1,5 @@
-<div id="spinvariablecontainer"></div>
 <form id="wdm-create-ad-<?php print $step; ?>" class="wdm-create-ad" method="post" <?php print $form_extra_attr?>>
-
+<div id="spinvariablecontainer"></div>
 <div class="formcarbonbackground">
   <div id="stepnavbar">
     <ul>
