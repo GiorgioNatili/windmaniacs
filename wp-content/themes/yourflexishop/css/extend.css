@@ -551,7 +551,6 @@ div#products_page_container {
   border: none;
   box-shadow: none;
   width:180px!important;
-  overflow:hidden;
 }
 /* line 351, ../sass/extend.sass */
 #content-wrapper .overlay {
@@ -1180,4 +1179,26 @@ a.large-blog-image img, div.main_image img {
 /* line 811, ../sass/extend.sass */
 .prima-multislider-title {
   left: -10px;
+}
+
+#content-wrapper .prima-multislide-box .overlay {
+  margin-bottom: 10px;
+  height: 175px;
+}
+
+.prima-multislide-box .prima-multislide-link {
+  overflow: hidden;
+  display: block;
+  width: 180px;
+  height: 125px;
+}
+
+.prima-multislide-box .sale-icon {
+  position: absolute;
+  width: 57px;
+  height: 57px;
+  left: -10px;
+  top: -10px;
+  background: transparent url(../images/sale.png) no-repeat center center;
+  text-indent: -100000px;
 }
