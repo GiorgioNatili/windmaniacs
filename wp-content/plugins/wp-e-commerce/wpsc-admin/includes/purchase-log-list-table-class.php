@@ -5,8 +5,7 @@
 require_once( ABSPATH . 'wp-admin/includes/class-wp-list-table.php' );
 require_once( ABSPATH . 'wp-admin/includes/class-wp-posts-list-table.php' );
 
-class WPSC_Purchase_Log_List_Table extends WP_List_Table
-{
+class WPSC_Purchase_Log_List_Table extends WP_List_Table {
 	private $search_box = true;
 	private $bulk_actions = true;
 	private $sortable = true;
@@ -82,7 +81,7 @@ class WPSC_Purchase_Log_List_Table extends WP_List_Table
 			$table_as = 's' . $i;
 			$select_as = str_replace('billing', '', $field->unique_name );
 			$selects[] = $table_as . '.value AS ' . $select_as;
-			$joins[] = $wpdb->prepare( "LEFT OUTER JOIN " . WPSC_TABLE_SUBMITED_FORM_DATA . " AS {$table_as} ON {$table_as}.log_id = p.id AND {$table_as}.form_id = %d", $field->id );
+			$joins[] = $wpdb->prepare( "LEFT OUTER JOIN " . WPSC_TABLE_SUBMITTED_FORM_DATA . " AS {$table_as} ON {$table_as}.log_id = p.id AND {$table_as}.form_id = %d", $field->id );
 
 			// build search term queries for first name, last name, email
 			foreach ( $search_terms as $term ) {
@@ -125,27 +124,29 @@ class WPSC_Purchase_Log_List_Table extends WP_List_Table
 			$where[] = "MONTH(FROM_UNIXTIME(date)) = " . esc_sql( $month );
 		}
 
-		$selects = implode( ', ', $selects );
-		$this->joins = implode( ' ', $joins );
-		$this->where = implode( ' AND ', $where );
+		$selects     = apply_filters( 'wpsc_manage_purchase_logs_selects', implode( ', ', $selects ) );
+		$this->joins = apply_filters( 'wpsc_manage_purchase_logs_joins', implode( ' ', $joins ) );
+		$this->where = apply_filters( 'wpsc_manage_purchase_logs_where', implode( ' AND ', $where ) );
+		
 		$limit = ( $this->per_page !== 0 ) ? "LIMIT {$offset}, {$this->per_page}" : '';
 
 		$orderby = empty( $_REQUEST['orderby'] ) ? 'p.id' : 'p.' . $_REQUEST['orderby'];
 		$order = empty( $_REQUEST['order'] ) ? 'DESC' : $_REQUEST['order'];
 
-		$orderby = esc_sql( $orderby );
+		$orderby = esc_sql( apply_filters( 'wpsc_manage_purchase_logs_orderby', $orderby ) );
 		$order = esc_sql( $order );
 
-		$submitted_data_log = WPSC_TABLE_SUBMITED_FORM_DATA;
-		$purchase_log_sql = "
+		$submitted_data_log = WPSC_TABLE_SUBMITTED_FORM_DATA;
+		$purchase_log_sql = apply_filters( 'wpsc_manage_purchase_logs_sql', "
 			SELECT SQL_CALC_FOUND_ROWS {$selects}
 			FROM " . WPSC_TABLE_PURCHASE_LOGS . " AS p
 			{$this->joins}
 			WHERE {$this->where}
 			ORDER BY {$orderby} {$order}
 			{$limit}
-		";
-		$this->items = $wpdb->get_results( $purchase_log_sql );
+		" );
+
+		$this->items = apply_filters( 'wpsc_manage_purchase_logs_items', $wpdb->get_results( $purchase_log_sql ) );
 		if ( $this->per_page ) {
 			$total_items = $wpdb->get_var( "SELECT FOUND_ROWS()" );
 
@@ -155,7 +156,7 @@ class WPSC_Purchase_Log_List_Table extends WP_List_Table
 			) );
 		}
 
-		$total_where = $this->where;
+		$total_where = apply_filters( 'wpsc_manage_purchase_logs_total_where', $this->where );
 		if ( $this->status == 'all' ) {
 			$total_where .= ' AND p.processed IN (2, 3, 4) ';
 		}
@@ -185,6 +186,13 @@ class WPSC_Purchase_Log_List_Table extends WP_List_Table
 		return $this->search_box;
 	}
 
+	/**
+	 * Define the columns in our list table. You can add/amend this list using
+	 * WordPress core filter manage_{screen}_columns, specifically
+	 * manage_dashboard_page_wpsc-purchase-logs_columns.
+	 *
+	 * @return array[string]string List of column headings
+	 */
 	public function get_columns() {
 		return array(
 			'cb'       => '<input type="checkbox" />',
@@ -193,10 +201,17 @@ class WPSC_Purchase_Log_List_Table extends WP_List_Table
 			'amount'   => __( 'Amount', 'wpsc' ),
 			'status'   => _x( 'Status', 'sales log list table column', 'wpsc' ),
 			'date'     => __( 'Date', 'wpsc' ),
-			'tracking' => __( 'Tracking ID', 'wpsc' ),
-		);
+			'tracking' => _x( 'Tracking ID', 'purchase log', 'wpsc' ),
+		) ;
 	}
 
+	/**
+	 * Define the columns in the table which are sortable. You can add/amend
+	 * this list using the WordPress core filter manage_{screen}_sortable_columns
+	 * Specifically: manage_dashboard_page_wpsc-purchase-logs_sortable_columns
+* 	 *
+	 * @return array[string]string List of sortable column IDs and corresponding db column of the item
+	 */
 	public function get_sortable_columns() {
 		if ( ! $this->sortable )
 			return array();
@@ -205,7 +220,7 @@ class WPSC_Purchase_Log_List_Table extends WP_List_Table
 			'date'   => 'id',
 			'status' => 'processed',
 			'amount' => 'totalprice',
-		);
+		) ;
 	}
 
 	private function get_months() {
@@ -276,7 +291,7 @@ class WPSC_Purchase_Log_List_Table extends WP_List_Table
 			'all' => sprintf(
 				'<a href="%s" %s>%s</a>',
 				esc_url( $all_href ),
-				sanitize_html_class( $all_class ),
+				$all_class,
 				$all_text
 			),
 		);
@@ -302,7 +317,7 @@ class WPSC_Purchase_Log_List_Table extends WP_List_Table
 			$views[$status] = sprintf(
 				'<a href="%s" %s>%s</a>',
 				esc_url( $href ),
-				sanitize_html_class( $class ),
+				$class,
 				$text
 			);
 		}
@@ -450,13 +465,13 @@ class WPSC_Purchase_Log_List_Table extends WP_List_Table
 
 	public function column_default( $item, $column_name ) {
 		$default = isset( $item->$column_name ) ? $item->$column_name : '';
-		$output = apply_filters( 'wpsc_manage_purchase_logs_custom_column',  $default, $column_name, $item );
+		$output = apply_filters( 'wpsc_manage_purchase_logs_custom_column', $default, $column_name, $item );
 		return $output;
 	}
 
 	public function column_status( $item ) {
 		global $wpsc_purchlog_statuses;
-		$dropdown_options = array();
+		$dropdown_options = '';
 		$current_status = false;
 		foreach ( $wpsc_purchlog_statuses as $status ) {
 			$selected = '';

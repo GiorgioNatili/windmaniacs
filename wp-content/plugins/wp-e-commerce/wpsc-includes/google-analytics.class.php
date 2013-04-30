@@ -25,7 +25,7 @@ class WPSC_Google_Analytics {
 			|| ( ! $this->is_theme_tracking && empty( $this->tracking_id ) );
 
 		if ( ! $this->is_analytics_disabled )
-			add_action( 'wpsc_transaction_results_shutdown', array( $this, 'print_script' ), 10, 2 );
+			add_action( 'wpsc_transaction_results_shutdown', array( $this, 'print_script' ), 10, 3 );
 	}
 
 	/**
@@ -48,10 +48,17 @@ class WPSC_Google_Analytics {
 	 * If analytics are disabled, we build nothing.
 	 * If the site already is tracking OR using the advanced option, we insert only the e-commerce portion, not the initial tracking info.
 	 *
+	 * @param $purchase_log      Purchase Log object
+	 * @param $session_id        Session ID
+	 * @param $display_to_screen Whether or not the output is displayed to the screen
+	 * 
 	 * @since 3.8.9
 	 * @return javascript
 	 */
-	public function print_script( $object, $session_id ) {
+	public function print_script( $purchase_log, $session_id, $display_to_screen ) {
+
+		if ( ! $display_to_screen )
+			return false;
 
 		$output = '';
 
@@ -116,7 +123,7 @@ class WPSC_Google_Analytics {
 		$output = '';
 
 		$city = $wpdb->get_var( $wpdb->prepare( "
-						SELECT tf.value FROM " . WPSC_TABLE_SUBMITED_FORM_DATA . " tf
+						SELECT tf.value FROM " . WPSC_TABLE_SUBMITTED_FORM_DATA . " tf
 						LEFT JOIN " . WPSC_TABLE_CHECKOUT_FORMS . " cf
 						ON cf.id = tf.form_id
 						WHERE cf.unique_name = 'billingcity'
@@ -124,7 +131,7 @@ class WPSC_Google_Analytics {
 
 		$state = $wpdb->get_var( $wpdb->prepare( "
 						SELECT tf.value
-						FROM " . WPSC_TABLE_SUBMITED_FORM_DATA . " tf
+						FROM " . WPSC_TABLE_SUBMITTED_FORM_DATA . " tf
 						LEFT JOIN " . WPSC_TABLE_CHECKOUT_FORMS . " cf
 						ON cf.id = tf.form_id
 						WHERE cf.unique_name = 'billingstate'
@@ -132,7 +139,7 @@ class WPSC_Google_Analytics {
 
 		$country = $wpdb->get_var( $wpdb->prepare( "
 						SELECT tf.value
-						FROM " . WPSC_TABLE_SUBMITED_FORM_DATA . " tf
+						FROM " . WPSC_TABLE_SUBMITTED_FORM_DATA . " tf
 						LEFT JOIN " . WPSC_TABLE_CHECKOUT_FORMS . " cf
 						ON cf.id = tf.form_id
 						WHERE cf.unique_name = 'billingcountry'
