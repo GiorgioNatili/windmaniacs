@@ -468,7 +468,7 @@ function wdm_create_ad_send_publishing_mail($post_id) {
   $mail_to = $user->user_email;
 
   // Send mail
-  wdm_create_ad_send_mail($mail_subj, $mail_to, 'product-publishig', $post = NULL, $user = NULL);
+  wdm_create_ad_send_mail($mail_subj, $mail_to, 'product-publishig', $post, $user);
 }
 
 /**
@@ -491,7 +491,7 @@ function wdm_create_ad_send_publishing_mail($post_id) {
  *
  * @return void
  */
-function wdm_create_ad_send_mail($mail_subj, $mail_to, $template, $post, $user) {
+function wdm_create_ad_send_mail($mail_subj, $mail_to, $template, $post = NULL, $user = NULL) {
   // Mail configuration
   $mail_body = file_get_contents(__DIR__ . "/mail/$template.html");
 
