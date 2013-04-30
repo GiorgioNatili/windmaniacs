@@ -431,22 +431,92 @@ function wdm_create_ad_generate_translation_blob($data) {
   return $data_string;
 }
 
-function wdm_create_ad_send_creation_mail($post = NULL) {
-  // Mail configuration
-  $mail_to = get_option('admin_email','g.natili@gnstudio.com');
+/**
+ * Send product creation mail to admin.
+ *
+ * @param WP_Post $post
+ *   Product to notify
+ *
+ * @return void
+ */
+function wdm_create_ad_send_creation_mail($post) {
+  // Mail information
   $mail_subj = _('Someone added a new product');
-  $mail_body = file_get_contents(__DIR__ . '/mail/product-create.html');
+  // Send mail
+  wdm_create_ad_send_mail($mail_subj, $mail_to, 'product-create', $post);
+}
+
+/**
+ * Send product publishing mail to admin.
+ *
+ * @param integer $post_id
+ *   Product id to notify
+ *
+ * @return void
+ */
+function wdm_create_ad_send_publishing_mail($post_id) {
+  // Load post
+  $post = get_post($post_id);
+  $user = get_userdata($post->post_author);
+
+  if ($post->post_type != 'wpsc-product') {
+    return;
+  }
+
+  // Mail subject
+  $mail_subj = _('Your product is approved');
+  $mail_to = $user->user_email;
+
+  // Send mail
+  wdm_create_ad_send_mail($mail_subj, $mail_to, 'product-publishig', $post = NULL, $user = NULL);
+}
+
+/**
+ * Send HTML mail with specified information.
+ *
+ * @param string $mail_subj
+ *   Mail subject
+ *
+ * @param string $mail_to
+ *   Mail destinatary
+ *
+ * @param string $template
+ *   Templete to load
+ *
+ * @param WP_Post $post
+ *   Post to notify
+ *
+ * @param WP_User $user
+ *   User notified
+ *
+ * @return void
+ */
+function wdm_create_ad_send_mail($mail_subj, $mail_to, $template, $post, $user) {
+  // Mail configuration
+  $mail_body = file_get_contents(__DIR__ . "/mail/$template.html");
 
   // Some basic replacement
+  // Site
   foreach (array('siteurl', 'blogname', 'blogdescription', 'admin_email') as $value) {
     $mail_body = str_replace("[site:$value]", get_option($value), $mail_body);
   }
 
-  $mail_body = str_replace("[post:id]",       $post->ID,    $mail_body);
-  $mail_body = str_replace("[post:title]",    $post->post_title, $mail_body);
-  $mail_body = str_replace("[post:status]",   $post->post_status, $mail_body);
-  $mail_body = str_replace("[post:modified]", $post->post_modified, $mail_body);
+  // Post
+  if ($post) {
+    $mail_body = str_replace("[post:id]",       $post->ID,            $mail_body);
+    $mail_body = str_replace("[post:title]",    $post->post_title,    $mail_body);
+    $mail_body = str_replace("[post:status]",   $post->post_status,   $mail_body);
+    $mail_body = str_replace("[post:modified]", $post->post_modified, $mail_body);
+  }
 
+  // User
+  if ($user) {
+    $mail_body = str_replace("[user:id]",         $user->ID,              $mail_body);
+    $mail_body = str_replace("[user:username]",   $user->user_login,      $mail_body);
+    $mail_body = str_replace("[user:first_name]", $user->user_firstname,  $mail_body);
+    $mail_body = str_replace("[user:last_name]",  $user->user_lastname,   $mail_body);
+    $mail_body = str_replace("[user:email]",      $user->user_email,      $mail_body);
+  }
 
   // Set filter to send HTML mail
   add_filter('wp_mail_content_type', 'wdm_create_ad_mail_content_type');
@@ -458,6 +528,12 @@ function wdm_create_ad_send_creation_mail($post = NULL) {
   remove_filter( 'wp_mail_content_type', 'wdm_create_ad_mail_content_type');
 }
 
+/**
+ * Set default mimetipe in mail
+ *
+ * @return string
+ *   Mimetype to use in mail.
+ */
 function wdm_create_ad_mail_content_type() {
   return 'text/html';
 }
@@ -470,3 +546,5 @@ add_shortcode( 'wdm-list-products', 'wdm_create_ad_products' );
 
 // Register CSS
 wp_register_style('wdm-create-ad', plugins_url('css/style.css', __FILE__));
+
+add_action('publish_post', 'wdm_create_ad_send_publishing_mail');
