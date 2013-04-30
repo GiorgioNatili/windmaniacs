@@ -1,8 +1,13 @@
 
 # BEGIN WordPress
 <IfModule mod_rewrite.c>
+
 RewriteEngine On
 RewriteBase /
+
+RewriteCond %{REQUEST_URI} ^/p/
+RewriteRule ^p/(.*)$ /advertisements/wdm-$1 [N]
+
 RewriteRule ^index\.php$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
