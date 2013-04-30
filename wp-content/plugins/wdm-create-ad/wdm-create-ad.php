@@ -441,13 +441,18 @@ function wdm_create_ad_generate_translation_blob($data) {
  */
 function wdm_create_ad_send_creation_mail($post) {
   // Mail information
-  $mail_subj = _('Someone added a new product');
+  $mail_subj = __('Someone added a new product');
+  $mail_to = get_option('admin_email','g.natili@gnstudio.com');
+
+  // Cast to class (required by token replacement)
+  $post = (object)$post;
+
   // Send mail
   wdm_create_ad_send_mail($mail_subj, $mail_to, 'product-create', $post);
 }
 
 /**
- * Send product publishing mail to admin.
+ * Send product publishing mail to user.
  *
  * @param integer $post_id
  *   Product id to notify
@@ -459,12 +464,8 @@ function wdm_create_ad_send_publishing_mail($post_id) {
   $post = get_post($post_id);
   $user = get_userdata($post->post_author);
 
-  if ($post->post_type != 'wpsc-product') {
-    return;
-  }
-
   // Mail subject
-  $mail_subj = _('Your product is approved');
+  $mail_subj = __('Your AD is approved');
   $mail_to = $user->user_email;
 
   // Send mail
@@ -502,7 +503,7 @@ function wdm_create_ad_send_mail($mail_subj, $mail_to, $template, $post = NULL, 
   }
 
   // Post
-  if ($post) {
+  if (!is_null($post)) {
     $mail_body = str_replace("[post:id]",       $post->ID,            $mail_body);
     $mail_body = str_replace("[post:title]",    $post->post_title,    $mail_body);
     $mail_body = str_replace("[post:status]",   $post->post_status,   $mail_body);
@@ -510,7 +511,7 @@ function wdm_create_ad_send_mail($mail_subj, $mail_to, $template, $post = NULL, 
   }
 
   // User
-  if ($user) {
+  if (!is_null($user)) {
     $mail_body = str_replace("[user:id]",         $user->ID,              $mail_body);
     $mail_body = str_replace("[user:username]",   $user->user_login,      $mail_body);
     $mail_body = str_replace("[user:first_name]", $user->user_firstname,  $mail_body);
@@ -547,4 +548,5 @@ add_shortcode( 'wdm-list-products', 'wdm_create_ad_products' );
 // Register CSS
 wp_register_style('wdm-create-ad', plugins_url('css/style.css', __FILE__));
 
-add_action('publish_post', 'wdm_create_ad_send_publishing_mail');
+// Send mail on post update
+add_action('publish_wpsc-product', 'wdm_create_ad_send_publishing_mail');
