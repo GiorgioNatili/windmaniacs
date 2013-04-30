@@ -2,10 +2,10 @@
 
 Contributors: NextScripts
 Donate link: http://www.nextscripts.com/social-networks-auto-poster-for-wordpress
-Tags: automation, autopost, auto-post, auto post, socialnetworks, socialnetwork, social networks, social network, facebook, google, google+, twitter, google plus, pinterest, tumblr, blogger, blogspot, blogpost, linkedin, delicious, delicious.com, plugin, links, Post, posts, api, automatic, seo, integration, bookmark, FriendFeed, bookmarks, admin, images, image, social, sharing, share, repost, re-post, wordpress.com, StumbleUpon, Diigo, vBulletin, Plurk, forums, vKontakte, open graph, LiveJournal, YouTube
+Tags: automation, autopost, auto-post, auto post, socialnetworks, socialnetwork, social networks, social network, facebook, google, google+, twitter, google plus, pinterest, tumblr, blogger, blogspot, blogpost, linkedin, delicious, delicious.com, reddit, reddit.com, plugin, links, Post, posts, api, automatic, seo, integration, bookmark, FriendFeed, bookmarks, admin, images, image, social, sharing, share, repost, re-post, wordpress.com, StumbleUpon, Diigo, vBulletin, Plurk, forums, vKontakte, open graph, LiveJournal, YouTube
 Requires at least: 3.0
 Tested up to: 3.5.1
-Stable tag: 2.7.9
+Stable tag: 2.7.12
 License: GPLv2 or later
 
 Automatically re-publishes blogposts to Facebook, Twitter, Google+, Pinterest, LinkedIn, Blogger, Tumblr, Delicious, Plurk, etc profiles and/or pages
@@ -13,6 +13,8 @@ Automatically re-publishes blogposts to Facebook, Twitter, Google+, Pinterest, L
 == Description ==
 
 **This plugin automatically publishes posts from your blog to your Social Network accounts** such as Facebook, Twitter, Google+(Google Plus), Blogger, Tumblr, LiveJournal, FriendFeed, DreamWidth, Delicious, Diigo, Instapaper, Stumbleupon, LinkedIn, Pinterest, Plurk, VKontakte(VK.com), YouTube, Wordpress, etc. The whole process is completely automated. Just write a new post and either entire post or it's nicely formatted announcement with backlink will be published to all your configured social networks. You can reach the most audience and tell all your friends, readers and followers about your new post. Plugin works with profiles, business pages, community pages, groups, etc. 
+
+Version 3 is coming soon, you can request to become an early beta-tester here: http://www.nextscripts.com/version-3-beta/
 
 * **Latest version 2.7** - YouTube Support, FriendFeed support, Auto-import comments from Facebook and Twitter as Wordpress Commnets, goo.gl and YOURLS support, ability to spin message text.
 * *Version 2.6* - Better Interface, DreamWidth support, Instapaper support, ability to auto-import comments from social networks
@@ -53,70 +55,25 @@ Please see <a href="http://www.nextscripts.com/installation-of-social-networks-a
 
 You need to have account with either Facebook, Tumblr, Google+, LinkedIn, Pinterest, Blogger, Twitter, Delicious, Diigo, Plurk, LiveJournal, Stumbleupon, DreamWidth or all of them.
 
-**Please, see more detailed installation instructions with screenshots here:** http://www.nextscripts.com/installation-of-social-networks-auto-poster-for-wordpress 
+**Very detailed installation instructions with screenshots are located here:** http://www.nextscripts.com/installation-of-social-networks-auto-poster-for-wordpress 
 
-Below are the quick instructions for Facebook, Twitter and Google+. Please see other networks at the link above...
+How to setup each type of Social Network
 
-Social Networks Auto Poster (SNAP).
+1. <a href="http://www.nextscripts.com/setup-installation-facebook-social-networks-auto-poster-wordpress/">Facebook Configuration</a><br/>
+2. <a href="http://www.nextscripts.com/setup-installation-twitter-social-networks-auto-poster-wordpress/">Twitter Configuration</a><br/>
+3. <a href="http://www.nextscripts.com/setup-installation-google-plus-social-networks-auto-poster-wordpress/">Google+ Configuration</a><br/>
+4. <a href="http://www.nextscripts.com/setup-installation-pinterest-social-networks-auto-poster-wordpress/">Pinterest Configuration</a><br/>
+5. <a href="http://www.nextscripts.com/setup-installation-tumblr-social-networks-auto-poster-wordpress/">Tumblr Configuration</a><br/>
+6. <a href="http://www.nextscripts.com/setup-installation-linkedin-social-networks-auto-poster-wordpress/">LinkedIn Configuration</a><br/>
+7. <a href="http://www.nextscripts.com/setup-installation-blogger-social-networks-auto-poster-wordpress/">Blogger Configuration</a><br/>
+8. <a href="http://www.nextscripts.com/setup-installation-delicious-social-networks-auto-poster-wordpress/">Delicious Configuration</a><br/>
+9. <a href="http://www.nextscripts.com/setup-installation-wp-based-social-networks-auto-poster-wordpress/">Blog.com/Wordpress.com Configuration</a><br/>
+10. <a href="http://www.nextscripts.com/setup-installation-diigo-social-networks-auto-poster-wordpress/">Diigo Configuration</a><br/>
+11. <a href="http://www.nextscripts.com/setup-installation-plurk-social-networks-auto-poster-wordpress/">Plurk Configuration</a><br/>
 
-1. Upload plugin folder to the /wp-content/plugins/.
-2. Login to your Wordpress Admin Panel, Go to the Plugins->Installed Plugins, Find "Next Scripts Google+ AutoPoster" in your list, click "Activate"
 
-Facebook.
+Have problems? Please check out the <a href="http://www.nextscripts.com/troubleshooting-social-networks-auto-poster">Troubleshooting FAQ</a> page.
 
-1. Create an app and community page for your website.
-   1. Login to your Facebook account.
-   2. Go to the Facebook Developers page: https://developers.facebook.com/apps
-   3. Click "+ Create New App" button. Fill "App Name", "App Namespace", agree to policies and click "Continue", fill captcha, click "Continue".
-     ***Notice App ID and App Secret on this page.
-   4. Click "Website with Faceook Login", enter your website URL
-   5. Enter your domain to the App Domain. Domain should be the same domain from URL that you have entered to the "Website  with Faceook Login" during the step 4.   
-   6. [Optional - you can skip this step and use existing page] Click "Advanced" from the left side menu "Settings.". Scroll all the way down and click "Create Facebook Page" button. Facebook will create Community page for your App. Click on it and see the URL. It will be something like http://www.facebook.com/pages/Your-Site-Community/304945439569358
-   
-2. Connect Facebook to your Wordpress.
-   1. Login to your Wordpress Admin Panel, Go to the Settings->Social Networks AutoPoster Options.
-   2. Click green "Add new account" button, select "Facebook" from the list. 
-   3. Fill URL of your Community page from step 6 above.
-   4. Fill "App ID" and "App Secret" from step 3 above.
-3. Authorize Facebook for your Wordpress.
-   1. Click "Update Settings". Notice new link "Authorize Your FaceBook Account".
-   2. Click "Authorize Your FaceBook Account" and follow the Facebook authorization wizard. If you get any errors at this step, please make sure that domain for your Wordpress site is entered to your App as "App Domain".
-4. Your facebook is ready to use.
-
-Twitter.
-
-1. Create a Twitter App for your website.
-   1. Login to your Twitter account.
-   2. Go to the Twitter Developers website: https://dev.twitter.com/ Sign in again if asked.
-   3. Click "Create an app" link from the right panel. Fill details, click "Create your Twitter application".
-     ***Notice Consumer key and Consumer secret on this page.    
-   4. Click "Settings" tab. Scroll to the "Application type", change Access level from "Read Only" to "Read and Write". Click "Update this Twitter application settings".    
-   5. Come back to "Details" tab. Scroll to the "Your access token" and click "Create my access token" button. Refresh page and notice "Access token" and "Access token secret". Make sure you have "Read and Write" access level. 
-   
-2. Connect Twitter to your Wordpress.    
-   1. Login to your Wordpress Admin Panel, Go to the Settings->Social Networks AutoPoster Options.
-   2. Click green "Add new account" button, select "Twitter" from the list. 
-   3. Fill your Twitter URL.
-   4. Fill "Consumer key" and "Consumer secret" from step 3 above.
-   5. Fill "Access token" and "Access token secret" from step 5 above.
-3. Your Twitter is ready to use.
-
-Google+.
-
-Google+ don't yet have API for automated posts. You need to get special library module to be able to publish Google+ posts.
-
-1. Create Google+ page for your website.
-   1. Login to your Google+ account.
-   2. Click "Create a Google+ page" link from the right panel. Choose category, fill details, click "Create".
-     ***Notice the URL of your page. 
-2. Connect Google+ to your Wordpress.
-   1. Login to your Wordpress Admin Panel, Go to the Settings->Social Networks AutoPoster Options.
-   2. Click green "Add new account" button, select "Google+" from the list. 
-   3. Fill Google+ Login and Password. Please note that Wordpress is not storing your Google+ password in very secure manner, so you better create a separate G+ account for your website.
-   4. Fill the ID of your page. You can get this ID from your URL (Step 2 above). If your URL is https://plus.google.com/u/0/b/117008619877691455570/ - your ID is 117008619877691455570
-3. Your Google+ is ready to use. 
-
-Please see <a href="http://www.nextscripts.com/installation-of-social-networks-auto-poster-for-wordpress/">complete installation instructions with screenshots</a>
 
 == Frequently Asked Questions ==
 
@@ -161,6 +118,24 @@ Please see more <a href="http://www.nextscripts.com/faq/">Frequently asked quest
 4. Google+: Types of Post 
 
 == Changelog ==
+
+= 2.7.12 [04/29/2013] =
+
+* Bug Fix - [Critical] Broken shedulled and automated posts
+
+= 2.7.11 [04/26/2013] =
+
+* Bug Fix - [Critical] Twitter lost formatting for posts
+
+= 2.7.10 [04/25/2013] =
+
+* New - Support for Facebook Secret Groups
+* Improvement - Import Button is availabe even if no networks configured.
+* Improvement - "Include/Exclude Wordpress Pages and Custom Post Types" is now a list of checkboxes.
+* Bug Fix - Google+ Community Postings
+* Bug Fix - Unselected user types were still be able to autopost from front end.
+* Bug Fix - Facebook "Warning: session_start() [function.session-start]: Cannot send session cookie - headers already sent by ...".
+* Bug Fix - Facebook sometimes dies silently without reporting an error.
 
 = 2.7.9 [04/11/2013] =
 
