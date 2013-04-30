@@ -283,6 +283,8 @@ function wdm_create_ad_form( $atts ) {
         'wdm_data'  => $post_id . '-' . md5($post_id . $wdm_salt)
       ));
       $destination_url = urlencode($destination_url);
+
+      wdm_create_ad_send_creation_mail($post);
       break;
     case 6:
       // Move back to result page
@@ -427,6 +429,37 @@ function wdm_create_ad_generate_translation_blob($data) {
     $data_string .= '<!--:' .  $langcode . '-->' .  $value . '<!--:-->';
   }
   return $data_string;
+}
+
+function wdm_create_ad_send_creation_mail($post = NULL) {
+  // Mail configuration
+  $mail_to = get_option('admin_email','g.natili@gnstudio.com');
+  $mail_subj = _('Someone added a new product');
+  $mail_body = file_get_contents(__DIR__ . '/mail/product-create.html');
+
+  // Some basic replacement
+  foreach (array('siteurl', 'blogname', 'blogdescription', 'admin_email') as $value) {
+    $mail_body = str_replace("[site:$value]", get_option($value), $mail_body);
+  }
+
+  $mail_body = str_replace("[post:id]",       $post->ID,    $mail_body);
+  $mail_body = str_replace("[post:title]",    $post->post_title, $mail_body);
+  $mail_body = str_replace("[post:status]",   $post->post_status, $mail_body);
+  $mail_body = str_replace("[post:modified]", $post->post_modified, $mail_body);
+
+
+  // Set filter to send HTML mail
+  add_filter('wp_mail_content_type', 'wdm_create_ad_mail_content_type');
+
+  // Send mail
+  wp_mail( $mail_to, $mail_subj, $mail_body);
+
+  // Reset mail filter
+  remove_filter( 'wp_mail_content_type', 'wdm_create_ad_mail_content_type');
+}
+
+function wdm_create_ad_mail_content_type() {
+  return 'text/html';
 }
 
 // Create shortcode for the form
