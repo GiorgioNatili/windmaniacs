@@ -4,7 +4,7 @@
 Plugin Name: Nextend Facebook Connect
 Plugin URI: http://nextendweb.com/
 Description: This plugins helps you create Facebook login and register buttons. The login and register process only takes one click.
-Version: 1.4.54
+Version: 1.4.59
 Author: Roland Soos
 License: GPL2
 */
@@ -29,26 +29,20 @@ define('NEW_FB_LOGIN', 1);
 if (!defined('NEW_FB_LOGIN_PLUGIN_BASENAME')) define('NEW_FB_LOGIN_PLUGIN_BASENAME', plugin_basename(__FILE__));
 $new_fb_settings = maybe_unserialize(get_option('nextend_fb_connect'));
 
-/*
-Sessions required for the profile notices
-*/
-
-function new_fb_start_session() {
-
-  if (!headers_sent()) {
-    if (!session_id()) {
-      session_start();
+if(!function_exists('nextend_uniqid')){
+    function nextend_uniqid(){
+        if(isset($_COOKIE['nextend_uniqid'])){
+            if(get_site_transient('n_'.$_COOKIE['nextend_uniqid']) !== false){
+                return $_COOKIE['nextend_uniqid'];
+            }
+        }
+        $_COOKIE['nextend_uniqid'] = uniqid('nextend', true);
+        setcookie('nextend_uniqid', $_COOKIE['nextend_uniqid'], time() + 3600, '/');
+        set_site_transient('n_'.$_COOKIE['nextend_uniqid'], 1, 3600);
+        
+        return $_COOKIE['nextend_uniqid'];
     }
-  }
 }
-
-function new_fb_end_session() {
-
-  if (session_id()) session_destroy();
-}
-add_action('init', 'new_fb_start_session', 1);
-add_action('wp_logout', 'new_fb_end_session');
-add_action('wp_login', 'new_fb_end_session');
 
 /*
 Loading style for buttons
@@ -136,12 +130,13 @@ function new_fb_login_action() {
       $wpdb->query($wpdb->prepare('DELETE FROM ' . $wpdb->prefix . 'social_users
           WHERE ID = %d
           AND type = \'fb\'', $user_info->ID));
-      $_SESSION['new_fb_admin_notice'] = __('Your Facebook profile is successfully unlinked from your account.', 'nextend-facebook-connect');
+      set_site_transient($user_info->ID.'_new_fb_admin_notice',__('Your Facebook profile is successfully unlinked from your account.', 'nextend-facebook-connect'), 3600);
     }
     new_fb_redirect();
   }
   require_once (dirname(__FILE__) . '/sdk/init.php');
   $user = $facebook->getUser();
+
   if ($user && is_user_logged_in() && new_fb_is_user_connected()) {
     new_fb_redirect();
   } elseif ($user) {
@@ -209,7 +204,7 @@ function new_fb_login_action() {
             ));
           }
           if (isset($new_fb_settings['fb_redirect_reg']) && $new_fb_settings['fb_redirect_reg'] != '' && $new_fb_settings['fb_redirect_reg'] != 'auto') {
-            $_SESSION['redirect'] = $new_fb_settings['fb_redirect_reg'];
+            set_site_transient( nextend_uniqid().'_fb_r', $new_twitter_settings['twitter_redirect_reg'], 3600);
           }
         }
         if ($ID) { // Login
@@ -245,9 +240,11 @@ function new_fb_login_action() {
           ));
           update_user_meta($current_user->ID, 'fb_user_access_token', $facebook->getAccessToken());
           do_action('nextend_fb_user_account_linked', $ID, $user_profile, $facebook);
-          $_SESSION['new_fb_admin_notice'] = __('Your Facebook profile is successfully linked with your account. Now you can sign in with Facebook easily.', 'nextend-facebook-connect');
+            $user_info = wp_get_current_user();
+            set_site_transient($user_info->ID.'_new_fb_admin_notice',__('Your Facebook profile is successfully linked with your account. Now you can sign in with Facebook easily.', 'nextend-facebook-connect'), 3600);
         } else {
-          $_SESSION['new_fb_admin_notice'] = __('This Facebook profile is already linked with other account. Linking process failed!', 'nextend-facebook-connect');
+            $user_info = wp_get_current_user();
+            set_site_transient($user_info->ID.'_new_fb_admin_notice',__('This Facebook profile is already linked with other account. Linking process failed!', 'nextend-facebook-connect'), 3600);
         }
       }
       new_fb_redirect();
@@ -259,7 +256,7 @@ function new_fb_login_action() {
       $user = null;
     }
     exit;
-  } else {
+  } else if(!isset($_GET['code'])){
     $scope = apply_filters('nextend_fb_scope', 'email');
     $loginUrl = $facebook->getLoginUrl(array(
       'scope' => $scope
@@ -268,12 +265,17 @@ function new_fb_login_action() {
       $_GET['redirect'] = $new_fb_settings['fb_redirect'];
     }
     if (isset($_GET['redirect'])) {
-      $_SESSION['redirect'] = $_GET['redirect'];
+      set_site_transient( nextend_uniqid().'_fb_r', $_GET['redirect'], 3600);
     }
-    if ($_SESSION['redirect'] == '' || $_SESSION['redirect'] == new_fb_login_url()) {
-      $_SESSION['redirect'] = site_url();
+    $redirect = get_site_transient( nextend_uniqid().'_fb_r');
+    if ($redirect == '' || $redirect == new_fb_login_url()) {
+      set_site_transient( nextend_uniqid().'_fb_r', site_url(), 3600);
     }
+    
     header('Location: ' . $loginUrl);
+    exit;
+  }else{
+    echo "Login error!";
     exit;
   }
 }
@@ -366,7 +368,7 @@ function new_add_fb_login_form() {
 add_action('login_form', 'new_add_fb_login_form');
 add_action('register_form', 'new_add_fb_login_form');
 add_action('bp_sidebar_login_form', 'new_add_fb_login_form');
-add_filter('get_avatar', 'new_fb_insert_avatar', 1, 5);
+add_filter('get_avatar', 'new_fb_insert_avatar', 5, 5);
 
 function new_fb_insert_avatar($avatar = '', $id_or_email, $size = 96, $default = '', $alt = false) {
 
@@ -384,6 +386,16 @@ function new_fb_insert_avatar($avatar = '', $id_or_email, $size = 96, $default =
   if (!$pic || $pic == '') return $avatar;
   $avatar = preg_replace('/src=("|\').*?("|\')/i', 'src=\'' . $pic . '\'', $avatar);
   return $avatar;
+}
+
+add_filter('bp_core_fetch_avatar', 'new_fb_bp_insert_avatar', 3, 5);
+
+function new_fb_bp_insert_avatar($avatar = '', $params, $id) {
+    if(!is_numeric($id) || strpos($avatar, 'gravatar') === false) return $avatar;
+    $pic = get_user_meta($id, 'fb_profile_picture', true);
+    if (!$pic || $pic == '') return $avatar;
+    $avatar = preg_replace('/src=("|\').*?("|\')/i', 'src=\'' . $pic . '\'', $avatar);
+    return $avatar;
 }
 
 /*
@@ -451,16 +463,18 @@ function new_fb_login_url() {
 }
 
 function new_fb_redirect() {
+  
+  $redirect = get_site_transient( nextend_uniqid().'_fb_r');
 
-  if (!isset($_SESSION['redirect']) || $_SESSION['redirect'] == '' || $_SESSION['redirect'] == new_fb_login_url()) {
+  if (!$redirect || $redirect == '' || $redirect == new_fb_login_url()) {
     if (isset($_GET['redirect'])) {
-      $_SESSION['redirect'] = $_GET['redirect'];
+      $redirect = $_GET['redirect'];
     } else {
-      $_SESSION['redirect'] = site_url();
+      $redirect = site_url();
     }
   }
-  header('LOCATION: ' . $_SESSION['redirect']);
-  unset($_SESSION['redirect']);
+  header('LOCATION: ' . $redirect);
+  delete_site_transient( nextend_uniqid().'_fb_r');
   exit;
 }
 
@@ -490,12 +504,14 @@ Session notices used in the profile settings
 */
 
 function new_fb_admin_notice() {
-
-  if (isset($_SESSION['new_fb_admin_notice'])) {
+  $user_info = wp_get_current_user();
+  $notice = get_site_transient($user_info->ID.'_new_fb_admin_notice');
+  if ($notice !== false) {
     echo '<div class="updated">
-       <p>' . $_SESSION['new_fb_admin_notice'] . '</p>
+       <p>' . $notice . '</p>
     </div>';
-    unset($_SESSION['new_fb_admin_notice']);
+    delete_site_transient($user_info->ID.'_new_fb_admin_notice');
   }
 }
+
 add_action('admin_notices', 'new_fb_admin_notice');

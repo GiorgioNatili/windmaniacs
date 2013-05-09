@@ -97,30 +97,30 @@ p.ps-box, div.ps-box {margin:1em 0 1.5em 0;  padding:9px 15px; border-width:1px;
 .ps-box.icon-user {background-image:url(images/shortcodes/user.png); }
 /* Button */
 .ps-button {
-margin-bottom: 20px;
-background: #FFFFFF;
-border-bottom: 1px solid #BFBFBF;
-font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
-border: 1px solid #CCC;
--moz-border-radius: 3px;
-border-radius: 3px;
-color: #555;
-line-height:30px;
-cursor: pointer;
-font-weight: 300;
-font-size: 12px;
-padding: 1px 20px 0px;
-position: relative;
-display: inline-block;
-text-align: center;
-text-decoration: none !important;
-text-shadow: 0 1px 0 rgba(255, 255, 255, 1);
-width: auto;
--webkit-box-shadow: 1px 1px 1px #E8E8E8;
--moz-box-shadow: 1px 1px 1px #E8E8E8;
-box-shadow: 1px 1px 1px #E8E8E8;
--webkit-transition: color .3s linear;
--o-transition: color .3s 
+	margin-bottom: 20px;
+	background: #FFFFFF;
+	border-bottom: 1px solid #BFBFBF;
+	font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+	border: 1px solid #CCC;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	color: #555;
+	line-height:30px;
+	cursor: pointer;
+	font-weight: 300;
+	font-size: 12px;
+	padding: 1px 20px 0px;
+	position: relative;
+	display: inline-block;
+	text-align: center;
+	text-decoration: none !important;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 1);
+	width: auto;
+	-webkit-box-shadow: 1px 1px 1px #E8E8E8;
+	-moz-box-shadow: 1px 1px 1px #E8E8E8;
+	box-shadow: 1px 1px 1px #E8E8E8;
+	-webkit-transition: color .3s linear;
+	-o-transition: color .3s;
 }
 .ps-button:hover{
 	color:black;
@@ -370,7 +370,7 @@ ul.ps-tabs li.active a{
 /*	-webkit-box-shadow: 1px 1px 2px #bdbdbd;*/
 /*	-moz-box-shadow: 1px 1px 2px #bdbdbd;*/
 /*	box-shadow: 1px 1px 2px #bdbdbd;*/
-/*}*/
+}
 .prima-multislider ul li .prima-multislide-box img {
 }
 .prima-multislider ul li a.prima-multislide-link {
@@ -452,7 +452,7 @@ ul.ps-tabs li.active a{
 	margin:-10px 0 0 0;
 	padding: 0;
 	text-indent: -9999px;
-	z-index:3;	
+	z-index:3;
 	filter:alpha(opacity=50);
 	-moz-opacity:0.5;
 	-khtml-opacity: 0.5;
@@ -478,7 +478,7 @@ ul.ps-tabs li.active a{
 	margin:-10px 0 0 0;
 	padding: 0;
 	text-indent: -9999px;
-	z-index:3;	
+	z-index:3;
 	filter:alpha(opacity=50);
 	-moz-opacity:0.5;
 	-khtml-opacity: 0.5;
@@ -504,7 +504,7 @@ ul.ps-tabs li.active a{
 	margin:-10px 0 0 0;
 	padding: 0;
 	text-indent: -9999px;
-	z-index:3;	
+	z-index:3;
 	filter:alpha(opacity=50);
 	-moz-opacity:0.5;
 	-khtml-opacity: 0.5;
@@ -562,8 +562,8 @@ div#full-col ul.ps-testimonials li blockquote, div#main-col ul.ps-testimonials l
 	color:#666;
 	font-style:italic;
 	border: none;
-	padding:0 0 10px 45px; 
-	background: url(images/shortcodes/blockquote.png) no-repeat left top; 
+	padding:0 0 10px 45px;
+	background: url(images/shortcodes/blockquote.png) no-repeat left top;
 }
 div#full-col ul.ps-testimonials li .ps-testimonial-meta, div#main-col ul.ps-testimonials li .ps-testimonial-meta, div#sidebar ul.ps-testimonials li .ps-testimonial-meta, div#footer ul.ps-testimonials li .ps-testimonial-meta   {
 	font-size:12px;
@@ -584,7 +584,7 @@ div.single_container div.single-imagecol a.bx-next, .main_image a.bx-next{
 	margin:-10px 0 0 0;
 	padding: 0;
 	text-indent: -9999px;
-	z-index:100;	
+	z-index:100;
 	filter:alpha(opacity=50);
 	-moz-opacity:0.5;
 	-khtml-opacity: 0.5;
@@ -614,7 +614,7 @@ div.single_container div.single-imagecol a.bx-prev, .main_image a.bx-prev{
 	margin:-10px 0 0 0;
 	padding: 0;
 	text-indent: -9999px;
-	z-index:100;	
+	z-index:100;
 	filter:alpha(opacity=50);
 	-moz-opacity:0.5;
 	-khtml-opacity: 0.5;
@@ -679,11 +679,11 @@ div.jp-audio div.jp-interface {
 	    rgb(34,34,34) 0%,
 	    rgb(58,59,60) 100%
 	);
-	
+
 	-webkit-box-shadow: 0px 1px 1px rgba(0,0,0,0.5);
 	-moz-box-shadow: 0px 1px 1px rgba(0,0,0,0.5);
 	box-shadow: 0px 1px 1px rgba(0,0,0,0.5);
-	
+
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
 	border-radius: 3px;
@@ -706,11 +706,11 @@ div.jp-video div.jp-interface {
 	    rgb(34,34,34) 0%,
 	    rgb(58,59,60) 100%
 	);
-	
+
 	-webkit-box-shadow: 0px 1px 1px rgba(0,0,0,0.5);
 	-moz-box-shadow: 0px 1px 1px rgba(0,0,0,0.5);
 	box-shadow: 0px 1px 1px rgba(0,0,0,0.5);
-	
+
 }
 
 div.jp-audio div.jp-type-single div.jp-interface, div.jp-video div.jp-type-single div.jp-interface {
