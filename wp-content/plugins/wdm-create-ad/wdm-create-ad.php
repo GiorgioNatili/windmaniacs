@@ -221,6 +221,7 @@ function wdm_create_ad_form( $atts ) {
       $terms = array($product_category->term_id);
       echo "category_Id".wp_set_post_terms($post_id, $terms, 'wpsc_product_category', FALSE);
 	  echo "terms".$terms;
+	  echo "cat".$hidden_value['wdm-type'];
 	  exit();	
       // Sub category
       $product_sub_category = array();
