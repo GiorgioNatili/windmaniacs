@@ -219,8 +219,9 @@ function wdm_create_ad_form( $atts ) {
       // Category
       $product_category = get_term_by('slug', str_replace('ing-', '-', $hidden_value['wdm-type']), 'wpsc_product_category');
       $terms = array($product_category->term_id);
-      wp_set_post_terms($post_id, $terms, 'wpsc_product_category', FALSE);
-
+      echo "category_Id".wp_set_post_terms($post_id, $terms, 'wpsc_product_category', FALSE);
+	  echo "terms".$terms;
+	  exit();	
       // Sub category
       $product_sub_category = array();
       foreach (wdm_create_ad_form_get($hidden_value['wdm-category']) as $value) {
