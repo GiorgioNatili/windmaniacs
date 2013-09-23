@@ -8,7 +8,6 @@
   <?php endforeach?>
   </select>
 </div>
-<?php echo "test";?> 
 <div id="dynamic-select">
   <fieldset class="post-category">
   <!-- <h2>Sub category</h2> -->
