@@ -49,7 +49,7 @@ jQuery( this ).dialog( "close" );
 <?php if(prima_get_option('usernav')&&class_exists('WP_eCommerce')) get_template_part( 'flexi-usernav' ); ?>
 <div id="flexi-wrapper">
   <div id="shadow">
-  <div id="bf"></div>
+  <div id="bf">not allow</div>
 <?php
   echo "allow";
    $social_notify = $_GET["social_notify"];
