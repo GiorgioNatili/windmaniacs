@@ -50,6 +50,7 @@ jQuery( this ).dialog( "close" );
 <div id="flexi-wrapper">
   <div id="shadow">
 <?php
+  echo "allow";
    $social_notify = $_GET["social_notify"];
 	if($social_notify)
 	{
