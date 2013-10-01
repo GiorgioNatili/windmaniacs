@@ -28,3 +28,15 @@
 <?php if(prima_get_option('usernav')&&class_exists('WP_eCommerce')) get_template_part( 'flexi-usernav' ); ?>
 <div id="flexi-wrapper">
   <div id="shadow">
+  <?php
+   $social_notify = $_GET["social_notify"];
+	if($social_notify)
+	{
+	if ( !is_user_logged_in() ) 
+	{
+	echo '<div id="dialog-message" title="Basic modal dialog"><p>Your session is expired!<a href="'. get_site_url().'/p/your-account">login</a></p></div>';
+	} 
+		
+	} 
+	
+	
