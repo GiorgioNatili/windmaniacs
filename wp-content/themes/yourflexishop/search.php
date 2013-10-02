@@ -27,6 +27,9 @@ get_header(); ?>
   <div id="main-content" class="container">
     <?php wdm_search_form(); ?>
     <div class="margin">
+	<?php $a = $_GET['s']; 
+	        echo '<div class="search_title">search result are: '.'"'.$a.'"'.'</div>';
+	  ?>
       <div id="main-col">
       <?php if ($pageposts->have_posts()) : while ($pageposts->have_posts()) : $pageposts->the_post(); ?>
           <div class="blog-post blog-overview">
