@@ -1659,6 +1659,7 @@ div#products_page_container.single_container form.product_form{
 	clear:both;
 	overflow: hidden;
 	padding-bottom:10px;
+	display:none;
 	margin-bottom:15px;
 }
 
