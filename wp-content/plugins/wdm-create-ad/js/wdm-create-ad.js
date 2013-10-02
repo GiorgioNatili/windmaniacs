@@ -33,6 +33,7 @@
         beforeSend : function () {
           $('#spinvariablecontainer').fadeIn(300);
           $('#spinvariablecontainer').append(spinner.el);
+		  setTimeout(function(){$('#spinvariablecontainer').hide();},30000);
         },
         success    : function (result) {
           // Find form in response..
