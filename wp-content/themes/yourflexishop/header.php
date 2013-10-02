@@ -60,7 +60,6 @@ jQuery( this ).dialog( "close" );
 	echo "test123";
 	echo '<div id="dialog-message" title="Basic modal dialog"><p>Your session is expired!<a href="'. get_site_url().'/p/your-account">login</a></p></div>';
 	} 
-		
 	} 
 	
 	
