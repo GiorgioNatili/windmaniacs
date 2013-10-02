@@ -51,7 +51,7 @@ jQuery( this ).dialog( "close" );
   <div id="shadow">
   <div id="bf">not allow</div>
 <?php
-  echo "allow";
+ 
    $social_notify = $_GET["social_notify"];
 	if($social_notify)
 	{
