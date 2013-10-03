@@ -25,10 +25,10 @@ jQuery.fn.rating = function(){
             title: this.title,
             'class': this.className
         }).insertAfter( this );
-        product_id = jQuery("input.wpsc_rating_product_id", this).val();
+        product_id = jQuery("input.wpsc_rating_product_id").val();
 
-        var selected_rating = jQuery("select option:selected", this).val();
-        jQuery("select option", this).each(function(){
+        var selected_rating = jQuery("select option:selected").val();
+        jQuery("select option").each(function(){
         		
 						className = '';
 						//console.log(jQuery(this).attr('selected'));
