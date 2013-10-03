@@ -34,7 +34,7 @@
 	{
 	if ( !is_user_logged_in() ) 
 	{
-	echo "test123";
+	//echo "test";
 	echo '<div id="dialog-message" title="Basic modal dialog"><p>Your session is expired!<a href="'. get_site_url().'/p/your-account">login</a></p></div>';
 	} 
 		
