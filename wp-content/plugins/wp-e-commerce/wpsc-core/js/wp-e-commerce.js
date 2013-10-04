@@ -340,9 +340,8 @@ jQuery(document).ready(function ($) {
 	});
 
 	// Object frame destroying code.
-	//jQuery("form.wpsc_product_rating").livequery(function(){
 		jQuery('.wpsc_product_rating').rating();
-	//});
+
 
 	jQuery("form.wpsc_empty_the_cart").livequery(function(){
 		jQuery(this).submit(function() {
