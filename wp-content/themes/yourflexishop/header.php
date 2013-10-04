@@ -54,6 +54,7 @@ jQuery( this ).dialog( "close" );
    $social_notify = $_GET["social_notify"];
 	if($social_notify)
 	{
+	  echo "test";
 	  if ( !is_user_logged_in() ) 
 	  {
 	    echo '<div id="dialog-message" title="Remember Message"><p>Your session was expired!<a href="'. get_site_url().'/p/your-account">login</a></p></div>';
