@@ -108,7 +108,7 @@
 }
 .descriptionstep{
   display:block;
-  font-size:11px;
+  font-size:9px;
   color:white;
   font-weight:lighter;
   padding-left:10px;
@@ -851,7 +851,7 @@ input[type="radio"]:checked + span{
   appearance: none;
 
   margin: 5px 10px 25px 10px;
-  width: 320px;
+  width: 380px;
   height: 35px;
   -webkit-border-radius: 15px;
   -moz-border-radius: 15px;
@@ -918,8 +918,8 @@ input[type="radio"]:checked + span{
   -moz-appearance: none;
   appearance: none;
   float:left;
-  margin: 5px 10px 25px 10px;
-  width: 220px;
+  margin: 5px 5px 25px 0px;
+  width: 245px;
   height: 35px;
   -webkit-border-radius: 15px;
   -moz-border-radius: 15px;
