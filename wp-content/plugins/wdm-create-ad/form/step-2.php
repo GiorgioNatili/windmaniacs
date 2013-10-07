@@ -2,7 +2,7 @@
 <div id="selectabletags" class="select">
 
   <select id="wdm-ad-main-category" name="wdm-category" class="selected">
-    <option value=""><?php _e('Please select your product category'); ?></option>
+    <option value=""><?php _e('Please select your product category', 'qtranslate'); ?></option>
   <?php foreach ($custom_taxonomies as $taxonomy):?>
     <option value="<?php print $taxonomy->slug; ?>" <?php print wdm_create_ad_is_default($taxonomy->slug, $default_value['wdm-category']) ?>><?php print $taxonomy->label; ?></option>
   <?php endforeach?>
@@ -20,10 +20,10 @@
 <fieldset class="post-description">
 <div id="inputdati-sx">
   <label for="wdm-price"><?php _e("Price"); ?></label>
-  <input type="text" name="wdm-price" value="<?php print $default_value['wdm-price']; ?>"  onblur="if(this.value=='')this.value=this.defaultValue;" onfocus="if(this.value==this.defaultValue)this.value='';" placeholder="Prezzo" name="s" size="put_a_size_here" class="input-left"/>
+  <input type="text" name="wdm-price" value="<?php print $default_value['wdm-price']; ?>"  onblur="if(this.value=='')this.value=this.defaultValue;" onfocus="if(this.value==this.defaultValue)this.value='';" placeholder="<?php _e("price", 'qtranslate'); ?>" name="s" size="put_a_size_here" class="input-left"/>
 
   <label for="wdm-sale_price"><?php _e("Sale price"); ?></label>
-  <input type="text" name="wdm-sale_price" value="<?php print $default_value['wdm-sale_price']; ?>"  onblur="if(this.value=='')this.value=this.defaultValue;" onfocus="if(this.value==this.defaultValue)this.value='';" placeholder="Prezzo scontato" name="s" size="put_a_size_here" class="input-left"/>
+  <input type="text" name="wdm-sale_price" value="<?php print $default_value['wdm-sale_price']; ?>"  onblur="if(this.value=='')this.value=this.defaultValue;" onfocus="if(this.value==this.defaultValue)this.value='';" placeholder="<?php _e("Price lowered", 'qtranslate'); ?>" name="s" size="put_a_size_here" class="input-left"/>
 </div>
 
 
@@ -40,10 +40,10 @@
           <fieldset class="language-<?php  print $langcode; ?>">
             <!--<label><?php print $langcode; ?></label>-->
             <label for="wdm-title-<?php  print $langcode; ?>"><?php _e("Title"); ?></label>
-            <input id="titolo" type="text" onblur="if(this.value=='')this.value=this.defaultValue;" onfocus="if(this.value==this.defaultValue)this.value='';" placeholder="<?php _e("Insert Title"); ?>" name="wdm-title-<?php print $langcode; ?>" value="<?php print $default_value['wdm-title-' . $langcode]; ?>" class="input-left" />
+            <input id="titolo" type="text" onblur="if(this.value=='')this.value=this.defaultValue;" onfocus="if(this.value==this.defaultValue)this.value='';" placeholder="<?php _e("Insert Title", 'qtranslate'); ?>" name="wdm-title-<?php print $langcode; ?>" value="<?php print $default_value['wdm-title-' . $langcode]; ?>" class="input-left" />
 
             <label for="wdm-description-<?php  print $langcode; ?>"><?php _e("Description"); ?></label>
-            <textarea name="wdm-description-<?php print $langcode; ?>" value="<?php print $default_value['wdm-description-' . $langcode]; ?>" placeholder="<?php _e('Insert Description'); ?>" class="text-area-right" onKeyDown="limitText(this.form.desc,this.form.countdown,500);" onKeyUp="limitText(this.form.desc,this.form.countdown,500);"></textarea>
+            <textarea name="wdm-description-<?php print $langcode; ?>" value="<?php print $default_value['wdm-description-' . $langcode]; ?>" placeholder="<?php _e('Insert Description', 'qtranslate'); ?>" class="text-area-right" onKeyDown="limitText(this.form.desc,this.form.countdown,500);" onKeyUp="limitText(this.form.desc,this.form.countdown,500);"></textarea>
           </fieldset>
         </div>
         <?php endforeach; ?>
